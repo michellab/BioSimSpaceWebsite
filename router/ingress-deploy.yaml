@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: rewrite  
+  annotations:    
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: 'true'
+spec:
+  rules:
+  - host: biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: 80
+  - host: www.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: 80
+  - host: notebook.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: notebook
+          servicePort: 80
+  - host: notebookdev.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: devnotebook
+          servicePort: 80
+  tls:
+  - secretName: web-tls-cert
+    hosts:
+    - biosimspace.org
+    - www.biosimspace.org
+    - notebook.biosimspace.org
+    - wwwdev.biosimspace.org
+    - notebookdev.biosimspace.org
