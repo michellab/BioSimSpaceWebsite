@@ -8,6 +8,10 @@ singleuser:
     tag: bss-v2
   storage:
     type: none
+  lifecycleHooks:
+    postStart:
+      exec:
+        command: ["ln", "-s", "/home/biosimspace", "."]
 cull:
   timeout: 7200
   every: 600
