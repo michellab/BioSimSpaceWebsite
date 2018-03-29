@@ -46,3 +46,5 @@ USER $NB_USER
 
 # Now git clone in all workshops we wish to use...
 
+# Finally, switch back to the home directory
+WORKDIR $HOME
