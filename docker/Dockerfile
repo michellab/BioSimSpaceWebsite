@@ -70,24 +70,18 @@ RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
 # Install Sire, which provides conda
 RUN wget http://siremol.org/largefiles/sire_releases/download.php?name=sire_2018_1_0_linux.run -O sire.run
 RUN chmod a+x sire.run
-RUN echo "/opt/conda" | ./sire.run
+RUN echo "/opt/conda" | ./sire.run && \
+    fix-permissions /opt/conda
 
 # Install biosimspace into /home using git
 WORKDIR /home
-RUN git clone https://github.com/michellab/biosimspace
+RUN git clone https://github.com/michellab/biosimspace && \
+    fix-permissions /home/biosimspace
 
 # Download and install amber16 into /home using wget
 RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2
 RUN tar -jxvf amber16.tar.bz2
 RUN rm amber16.tar.bz2
-
-# Change ownership of the conda directory so that users
-# can conda install their own modules
-RUN fix-permissions $CONDA_DIR
-
-# Change the ownership of the BioSimSpace directory so that users
-# can edit and run the notebooks that are contained within
-RUN fix-permissions /home/biosimspace
 
 # Configure container startup
 ENTRYPOINT ["tini", "--"]
