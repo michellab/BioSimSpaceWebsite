@@ -31,6 +31,7 @@ RUN apt-get update && apt-get -yq dist-upgrade \
     bc \
     less \
     nano \
+    libgfortran3 \
     fonts-liberation \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
@@ -58,6 +59,7 @@ ENV CONDA_DIR=/opt/conda \
     LANGUAGE=en_US.UTF-8
 
 ENV PATH=$CONDA_DIR/bin:$PATH \
+    LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$AMBERHOME/lib64 \
     HOME=/home/$NB_USER
 
 ADD fix-permissions /usr/local/bin/fix-permissions
@@ -135,6 +137,10 @@ RUN pip --no-cache-dir install nglview && \
 RUN pip install fileupload && \
     jupyter-nbextension install fileupload --py --sys-prefix && \
     jupyter-nbextension enable fileupload --py --sys-prefix
+
+# Install BioSimSpace
+RUN cd /home/biosimspace/python && \
+    python setup.py install
 
 # Finally, reinstall an older version of tornado as tornado 5 
 # and clean up after conda, including clearing the cache
