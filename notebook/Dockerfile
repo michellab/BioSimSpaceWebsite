@@ -92,6 +92,7 @@ RUN conda install --quiet --yes \
 RUN pip install --upgrade pip
 RUN pip install pygtail
 RUN pip install matplotlib
+RUN pip install jupyterhub-tmpauthenticator
 RUN conda install watchdog
 
 # Now clean up after conda
@@ -109,6 +110,13 @@ USER root
 EXPOSE 8888
 WORKDIR $HOME
 
+# install ambertools into /home/amber 
+ADD amber.tar.bz2 /home/amber
+
+# Add biosimspace files
+ADD biosimspace.tar.bz2 /home/
+RUN chown -R $NB_USER:$NB_GID /home/biosimspace
+
 # Configure container startup
 ENTRYPOINT ["tini", "--"]
 CMD ["start-notebook.sh"]
@@ -119,10 +127,6 @@ COPY start-notebook.sh /usr/local/bin/
 COPY start-singleuser.sh /usr/local/bin/
 COPY jupyter_notebook_config.py /etc/jupyter/
 RUN fix-permissions /etc/jupyter/
-
-# Add biosimspace files
-ADD biosimspace.tar.bz2 /home/
-RUN chown -R $NB_USER:$NB_GID /home/biosimspace
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_USER

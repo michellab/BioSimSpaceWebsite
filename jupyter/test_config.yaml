@@ -8,6 +8,12 @@ singleuser:
     tag: bss-v2
   storage:
     type: none
+  memory:
+    limit: 1G
+    guarantee: 1G
+  cpu:
+    limit: 1.0
+    guarantee: 0.5
   lifecycleHooks:
     postStart:
       exec:

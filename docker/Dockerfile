@@ -1,0 +1,158 @@
+# Based on the JupyterHub docker image that is
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+# Ubuntu 16.04 (xenial) from 2017-07-23
+# https://github.com/docker-library/official-images/commit/0ea9b38b835ffb656c497783321632ec7f87b60c
+FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed3005f
+
+# Changes made for the BioSimSpace project (https://biosimspace.org), and
+# are (c) the BioSimSpace development team, distributed under
+# the same license as the original JupyterHub docker file, i.e.
+# the Modified BSD License.
+
+# Any errors or problems are the fault of the BioSimSpace team and nothing
+# to do with JupyterHub
+
+LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
+
+USER root
+
+# Install all OS dependencies for notebook server that starts but lacks all
+# features (e.g., download as all possible file formats)
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && apt-get -yq dist-upgrade \
+ && apt-get install -yq --no-install-recommends \
+    wget \
+    bzip2 \
+    ca-certificates \
+    sudo \
+    locales \
+    git \
+    bc \
+    less \
+    nano \
+    fonts-liberation \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
+    locale-gen
+
+# Install Tini
+RUN wget --quiet https://github.com/krallin/tini/releases/download/v0.10.0/tini && \
+    echo "1361527f39190a7338a0b434bd8c88ff7233ce7b9a4876f3315c22fce7eca1b0 *tini" | sha256sum -c - && \
+    mv tini /usr/local/bin/tini && \
+    chmod +x /usr/local/bin/tini
+
+# Configure environment
+ENV CONDA_DIR=/opt/conda \
+    SIRE_SILENT_PHONEHOME=1 \
+    SIRE=/opt/conda \
+    AMBERHOME=/home/amber16 \
+    SHELL=/bin/bash \
+    NB_USER=jovyan \
+    NB_UID=1000 \
+    NB_GID=100 \
+    LC_ALL=en_US.UTF-8 \
+    LANG=en_US.UTF-8 \
+    LANGUAGE=en_US.UTF-8
+
+ENV PATH=$CONDA_DIR/bin:$PATH \
+    HOME=/home/$NB_USER
+
+ADD fix-permissions /usr/local/bin/fix-permissions
+
+# Create jovyan user with UID=1000 and in the 'users' group
+# and make sure these dirs are writable by the `users` group.
+RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
+    fix-permissions $HOME
+
+# Install Sire, which provides conda
+RUN wget http://siremol.org/largefiles/sire_releases/download.php?name=sire_2018_1_0_linux.run -O sire.run
+RUN chmod a+x sire.run
+RUN echo "/opt/conda" | ./sire.run
+
+# Install biosimspace into /home using git
+WORKDIR /home
+RUN git clone https://github.com/michellab/biosimspace
+
+# Download and install amber16 into /home using wget
+RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2
+RUN tar -jxvf amber16.tar.bz2
+RUN rm amber16.tar.bz2
+
+# Change ownership of the conda directory so that users
+# can conda install their own modules
+RUN fix-permissions $CONDA_DIR
+
+# Change the ownership of the BioSimSpace directory so that users
+# can edit and run the notebooks that are contained within
+RUN fix-permissions /home/biosimspace
+
+# Configure container startup
+ENTRYPOINT ["tini", "--"]
+CMD ["start-notebook.sh"]
+EXPOSE 8888
+
+COPY start.sh /usr/local/bin/
+COPY start-notebook.sh /usr/local/bin/
+COPY start-singleuser.sh /usr/local/bin/
+COPY jupyter_notebook_config.py /etc/jupyter/
+RUN fix-permissions /etc/jupyter/
+
+# Do all conda work as $NB_USER
+USER $NB_USER
+WORKDIR $HOME
+
+RUN $CONDA_DIR/bin/conda config --system --prepend channels conda-forge
+RUN $CONDA_DIR/bin/conda config --system --set auto_update_conda false
+RUN $CONDA_DIR/bin/conda config --system --set show_channel_urls true
+RUN conda clean -tipsy
+
+# Install Jupyter Notebook and Hub
+RUN conda install --quiet --yes \
+    'notebook=5.2.*' \
+    'jupyterhub=0.8.*' \
+    'jupyterlab=0.31.*'
+
+RUN pip install --upgrade pip
+RUN pip install pygtail
+RUN pip install matplotlib
+RUN pip install jupyterhub-tmpauthenticator
+RUN conda install watchdog
+
+# Install necessary Python modules
+RUN conda config --add channels conda-forge
+RUN conda install mdanalysis
+RUN conda install -c omnia mdtraj
+RUN conda install -c omnia pymbar
+
+# Install and enable nglview (including patching some issues)
+RUN pip --no-cache-dir install nglview
+RUN jupyter-nbextension enable nglview --py --sys-prefix
+COPY nglview_patch.sh $HOME
+RUN $HOME/nglview_patch.sh /opt/conda
+RUN rm $HOME/nglview_patch.sh
+
+# Install and run fileupload
+RUN pip install fileupload
+RUN jupyter-nbextension install fileupload --py --sys-prefix
+RUN jupyter-nbextension enable fileupload --py --sys-prefix
+
+# Finally, reinstall an older version of tornado as tornado 5 
+# doesn't work with Jupyterhub
+RUN conda install tornado=4.5.3
+
+# Now clean up after conda, including clearing the cache
+RUN conda clean -tipsy && \
+    jupyter labextension install @jupyterlab/hub-extension@^0.8.0 && \
+    npm cache clean && \
+    rm -rf $CONDA_DIR/share/jupyter/lab/staging
+
+RUN npm cache clean && \
+    rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
+    fix-permissions $CONDA_DIR
+
+RUN rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
+
+USER $NB_USER
