@@ -8,6 +8,7 @@ USER root
 # Install all OS dependencies for workshop server
 RUN apt-get update && apt-get -yq dist-upgrade \
  && apt-get install -yq --no-install-recommends \
+    vim-tiny \
     python \
     python-numpy \
     python-matplotlib \
