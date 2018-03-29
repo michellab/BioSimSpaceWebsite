@@ -1,4 +1,19 @@
-# Workshop image that builds on the biosimspace docker image
+# Based on the JupyterHub docker image that is
+# Copyright (c) Jupyter Development Team.
+# Distributed under the terms of the Modified BSD License.
+# Ubuntu 16.04 (xenial) from 2017-07-23
+# https://github.com/docker-library/official-images/commit/0ea9b38b835ffb656c497783321632ec7f87b60c
+
+# Changes made for the BioSimSpace project (https://biosimspace.org), and
+# are (c) the BioSimSpace development team, distributed under
+# the same license as the original JupyterHub docker file, i.e.
+# the Modified BSD License.
+
+# Any errors or problems are the fault of the BioSimSpace team and nothing
+# to do with JupyterHub
+
+# Start from ubuntu :-)
+FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed3005f
 
 LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
 
