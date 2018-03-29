@@ -68,20 +68,23 @@ RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
     fix-permissions $HOME
 
 # Install Sire, which provides conda
-RUN wget http://siremol.org/largefiles/sire_releases/download.php?name=sire_2018_1_0_linux.run -O sire.run
-RUN chmod a+x sire.run
-RUN echo "/opt/conda" | ./sire.run && \
-    fix-permissions /opt/conda
+RUN wget http://siremol.org/largefiles/sire_releases/download.php?name=sire_2018_1_0_linux.run -O sire.run && \
+    chmod a+x sire.run && \
+    echo "/opt/conda" | ./sire.run && \
+    chown -R $NB_USER:$NB_GID /opt/conda && \
+    fix-permissions /opt/conda && \
+    rm sire.run
 
 # Install biosimspace into /home using git
 WORKDIR /home
 RUN git clone https://github.com/michellab/biosimspace && \
+    chown -R $NB_USER:$NB_GID /home/biosimspace && \
     fix-permissions /home/biosimspace
 
 # Download and install amber16 into /home using wget
-RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2
-RUN tar -jxvf amber16.tar.bz2
-RUN rm amber16.tar.bz2
+RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2 && \
+    tar -jxvf amber16.tar.bz2 && \
+    rm amber16.tar.bz2
 
 # Configure container startup
 ENTRYPOINT ["tini", "--"]
@@ -101,7 +104,6 @@ WORKDIR $HOME
 RUN $CONDA_DIR/bin/conda config --system --prepend channels conda-forge
 RUN $CONDA_DIR/bin/conda config --system --set auto_update_conda false
 RUN $CONDA_DIR/bin/conda config --system --set show_channel_urls true
-RUN conda clean -tipsy
 
 # Install Jupyter Notebook and Hub
 RUN conda install --quiet --yes \
@@ -122,31 +124,28 @@ RUN conda install -c omnia mdtraj
 RUN conda install -c omnia pymbar
 
 # Install and enable nglview (including patching some issues)
-RUN pip --no-cache-dir install nglview
-RUN jupyter-nbextension enable nglview --py --sys-prefix
 COPY nglview_patch.sh $HOME
-RUN $HOME/nglview_patch.sh /opt/conda
-RUN rm $HOME/nglview_patch.sh
+RUN pip --no-cache-dir install nglview && \
+    jupyter-nbextension install nglview --py --sys-prefix && \
+    jupyter-nbextension enable nglview --py --sys-prefix && \
+    $HOME/nglview_patch.sh /opt/conda && \
+    rm $HOME/nglview_patch.sh
 
 # Install and run fileupload
-RUN pip install fileupload
-RUN jupyter-nbextension install fileupload --py --sys-prefix
-RUN jupyter-nbextension enable fileupload --py --sys-prefix
+RUN pip install fileupload && \
+    jupyter-nbextension install fileupload --py --sys-prefix && \
+    jupyter-nbextension enable fileupload --py --sys-prefix
 
 # Finally, reinstall an older version of tornado as tornado 5 
-# doesn't work with Jupyterhub
-RUN conda install tornado=4.5.3
-
-# Now clean up after conda, including clearing the cache
-RUN conda clean -tipsy && \
+# and clean up after conda, including clearing the cache
+RUN conda install tornado=4.5.3 && \
+    conda clean -tipsy && \
     jupyter labextension install @jupyterlab/hub-extension@^0.8.0 && \
     npm cache clean && \
-    rm -rf $CONDA_DIR/share/jupyter/lab/staging
-
-RUN npm cache clean && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
-    fix-permissions $CONDA_DIR
+    fix-permissions $CONDA_DIR && \
+    rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
 
-RUN rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
-
+# End as the User to make sure that we don't
+# accidentally run the container as root
 USER $NB_USER
