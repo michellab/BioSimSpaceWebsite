@@ -11,6 +11,7 @@ RUN apt-get update && apt-get -yq dist-upgrade \
     python \
     python-numpy \
     python-matplotlib \
+    python-scipy \
     libpython2.7 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
@@ -32,12 +33,21 @@ RUN wget https://biosimspace.blob.core.windows.net/dependencies/wham.tar.bz2 -O 
     cp wham/wham-2d/wham-2d /usr/local/bin && \
     rm wham.tar.bz2
 
+# Download and install ProtoMS
+RUN wget https://biosimspace.blob.core.windows.net/dependencies/protoms.tar.bz2 -O protoms.tar.bz2 && \
+    tar -jxvf protoms.tar.bz2 && \
+    rm protoms.tar.bz2 && \
+    chown -R $NB_USER:$NB_GID /home/protoms3.3.0 && \
+    fix-permissions /home/protoms3.3.0
+
 # Create the workshops directory and make sure it is owned by the user
 RUN mkdir /home/workshops && \
     chown -R $NB_USER:$NB_GID /home/workshops
 
 # Set the path to FESetup and add it to the path
-ENV FES_HOME=/home/FESetup1.2.1/FESetup64
+ENV FES_HOME=/home/FESetup1.2.1/FESetup64 \
+    PROTOMSHOME=/home/protoms3.3.0 \
+    WHAM_HOME=/home/wham
 
 ENV PATH=$PATH:$FES_HOME/bin
 
