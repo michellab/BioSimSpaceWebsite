@@ -1,17 +1,4 @@
-# Based on the JupyterHub docker image that is
-# Copyright (c) Jupyter Development Team.
-# Distributed under the terms of the Modified BSD License.
-# Ubuntu 16.04 (xenial) from 2017-07-23
-# https://github.com/docker-library/official-images/commit/0ea9b38b835ffb656c497783321632ec7f87b60c
-FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed3005f
-
-# Changes made for the BioSimSpace project (https://biosimspace.org), and
-# are (c) the BioSimSpace development team, distributed under
-# the same license as the original JupyterHub docker file, i.e.
-# the Modified BSD License.
-
-# Any errors or problems are the fault of the BioSimSpace team and nothing
-# to do with JupyterHub
+# Workshop image that builds on the biosimspace docker image
 
 LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
 
@@ -103,38 +90,30 @@ RUN fix-permissions /etc/jupyter/
 USER $NB_USER
 WORKDIR $HOME
 
-RUN $CONDA_DIR/bin/conda config --system --prepend channels conda-forge
-RUN $CONDA_DIR/bin/conda config --system --set auto_update_conda false
-RUN $CONDA_DIR/bin/conda config --system --set show_channel_urls true
+# Install Jupyter Notebook and Hub and other useful packages
+RUN conda config --system --prepend channels conda-forge && \
+    conda config --system --set auto_update_conda false && \
+    conda config --system --set show_channel_urls true && \
+    conda install --quiet --yes 'notebook=5.2.*' 'jupyterhub=0.8.*' 'jupyterlab=0.31.*' && \
+    conda install watchdog && \
+    pip install --upgrade pip && \
+    pip install pygtail && \
+    pip install matplotlib && \
+    pip install jupyterhub-tmpauthenticator && \
+    conda install watchdog && \
+    conda config --add channels conda-forge && \
+    conda install mdanalysis && \
+    conda install -c omnia mdtraj && \
+    conda install -c omnia pymbar
 
-# Install Jupyter Notebook and Hub
-RUN conda install --quiet --yes \
-    'notebook=5.2.*' \
-    'jupyterhub=0.8.*' \
-    'jupyterlab=0.31.*'
-
-RUN pip install --upgrade pip
-RUN pip install pygtail
-RUN pip install matplotlib
-RUN pip install jupyterhub-tmpauthenticator
-RUN conda install watchdog
-
-# Install necessary Python modules
-RUN conda config --add channels conda-forge
-RUN conda install mdanalysis
-RUN conda install -c omnia mdtraj
-RUN conda install -c omnia pymbar
-
-# Install and enable nglview (including patching some issues)
+# Install and enable nglview (including patching some issues) and fileupload
 COPY nglview_patch.sh $HOME
 RUN pip --no-cache-dir install nglview && \
     jupyter-nbextension install nglview --py --sys-prefix && \
     jupyter-nbextension enable nglview --py --sys-prefix && \
     $HOME/nglview_patch.sh /opt/conda && \
-    rm $HOME/nglview_patch.sh
-
-# Install and run fileupload
-RUN pip install fileupload && \
+    rm $HOME/nglview_patch.sh && \
+    pip install fileupload && \
     jupyter-nbextension install fileupload --py --sys-prefix && \
     jupyter-nbextension enable fileupload --py --sys-prefix
 
