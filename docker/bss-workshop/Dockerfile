@@ -56,6 +56,16 @@ ENV PATH=$PATH:$FES_HOME/bin
 USER $NB_USER
 
 # Now git clone in all workshops we wish to use...
+WORKDIR /home/workshops
+RUN git clone https://github.com/ccpbiosim/xswaps
 
-# Finally, switch back to the home directory
+# switch back to the home directory
 WORKDIR $HOME
+
+# Link all of the directories into the home directory.
+# We do this, as some JupyterHubs will wipe the home 
+# directory, so need to install workshop files elsewhere
+RUN ln -s /home/workshops/* .
+
+# Ensure that the container runs as $NB_USER
+USER $NB_USER
