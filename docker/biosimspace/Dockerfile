@@ -136,7 +136,7 @@ RUN pip --no-cache-dir install nglview && \
 RUN cd /home/biosimspace/python && \
     python setup.py install
 
-# Finally, reinstall an older version of tornado as tornado 5 
+# Reinstall an older version of tornado as tornado 5 
 # and clean up after conda, including clearing the cache
 RUN conda install tornado=4.5.3 && \
     conda clean -tipsy && \
@@ -145,6 +145,10 @@ RUN conda install tornado=4.5.3 && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     fix-permissions $CONDA_DIR && \
     rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
+
+# Link the BioSimSpace directory into $HOME so that we can access
+# this from the notebook
+RUN ln -s /home/biosimspace $HOME/
 
 # End as the User to make sure that we don't
 # accidentally run the container as root

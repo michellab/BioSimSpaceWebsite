@@ -1,7 +1,7 @@
 # Workshop image that builds on the biosimspace docker image
 
 # start from the BioSimSpace image
-FROM biosimspace:latest
+FROM chryswoods/biosimspace:latest
 
 USER root
 
@@ -64,8 +64,10 @@ WORKDIR $HOME
 
 # Link all of the directories into the home directory.
 # We do this, as some JupyterHubs will wipe the home 
-# directory, so need to install workshop files elsewhere
-RUN ln -s /home/workshops/* .
+# directory, so need to install workshop files elsewhere.
+# However, we need to remove anything that is currently
+# in home (e.g. a link to biosimspace)
+RUN rm * && ln -s /home/workshops/* .
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER
