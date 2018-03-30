@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: web
+  name: wordpress
 spec:
   type: ExternalName
   externalName: web-wordpress.wordpress.svc.cluster.local

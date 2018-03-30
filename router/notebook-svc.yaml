@@ -4,16 +4,26 @@ metadata:
   name: notebook
 spec:
   type: ExternalName
-  externalName: proxy-public.jupyterhub.svc.cluster.local
+  externalName: proxy-public.notebook.svc.cluster.local
   ports:
   - port: 80
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: devnotebook
+  name: notebookdev
 spec:
   type: ExternalName
-  externalName: proxy-public.testhub.svc.cluster.local
+  externalName: proxy-public.notebookdev.svc.cluster.local
+  ports:
+  - port: 80
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: workshop
+spec:
+  type: ExternalName
+  externalName: proxy-public.workshop.svc.cluster.local
   ports:
   - port: 80
