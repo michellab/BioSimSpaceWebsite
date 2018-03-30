@@ -69,5 +69,9 @@ WORKDIR $HOME
 # in home (e.g. a link to biosimspace)
 RUN rm * && ln -s /home/workshops/* .
 
+# Add a file into the path that allows the user to update
+# BioSimSpace and all workshops very easily
+COPY update_workshops /opt/conda/bin/
+
 # Ensure that the container runs as $NB_USER
 USER $NB_USER

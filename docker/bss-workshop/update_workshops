@@ -1,0 +1,20 @@
+#!/opt/conda/bin/python
+
+import os
+
+print("Updating BioSimSpace and all workshops...")
+
+print("  -- [u] BioSimSpace")
+os.chdir("/home/biosimspace/python")
+os.system("git pull")
+os.system("/opt/conda/bin/python setup.py install >> /dev/null 2>&1")
+
+os.chdir("/home/workshops")
+
+for d in os.listdir("."):
+    print("\n  -- [u] %s" % d)
+    os.chdir(d)
+    os.system("git pull")
+    os.chdir("/home/workshops")
+
+print("\nEverything updated :-)")
