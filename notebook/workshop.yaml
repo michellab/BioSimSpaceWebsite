@@ -3,7 +3,7 @@ rbac:
 singleuser:
   image:
     name: workshop.azurecr.io/bss-workshop
-    tag: v1
+    tag: v4
   storage:
     type: none
   memory:

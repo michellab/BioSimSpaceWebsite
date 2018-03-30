@@ -3,7 +3,7 @@ rbac:
 singleuser:
   image:
     name: biosimspace.azurecr.io/biosimspace
-    tag: v1
+    tag: v3
   storage:
     type: none
   memory:
