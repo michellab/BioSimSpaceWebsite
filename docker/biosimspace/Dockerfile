@@ -132,8 +132,10 @@ RUN pip --no-cache-dir install nglview && \
     jupyter-nbextension install fileupload --py --sys-prefix && \
     jupyter-nbextension enable fileupload --py --sys-prefix
 
-# Install BioSimSpace
+# Install BioSimSpace (updating to the latest version here to
+# limit cache busting)
 RUN cd /home/biosimspace/python && \
+    git pull && \
     python setup.py install
 
 # Reinstall an older version of tornado as tornado 5 
