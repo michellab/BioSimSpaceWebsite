@@ -1,11 +1,9 @@
-proxy:
-  secretToken: [TOKEN]
 rbac:
   enabled: false
 singleuser:
   image:
-    name: biosimspace.azurecr.io/jupyter-bss
-    tag: bss-v2
+    name: biosimspace.azurecr.io/biosimspace
+    tag: v1
   storage:
     type: none
   memory:
@@ -21,10 +19,10 @@ singleuser:
 cull:
   timeout: 7200
   every: 600
+prePuller:
+  continuous:
+    enabled: true
 auth:
-  admin:
-    users:
-      - chris
-  whitelist:
-    users:
-      - chris
+  type: custom
+  custom:
+    className: tmpauthenticator.TmpAuthenticator

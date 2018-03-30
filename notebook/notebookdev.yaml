@@ -1,0 +1,28 @@
+rbac:
+  enabled: false
+singleuser:
+  image:
+    name: biosimspace.azurecr.io/biosimspace
+    tag: v1
+  storage:
+    type: none
+  memory:
+    limit: 1G
+    guarantee: 1G
+  cpu:
+    limit: 1.0
+    guarantee: 0.5
+  lifecycleHooks:
+    postStart:
+      exec:
+        command: ["ln", "-s", "/home/biosimspace", "."]
+cull:
+  timeout: 7200
+  every: 600
+prePuller:
+  continuous:
+    enabled: true
+auth:
+  type: custom
+  custom:
+    className: tmpauthenticator.TmpAuthenticator
