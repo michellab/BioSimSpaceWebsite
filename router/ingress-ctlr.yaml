@@ -6,7 +6,7 @@ metadata:
     k8s-app: nginx-ingress-controller
   namespace: router
 spec:
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:

@@ -12,14 +12,14 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: web
+          serviceName: wordpress
           servicePort: 80
   - host: www.biosimspace.org
     http:
       paths:
       - path: /
         backend:
-          serviceName: web
+          serviceName: wordpress
           servicePort: 80
   - host: notebook.biosimspace.org
     http:
@@ -33,7 +33,14 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: devnotebook
+          serviceName: notebookdev
+          servicePort: 80
+  - host: workshop.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: workshop
           servicePort: 80
   tls:
   - secretName: web-tls-cert
@@ -43,3 +50,4 @@ spec:
     - notebook.biosimspace.org
     - wwwdev.biosimspace.org
     - notebookdev.biosimspace.org
+    - workshop.biosimspace.org

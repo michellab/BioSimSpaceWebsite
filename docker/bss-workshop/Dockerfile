@@ -1,7 +1,7 @@
 # Workshop image that builds on the biosimspace docker image
 
 # start from the BioSimSpace image
-FROM chryswoods/biosimspace:latest
+FROM biosimspace:latest
 
 USER root
 

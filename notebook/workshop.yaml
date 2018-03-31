@@ -3,11 +3,11 @@ rbac:
 singleuser:
   image:
     name: workshop.azurecr.io/bss-workshop
-    tag: v1
+    tag: v4
   storage:
     type: none
   memory:
-    limit: 1G
+    limit: 1.5G
     guarantee: 1G
   cpu:
     limit: 1.0
