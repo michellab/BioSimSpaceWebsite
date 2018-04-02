@@ -73,6 +73,16 @@ Next, I have to connect helm to the kubernetes cluster, using
 $ helm init
 ```
 
+# Allowing kubernetes to connect to acr
+
+Must give permission to the pods to access the acr
+
+```
+$ CLIENT_ID=$(az aks show --resource-group biosimspace --name biosimspace --query "servicePrincipalProfile.clientId" --output tsv)
+$ ACR_ID=$(az acr show --name biosimspace --resource-group biosimspace --query "id" --output tsv)
+$ az role assignment create --assignee $CLIENT_ID --role Reader --scope $ACR_ID
+```
+
 # Configuring Jupyter
 
 Created a config file called [notebook.yaml](notebook.yaml)

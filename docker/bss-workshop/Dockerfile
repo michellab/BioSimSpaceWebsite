@@ -73,5 +73,10 @@ RUN rm * && ln -s /home/workshops/* .
 # BioSimSpace and all workshops very easily
 COPY update_workshops /opt/conda/bin/
 
+# Finally, run 'update_workshops' so that everything is 
+# fully updated (or we want to update without rebuilding
+# everything)
+RUN /opt/conda/bin/update_workshops 1
+
 # Ensure that the container runs as $NB_USER
 USER $NB_USER
