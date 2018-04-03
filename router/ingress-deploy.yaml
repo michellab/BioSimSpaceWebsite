@@ -40,7 +40,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: notebookdev
+          serviceName: notebook
           servicePort: 80
   - host: workshop.biosimspace.org
     http:
