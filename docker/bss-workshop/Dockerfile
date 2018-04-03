@@ -58,6 +58,7 @@ USER $NB_USER
 # Now git clone in all workshops we wish to use...
 WORKDIR /home/workshops
 RUN git clone https://github.com/ccpbiosim/xswaps
+RUN git clone https://github.com/ccpbiosim/python_and_data
 
 # switch back to the home directory
 WORKDIR $HOME
@@ -76,7 +77,7 @@ COPY update_workshops /opt/conda/bin/
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
 # everything)
-RUN /opt/conda/bin/update_workshops 1
+RUN /opt/conda/bin/update_workshops
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER

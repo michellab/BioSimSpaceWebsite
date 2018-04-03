@@ -8,11 +8,11 @@ rbac:
 singleuser:
   image:
     name: chryswoods/bss-workshop
-    tag: latest
+    tag: v7
   storage:
     type: none
   memory:
-    limit: 2.5G
+    limit: 1.8G
     guarantee: 1.5G
   cpu:
     limit: 2.0
