@@ -1,7 +1,7 @@
 # Workshop image that builds on the biosimspace docker image
 
 # start from the BioSimSpace image
-FROM biosimspace:latest
+FROM chryswoods/biosimspace-base:latest
 
 USER root
 
@@ -59,6 +59,7 @@ USER $NB_USER
 WORKDIR /home/workshops
 RUN git clone https://github.com/ccpbiosim/xswaps
 RUN git clone https://github.com/ccpbiosim/python_and_data
+RUN git clone https://github.com/ccpbiosim/fesetup_workshop
 
 # switch back to the home directory
 WORKDIR $HOME
@@ -73,11 +74,16 @@ RUN rm * && ln -s /home/workshops/* .
 # Add a file into the path that allows the user to update
 # BioSimSpace and all workshops very easily
 COPY update_workshops /opt/conda/bin/
+COPY update_biosimspace /opt/conda/bin/
 
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
 # everything)
 RUN /opt/conda/bin/update_workshops
+
+# Finally (finally) fix any missing or broken environment
+# variables
+ENV OPENMM_PLUGIN_DIR=$SIRE/lib/plugins
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER
