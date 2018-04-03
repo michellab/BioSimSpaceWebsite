@@ -1,23 +1,21 @@
+proxy:
+  secretToken: "2f0f13bd6a360b8ea906c4f454985eeda481b0b8ecd81ed1709b891eb304512a"
 rbac:
   enabled: false
 singleuser:
   image:
-    name: workshop.azurecr.io/bss-workshop
-    tag: v4
+    name: chryswoods/bss-workshop
+    tag: v8
   storage:
     type: none
   memory:
-    limit: 1.5G
-    guarantee: 1G
+    limit: 1.8G
+    guarantee: 1.5G
   cpu:
-    limit: 1.0
+    limit: 2.0
     guarantee: 0.5
-  lifecycleHooks:
-    postStart:
-      exec:
-        command: ["ln", "-s", "/home/workshops/*", "."]
 cull:
-  timeout: 7200
+  timeout: 2400
   every: 600
 prePuller:
   continuous:

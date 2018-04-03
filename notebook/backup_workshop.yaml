@@ -8,7 +8,7 @@ rbac:
 singleuser:
   image:
     name: chryswoods/bss-workshop
-    tag: v7
+    tag: v8
   storage:
     type: none
   memory:
