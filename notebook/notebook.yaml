@@ -9,8 +9,8 @@ singleuser:
   storage:
     type: none
   memory:
-    limit: 1.8GiB
-    guarantee: 1.5GiB
+    limit: 1.8G
+    guarantee: 1.5G
   cpu:
     limit: 2.0
     guarantee: 0.5

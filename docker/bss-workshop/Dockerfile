@@ -7,6 +7,7 @@ USER root
 
 # Install all OS dependencies for workshop server
 RUN apt-get update && apt-get -yq dist-upgrade \
+ && apt-get install -yq gcc \
  && apt-get install -yq --no-install-recommends \
     vim-tiny \
     python \
@@ -48,18 +49,28 @@ RUN mkdir /home/workshops && \
 # Set the path to FESetup and add it to the path
 ENV FES_HOME=/home/FESetup1.2.1/FESetup64 \
     PROTOMSHOME=/home/protoms3.3.0 \
-    WHAM_HOME=/home/wham
+    WHAM_HOME=/home/wham \
+    OPENMM_PLUGIN_DIR=$SIRE/lib/plugins
 
 ENV PATH=$PATH:$FES_HOME/bin
 
 # Switch to the user so we can pull in the workshops
 USER $NB_USER
 
+# Install pyPcazip / MDPlus
+RUN conda install cython h5py && \
+    pip install pyPcazip && \
+    conda clean -tipsy && \
+    rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
+
 # Now git clone in all workshops we wish to use...
 WORKDIR /home/workshops
 RUN git clone https://github.com/ccpbiosim/xswaps
 RUN git clone https://github.com/ccpbiosim/python_and_data
 RUN git clone https://github.com/ccpbiosim/fesetup_workshop
+RUN git clone https://github.com/ccpbiosim/md_workshop
+RUN git clone https://github.com/ccpbiosim/fe_analysis
+RUN git clone https://github.com/ccpbiosim/biosimspace_workshop
 
 # switch back to the home directory
 WORKDIR $HOME
@@ -76,14 +87,22 @@ RUN rm * && ln -s /home/workshops/* .
 COPY update_workshops /opt/conda/bin/
 COPY update_biosimspace /opt/conda/bin/
 
+# Copy a modified library from Sire 2018.1.1
+COPY libSireIO.so.2018.1.0 /opt/conda/lib/libSireIO.so.2018.1.0
+RUN cp /opt/conda/lib/libSireIO.so.2018.1.0 /opt/conda/pkgs/sire-2018.1.0/lib/
+
+# Install openbabel (doing this late as last-minute addition)
+USER root
+RUN apt-get update && \
+    apt-get install -yq openbabel && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*   
+USER $NB_USER
+
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
 # everything)
 RUN /opt/conda/bin/update_workshops 1
-
-# Finally (finally) fix any missing or broken environment
-# variables
-ENV OPENMM_PLUGIN_DIR=$SIRE/lib/plugins
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER
