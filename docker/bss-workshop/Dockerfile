@@ -95,14 +95,38 @@ RUN cp /opt/conda/lib/libSireIO.so.2018.1.0 /opt/conda/pkgs/sire-2018.1.0/lib/
 USER root
 RUN apt-get update && \
     apt-get install -yq openbabel && \
+    apt-get install -yq g++ && \
+    apt-get install -yq dssp && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*   
+
 USER $NB_USER
+
+# Install isambard and scikit-image (late requirement)
+RUN pip install isambard && \
+    pip install scikit-image && \
+    conda clean -tipsy && \
+    rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
+
+# clone in the last workshops
+WORKDIR /home/workshops
+RUN git clone https://github.com/ccpbiosim/isambard_workshop
+RUN git clone https://github.com/ccpbiosim/gcmc_protoms_workshop
+
+WORKDIR $HOME
+
+# Link all of the directories into the home directory.
+# We do this, as some JupyterHubs will wipe the home
+# directory, so need to install workshop files elsewhere.
+# However, we need to remove anything that is currently
+# in home (e.g. a link to biosimspace)
+RUN rm * && ln -s /home/workshops/* .
 
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
-# everything)
+# everything), and recopy the isambard settings to $HOME
 RUN /opt/conda/bin/update_workshops 1
+RUN cp $HOME/isambard_workshop/.isambard_settings $HOME/
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER
