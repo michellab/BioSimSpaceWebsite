@@ -112,6 +112,7 @@ RUN pip install isambard && \
 WORKDIR /home/workshops
 RUN git clone https://github.com/ccpbiosim/isambard_workshop
 RUN git clone https://github.com/ccpbiosim/gcmc_protoms_workshop
+RUN git clone https://github.com/ccpbiosim/qmmm_workshop
 
 WORKDIR $HOME
 
@@ -121,6 +122,20 @@ WORKDIR $HOME
 # However, we need to remove anything that is currently
 # in home (e.g. a link to biosimspace)
 RUN rm * && ln -s /home/workshops/* .
+
+# Need to use git-lfs to get the gcmc workshop
+USER root
+RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-linux-386-2.4.0.tar.gz && \
+    tar -zxvf git-lfs-linux-386-2.4.0.tar.gz && \
+    ./git-lfs-2.4.0/install.sh && \
+    rm -rf ./git-lfs-2.4.0 git-lfs-linux-386-2.4.0.tar.gz
+
+USER $NB_USER
+
+# pull in the protoms workshop
+WORKDIR /home/workshops/gcmc_protoms_workshop
+RUN git lfs pull
+WORKDIR $HOME
 
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding

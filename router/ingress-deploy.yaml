@@ -49,6 +49,13 @@ spec:
         backend:
           serviceName: workshop
           servicePort: 80
+  - host: monitor.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: monitor
+          servicePort: 80
   tls:
   - secretName: web-tls-cert
     hosts:
@@ -58,3 +65,4 @@ spec:
     - wwwdev.biosimspace.org
     - notebookdev.biosimspace.org
     - workshop.biosimspace.org
+    - monitor.biosimspace.org
