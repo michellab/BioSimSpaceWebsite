@@ -22,7 +22,11 @@ and then makes sure that I can connect using kubectl
 
 This sets up six A4v2 nodes. Each node has 4 cores, 8 GB RAM and 40 GB disk.
 These cost $0.18 per hour, so $26.35 per day, $790.56 per month and $9618.48
-per year.
+per year (using UK pricing, £0.179 per hour, £25.776 per day, £773.28 per month
+and £9408.24 per year).
+
+There is a 3 year option that brings down the annual cost to £4152 per year
+(£12456 upfront cost). This is £11.34 per day.
 
 Next, creating a public static IP address...
 
