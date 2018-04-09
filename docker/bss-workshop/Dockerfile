@@ -137,10 +137,13 @@ WORKDIR /home/workshops/gcmc_protoms_workshop
 RUN git lfs pull
 WORKDIR $HOME
 
+# Patch the netcdf writer in scipy
+RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.5/site-packages/scipy/io/netcdf.py
+
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
 # everything), and recopy the isambard settings to $HOME
-RUN /opt/conda/bin/update_workshops 1
+RUN /opt/conda/bin/update_workshops 4
 RUN cp $HOME/isambard_workshop/.isambard_settings $HOME/
 
 # Ensure that the container runs as $NB_USER
