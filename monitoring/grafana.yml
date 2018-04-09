@@ -1,0 +1,19 @@
+server:
+  setDatasource:
+    datasource:
+      ## The datasource name.
+      ## Default: default
+      name: default
+
+      ## Type of datasource
+      ## Default: prometheus
+      ##
+      type: prometheus
+
+      ## The url of the datasource. To set correctly you need to know
+      ## the right datasource name and its port ahead. Check kubernetes
+      ## dashboard or describe the service should fulfill the requirements.
+      ## Syntax like `http://<release name>-<server name>:<port number>
+      ## Default: <empty>
+      ##
+      url: monitor-prometheus-server.monitor.svc.cluster.local

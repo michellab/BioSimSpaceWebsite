@@ -1,23 +1,21 @@
+proxy:
+  secretToken: "32f0d34e18e6da51136a5de768e2e4bc2464c8cc6c650a41fcb5db1b4ffc6468"
 rbac:
   enabled: false
 singleuser:
   image:
-    name: biosimspace.azurecr.io/biosimspace
-    tag: v3
+    name: chryswoods/biosimspace
+    tag: v4
   storage:
     type: none
   memory:
-    limit: 1.5G
-    guarantee: 1G
+    limit: 1.8G
+    guarantee: 1.5G
   cpu:
-    limit: 1.0
+    limit: 2.0
     guarantee: 0.5
-  lifecycleHooks:
-    postStart:
-      exec:
-        command: ["ln", "-s", "/home/biosimspace", "."]
 cull:
-  timeout: 7200
+  timeout: 2400
   every: 600
 prePuller:
   continuous:

@@ -1,0 +1,29 @@
+proxy:
+  secretToken: "d6bc1bc814e99993e3de10837c6d0c2f30d62a8d4b65cba235409d5a42d7c07d"
+hub:
+  service:
+    loadBalancerIP: 52.226.72.111
+rbac:
+  enabled: false
+singleuser:
+  image:
+    name: chryswoods/bss-workshop
+    tag: v17
+  storage:
+    type: none
+  memory:
+    limit: 1.8G
+    guarantee: 1.5G
+  cpu:
+    limit: 2.0
+    guarantee: 0.5
+cull:
+  timeout: 2400
+  every: 600
+prePuller:
+  continuous:
+    enabled: true
+auth:
+  type: custom
+  custom:
+    className: tmpauthenticator.TmpAuthenticator

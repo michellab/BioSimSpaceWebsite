@@ -7,6 +7,13 @@ metadata:
     kubernetes.io/tls-acme: 'true'
 spec:
   rules:
+  - host: biosimspace.eastus.cloudapp.azure.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: wordpress
+          servicePort: 80
   - host: biosimspace.org
     http:
       paths:
@@ -33,7 +40,7 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: notebookdev
+          serviceName: notebook
           servicePort: 80
   - host: workshop.biosimspace.org
     http:
@@ -41,6 +48,13 @@ spec:
       - path: /
         backend:
           serviceName: workshop
+          servicePort: 80
+  - host: monitor.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: monitor
           servicePort: 80
   tls:
   - secretName: web-tls-cert
@@ -51,3 +65,4 @@ spec:
     - wwwdev.biosimspace.org
     - notebookdev.biosimspace.org
     - workshop.biosimspace.org
+    - monitor.biosimspace.org
