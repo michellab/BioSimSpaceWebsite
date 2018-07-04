@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cryoem
+spec:
+  type: ExternalName
+  externalName: proxy-public.cryoem.svc.cluster.local
+  ports:
+  - port: 80

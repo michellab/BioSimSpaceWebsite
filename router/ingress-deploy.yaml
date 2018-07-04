@@ -69,8 +69,8 @@ spec:
     - biosimspace.org
     - www.biosimspace.org
     - notebook.biosimspace.org
+    - cryoem.biosimspace.org
     - wwwdev.biosimspace.org
     - notebookdev.biosimspace.org
     - workshop.biosimspace.org
     - monitor.biosimspace.org
-    - cryoem.biosimspace.org

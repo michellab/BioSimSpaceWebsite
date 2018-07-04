@@ -87,10 +87,6 @@ RUN rm * && ln -s /home/workshops/* .
 COPY update_workshops /opt/conda/bin/
 COPY update_biosimspace /opt/conda/bin/
 
-# Copy a modified library from Sire 2018.1.1
-COPY libSireIO.so.2018.1.0 /opt/conda/lib/libSireIO.so.2018.1.0
-RUN cp /opt/conda/lib/libSireIO.so.2018.1.0 /opt/conda/pkgs/sire-2018.1.0/lib/
-
 # Install openbabel (doing this late as last-minute addition)
 USER root
 RUN apt-get update && \
@@ -123,18 +119,8 @@ WORKDIR $HOME
 # in home (e.g. a link to biosimspace)
 RUN rm * && ln -s /home/workshops/* .
 
-# Need to use git-lfs to get the gcmc workshop
-USER root
-RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-linux-386-2.4.0.tar.gz && \
-    tar -zxvf git-lfs-linux-386-2.4.0.tar.gz && \
-    ./git-lfs-2.4.0/install.sh && \
-    rm -rf ./git-lfs-2.4.0 git-lfs-linux-386-2.4.0.tar.gz
-
 USER $NB_USER
 
-# pull in the protoms workshop
-#WORKDIR /home/workshops/gcmc_protoms_workshop
-#RUN git lfs pull
 WORKDIR $HOME
 
 # Patch the netcdf writer in scipy
@@ -152,10 +138,15 @@ RUN cp $HOME/isambard_workshop/.isambard_settings $HOME/
 RUN cp $HOME/fe_analysis/FreeEnergyAnalysis.py /opt/conda/lib/python3.5/site-packages/Sire/Tools/FreeEnergyAnalysis.py
 
 # Add in gcmc
-ADD gcmc_protoms_workshop.tar.bz2 /home/workshops
+# pull in the protoms workshop
+WORKDIR /home/workshops
+RUN wget https://biosimspace.blob.core.windows.net/dependencies/gcmc_protoms_workshop.tar.bz2 -O protoms.tar.bz2
+RUN tar -jxvf protoms.tar.bz2 && rm protoms.tar.bz2
+
+WORKDIR $HOME
 
 RUN cd /home/workshops/gcmc_protoms_workshop && \
-    rm -rf rm -rf workshop_pages/ && \
+    rm -rf workshop_pages/ && \
     git pull && \
     cd $HOME
 

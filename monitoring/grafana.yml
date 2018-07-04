@@ -17,3 +17,7 @@ server:
       ## Default: <empty>
       ##
       url: monitor-prometheus-server.monitor.svc.cluster.local
+
+rbac:
+  create: false
+
