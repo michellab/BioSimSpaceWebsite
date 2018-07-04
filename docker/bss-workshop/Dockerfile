@@ -133,18 +133,31 @@ RUN wget https://github.com/git-lfs/git-lfs/releases/download/v2.4.0/git-lfs-lin
 USER $NB_USER
 
 # pull in the protoms workshop
-WORKDIR /home/workshops/gcmc_protoms_workshop
-RUN git lfs pull
+#WORKDIR /home/workshops/gcmc_protoms_workshop
+#RUN git lfs pull
 WORKDIR $HOME
 
 # Patch the netcdf writer in scipy
 RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.5/site-packages/scipy/io/netcdf.py
 
+RUN pip install freenrgworkflows
+
 # Finally, run 'update_workshops' so that everything is 
 # fully updated (or we want to update without rebuilding
 # everything), and recopy the isambard settings to $HOME
-RUN /opt/conda/bin/update_workshops 4
+RUN /opt/conda/bin/update_workshops
 RUN cp $HOME/isambard_workshop/.isambard_settings $HOME/
+
+# Add in the patch for Sire
+RUN cp $HOME/fe_analysis/FreeEnergyAnalysis.py /opt/conda/lib/python3.5/site-packages/Sire/Tools/FreeEnergyAnalysis.py
+
+# Add in gcmc
+ADD gcmc_protoms_workshop.tar.bz2 /home/workshops
+
+RUN cd /home/workshops/gcmc_protoms_workshop && \
+    rm -rf rm -rf workshop_pages/ && \
+    git pull && \
+    cd $HOME
 
 # Ensure that the container runs as $NB_USER
 USER $NB_USER

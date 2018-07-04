@@ -5,7 +5,7 @@ rbac:
 singleuser:
   image:
     name: chryswoods/bss-workshop
-    tag: v17
+    tag: v20
   storage:
     type: none
   memory:
