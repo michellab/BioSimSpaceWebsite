@@ -72,7 +72,7 @@ RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
     fix-permissions $HOME
 
 # Install Sire, which provides conda
-RUN wget http://siremol.org/largefiles/sire_releases/download.php?name=sire_2018_1_0_linux.run -O sire.run && \
+RUN wget https://sire.blob.core.windows.net/releases/sire_2018_2_0_linux_pre.run -O sire.run && \
     chmod a+x sire.run && \
     echo "/opt/conda" | ./sire.run && \
     chown -R $NB_USER:$NB_GID /opt/conda && \
@@ -89,6 +89,11 @@ RUN git clone https://github.com/michellab/biosimspace && \
 RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2 && \
     tar -jxvf amber16.tar.bz2 && \
     rm amber16.tar.bz2
+
+# Download and install gromacs into /home using wget
+RUN wget https://biosimspace.blob.core.windows.net/dependencies/gromacs.tar.bz2 -O gromacs.tar.bz2 && \
+    tar -jxvf gromacs.tar.bz2 && \
+    rm gromacs.tar.bz2
 
 # Configure container startup
 ENTRYPOINT ["tini", "--"]
@@ -109,17 +114,17 @@ WORKDIR $HOME
 RUN conda config --system --prepend channels conda-forge && \
     conda config --system --set auto_update_conda false && \
     conda config --system --set show_channel_urls true && \
-    conda install --quiet --yes 'notebook=5.2.*' 'jupyterhub=0.8.*' 'jupyterlab=0.31.*' && \
-    conda install watchdog && \
-    pip install --upgrade pip && \
+    conda install --quiet --yes 'notebook=5.2.*' 'jupyterhub=0.8.*' 'jupyterlab=0.31.*'
+RUN conda install watchdog
+RUN pip install --upgrade pip && \
     pip install pygtail && \
     pip install matplotlib && \
-    pip install jupyterhub-tmpauthenticator && \
-    conda install watchdog && \
-    conda config --add channels conda-forge && \
-    conda install mdanalysis && \
-    conda install -c omnia mdtraj && \
-    conda install -c omnia pymbar
+    pip install jupyterhub-tmpauthenticator
+
+RUN conda config --add channels conda-forge && \
+    conda install mdanalysis
+RUN conda install -c omnia mdtraj
+RUN conda install -c omnia pymbar
 
 # Install and enable nglview (including patching some issues) and fileupload
 COPY nglview_patch.sh $HOME
@@ -142,8 +147,7 @@ RUN cd /home/biosimspace/python && \
 # and clean up after conda, including clearing the cache
 RUN conda install tornado=4.5.3 && \
     conda clean -tipsy && \
-    jupyter labextension install @jupyterlab/hub-extension@^0.8.0 && \
-    npm cache clean && \
+    npm cache clean --force && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     fix-permissions $CONDA_DIR && \
     rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter

@@ -56,6 +56,13 @@ spec:
         backend:
           serviceName: monitor
           servicePort: 80
+  - host: cryoem.biosimspace.org
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: cryoem
+          servicePort: 80
   tls:
   - secretName: web-tls-cert
     hosts:
@@ -66,3 +73,4 @@ spec:
     - notebookdev.biosimspace.org
     - workshop.biosimspace.org
     - monitor.biosimspace.org
+    - cryoem.biosimspace.org
