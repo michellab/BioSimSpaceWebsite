@@ -150,5 +150,17 @@ RUN cd /home/workshops/gcmc_protoms_workshop && \
     git pull && \
     cd $HOME
 
+# Add in an edited version of the gromacs water models so
+# that these can be read in correctly by BioSimSpace
+USER root
+add growat.tar.bz2 /home/gromacs/share/topology/
+
+ENV GROMACSHOME=/home/gromacs \
+    BSS_SKIP_INSTALL=1 
+
+USER $NB_USER
+# Final update of the workshops
+RUN update_workshops
+
 # Ensure that the container runs as $NB_USER
 USER $NB_USER

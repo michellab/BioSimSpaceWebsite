@@ -5,6 +5,7 @@ import os
 print("Updating BioSimSpace and all workshops...")
 
 print("  -- [u] BioSimSpace")
+os.environ["BSS_SKIP_INSTALL"] = "1"
 os.chdir("/home/biosimspace/python")
 os.system("git pull")
 os.system("/opt/conda/bin/python setup.py install >> /dev/null 2>&1")

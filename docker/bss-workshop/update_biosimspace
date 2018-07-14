@@ -4,6 +4,8 @@ import os
 
 print("Updating BioSimSpace...")
 
+os.environ["BSS_SKIP_INSTALL"] = "1"
+
 print("  -- [u] BioSimSpace")
 os.chdir("/home/biosimspace/python")
 os.system("git pull")
