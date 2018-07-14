@@ -1,9 +1,0 @@
-kind: Service
-apiVersion: v1
-metadata:
-  name: monitor
-spec:
-  type: ExternalName
-  externalName: grafana.monitor.svc.cluster.local
-  ports:
-  - port: 80

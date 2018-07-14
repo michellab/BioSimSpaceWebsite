@@ -2,6 +2,9 @@ proxy:
   secretToken: "2f0f13bd6a360b8ea906c4f454985eeda481b0b8ecd81ed1709b891eb304512a"
 rbac:
   enabled: false
+hub:
+  db:
+    type: sqlite-memory
 singleuser:
   image:
     name: chryswoods/bss-workshop

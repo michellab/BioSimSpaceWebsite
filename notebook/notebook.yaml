@@ -1,7 +1,10 @@
 proxy:
-  secretToken: "32f0d34e18e6da51136a5de768e2e4bc2464c8cc6c650a41fcb5db1b4ffc6468"
+  secretToken: "32f0d34e18e6da51136a5de768e2e4bc2464c8cc6c650a41fcb5db1b4ffc6469"
 rbac:
   enabled: false
+hub:
+  db:
+    type: sqlite-memory
 singleuser:
   image:
     name: chryswoods/biosimspace
