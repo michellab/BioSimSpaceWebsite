@@ -5,72 +5,50 @@ FROM chryswoods/biosimspace-base:latest
 
 USER root
 
+ENV GROMACSHOME=/home/gromacs \
+    BSS_SKIP_INSTALL=1
+
 # Install all OS dependencies for workshop server
 RUN apt-get update && apt-get -yq dist-upgrade \
  && apt-get install -yq gcc \
+ && apt-get install -yq openbabel \
+ && apt-get install -yq g++ \
+ && apt-get install -yq dssp \
  && apt-get install -yq --no-install-recommends \
     vim-tiny \
-    python \
-    python-numpy \
-    python-matplotlib \
-    python-scipy \
-    libpython2.7 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+# Add in an edited version of the gromacs water models so
+# that these can be read in correctly by BioSimSpace
+add growat.tar.bz2 /home/gromacs/share/topology/
+
 WORKDIR /home
-
-# Download and install FESetup, and change ownership to the user
-#RUN wget https://biosimspace.blob.core.windows.net/dependencies/FESetup1.2.1_Linux.sh -O FESetup1.2.1_Linux.sh && \
-#    chmod a+x FESetup1.2.1_Linux.sh && \
-#    ./FESetup1.2.1_Linux.sh --python /usr/bin/python2.7 --amber "_default" --gromacs "_none" --namd "_none" --dlpoly "_none" && \
-#    rm FESetup1.2.1_Linux.sh && \
-#    chown -R $NB_USER:$NB_GID /home/FESetup1.2.1 && \
-#    fix-permissions /home/FESetup1.2.1
-
-# Dowload and install wham
-#RUN wget https://biosimspace.blob.core.windows.net/dependencies/wham.tar.bz2 -O wham.tar.bz2 && \
-#    tar -jxvf wham.tar.bz2 && \
-#    cp wham/wham/wham /usr/local/bin && \
-#    cp wham/wham-2d/wham-2d /usr/local/bin && \
-#    rm wham.tar.bz2
-
-# Download and install ProtoMS
-#RUN wget https://biosimspace.blob.core.windows.net/dependencies/protoms.tar.bz2 -O protoms.tar.bz2 && \
-#    tar -jxvf protoms.tar.bz2 && \
-#    rm protoms.tar.bz2 && \
-#    chown -R $NB_USER:$NB_GID /home/protoms3.3.0 && \
-#    fix-permissions /home/protoms3.3.0
 
 # Create the workshops directory and make sure it is owned by the user
 RUN mkdir /home/workshops && \
     chown -R $NB_USER:$NB_GID /home/workshops
 
-# Set the path to FESetup and add it to the path
-#ENV FES_HOME=/home/FESetup1.2.1/FESetup64 \
-#    PROTOMSHOME=/home/protoms3.3.0 \
-#    WHAM_HOME=/home/wham \
-#    OPENMM_PLUGIN_DIR=$SIRE/lib/plugins
-
-#ENV PATH=$PATH:$FES_HOME/bin
-
 # Switch to the user so we can pull in the workshops
 USER $NB_USER
 
-# Install pyPcazip / MDPlus
+# Install pyPcazip / MDPlus - USED FOR CHARLIES WORKSHOP
 RUN conda install cython h5py && \
     pip install pyPcazip && \
+    pip install scikit-image && \
     conda clean -tipsy && \
     rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
 
+# Patch the netcdf writer in scipy
+RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.5/site-packages/scipy/io/netcdf.py
+
 # Now git clone in all workshops we wish to use...
 WORKDIR /home/workshops
-#RUN git clone https://github.com/ccpbiosim/xswaps
+
 RUN git clone https://github.com/ccpbiosim/python_and_data
-#RUN git clone https://github.com/ccpbiosim/fesetup_workshop
-RUN git clone https://github.com/ccpbiosim/md_workshop
-#RUN git clone https://github.com/ccpbiosim/fe_analysis
 RUN git clone https://github.com/ccpbiosim/biosimspace_workshop
+
+RUN git clone https://github.com/ccpbiosim/md_workshop
 
 # switch back to the home directory
 WORKDIR $HOME
@@ -87,78 +65,17 @@ RUN rm * && ln -s /home/workshops/* .
 COPY update_workshops /opt/conda/bin/
 COPY update_biosimspace /opt/conda/bin/
 
-# Install openbabel (doing this late as last-minute addition)
+# Last minute configuration changes for jupyter
 USER root
-RUN apt-get update && \
-    apt-get install -yq openbabel && \
-    apt-get install -yq g++ && \
-    apt-get install -yq dssp && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*   
 
-USER $NB_USER
-
-# Install isambard and scikit-image (late requirement)
-#RUN pip install isambard && \
-#    pip install scikit-image && \
-#    conda clean -tipsy && \
-#    rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
-
-# clone in the last workshops
-WORKDIR /home/workshops
-#RUN git clone https://github.com/ccpbiosim/isambard_workshop
-#RUN git clone https://github.com/ccpbiosim/gcmc_protoms_workshop
-#RUN git clone https://github.com/ccpbiosim/qmmm_workshop
-
-WORKDIR $HOME
-
-# Link all of the directories into the home directory.
-# We do this, as some JupyterHubs will wipe the home
-# directory, so need to install workshop files elsewhere.
-# However, we need to remove anything that is currently
-# in home (e.g. a link to biosimspace)
-RUN rm * && ln -s /home/workshops/* .
+COPY jupyter_notebook_config.py /etc/jupyter/
+RUN fix-permissions /etc/jupyter/
 
 USER $NB_USER
 
 WORKDIR $HOME
-
-# Patch the netcdf writer in scipy
-RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.5/site-packages/scipy/io/netcdf.py
-
-#RUN pip install freenrgworkflows
-
-# Finally, run 'update_workshops' so that everything is 
-# fully updated (or we want to update without rebuilding
-# everything), and recopy the isambard settings to $HOME
-RUN /opt/conda/bin/update_workshops
-#RUN cp $HOME/isambard_workshop/.isambard_settings $HOME/
-
-# Add in the patch for Sire
-#RUN cp $HOME/fe_analysis/FreeEnergyAnalysis.py /opt/conda/lib/python3.5/site-packages/Sire/Tools/FreeEnergyAnalysis.py
-
-# Add in gcmc
-# pull in the protoms workshop
-#WORKDIR /home/workshops
-#RUN wget https://biosimspace.blob.core.windows.net/dependencies/gcmc_protoms_workshop.tar.bz2 -O protoms.tar.bz2
-#RUN tar -jxvf protoms.tar.bz2 && rm protoms.tar.bz2
-
-WORKDIR $HOME
-
-#RUN cd /home/workshops/gcmc_protoms_workshop && \
-#    rm -rf workshop_pages/ && \
-#    git pull && \
-#    cd $HOME
-
-# Add in an edited version of the gromacs water models so
-# that these can be read in correctly by BioSimSpace
-USER root
-add growat.tar.bz2 /home/gromacs/share/topology/
-
-ENV GROMACSHOME=/home/gromacs \
-    BSS_SKIP_INSTALL=1 
-
 USER $NB_USER
+
 # Final update of the workshops
 RUN update_workshops
 
