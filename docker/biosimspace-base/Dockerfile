@@ -18,7 +18,7 @@ FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed30
 LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
 
 # Variables holding links to download dependencies
-ENV SIRE_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/kAWkIxg3dh6eJ-_pC1kdTYY0vAAleqDQ3h5pEAA2eRQ/n/chryswoods/b/downloads/o/sire_2018_2_0_linux.run
+ENV SIRE_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/TVMhrbUeBXnSBJUz4unXHtbLvoyXk7qKRzGVm9ai4CE/n/chryswoods/b/downloads/o/sire_devel_latest_linux.run
 ENV AMBER_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/7ODpDhtg0WbT9Dl8JHW_4pJDB1Eka_EfCL3L600gIXo/n/chryswoods/b/downloads/o/amber16.tar.bz2
 ENV GROMACS_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/2jeHceFVZcIMeyRm7T3TpaUY8JajKmE3QkZ1iQ7vE3I/n/chryswoods/b/downloads/o/gromacs.tar.bz2
 
@@ -108,8 +108,6 @@ EXPOSE 8888
 COPY start.sh /usr/local/bin/
 COPY start-notebook.sh /usr/local/bin/
 COPY start-singleuser.sh /usr/local/bin/
-COPY jupyter_notebook_config.py /etc/jupyter/
-RUN fix-permissions /etc/jupyter/
 
 # Do all conda work as $NB_USER
 USER $NB_USER
