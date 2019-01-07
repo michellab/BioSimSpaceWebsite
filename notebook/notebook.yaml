@@ -1,28 +1,25 @@
 proxy:
-  secretToken: "32f0d34e18e6da51136a5de768e2e4bc2464c8cc6c650a41fcb5db1b4ffc6469"
+  secretToken: "b10fad2fe03bcfa7f6f442c63301b01e5f1f8cea8da3bb1ac57dd2341e6a9a27"
 rbac:
-  enabled: false
-hub:
-  db:
-    type: sqlite-memory
+  enabled: true
 singleuser:
   image:
-    name: chryswoods/biosimspace
-    tag: v1
+    name: chryswoods/bss-workshop
+    tag: latest
   storage:
     type: none
   memory:
-    limit: 1.8G
-    guarantee: 1.5G
+    limit: 5.0G
+    guarantee: 1.0G
   cpu:
-    limit: 2.0
+    limit: 5.0
     guarantee: 0.5
 cull:
   timeout: 2400
   every: 600
 prePuller:
   continuous:
-    enabled: true
+    enabled: false
 auth:
   type: custom
   custom:

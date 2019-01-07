@@ -8,6 +8,16 @@
 # start from the BioSimSpace image
 FROM chryswoods/biosimspace-base:latest
 
+USER root
+
+ENV GROMACSHOME=/home/gromacs \
+    BSS_SKIP_INSTALL=1
+
+add growat.tar.bz2 /home/gromacs/share/topology/
+
+COPY jupyter_notebook_config.py /etc/jupyter/
+RUN fix-permissions /etc/jupyter/
+
 USER $NB_USER
 WORKDIR /home/$NB_USER
 

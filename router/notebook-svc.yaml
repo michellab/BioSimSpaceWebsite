@@ -11,16 +11,6 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: notebookdev
-spec:
-  type: ExternalName
-  externalName: proxy-public.notebookdev.svc.cluster.local
-  ports:
-  - port: 80
----
-kind: Service
-apiVersion: v1
-metadata:
   name: workshop
 spec:
   type: ExternalName

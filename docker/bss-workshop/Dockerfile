@@ -33,7 +33,7 @@ RUN mkdir /home/workshops && \
 USER $NB_USER
 
 # Install pyPcazip / MDPlus - USED FOR CHARLIES WORKSHOP
-RUN conda install cython h5py && \
+RUN conda install numpy cython h5py && \
     pip install pyPcazip && \
     pip install scikit-image && \
     conda clean -tipsy && \

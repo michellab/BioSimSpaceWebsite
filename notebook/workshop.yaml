@@ -1,28 +1,25 @@
 proxy:
-  secretToken: "2f0f13bd6a360b8ea906c4f454985eeda481b0b8ecd81ed1709b891eb304512a"
+  secretToken: "3c830a49300697235f392526248c0f41afc179714bfff2ba42eae5693dba4744"
 rbac:
-  enabled: false
-hub:
-  db:
-    type: sqlite-memory
+  enabled: true
 singleuser:
   image:
     name: chryswoods/bss-workshop
-    tag: v1
+    tag: v6
   storage:
     type: none
   memory:
-    limit: 1.8G
-    guarantee: 1.5G
+    limit: 5.0G
+    guarantee: 1.0G
   cpu:
-    limit: 2.0
+    limit: 5.0
     guarantee: 0.5
 cull:
   timeout: 2400
   every: 600
 prePuller:
   continuous:
-    enabled: true
+    enabled: false
 auth:
   type: custom
   custom:
