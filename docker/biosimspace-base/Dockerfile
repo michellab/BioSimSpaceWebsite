@@ -21,6 +21,8 @@ USER root
 
 # Variables holding links to download dependencies
 ENV SIRE_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/kAWkIxg3dh6eJ-_pC1kdTYY0vAAleqDQ3h5pEAA2eRQ/n/chryswoods/b/downloads/o/sire_2018_2_0_linux.run
+ENV AMBER_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/SCFrGO1wSeI6xwSV4QpwwEPDDI8UDb8yGiAtwsTHgMQ/n/chryswoods/b/downloads/o/amber16.tar.bz2
+ENV GROMACS_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/2jeHceFVZcIMeyRm7T3TpaUY8JajKmE3QkZ1iQ7vE3I/n/chryswoods/b/downloads/o/gromacs.tar.bz2
 
 # Install all OS dependencies for notebook server that starts but lacks all
 # features (e.g., download as all possible file formats)
@@ -75,7 +77,7 @@ RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
     fix-permissions $HOME
 
 # Install Sire, which provides conda
-RUN wget $SIRE_DOWNLOAD sire.run && \
+RUN wget $SIRE_DOWNLOAD -O sire.run && \
     chmod a+x sire.run && \
     echo "/opt/conda" | ./sire.run && \
     chown -R $NB_USER:$NB_GID /opt/conda && \
@@ -89,12 +91,12 @@ RUN git clone https://github.com/michellab/biosimspace && \
     fix-permissions /home/biosimspace
 
 # Download and install amber16 into /home using wget
-RUN wget https://biosimspace.blob.core.windows.net/dependencies/amber16.tar.bz2 -O amber16.tar.bz2 && \
+RUN wget $AMBER_DOWNLOAD -O amber16.tar.bz2 && \
     tar -jxvf amber16.tar.bz2 && \
     rm amber16.tar.bz2
 
 # Download and install gromacs into /home using wget
-RUN wget https://biosimspace.blob.core.windows.net/dependencies/gromacs.tar.bz2 -O gromacs.tar.bz2 && \
+RUN wget $GROMACS_DOWNLOAD -O gromacs.tar.bz2 && \
     tar -jxvf gromacs.tar.bz2 && \
     rm gromacs.tar.bz2
 
