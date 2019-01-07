@@ -19,6 +19,9 @@ LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
 
 USER root
 
+# Variables holding links to download dependencies
+ENV SIRE_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/kAWkIxg3dh6eJ-_pC1kdTYY0vAAleqDQ3h5pEAA2eRQ/n/chryswoods/b/downloads/o/sire_2018_2_0_linux.run
+
 # Install all OS dependencies for notebook server that starts but lacks all
 # features (e.g., download as all possible file formats)
 ENV DEBIAN_FRONTEND noninteractive
@@ -72,7 +75,7 @@ RUN useradd -m -s /bin/bash -N -u $NB_UID $NB_USER && \
     fix-permissions $HOME
 
 # Install Sire, which provides conda
-RUN wget https://sire.blob.core.windows.net/releases/sire_2018_2_0_linux_pre.run -O sire.run && \
+RUN wget $SIRE_DOWNLOAD sire.run && \
     chmod a+x sire.run && \
     echo "/opt/conda" | ./sire.run && \
     chown -R $NB_USER:$NB_GID /opt/conda && \
