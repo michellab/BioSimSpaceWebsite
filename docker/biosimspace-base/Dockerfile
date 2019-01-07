@@ -17,12 +17,12 @@ FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed30
 
 LABEL maintainer="Christopher Woods <Christopher.Woods@bristol.ac.uk>"
 
-USER root
-
 # Variables holding links to download dependencies
 ENV SIRE_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/kAWkIxg3dh6eJ-_pC1kdTYY0vAAleqDQ3h5pEAA2eRQ/n/chryswoods/b/downloads/o/sire_2018_2_0_linux.run
-ENV AMBER_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/SCFrGO1wSeI6xwSV4QpwwEPDDI8UDb8yGiAtwsTHgMQ/n/chryswoods/b/downloads/o/amber16.tar.bz2
+ENV AMBER_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/7ODpDhtg0WbT9Dl8JHW_4pJDB1Eka_EfCL3L600gIXo/n/chryswoods/b/downloads/o/amber16.tar.bz2
 ENV GROMACS_DOWNLOAD=https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/2jeHceFVZcIMeyRm7T3TpaUY8JajKmE3QkZ1iQ7vE3I/n/chryswoods/b/downloads/o/gromacs.tar.bz2
+
+USER root
 
 # Install all OS dependencies for notebook server that starts but lacks all
 # features (e.g., download as all possible file formats)
