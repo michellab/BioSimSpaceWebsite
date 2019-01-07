@@ -40,7 +40,7 @@ RUN conda install numpy cython h5py && \
     rm -rf $HOME/.cache $HOME/.jupyter $HOME/.local/share/jupyter
 
 # Patch the netcdf writer in scipy
-RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.5/site-packages/scipy/io/netcdf.py
+RUN wget https://raw.githubusercontent.com/scipy/scipy/master/scipy/io/netcdf.py -O /opt/conda/lib/python3.6/site-packages/scipy/io/netcdf.py
 
 # Now git clone in all workshops we wish to use...
 WORKDIR /home/workshops
