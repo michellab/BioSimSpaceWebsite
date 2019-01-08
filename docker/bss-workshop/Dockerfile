@@ -76,6 +76,10 @@ USER $NB_USER
 WORKDIR $HOME
 USER $NB_USER
 
+# Run update_biosimspace and then copy the demo and 
+RUN update_biosimspace && \
+    ln -s /home/biosimspace/demo ./biosimspace_demo 
+
 # Final update of the workshops
 RUN update_workshops
 
