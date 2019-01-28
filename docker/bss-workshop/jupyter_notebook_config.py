@@ -14,9 +14,6 @@ c.NotebookApp.port = 8888
 c.NotebookApp.open_browser = False
 c.JupyterHub.authenticator_class = tmpauthenticator.TmpAuthenticator
 
-c.JupyterHub.ssl_key = '/etc/letsencrypt/live/notebook.acquire-aaai.com/privkey.pem'
-c.JupyterHub.ssl_cert = '/etc/letsencrypt/live/notebook.acquire-aaai.com/fullchain.pem'
-
 # Generate a self-signed certificate
 if 'GEN_CERT' in os.environ:
     dir_name = jupyter_data_dir()
