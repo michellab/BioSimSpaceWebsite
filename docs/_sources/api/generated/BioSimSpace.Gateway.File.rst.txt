@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.File
+========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: File
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~File.__init__
+      ~File.getAllowedValues
+      ~File.getArgType
+      ~File.getDefault
+      ~File.getHelp
+      ~File.getMax
+      ~File.getMin
+      ~File.getUnit
+      ~File.getValue
+      ~File.isMulti
+      ~File.isOptional
+      ~File.setValue
+   
+   
+
+   
+   
+   

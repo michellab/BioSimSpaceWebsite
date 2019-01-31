@@ -1,0 +1,66 @@
+BioSimSpace.Process.Somd
+========================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: Somd
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Somd.__init__
+      ~Somd.addArgs
+      ~Somd.addToConfig
+      ~Somd.clearArgs
+      ~Somd.command
+      ~Somd.deleteArg
+      ~Somd.exe
+      ~Somd.getArgString
+      ~Somd.getArgStringList
+      ~Somd.getArgs
+      ~Somd.getConfig
+      ~Somd.getCurrentGradient
+      ~Somd.getCurrentSystem
+      ~Somd.getCurrentTime
+      ~Somd.getGradient
+      ~Somd.getName
+      ~Somd.getOutput
+      ~Somd.getPackageName
+      ~Somd.getSeed
+      ~Somd.getStderr
+      ~Somd.getStdout
+      ~Somd.getSystem
+      ~Somd.getTime
+      ~Somd.getTrajectory
+      ~Somd.inputFiles
+      ~Somd.insertArg
+      ~Somd.isError
+      ~Somd.isQueued
+      ~Somd.isRunning
+      ~Somd.kill
+      ~Somd.resetArgs
+      ~Somd.resetConfig
+      ~Somd.run
+      ~Somd.runTime
+      ~Somd.setArg
+      ~Somd.setArgs
+      ~Somd.setConfig
+      ~Somd.setName
+      ~Somd.setSeed
+      ~Somd.start
+      ~Somd.stderr
+      ~Somd.stdout
+      ~Somd.wait
+      ~Somd.workDir
+      ~Somd.writeConfig
+   
+   
+
+   
+   
+   

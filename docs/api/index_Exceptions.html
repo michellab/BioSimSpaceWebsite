@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace._Exceptions &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
+  <title>BioSimSpace._Exceptions &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace._SireWrappers" href="index_SireWrappers.html" />
-    <link rel="prev" title="BioSimSpace.Units.Volume.picometer3" href="generated/BioSimSpace.Units.Volume.picometer3.html" /> 
+    <link rel="next" title="BioSimSpace._Exceptions.IncompatibleError" href="generated/BioSimSpace._Exceptions.IncompatibleError.html" />
+    <link rel="prev" title="BioSimSpace.Units.Time.femtosecond" href="generated/BioSimSpace.Units.Time.femtosecond.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -105,7 +105,13 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Types.html">BioSimSpace.Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Units.html">BioSimSpace.Units</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace._Exceptions</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace._Exceptions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace._Exceptions.IncompatibleError.html">BioSimSpace._Exceptions.IncompatibleError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace._Exceptions.MissingSoftwareError.html">BioSimSpace._Exceptions.MissingSoftwareError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace._Exceptions.ParameterisationError.html">BioSimSpace._Exceptions.ParameterisationError</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
@@ -188,44 +194,26 @@
   <div class="section" id="biosimspace-exceptions">
 <span id="ref-exceptions"></span><h1>BioSimSpace._Exceptions<a class="headerlink" href="#biosimspace-exceptions" title="Permalink to this headline">¶</a></h1>
 <p>The <em>_Exceptions</em> package contains a collection of custom <code class="docutils literal notranslate"><span class="pre">Exception</span></code> types.</p>
-<span class="target" id="module-BioSimSpace._Exceptions"></span><p>Custom exceptions for error handling.
-Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<dl class="exception">
-<dt id="BioSimSpace._Exceptions.IncompatibleError">
-<em class="property">exception </em><code class="descclassname">BioSimSpace._Exceptions.</code><code class="descname">IncompatibleError</code><a class="headerlink" href="#BioSimSpace._Exceptions.IncompatibleError" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="BioSimSpace._Exceptions.IncompatibleError.with_traceback">
-<code class="descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._Exceptions.IncompatibleError.with_traceback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception.with_traceback(tb) –
-set self.__traceback__ to tb and return self.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="exception">
-<dt id="BioSimSpace._Exceptions.MissingSoftwareError">
-<em class="property">exception </em><code class="descclassname">BioSimSpace._Exceptions.</code><code class="descname">MissingSoftwareError</code><a class="headerlink" href="#BioSimSpace._Exceptions.MissingSoftwareError" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="BioSimSpace._Exceptions.MissingSoftwareError.with_traceback">
-<code class="descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._Exceptions.MissingSoftwareError.with_traceback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception.with_traceback(tb) –
-set self.__traceback__ to tb and return self.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="exception">
-<dt id="BioSimSpace._Exceptions.ParameterisationError">
-<em class="property">exception </em><code class="descclassname">BioSimSpace._Exceptions.</code><code class="descname">ParameterisationError</code><a class="headerlink" href="#BioSimSpace._Exceptions.ParameterisationError" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="method">
-<dt id="BioSimSpace._Exceptions.ParameterisationError.with_traceback">
-<code class="descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._Exceptions.ParameterisationError.with_traceback" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exception.with_traceback(tb) –
-set self.__traceback__ to tb and return self.</p>
-</dd></dl>
-
-</dd></dl>
-
+<span class="target" id="module-BioSimSpace._Exceptions"></span><div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace._Exceptions.IncompatibleError.html#BioSimSpace._Exceptions.IncompatibleError" title="BioSimSpace._Exceptions.IncompatibleError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IncompatibleError</span></code></a></td>
+<td>Exception thrown when objects are incompatible with each other.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace._Exceptions.MissingSoftwareError.html#BioSimSpace._Exceptions.MissingSoftwareError" title="BioSimSpace._Exceptions.MissingSoftwareError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MissingSoftwareError</span></code></a></td>
+<td>Exception thrown when external software dependencies are missing.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace._Exceptions.ParameterisationError.html#BioSimSpace._Exceptions.ParameterisationError" title="BioSimSpace._Exceptions.ParameterisationError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ParameterisationError</span></code></a></td>
+<td>Exception thrown when molecular parameterisation fails.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -238,10 +226,10 @@ set self.__traceback__ to tb and return self.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index_SireWrappers.html" class="btn btn-neutral float-right" title="BioSimSpace._SireWrappers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace._Exceptions.IncompatibleError.html" class="btn btn-neutral float-right" title="BioSimSpace._Exceptions.IncompatibleError" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="generated/BioSimSpace.Units.Volume.picometer3.html" class="btn btn-neutral" title="BioSimSpace.Units.Volume.picometer3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="generated/BioSimSpace.Units.Time.femtosecond.html" class="btn btn-neutral" title="BioSimSpace.Units.Time.femtosecond" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

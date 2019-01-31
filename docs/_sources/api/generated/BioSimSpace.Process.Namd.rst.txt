@@ -1,0 +1,111 @@
+BioSimSpace.Process.Namd
+========================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: Namd
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Namd.__init__
+      ~Namd.addArgs
+      ~Namd.addToConfig
+      ~Namd.clearArgs
+      ~Namd.command
+      ~Namd.deleteArg
+      ~Namd.eta
+      ~Namd.exe
+      ~Namd.getAngleEnergy
+      ~Namd.getArgString
+      ~Namd.getArgStringList
+      ~Namd.getArgs
+      ~Namd.getBondEnergy
+      ~Namd.getBoundaryEnergy
+      ~Namd.getConfig
+      ~Namd.getCurrentAngleEnergy
+      ~Namd.getCurrentBondEnergy
+      ~Namd.getCurrentBoundaryEnergy
+      ~Namd.getCurrentDihedralEnergy
+      ~Namd.getCurrentElectrostaticEnergy
+      ~Namd.getCurrentGPressure
+      ~Namd.getCurrentGPressureAverage
+      ~Namd.getCurrentImproperEnergy
+      ~Namd.getCurrentKineticEnergy
+      ~Namd.getCurrentMiscEnergy
+      ~Namd.getCurrentPotentialEnergy
+      ~Namd.getCurrentPressure
+      ~Namd.getCurrentPressureAverage
+      ~Namd.getCurrentRecord
+      ~Namd.getCurrentRecords
+      ~Namd.getCurrentStep
+      ~Namd.getCurrentSystem
+      ~Namd.getCurrentTemperature
+      ~Namd.getCurrentTemperatureAverage
+      ~Namd.getCurrentTime
+      ~Namd.getCurrentTotal2Energy
+      ~Namd.getCurrentTotal3Energy
+      ~Namd.getCurrentTotalEnergy
+      ~Namd.getCurrentVanDerWaalsEnergy
+      ~Namd.getCurrentVolume
+      ~Namd.getDihedralEnergy
+      ~Namd.getElectrostaticEnergy
+      ~Namd.getGPressure
+      ~Namd.getGPressureAverage
+      ~Namd.getImproperEnergy
+      ~Namd.getKineticEnergy
+      ~Namd.getMiscEnergy
+      ~Namd.getName
+      ~Namd.getOutput
+      ~Namd.getPackageName
+      ~Namd.getPotentialEnergy
+      ~Namd.getPressure
+      ~Namd.getPressureAverage
+      ~Namd.getRecord
+      ~Namd.getRecords
+      ~Namd.getSeed
+      ~Namd.getStderr
+      ~Namd.getStdout
+      ~Namd.getStep
+      ~Namd.getSystem
+      ~Namd.getTemperature
+      ~Namd.getTemperatureAverage
+      ~Namd.getTime
+      ~Namd.getTotal2Energy
+      ~Namd.getTotal3Energy
+      ~Namd.getTotalEnergy
+      ~Namd.getTrajectory
+      ~Namd.getVanDerWaalsEnergy
+      ~Namd.getVolume
+      ~Namd.inputFiles
+      ~Namd.insertArg
+      ~Namd.isError
+      ~Namd.isQueued
+      ~Namd.isRunning
+      ~Namd.kill
+      ~Namd.resetArgs
+      ~Namd.resetConfig
+      ~Namd.run
+      ~Namd.runTime
+      ~Namd.setArg
+      ~Namd.setArgs
+      ~Namd.setConfig
+      ~Namd.setName
+      ~Namd.setSeed
+      ~Namd.start
+      ~Namd.stderr
+      ~Namd.stdout
+      ~Namd.wait
+      ~Namd.workDir
+      ~Namd.writeConfig
+   
+   
+
+   
+   
+   

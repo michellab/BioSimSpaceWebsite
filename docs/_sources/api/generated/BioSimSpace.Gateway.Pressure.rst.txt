@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Pressure
+============================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Pressure
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Pressure.__init__
+      ~Pressure.getAllowedValues
+      ~Pressure.getArgType
+      ~Pressure.getDefault
+      ~Pressure.getHelp
+      ~Pressure.getMax
+      ~Pressure.getMin
+      ~Pressure.getUnit
+      ~Pressure.getValue
+      ~Pressure.isMulti
+      ~Pressure.isOptional
+      ~Pressure.setValue
+   
+   
+
+   
+   
+   

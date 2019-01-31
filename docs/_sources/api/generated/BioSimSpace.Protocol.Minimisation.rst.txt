@@ -1,0 +1,24 @@
+BioSimSpace.Protocol.Minimisation
+=================================
+
+.. currentmodule:: BioSimSpace.Protocol
+
+.. autoclass:: Minimisation
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Minimisation.__init__
+      ~Minimisation.getSteps
+      ~Minimisation.setSteps
+   
+   
+
+   
+   
+   

@@ -1,0 +1,33 @@
+BioSimSpace.Protocol.FreeEnergy
+===============================
+
+.. currentmodule:: BioSimSpace.Protocol
+
+.. autoclass:: FreeEnergy
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~FreeEnergy.__init__
+      ~FreeEnergy.getEnsemble
+      ~FreeEnergy.getLambda
+      ~FreeEnergy.getLambdaValues
+      ~FreeEnergy.getRunTime
+      ~FreeEnergy.getTemperature
+      ~FreeEnergy.getTimeStep
+      ~FreeEnergy.setEnsemble
+      ~FreeEnergy.setLambdaValues
+      ~FreeEnergy.setRunTime
+      ~FreeEnergy.setTemperature
+      ~FreeEnergy.setTimeStep
+   
+   
+
+   
+   
+   

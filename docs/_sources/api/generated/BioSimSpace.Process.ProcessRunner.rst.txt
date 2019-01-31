@@ -1,0 +1,44 @@
+BioSimSpace.Process.ProcessRunner
+=================================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: ProcessRunner
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ProcessRunner.__init__
+      ~ProcessRunner.addProcess
+      ~ProcessRunner.errored
+      ~ProcessRunner.getName
+      ~ProcessRunner.isError
+      ~ProcessRunner.isQueued
+      ~ProcessRunner.isRunning
+      ~ProcessRunner.kill
+      ~ProcessRunner.killAll
+      ~ProcessRunner.nError
+      ~ProcessRunner.nProcesses
+      ~ProcessRunner.nQueued
+      ~ProcessRunner.nRunning
+      ~ProcessRunner.processes
+      ~ProcessRunner.queued
+      ~ProcessRunner.removeProcess
+      ~ProcessRunner.restartFailed
+      ~ProcessRunner.runTime
+      ~ProcessRunner.running
+      ~ProcessRunner.setName
+      ~ProcessRunner.start
+      ~ProcessRunner.startAll
+      ~ProcessRunner.workDir
+   
+   
+
+   
+   
+   

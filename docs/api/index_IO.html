@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
+  <title>BioSimSpace.IO &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.MD" href="index_MD.html" />
-    <link rel="prev" title="BioSimSpace.Gateway" href="index_Gateway.html" /> 
+    <link rel="next" title="BioSimSpace.IO.fileFormats" href="generated/BioSimSpace.IO.fileFormats.html" />
+    <link rel="prev" title="BioSimSpace.Gateway.Time" href="generated/BioSimSpace.Gateway.Time.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -95,7 +95,15 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Align.html">BioSimSpace.Align</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.IO</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.IO.fileFormats.html">BioSimSpace.IO.fileFormats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.IO.formatInfo.html">BioSimSpace.IO.formatInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.IO.readMolecules.html">BioSimSpace.IO.readMolecules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.IO.readPDB.html">BioSimSpace.IO.readPDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.IO.saveMolecules.html">BioSimSpace.IO.saveMolecules</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
@@ -188,113 +196,32 @@
   <div class="section" id="biosimspace-io">
 <span id="ref-io"></span><h1>BioSimSpace.IO<a class="headerlink" href="#biosimspace-io" title="Permalink to this headline">¶</a></h1>
 <p>The <em>IO</em> package contains tools for reading and writing molecular systems.</p>
-<span class="target" id="module-BioSimSpace.IO"></span><p>Functionality for reading/writing molecular systems.
-Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<dl class="function">
-<dt id="BioSimSpace.IO.fileFormats">
-<code class="descclassname">BioSimSpace.IO.</code><code class="descname">fileFormats</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.fileFormats" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of the supported formats.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.IO.formatInfo">
-<code class="descclassname">BioSimSpace.IO.</code><code class="descname">formatInfo</code><span class="sig-paren">(</span><em>format</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.formatInfo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return information for the specified file format.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<span class="target" id="module-BioSimSpace.IO"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>format</strong> (<em>str</em>) – The file format.</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.IO.fileFormats.html#BioSimSpace.IO.fileFormats" title="BioSimSpace.IO.fileFormats"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileFormats</span></code></a>()</td>
+<td>Return a list of the supported formats.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>info</strong> – A description of the named file format.</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.IO.formatInfo.html#BioSimSpace.IO.formatInfo" title="BioSimSpace.IO.formatInfo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">formatInfo</span></code></a>(format)</td>
+<td>Return information for the specified file format.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.IO.readMolecules.html#BioSimSpace.IO.readMolecules" title="BioSimSpace.IO.readMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readMolecules</span></code></a>(files[,&nbsp;property_map])</td>
+<td>Read a molecular system from file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.IO.readPDB.html#BioSimSpace.IO.readPDB" title="BioSimSpace.IO.readPDB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">readPDB</span></code></a>(id[,&nbsp;property_map])</td>
+<td>Read a molecular system from a PDB ID in the RSCB PDB website.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.IO.saveMolecules.html#BioSimSpace.IO.saveMolecules" title="BioSimSpace.IO.saveMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">saveMolecules</span></code></a>(filebase,&nbsp;system,&nbsp;fileformat)</td>
+<td>Save a molecular system to file.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.IO.readMolecules">
-<code class="descclassname">BioSimSpace.IO.</code><code class="descname">readMolecules</code><span class="sig-paren">(</span><em>files</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readMolecules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a molecular system from file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>files</strong> (<em>str</em><em>, </em><em>[ </em><em>str</em><em> ]</em>) – A file name, or a list of file names.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – A molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.IO.readPDB">
-<code class="descclassname">BioSimSpace.IO.</code><code class="descname">readPDB</code><span class="sig-paren">(</span><em>id</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readPDB" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a molecular system from a PDB ID in the RSCB PDB website.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>id</strong> (<em>str</em>) – The PDB ID string.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – A molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.IO.saveMolecules">
-<code class="descclassname">BioSimSpace.IO.</code><code class="descname">saveMolecules</code><span class="sig-paren">(</span><em>filebase</em>, <em>system</em>, <em>fileformat</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.saveMolecules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save a molecular system to file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>filebase</strong> (<em>str</em>) – The base name of the output file.</li>
-<li><strong>system</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>,</em>) – [ BioSimSpace._SireWrappers.Molecule ]
-The molecular system.</li>
-<li><strong>fileformat</strong> (<em>str</em><em>, </em><em>[ </em><em>str</em><em> ]</em>) – The file format (or formats) to save to.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user
-defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>files</strong> – The list of files that were generated.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">[ str ]</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -307,10 +234,10 @@ with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index_MD.html" class="btn btn-neutral float-right" title="BioSimSpace.MD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace.IO.fileFormats.html" class="btn btn-neutral float-right" title="BioSimSpace.IO.fileFormats" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index_Gateway.html" class="btn btn-neutral" title="BioSimSpace.Gateway" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="generated/BioSimSpace.Gateway.Time.html" class="btn btn-neutral" title="BioSimSpace.Gateway.Time" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

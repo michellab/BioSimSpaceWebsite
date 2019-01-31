@@ -1,0 +1,6 @@
+BioSimSpace.IO.readMolecules
+============================
+
+.. currentmodule:: BioSimSpace.IO
+
+.. autofunction:: readMolecules

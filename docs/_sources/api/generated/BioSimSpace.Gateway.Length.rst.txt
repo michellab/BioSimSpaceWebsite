@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Length
+==========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Length
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Length.__init__
+      ~Length.getAllowedValues
+      ~Length.getArgType
+      ~Length.getDefault
+      ~Length.getHelp
+      ~Length.getMax
+      ~Length.getMin
+      ~Length.getUnit
+      ~Length.getValue
+      ~Length.isMulti
+      ~Length.isOptional
+      ~Length.setValue
+   
+   
+
+   
+   
+   

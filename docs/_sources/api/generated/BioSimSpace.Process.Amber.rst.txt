@@ -1,0 +1,106 @@
+BioSimSpace.Process.Amber
+=========================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: Amber
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Amber.__init__
+      ~Amber.addArgs
+      ~Amber.addToConfig
+      ~Amber.clearArgs
+      ~Amber.command
+      ~Amber.deleteArg
+      ~Amber.exe
+      ~Amber.getAngleEnergy
+      ~Amber.getArgString
+      ~Amber.getArgStringList
+      ~Amber.getArgs
+      ~Amber.getBondEnergy
+      ~Amber.getCentreOfMassKineticEnergy
+      ~Amber.getConfig
+      ~Amber.getCurrentAngleEnergy
+      ~Amber.getCurrentBondEnergy
+      ~Amber.getCurrentCentreOfMassKineticEnergy
+      ~Amber.getCurrentDensity
+      ~Amber.getCurrentDihedralEnergy
+      ~Amber.getCurrentElectrostaticEnergy
+      ~Amber.getCurrentElectrostaticEnergy14
+      ~Amber.getCurrentHydrogenBondEnergy
+      ~Amber.getCurrentKineticEnergy
+      ~Amber.getCurrentNonBondedEnergy14
+      ~Amber.getCurrentPotentialEnergy
+      ~Amber.getCurrentPressure
+      ~Amber.getCurrentRecord
+      ~Amber.getCurrentRecords
+      ~Amber.getCurrentRestraintEnergy
+      ~Amber.getCurrentStep
+      ~Amber.getCurrentSystem
+      ~Amber.getCurrentTemperature
+      ~Amber.getCurrentTime
+      ~Amber.getCurrentTotalEnergy
+      ~Amber.getCurrentVanDerWaalsEnergy
+      ~Amber.getCurrentVirial
+      ~Amber.getCurrentVolume
+      ~Amber.getDensity
+      ~Amber.getDihedralEnergy
+      ~Amber.getElectrostaticEnergy
+      ~Amber.getElectrostaticEnergy14
+      ~Amber.getHydrogenBondEnergy
+      ~Amber.getKineticEnergy
+      ~Amber.getName
+      ~Amber.getNonBondedEnergy14
+      ~Amber.getOutput
+      ~Amber.getPackageName
+      ~Amber.getPotentialEnergy
+      ~Amber.getPressure
+      ~Amber.getRecord
+      ~Amber.getRecords
+      ~Amber.getRestraintEnergy
+      ~Amber.getSeed
+      ~Amber.getStderr
+      ~Amber.getStdout
+      ~Amber.getStep
+      ~Amber.getSystem
+      ~Amber.getTemperature
+      ~Amber.getTime
+      ~Amber.getTotalEnergy
+      ~Amber.getTrajectory
+      ~Amber.getVanDerWaalsEnergy
+      ~Amber.getVirial
+      ~Amber.getVolume
+      ~Amber.inputFiles
+      ~Amber.insertArg
+      ~Amber.isError
+      ~Amber.isQueued
+      ~Amber.isRunning
+      ~Amber.kill
+      ~Amber.resetArgs
+      ~Amber.resetConfig
+      ~Amber.run
+      ~Amber.runTime
+      ~Amber.setArg
+      ~Amber.setArgs
+      ~Amber.setConfig
+      ~Amber.setName
+      ~Amber.setSeed
+      ~Amber.start
+      ~Amber.stderr
+      ~Amber.stdout
+      ~Amber.wait
+      ~Amber.workDir
+      ~Amber.writeConfig
+   
+   
+
+   
+   
+   

@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Volume
+==========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Volume
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Volume.__init__
+      ~Volume.getAllowedValues
+      ~Volume.getArgType
+      ~Volume.getDefault
+      ~Volume.getHelp
+      ~Volume.getMax
+      ~Volume.getMin
+      ~Volume.getUnit
+      ~Volume.getValue
+      ~Volume.isMulti
+      ~Volume.isOptional
+      ~Volume.setValue
+   
+   
+
+   
+   
+   

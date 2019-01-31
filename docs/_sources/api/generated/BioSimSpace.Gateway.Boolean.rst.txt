@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Boolean
+===========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Boolean
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Boolean.__init__
+      ~Boolean.getAllowedValues
+      ~Boolean.getArgType
+      ~Boolean.getDefault
+      ~Boolean.getHelp
+      ~Boolean.getMax
+      ~Boolean.getMin
+      ~Boolean.getUnit
+      ~Boolean.getValue
+      ~Boolean.isMulti
+      ~Boolean.isOptional
+      ~Boolean.setValue
+   
+   
+
+   
+   
+   

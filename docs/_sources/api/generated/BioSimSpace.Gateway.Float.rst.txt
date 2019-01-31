@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Float
+=========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Float
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Float.__init__
+      ~Float.getAllowedValues
+      ~Float.getArgType
+      ~Float.getDefault
+      ~Float.getHelp
+      ~Float.getMax
+      ~Float.getMin
+      ~Float.getUnit
+      ~Float.getValue
+      ~Float.isMulti
+      ~Float.isOptional
+      ~Float.setValue
+   
+   
+
+   
+   
+   

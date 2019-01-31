@@ -1,0 +1,6 @@
+BioSimSpace.IO.readPDB
+======================
+
+.. currentmodule:: BioSimSpace.IO
+
+.. autofunction:: readPDB

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
+  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.Solvent" href="index_Solvent.html" />
-    <link rel="prev" title="BioSimSpace.Process" href="index_Process.html" /> 
+    <link rel="next" title="BioSimSpace.Protocol.protocols" href="generated/BioSimSpace.Protocol.protocols.html" />
+    <link rel="prev" title="BioSimSpace.Process.ProcessRunner" href="generated/BioSimSpace.Process.ProcessRunner.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -100,7 +100,20 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Process.html">BioSimSpace.Process</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Protocol</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Protocol</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.protocols.html">BioSimSpace.Protocol.protocols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.createProtocol.html">BioSimSpace.Protocol.createProtocol</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Custom.html">BioSimSpace.Protocol.Custom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Equilibration.html">BioSimSpace.Protocol.Equilibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.FreeEnergy.html">BioSimSpace.Protocol.FreeEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Minimisation.html">BioSimSpace.Protocol.Minimisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Production.html">BioSimSpace.Protocol.Production</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index_Solvent.html">BioSimSpace.Solvent</a></li>
@@ -190,28 +203,49 @@
 <p>The <em>Protocol</em> package contains tools to select features from MD-trajectories.
 It also assigns them to a discrete state space, which will be later used in Markov
 modeling.</p>
-<span class="target" id="module-BioSimSpace.Protocol"></span><p>Functionality for defining simulation protocols.
-Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<dl class="function">
-<dt id="BioSimSpace.Protocol.createProtocol">
-<code class="descclassname">BioSimSpace.Protocol.</code><code class="descname">createProtocol</code><span class="sig-paren">(</span><em>protocol</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.createProtocol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a default simulation protocol.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<span class="target" id="module-BioSimSpace.Protocol"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>protocol</strong> (<em>str</em>) – The name of the protocol.</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.protocols.html#BioSimSpace.Protocol.protocols" title="BioSimSpace.Protocol.protocols"><code class="xref py py-obj docutils literal notranslate"><span class="pre">protocols</span></code></a>()</td>
+<td>Return a list of the supported Molecular Dynamics protocols.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.createProtocol.html#BioSimSpace.Protocol.createProtocol" title="BioSimSpace.Protocol.createProtocol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createProtocol</span></code></a>(protocol)</td>
+<td>Create a default simulation protocol.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Protocol.protocols">
-<code class="descclassname">BioSimSpace.Protocol.</code><code class="descname">protocols</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.protocols" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of the supported Molecular Dynamics protocols.</p>
-</dd></dl>
-
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.Custom.html#BioSimSpace.Protocol.Custom" title="BioSimSpace.Protocol.Custom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Custom</span></code></a>(config)</td>
+<td>A class for storing custom protocols.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.Equilibration.html#BioSimSpace.Protocol.Equilibration" title="BioSimSpace.Protocol.Equilibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Equilibration</span></code></a>([timestep,&nbsp;runtime,&nbsp;…])</td>
+<td>A class for storing equilibration protocols.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FreeEnergy</span></code></a>([lam,&nbsp;lam_vals,&nbsp;min_lam,&nbsp;…])</td>
+<td>A class for storing free energy protocols.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.Minimisation.html#BioSimSpace.Protocol.Minimisation" title="BioSimSpace.Protocol.Minimisation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Minimisation</span></code></a>([steps])</td>
+<td>A class for storing minimisation protocols.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Protocol.Production.html#BioSimSpace.Protocol.Production" title="BioSimSpace.Protocol.Production"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Production</span></code></a>([timestep,&nbsp;runtime,&nbsp;temperature,&nbsp;…])</td>
+<td>A class for storing production protocols.</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -224,10 +258,10 @@ Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index_Solvent.html" class="btn btn-neutral float-right" title="BioSimSpace.Solvent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace.Protocol.protocols.html" class="btn btn-neutral float-right" title="BioSimSpace.Protocol.protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index_Process.html" class="btn btn-neutral" title="BioSimSpace.Process" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="generated/BioSimSpace.Process.ProcessRunner.html" class="btn btn-neutral" title="BioSimSpace.Process.ProcessRunner" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
