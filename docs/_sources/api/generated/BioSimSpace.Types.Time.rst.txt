@@ -1,0 +1,32 @@
+BioSimSpace.Types.Time
+======================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Time
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Time.__init__
+      ~Time.days
+      ~Time.femtoseconds
+      ~Time.hours
+      ~Time.magnitude
+      ~Time.milliseconds
+      ~Time.minutes
+      ~Time.nanoseconds
+      ~Time.picoseconds
+      ~Time.seconds
+      ~Time.unit
+   
+   
+
+   
+   
+   

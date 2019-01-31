@@ -1,0 +1,27 @@
+BioSimSpace.Types.Temperature
+=============================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Temperature
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Temperature.__init__
+      ~Temperature.celsius
+      ~Temperature.fahrenheit
+      ~Temperature.kelvin
+      ~Temperature.magnitude
+      ~Temperature.unit
+   
+   
+
+   
+   
+   

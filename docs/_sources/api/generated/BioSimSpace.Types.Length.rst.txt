@@ -1,0 +1,30 @@
+BioSimSpace.Types.Length
+========================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Length
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Length.__init__
+      ~Length.angstroms
+      ~Length.centimeters
+      ~Length.magnitude
+      ~Length.meters
+      ~Length.millimeters
+      ~Length.nanometers
+      ~Length.picometers
+      ~Length.unit
+   
+   
+
+   
+   
+   

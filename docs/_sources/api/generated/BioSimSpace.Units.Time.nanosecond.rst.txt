@@ -1,0 +1,6 @@
+BioSimSpace.Units.Time.nanosecond
+=================================
+
+.. currentmodule:: BioSimSpace.Units.Time
+
+.. autodata:: nanosecond

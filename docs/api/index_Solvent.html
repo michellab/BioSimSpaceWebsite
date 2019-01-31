@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+664.gb8eaf29 documentation</title>
+  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
   
 
   
@@ -187,9 +187,7 @@
             
   <div class="section" id="biosimspace-solvent">
 <span id="ref-solvent"></span><h1>BioSimSpace.Solvent<a class="headerlink" href="#biosimspace-solvent" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Solvent</em> package contains tools to select features from MD-trajectories.
-It also assigns them to a discrete state space, which will be later used in Markov
-modeling.</p>
+<p>The <em>Solvent</em> package contains tools for solvating molecular systems.</p>
 <span class="target" id="module-BioSimSpace.Solvent"></span><p>Functionality for solvating molecular systems.
 Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
 <dl class="function">
@@ -202,9 +200,9 @@ Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>model</strong> (<em>str</em>) – The name of the water model.</li>
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -217,7 +215,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -233,9 +231,9 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -248,7 +246,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -264,9 +262,9 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -279,7 +277,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -295,9 +293,9 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -310,7 +308,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -326,9 +324,9 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -341,7 +339,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -357,9 +355,9 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em><em>, </em><em>BioSimSpace._SireWrappers.System</em>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><em>BioSimSpace.Types.Length</em><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<em>BioSimSpace.Types.Length</em>) – Thickness of the water shell around the solute.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
+<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
+<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
@@ -372,7 +370,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.System</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
 </td>
 </tr>
 </tbody>
@@ -410,7 +408,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019 Michel Lab
-      Last updated on Jan 30, 2019.
+      Last updated on Jan 31, 2019.
 
     </p>
   </div>

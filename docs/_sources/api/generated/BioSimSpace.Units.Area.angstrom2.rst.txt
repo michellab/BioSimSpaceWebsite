@@ -1,0 +1,6 @@
+BioSimSpace.Units.Area.angstrom2
+================================
+
+.. currentmodule:: BioSimSpace.Units.Area
+
+.. autodata:: angstrom2

@@ -1,0 +1,6 @@
+BioSimSpace.Align.rmsdAlign
+===========================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: rmsdAlign

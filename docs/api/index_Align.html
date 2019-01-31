@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align &mdash; BioSimSpace 2018.1.1+664.gb8eaf29 documentation</title>
+  <title>BioSimSpace.Align &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.FreeEnergy" href="index_FreeEnergy.html" />
+    <link rel="next" title="BioSimSpace.Align.matchAtoms" href="generated/BioSimSpace.Align.matchAtoms.html" />
     <link rel="prev" title="Documentation" href="index.html" /> 
 
   
@@ -92,7 +92,13 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentation</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Align</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Align</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Align.matchAtoms.html">BioSimSpace.Align.matchAtoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Align.rmsdAlign.html">BioSimSpace.Align.rmsdAlign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Align.merge.html">BioSimSpace.Align.merge</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
@@ -187,145 +193,27 @@
             
   <div class="section" id="biosimspace-align">
 <span id="ref-align"></span><h1>BioSimSpace.Align<a class="headerlink" href="#biosimspace-align" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Align</em> package contains tools to select features from MD-trajectories.
-It also assigns them to a discrete state space, which will be later used in Markov
-modeling.</p>
-<p>It supports reading from MD-trajectories, comma separated value ASCII files and
-NumPy arrays. The discretized trajectories are being stored as NumPy arrays of
-integers.</p>
-<span class="target" id="module-BioSimSpace.Align"></span><p>Functionality for aligning molecules.
-Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<dl class="function">
-<dt id="BioSimSpace.Align.matchAtoms">
-<code class="descclassname">BioSimSpace.Align.</code><code class="descname">matchAtoms</code><span class="sig-paren">(</span><em>molecule0</em>, <em>molecule1</em>, <em>scoring_function='RMSD align'</em>, <em>matches=1</em>, <em>return_scores=False</em>, <em>prematch={}</em>, <em>timeout=5.0000 secs</em>, <em>match_light=True</em>, <em>property_map0={}</em>, <em>property_map1={}</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
-<dd><p>Find mappings between atom indices in molecule0 to those in molecule1.
-Molecules are aligned using a Maximum Common Substructure (MCS) search.
-When requesting more than one match, the mappings will be sorted using
-a scoring function and returned in order of best to worst score. (Note
-that, depending on the scoring function the “best” score may have the
-lowest value.)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<p>The <em>Align</em> package contains tools to align and merge pairs of molecules.</p>
+<span class="target" id="module-BioSimSpace.Align"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule0</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule of interest.</li>
-<li><strong>molecule1</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The reference molecule.</li>
-<li><strong>scoring_function</strong> (<em>str</em>) – <dl class="docutils">
-<dt>The scoring function used to match atoms. Available options are:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>”RMSD”</dt>
-<dd>Calculate the root mean squared distance between the
-coordinates of atoms in molecule0 to those that they
-map to in molecule1.</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>”RMSD align”</dt>
-<dd>Align molecule0 to molecule1 based on the mapping before
-computing the above RMSD score.</dd>
-</dl>
-</li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><strong>matches</strong> (<em>int</em>) – The maximum number of matches to return. (Sorted in order of score).</li>
-<li><strong>return_scores</strong> (<em>bool</em>) – Whether to return a list containing the scores for each mapping.</li>
-<li><strong>prematch</strong> (<em>dict</em>) – A pre-match to use as the basis of the search.</li>
-<li><strong>timeout</strong> (<em>BioSimSpace.Types.Time</em>) – The timeout for the matching algorithm.</li>
-<li><strong>match_light</strong> (<em>bool</em>) – Whether to match light atoms.</li>
-<li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
-defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-<li><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
-defined values.</li>
-<li><strong>verbose</strong> (<em>bool</em>) – Whether to print status information from the matcher.</li>
-</ul>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Align.matchAtoms.html#BioSimSpace.Align.matchAtoms" title="BioSimSpace.Align.matchAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">matchAtoms</span></code></a>(molecule0,&nbsp;molecule1[,&nbsp;…])</td>
+<td>Find mappings between atom indices in molecule0 to those in molecule1.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>matches</strong> – The best atom mapping, a list containing a user specified number of
-the best mappings ranked by their score, or a tuple containing the
-list of best mappings and a list of the corresponding scores.</p>
-</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Align.rmsdAlign.html#BioSimSpace.Align.rmsdAlign" title="BioSimSpace.Align.rmsdAlign"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsdAlign</span></code></a>(molecule0,&nbsp;molecule1[,&nbsp;mapping,&nbsp;…])</td>
+<td>Align atoms in molecule0 to those in molecule1 using the mapping between matched atom indices.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict, [dict], ([dict], list)</p>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Align.merge.html#BioSimSpace.Align.merge" title="BioSimSpace.Align.merge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></a>(molecule0,&nbsp;molecule1[,&nbsp;mapping,&nbsp;…])</td>
+<td>Create a merged molecule from ‘molecule0’ and ‘molecule1’ based on the atom index ‘mapping’.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Align.merge">
-<code class="descclassname">BioSimSpace.Align.</code><code class="descname">merge</code><span class="sig-paren">(</span><em>molecule0</em>, <em>molecule1</em>, <em>mapping=None</em>, <em>property_map0={}</em>, <em>property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.merge" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a merged molecule from ‘molecule0’ and ‘molecule1’ based on the
-atom index ‘mapping’. The merged molecule can be used in single- and
-dual-toplogy free energy calculations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule0</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – A molecule object.</li>
-<li><strong>molecule1</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – A second molecule object.</li>
-<li><strong>mapping</strong> (<em>dict</em>) – The mapping between matching atom indices in the two molecules.
-If no mapping is provided, then atoms in molecule0 will be mapped
-to those in molecule1 using “findMCSmatches”, with “rmsdAlign” then
-used to align molecule0 to molecule1 based on the resulting mapping.</li>
-<li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
-defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-<li><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
-defined values.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The merged molecule.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Align.rmsdAlign">
-<code class="descclassname">BioSimSpace.Align.</code><code class="descname">rmsdAlign</code><span class="sig-paren">(</span><em>molecule0</em>, <em>molecule1</em>, <em>mapping=None</em>, <em>property_map0={}</em>, <em>property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.rmsdAlign" title="Permalink to this definition">¶</a></dt>
-<dd><p>Align atoms in molecule0 to those in molecule1 using the mapping
-between matched atom indices. The molecule is aligned based on
-a root mean squared displacement (RMSD) fit to find the optimal
-translation vector (as opposed to merely taking the difference of
-centroids).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule0</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to align.</li>
-<li><strong>molecule1</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The reference molecule.</li>
-<li><strong>mapping</strong> (<em>dict</em>) – A dictionary mapping atoms in molecule0 to those in molecule1.</li>
-<li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
-defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-<li><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
-defined values.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The aligned molecule.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -338,7 +226,7 @@ defined values.</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index_FreeEnergy.html" class="btn btn-neutral float-right" title="BioSimSpace.FreeEnergy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace.Align.matchAtoms.html" class="btn btn-neutral float-right" title="BioSimSpace.Align.matchAtoms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -351,7 +239,7 @@ defined values.</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019 Michel Lab
-      Last updated on Jan 30, 2019.
+      Last updated on Jan 31, 2019.
 
     </p>
   </div>

@@ -1,0 +1,6 @@
+BioSimSpace.Units.Energy.kcal\_per\_mol
+=======================================
+
+.. currentmodule:: BioSimSpace.Units.Energy
+
+.. autodata:: kcal_per_mol

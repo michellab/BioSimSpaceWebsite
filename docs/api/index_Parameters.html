@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2018.1.1+664.gb8eaf29 documentation</title>
+  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
   
 
   
@@ -187,9 +187,8 @@
             
   <div class="section" id="biosimspace-parameters">
 <span id="ref-parameters"></span><h1>BioSimSpace.Parameters<a class="headerlink" href="#biosimspace-parameters" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Parameters</em> package contains tools to select features from MD-trajectories.
-It also assigns them to a discrete state space, which will be later used in Markov
-modeling.</p>
+<p>The <em>Parameters</em> package contains tools for parameterising molecules with
+a range of force fields.</p>
 <span class="target" id="module-BioSimSpace.Parameters"></span><p>Functionality for parameterising molecules.
 Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
 <dl class="function">
@@ -201,7 +200,7 @@ Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>forcefield</strong> (<em>str</em>) – The force field. Run BioSimSpace.Parameters.forceFields() to get a
 list of the supported force fields.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
@@ -215,7 +214,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -231,7 +230,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
@@ -243,7 +242,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -259,7 +258,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
@@ -271,7 +270,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -287,7 +286,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
@@ -299,7 +298,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -315,7 +314,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
@@ -327,7 +326,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -343,7 +342,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<em>BioSimSpace._SireWrappers.Molecule</em>) – The molecule to parameterise.</li>
+<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a>) – The molecule to parameterise.</li>
 <li><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
@@ -355,7 +354,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The parameterised molecule.</p>
 </td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">BioSimSpace._SireWrappers.Molecule</p>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule">BioSimSpace._SireWrappers.Molecule</a></p>
 </td>
 </tr>
 </tbody>
@@ -393,7 +392,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019 Michel Lab
-      Last updated on Jan 30, 2019.
+      Last updated on Jan 31, 2019.
 
     </p>
   </div>
