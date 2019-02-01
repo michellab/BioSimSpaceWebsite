@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+670.g3ab36ab documentation</title>
+  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
   
 
   
@@ -30,8 +30,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.Trajectory" href="index_Trajectory.html" />
-    <link rel="prev" title="BioSimSpace.Protocol" href="index_Protocol.html" /> 
+    <link rel="next" title="BioSimSpace.Solvent.solvate" href="generated/BioSimSpace.Solvent.solvate.html" />
+    <link rel="prev" title="BioSimSpace.Protocol.Production" href="generated/BioSimSpace.Protocol.Production.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -101,7 +101,17 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Protocol.html">BioSimSpace.Protocol</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Solvent</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Solvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.solvate.html">BioSimSpace.Solvent.solvate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.spc.html">BioSimSpace.Solvent.spc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.spce.html">BioSimSpace.Solvent.spce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.tip3p.html">BioSimSpace.Solvent.tip3p</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.tip4p.html">BioSimSpace.Solvent.tip4p</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.tip5p.html">BioSimSpace.Solvent.tip5p</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Solvent.waterModels.html">BioSimSpace.Solvent.waterModels</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
@@ -188,201 +198,38 @@
   <div class="section" id="biosimspace-solvent">
 <span id="ref-solvent"></span><h1>BioSimSpace.Solvent<a class="headerlink" href="#biosimspace-solvent" title="Permalink to this headline">¶</a></h1>
 <p>The <em>Solvent</em> package contains tools for solvating molecular systems.</p>
-<span class="target" id="module-BioSimSpace.Solvent"></span><p>Functionality for solvating molecular systems.
-Author: Lester Hedges &lt;<a class="reference external" href="mailto:lester&#46;hedges&#37;&#52;&#48;gmail&#46;com">lester<span>&#46;</span>hedges<span>&#64;</span>gmail<span>&#46;</span>com</a>&gt;</p>
-<dl class="function">
-<dt id="BioSimSpace.Solvent.solvate">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">solvate</code><span class="sig-paren">(</span><em>model</em>, <em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.solvate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add SPC solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+<span class="target" id="module-BioSimSpace.Solvent"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>model</strong> (<em>str</em>) – The name of the water model.</li>
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.solvate.html#BioSimSpace.Solvent.solvate" title="BioSimSpace.Solvent.solvate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solvate</span></code></a>(model[,&nbsp;molecule,&nbsp;box,&nbsp;shell,&nbsp;…])</td>
+<td>Add SPC solvent.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.spc.html#BioSimSpace.Solvent.spc" title="BioSimSpace.Solvent.spc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spc</span></code></a>([molecule,&nbsp;box,&nbsp;shell,&nbsp;ion_conc,&nbsp;…])</td>
+<td>Add SPC solvent.</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.spce.html#BioSimSpace.Solvent.spce" title="BioSimSpace.Solvent.spce"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spce</span></code></a>([molecule,&nbsp;box,&nbsp;shell,&nbsp;ion_conc,&nbsp;…])</td>
+<td>Add SPC/E solvent.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.tip3p.html#BioSimSpace.Solvent.tip3p" title="BioSimSpace.Solvent.tip3p"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tip3p</span></code></a>([molecule,&nbsp;box,&nbsp;shell,&nbsp;ion_conc,&nbsp;…])</td>
+<td>Add TIP3P solvent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.tip4p.html#BioSimSpace.Solvent.tip4p" title="BioSimSpace.Solvent.tip4p"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tip4p</span></code></a>([molecule,&nbsp;box,&nbsp;shell,&nbsp;ion_conc,&nbsp;…])</td>
+<td>Add TIP4P solvent.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.tip5p.html#BioSimSpace.Solvent.tip5p" title="BioSimSpace.Solvent.tip5p"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tip5p</span></code></a>([molecule,&nbsp;box,&nbsp;shell,&nbsp;ion_conc,&nbsp;…])</td>
+<td>Add TIP5P solvent.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Solvent.waterModels.html#BioSimSpace.Solvent.waterModels" title="BioSimSpace.Solvent.waterModels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">waterModels</span></code></a>()</td>
+<td>Return a list of the supported water models.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.spc">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">spc</code><span class="sig-paren">(</span><em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.spc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add SPC solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.spce">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">spce</code><span class="sig-paren">(</span><em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.spce" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add SPC/E solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.tip3p">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">tip3p</code><span class="sig-paren">(</span><em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.tip3p" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add TIP3P solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.tip4p">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">tip4p</code><span class="sig-paren">(</span><em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.tip4p" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add TIP4P solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.tip5p">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">tip5p</code><span class="sig-paren">(</span><em>molecule=None</em>, <em>box=None</em>, <em>shell=None</em>, <em>ion_conc=0</em>, <em>is_neutral=True</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.tip5p" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add TIP5P solvent.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule</strong> (<a class="reference internal" href="generated/BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><em>BioSimSpace._SireWrappers.Molecule</em></a><em>, </em><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><em>BioSimSpace._SireWrappers.System</em></a>) – A molecule, or system of molecules.</li>
-<li><strong>box</strong> (<em>[ </em><a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a><em> ]</em>) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<a class="reference internal" href="generated/BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><em>BioSimSpace.Types.Length</em></a>) – Thickness of the water shell around the solute.</li>
-<li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
-<li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – The solvated molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System">BioSimSpace._SireWrappers.System</a></p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="BioSimSpace.Solvent.waterModels">
-<code class="descclassname">BioSimSpace.Solvent.</code><code class="descname">waterModels</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.waterModels" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of the supported water models.</p>
-</dd></dl>
-
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -395,10 +242,10 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="index_Trajectory.html" class="btn btn-neutral float-right" title="BioSimSpace.Trajectory" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace.Solvent.solvate.html" class="btn btn-neutral float-right" title="BioSimSpace.Solvent.solvate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index_Protocol.html" class="btn btn-neutral" title="BioSimSpace.Protocol" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="generated/BioSimSpace.Protocol.Production.html" class="btn btn-neutral" title="BioSimSpace.Protocol.Production" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

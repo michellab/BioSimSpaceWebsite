@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Temperature
+===============================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Temperature
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Temperature.__init__
+      ~Temperature.getAllowedValues
+      ~Temperature.getArgType
+      ~Temperature.getDefault
+      ~Temperature.getHelp
+      ~Temperature.getMax
+      ~Temperature.getMin
+      ~Temperature.getUnit
+      ~Temperature.getValue
+      ~Temperature.isMulti
+      ~Temperature.isOptional
+      ~Temperature.setValue
+   
+   
+
+   
+   
+   

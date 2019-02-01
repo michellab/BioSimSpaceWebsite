@@ -1,0 +1,6 @@
+BioSimSpace.IO.fileFormats
+==========================
+
+.. currentmodule:: BioSimSpace.IO
+
+.. autofunction:: fileFormats

@@ -1,0 +1,1131 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Process.Somd &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Process.ProcessRunner" href="BioSimSpace.Process.ProcessRunner.html" />
+    <link rel="prev" title="BioSimSpace.Process.Namd" href="BioSimSpace.Process.Namd.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Process.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Process.html#md-driver-classes">MD driver classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Amber.html">BioSimSpace.Process.Amber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Gromacs.html">BioSimSpace.Process.Gromacs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Namd.html">BioSimSpace.Process.Namd</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Process.Somd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Process.html#multi-process-simulation-tools">Multi process simulation tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Process.html">BioSimSpace.Process</a> &raquo;</li>
+        
+      <li>BioSimSpace.Process.Somd</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Process.Somd.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-process-somd">
+<h1>BioSimSpace.Process.Somd<a class="headerlink" href="#biosimspace-process-somd" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Process.Somd">
+<em class="property">class </em><code class="descclassname">BioSimSpace.Process.</code><code class="descname">Somd</code><span class="sig-paren">(</span><em>system</em>, <em>protocol</em>, <em>exe=None</em>, <em>name='somd'</em>, <em>platform='CPU'</em>, <em>work_dir=None</em>, <em>seed=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for running simulations using SOMD.</p>
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol</em>, <em>exe=None</em>, <em>name='somd'</em>, <em>platform='CPU'</em>, <em>work_dir=None</em>, <em>seed=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</li>
+<li><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The protocol for the SOMD process.</li>
+<li><strong>exe</strong> (<em>str</em>) – The full path to the SOMD executable.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of the process.</li>
+<li><strong>platform</strong> (<em>str</em>) – The platform for the simulation: “CPU”, “CUDA”, or “OPENCL”.</li>
+<li><strong>work_dir</strong> – The working directory for the process.</li>
+<li><strong>seed</strong> (<em>int</em>) – A random number seed.</li>
+<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.__init__" title="BioSimSpace.Process.Somd.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>Constructor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.addArgs" title="BioSimSpace.Process.Somd.addArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addArgs</span></code></a>(args)</td>
+<td>Append additional command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.addToConfig" title="BioSimSpace.Process.Somd.addToConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addToConfig</span></code></a>(config)</td>
+<td>Add a string to the configuration list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.clearArgs" title="BioSimSpace.Process.Somd.clearArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearArgs</span></code></a>()</td>
+<td>Clear all of the command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.command" title="BioSimSpace.Process.Somd.command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code></a>()</td>
+<td>Return the command-line string used to run the process.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.deleteArg" title="BioSimSpace.Process.Somd.deleteArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteArg</span></code></a>(arg)</td>
+<td>Delete an argument from the dictionary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.exe" title="BioSimSpace.Process.Somd.exe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exe</span></code></a>()</td>
+<td>Return the executable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getArgString" title="BioSimSpace.Process.Somd.getArgString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgString</span></code></a>()</td>
+<td>Get the command-line arguments string.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getArgStringList" title="BioSimSpace.Process.Somd.getArgStringList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgStringList</span></code></a>()</td>
+<td>Convert the argument dictionary into a list of strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getArgs" title="BioSimSpace.Process.Somd.getArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgs</span></code></a>()</td>
+<td>Get the dictionary of command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getConfig" title="BioSimSpace.Process.Somd.getConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConfig</span></code></a>()</td>
+<td>Get the list of configuration file strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getCurrentGradient" title="BioSimSpace.Process.Somd.getCurrentGradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentGradient</span></code></a>([time_series])</td>
+<td>Get the current free energy gradient.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getCurrentSystem" title="BioSimSpace.Process.Somd.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</td>
+<td>Get the latest molecular system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getCurrentTime" title="BioSimSpace.Process.Somd.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</td>
+<td>Get the current time (in nanoseconds).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getGradient" title="BioSimSpace.Process.Somd.getGradient"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGradient</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the free energy gradient.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getName" title="BioSimSpace.Process.Somd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</td>
+<td>Return the process name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getOutput" title="BioSimSpace.Process.Somd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name,&nbsp;block])</td>
+<td>Return a link to a zip file of the working directory.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getPackageName" title="BioSimSpace.Process.Somd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</td>
+<td>Return the package name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getSeed" title="BioSimSpace.Process.Somd.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</td>
+<td>Return the random number seed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getStderr" title="BioSimSpace.Process.Somd.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</td>
+<td>Return the entire stderr for the process as a list of strings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getStdout" title="BioSimSpace.Process.Somd.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</td>
+<td>Return the entire stdout for the process as a list of strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getSystem" title="BioSimSpace.Process.Somd.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</td>
+<td>Get the latest molecular system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getTime" title="BioSimSpace.Process.Somd.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the time (in nanoseconds).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.getTrajectory" title="BioSimSpace.Process.Somd.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</td>
+<td>Return a trajectory object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.inputFiles" title="BioSimSpace.Process.Somd.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</td>
+<td>Return the list of input files.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.insertArg" title="BioSimSpace.Process.Somd.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg,&nbsp;value,&nbsp;index)</td>
+<td>Insert a command-line argument at a specific index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.isError" title="BioSimSpace.Process.Somd.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</td>
+<td>Return whether the process errored.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.isQueued" title="BioSimSpace.Process.Somd.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</td>
+<td>Return whether the process is queued.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.isRunning" title="BioSimSpace.Process.Somd.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</td>
+<td>Return whether the process is running.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.kill" title="BioSimSpace.Process.Somd.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</td>
+<td>Kill the running process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.resetArgs" title="BioSimSpace.Process.Somd.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</td>
+<td>Reset the command-line arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.resetConfig" title="BioSimSpace.Process.Somd.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</td>
+<td>Reset the configuration parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.run" title="BioSimSpace.Process.Somd.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system,&nbsp;protocol,&nbsp;autostart,&nbsp;restart])</td>
+<td>Create and run a new process.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.runTime" title="BioSimSpace.Process.Somd.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</td>
+<td>Return the running time for the process (in minutes).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.setArg" title="BioSimSpace.Process.Somd.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg,&nbsp;value)</td>
+<td>Set a specific command-line argument.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.setArgs" title="BioSimSpace.Process.Somd.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</td>
+<td>Set the dictionary of command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.setConfig" title="BioSimSpace.Process.Somd.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</td>
+<td>Set the list of configuration file strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.setName" title="BioSimSpace.Process.Somd.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</td>
+<td>Set the process name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.setSeed" title="BioSimSpace.Process.Somd.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</td>
+<td>Set the random number seed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.start" title="BioSimSpace.Process.Somd.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</td>
+<td>Start the SOMD process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.stderr" title="BioSimSpace.Process.Somd.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</td>
+<td>Print the last n lines of the stderr buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.stdout" title="BioSimSpace.Process.Somd.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</td>
+<td>Print the last n lines of the stdout buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.wait" title="BioSimSpace.Process.Somd.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</td>
+<td>Wait for the process to finish.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.workDir" title="BioSimSpace.Process.Somd.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</td>
+<td>Return the working directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Somd.writeConfig" title="BioSimSpace.Process.Somd.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</td>
+<td>Write the configuration to file.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.addArgs">
+<code class="descname">addArgs</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.addArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append additional command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command line arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.addToConfig">
+<code class="descname">addToConfig</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.addToConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a string to the configuration list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> (<em>str</em><em>, </em><em>[ </em><em>str</em><em> ]</em>) – A configuration string, a list of configuration strings, or a
+path to a configuration file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.clearArgs">
+<code class="descname">clearArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.clearArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all of the command-line arguments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.command">
+<code class="descname">command</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the command-line string used to run the process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>command</strong> – The command string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.deleteArg">
+<code class="descname">deleteArg</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.deleteArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an argument from the dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg</strong> (<em>str</em>) – The argument to delete.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.exe">
+<code class="descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the executable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>exe</strong> – The path to the executable.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getArgString">
+<code class="descname">getArgString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getArgString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the command-line arguments string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>arg_string</strong> – The command-line argument string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getArgStringList">
+<code class="descname">getArgStringList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getArgStringList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the argument dictionary into a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>arg_string_list</strong> – The list of command-line arguments.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getArgs">
+<code class="descname">getArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dictionary of command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>args</strong> – The dictionary of command-line arguments.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">collections.OrderedDict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getConfig">
+<code class="descname">getConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of configuration file strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>config</strong> – The list of configuration strings.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getCurrentGradient">
+<code class="descname">getCurrentGradient</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getCurrentGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current free energy gradient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>gradient</strong> – The current free energy gradient.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getCurrentSystem">
+<code class="descname">getCurrentSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getCurrentSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the latest molecular system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>system</strong> – The latest molecular system.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getCurrentTime">
+<code class="descname">getCurrentTime</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getCurrentTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current time (in nanoseconds).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>time</strong> – The current simulation time in nanoseconds.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getGradient">
+<code class="descname">getGradient</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the free energy gradient.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gradient</strong> – The free energy gradient.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">float</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the process name.</p>
+<p>Returns:</p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The name of the process.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getOutput">
+<code class="descname">getOutput</code><span class="sig-paren">(</span><em>name=None</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a link to a zip file of the working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the zip file.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>ouput</strong> – A path, or file link, to an archive of the process output.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str, IPython.display.FileLink</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getPackageName">
+<code class="descname">getPackageName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getPackageName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the package name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the package.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getSeed">
+<code class="descname">getSeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getSeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the random number seed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>seed</strong> – The random number seed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getStderr">
+<code class="descname">getStderr</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getStderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire stderr for the process as a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>error</strong> – The list of stderror strings.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getStdout">
+<code class="descname">getStdout</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getStdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire stdout for the process as a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>output</strong> – The list of stdout strings.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getSystem">
+<code class="descname">getSystem</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the latest molecular system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>system</strong> – The latest molecular system.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getTime">
+<code class="descname">getTime</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time (in nanoseconds).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>time</strong> – The current simulation time in nanoseconds.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.getTrajectory">
+<code class="descname">getTrajectory</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.getTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a trajectory object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>trajectory</strong> – The latest trajectory object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.inputFiles">
+<code class="descname">inputFiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.inputFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of input files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>input_files</strong> – The list of autogenerated input files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.insertArg">
+<code class="descname">insertArg</code><span class="sig-paren">(</span><em>arg</em>, <em>value</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.insertArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a command-line argument at a specific index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg</strong> (<em>str</em>) – The argument to set.</li>
+<li><strong>value</strong> – The value of the argument.</li>
+<li><strong>index</strong> (<em>int</em>) – The index in the dictionary.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.isError">
+<code class="descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.isError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process errored.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_error</strong> – Whether the process errored.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.isQueued">
+<code class="descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.isQueued" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process is queued.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_queued</strong> – Whether the process is queued.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process is running.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_running</strong> – Whether the process is running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.kill">
+<code class="descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.kill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kill the running process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.resetArgs">
+<code class="descname">resetArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.resetArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the command-line arguments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.resetConfig">
+<code class="descname">resetConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.resetConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the configuration parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>system=None</em>, <em>protocol=None</em>, <em>autostart=True</em>, <em>restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and run a new process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</li>
+<li><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The simulation protocol.</li>
+<li><strong>autostart</strong> (<em>bool</em>) – Whether to start the process automatically.</li>
+<li><strong>restart</strong> (<em>bool</em>) – Whether to restart the simulation, i.e. use the original system.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>process</strong> – The new process object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Procees</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.runTime">
+<code class="descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.runTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the running time for the process (in minutes).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>runtime</strong> – The runtime in minutes.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.setArg">
+<code class="descname">setArg</code><span class="sig-paren">(</span><em>arg</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.setArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a specific command-line argument.</p>
+<p>For command-line flags, i.e. boolean arguments, the key should
+specify whether the flag is enabled (True) or not (False).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg</strong> (<em>str</em>) – The argument to set.</li>
+<li><strong>value</strong> (<em>bool</em><em>, </em><em>str</em>) – The value of the argument.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.setArgs">
+<code class="descname">setArgs</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.setArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the dictionary of command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command line arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.setConfig">
+<code class="descname">setConfig</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.setConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of configuration file strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – The list of configuration strings, or a path to a configuration
+file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the process name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The process name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.setSeed">
+<code class="descname">setSeed</code><span class="sig-paren">(</span><em>seed</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.setSeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the random number seed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seed</strong> (<em>int</em>) – The random number seed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the SOMD process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>process</strong> – A handle to the running process.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#BioSimSpace.Process.Somd" title="BioSimSpace.Process.Somd"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process.Somd</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.stderr">
+<code class="descname">stderr</code><span class="sig-paren">(</span><em>n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the last n lines of the stderr buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – The number of lines to print.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.stdout">
+<code class="descname">stdout</code><span class="sig-paren">(</span><em>n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.stdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the last n lines of the stdout buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – The number of lines to print.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><em>max_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for the process to finish.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>max_time</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>, int, float) – The maximimum time to wait (in minutes).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.workDir">
+<code class="descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.workDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>work_dir</strong> – The path of the working directory.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Somd.writeConfig">
+<code class="descname">writeConfig</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Somd.writeConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the configuration to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file</strong> (<em>str</em>) – The path to a file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Process.ProcessRunner.html" class="btn btn-neutral float-right" title="BioSimSpace.Process.ProcessRunner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BioSimSpace.Process.Namd.html" class="btn btn-neutral" title="BioSimSpace.Process.Namd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Jan 31, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

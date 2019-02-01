@@ -1,0 +1,6 @@
+BioSimSpace.Solvent.waterModels
+===============================
+
+.. currentmodule:: BioSimSpace.Solvent
+
+.. autofunction:: waterModels

@@ -1,0 +1,6 @@
+BioSimSpace.\_Exceptions.ParameterisationError
+==============================================
+
+.. currentmodule:: BioSimSpace._Exceptions
+
+.. autoexception:: ParameterisationError

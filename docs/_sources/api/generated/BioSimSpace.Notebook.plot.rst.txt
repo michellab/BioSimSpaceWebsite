@@ -1,0 +1,6 @@
+BioSimSpace.Notebook.plot
+=========================
+
+.. currentmodule:: BioSimSpace.Notebook
+
+.. autofunction:: plot

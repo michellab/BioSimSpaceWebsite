@@ -1,0 +1,6 @@
+BioSimSpace.IO.formatInfo
+=========================
+
+.. currentmodule:: BioSimSpace.IO
+
+.. autofunction:: formatInfo

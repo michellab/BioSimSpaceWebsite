@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.String
+==========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: String
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~String.__init__
+      ~String.getAllowedValues
+      ~String.getArgType
+      ~String.getDefault
+      ~String.getHelp
+      ~String.getMax
+      ~String.getMin
+      ~String.getUnit
+      ~String.getValue
+      ~String.isMulti
+      ~String.isOptional
+      ~String.setValue
+   
+   
+
+   
+   
+   

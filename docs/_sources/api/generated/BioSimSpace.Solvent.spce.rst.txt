@@ -1,0 +1,6 @@
+BioSimSpace.Solvent.spce
+========================
+
+.. currentmodule:: BioSimSpace.Solvent
+
+.. autofunction:: spce

@@ -1,0 +1,6 @@
+BioSimSpace.Parameters.parameterise
+===================================
+
+.. currentmodule:: BioSimSpace.Parameters
+
+.. autofunction:: parameterise

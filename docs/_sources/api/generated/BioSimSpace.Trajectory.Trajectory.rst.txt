@@ -1,0 +1,26 @@
+BioSimSpace.Trajectory.Trajectory
+=================================
+
+.. currentmodule:: BioSimSpace.Trajectory
+
+.. autoclass:: Trajectory
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Trajectory.RMSD
+      ~Trajectory.__init__
+      ~Trajectory.getFrames
+      ~Trajectory.getTrajectory
+      ~Trajectory.nFrames
+   
+   
+
+   
+   
+   

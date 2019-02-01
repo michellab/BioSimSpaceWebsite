@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Energy
+==========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Energy
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Energy.__init__
+      ~Energy.getAllowedValues
+      ~Energy.getArgType
+      ~Energy.getDefault
+      ~Energy.getHelp
+      ~Energy.getMax
+      ~Energy.getMin
+      ~Energy.getUnit
+      ~Energy.getValue
+      ~Energy.isMulti
+      ~Energy.isOptional
+      ~Energy.setValue
+   
+   
+
+   
+   
+   
