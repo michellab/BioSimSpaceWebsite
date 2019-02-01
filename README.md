@@ -1,4 +1,4 @@
-# BioSimSpace Website + Notebook Installation
+# BioSimSpace Website & Notebook Installation
 
 This directory contains all of the files needed to set up and configure
 the BioSimSpace website and jupyter notebooks (including building all
