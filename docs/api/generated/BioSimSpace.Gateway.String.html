@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.String &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
+  <title>BioSimSpace.Gateway.String &mdash; BioSimSpace 2018.1.1+710.g498d40c documentation</title>
   
 
   
@@ -211,6 +211,17 @@
 <dt id="BioSimSpace.Gateway.String">
 <em class="property">class </em><code class="descclassname">BioSimSpace.Gateway.</code><code class="descname">String</code><span class="sig-paren">(</span><em>help=None</em>, <em>default=None</em>, <em>allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.String" title="Permalink to this definition">¶</a></dt>
 <dd><p>A string requirement.</p>
+<p class="rubric">Examples</p>
+<p>Create a string requirement with a default value.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A string requirement.&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;dog&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a string requirement with a list of allowed values and a default of “cat”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_string</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A string requirement.&quot;</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;cat&quot;</span><span class="p">,</span> <span class="s2">&quot;dog&quot;</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">],</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;cat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="method">
 <dt id="BioSimSpace.Gateway.String.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>help=None</em>, <em>default=None</em>, <em>allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.String.__init__" title="Permalink to this definition">¶</a></dt>
@@ -438,7 +449,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019 Michel Lab
-      Last updated on Jan 31, 2019.
+      Last updated on Feb 08, 2019.
 
     </p>
   </div>

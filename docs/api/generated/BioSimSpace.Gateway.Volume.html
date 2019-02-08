@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.Volume &mdash; BioSimSpace 2018.1.1+692.g23d7ed5 documentation</title>
+  <title>BioSimSpace.Gateway.Volume &mdash; BioSimSpace 2018.1.1+710.g498d40c documentation</title>
   
 
   
@@ -211,6 +211,25 @@
 <dt id="BioSimSpace.Gateway.Volume">
 <em class="property">class </em><code class="descclassname">BioSimSpace.Gateway.</code><code class="descname">Volume</code><span class="sig-paren">(</span><em>help=None</em>, <em>default=None</em>, <em>unit=None</em>, <em>minimum=None</em>, <em>maximum=None</em>, <em>allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>A volume requirement.</p>
+<p class="rubric">Examples</p>
+<p>Create an area requirement with a default of 10 cubed Angstrom.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A volume requirement&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;angstrom3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The same, but explicitly passing a Volume type for the default.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A volume requirement&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Volume</span><span class="o">.</span><span class="n">angstrom3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a volume requirement with a default of 10 cubed Angstrom and a maximum
+of 50 square nanometers. Note that the unit is taken from the default value.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A volume requirement&quot;</span><span class="p">,</span> <span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Volume</span><span class="o">.</span><span class="n">angstrom3</span><span class="p">,</span> <span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span>                               <span class="n">maximum</span><span class="o">=</span><span class="mi">50</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Volume</span><span class="o">.</span><span class="n">nanometer3</span><span class="p">)</span>
+</pre></div>
+</div>
 <dl class="method">
 <dt id="BioSimSpace.Gateway.Volume.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>help=None</em>, <em>default=None</em>, <em>unit=None</em>, <em>minimum=None</em>, <em>maximum=None</em>, <em>allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Volume.__init__" title="Permalink to this definition">¶</a></dt>
@@ -451,7 +470,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019 Michel Lab
-      Last updated on Jan 31, 2019.
+      Last updated on Feb 08, 2019.
 
     </p>
   </div>
