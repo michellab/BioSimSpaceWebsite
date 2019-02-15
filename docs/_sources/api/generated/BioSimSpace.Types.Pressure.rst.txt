@@ -1,0 +1,26 @@
+BioSimSpace.Types.Pressure
+==========================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Pressure
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Pressure.__init__
+      ~Pressure.atm
+      ~Pressure.bar
+      ~Pressure.magnitude
+      ~Pressure.unit
+   
+   
+
+   
+   
+   

@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Process &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BioSimSpace.Process.packages" href="generated/BioSimSpace.Process.packages.html" />
+    <link rel="prev" title="BioSimSpace.Parameters.forceFields" href="generated/BioSimSpace.Parameters.forceFields.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Process</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.packages.html">BioSimSpace.Process.packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.createProcess.html">BioSimSpace.Process.createProcess</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#md-driver-classes">MD driver classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.Amber.html">BioSimSpace.Process.Amber</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.Gromacs.html">BioSimSpace.Process.Gromacs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.Namd.html">BioSimSpace.Process.Namd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.Somd.html">BioSimSpace.Process.Somd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-process-simulation-tools">Multi process simulation tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.ProcessRunner.html">BioSimSpace.Process.ProcessRunner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Documentation</a> &raquo;</li>
+        
+      <li>BioSimSpace.Process</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index_Process.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-process">
+<span id="ref-process"></span><h1>BioSimSpace.Process<a class="headerlink" href="#biosimspace-process" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Process</em> package contains tools for running different simulation protocols
+with a range of external molecular dynamics packages.</p>
+<span class="target" id="module-BioSimSpace.Process"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Process.packages.html#BioSimSpace.Process.packages" title="BioSimSpace.Process.packages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">packages</span></code></a>()</td>
+<td>Return a list of the supported Molecular Dynamics packages.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Process.createProcess.html#BioSimSpace.Process.createProcess" title="BioSimSpace.Process.createProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createProcess</span></code></a>(system,&nbsp;protocol,&nbsp;package)</td>
+<td>Create a simulation process.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="md-driver-classes">
+<h2>MD driver classes<a class="headerlink" href="#md-driver-classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Process.Amber.html#BioSimSpace.Process.Amber" title="BioSimSpace.Process.Amber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Amber</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>A class for running simulations using AMBER.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Process.Gromacs.html#BioSimSpace.Process.Gromacs" title="BioSimSpace.Process.Gromacs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Gromacs</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>A class for running simulations using GROMACS.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Process.Namd.html#BioSimSpace.Process.Namd" title="BioSimSpace.Process.Namd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Namd</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>A class for running simulations using NAMD.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Process.Somd.html#BioSimSpace.Process.Somd" title="BioSimSpace.Process.Somd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Somd</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>A class for running simulations using SOMD.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="multi-process-simulation-tools">
+<h2>Multi process simulation tools<a class="headerlink" href="#multi-process-simulation-tools" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Process.ProcessRunner.html#BioSimSpace.Process.ProcessRunner" title="BioSimSpace.Process.ProcessRunner"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProcessRunner</span></code></a>(processes[,&nbsp;name,&nbsp;work_dir,&nbsp;…])</td>
+<td>A class for managing and running multiple simulation processes, e.g.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/BioSimSpace.Process.packages.html" class="btn btn-neutral float-right" title="BioSimSpace.Process.packages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/BioSimSpace.Parameters.forceFields.html" class="btn btn-neutral" title="BioSimSpace.Parameters.forceFields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

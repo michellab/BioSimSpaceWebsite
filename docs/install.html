@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Documentation" href="api/index.html" />
+    <link rel="prev" title="BioSimSpace" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#binary-install">Binary install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#for-developers">For developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-issues">Common issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#external-dependencies">External dependencies</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<span id="ref-install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="binary-install">
+<h2>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this headline">¶</a></h2>
+<p>The latest self-extracting binary for the development version of BioSimSpace
+can be downloaded from one of the following links:</p>
+<ul class="simple">
+<li>Linux: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/ZH4wscDHe59T28yVJtrMH8uqifI_ih0NL5IyqxXQjSo/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_linux.run">biosimspace_devel_latest_linux.run</a></li>
+<li>Mac OS X: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/whcwfvWfndjA4RxupM-4gsVsjcdR0w5I9aP1RJKPruQ/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_osx.run">biosimspace_devel_latest_osx.run</a></li>
+</ul>
+<p>(these are portable X86-64 binaries that should work on any Linux distribution released
+since ~2011, or any OS X &gt;= 10.9[Mavericks, released 2013]. Note that they are compiled with AVX
+enabled, so will only work on modern (&gt;2011) X86-64 Intel/AMD processors)</p>
+<p>One downloaded, the binary can be unpacked as follows on Linux:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x biosimspace_devel_latest_linux.run
+./biosimspace_devel_latest_linux.run
+</pre></div>
+</div>
+<p>or on OS X:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod +x biosimspace_devel_latest_osx.run
+./biosimspace_devel_latest_osx.run
+</pre></div>
+</div>
+<p>Both of these commands will let you choose where to install BioSimSpace. By default,
+this will be into $HOME/biosimspace.app.</p>
+</div>
+<div class="section" id="for-developers">
+<h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
+<p>The following documents a full installation of BioSimSpace from source. Before
+starting, you’ll need working <a class="reference external" href="https://git-scm.com">Git</a> and <a class="reference external" href="https://cmake.org">CMake</a>
+installations.</p>
+<ol class="arabic simple">
+<li>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
+molecular simulation framework. To download and install Sire:</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/Sire
+<span class="nb">cd</span> Sire
+./compile_sire.sh
+</pre></div>
+</div>
+<p>Assuming the default installation path, this will install Sire into <code class="docutils literal notranslate"><span class="pre">$HOME/sire.app</span></code>.</p>
+<p>(Note that the installation is slow and can take in excess of an hour.)</p>
+<ol class="arabic simple" start="2">
+<li>Next you will need to download BioSimSpace and install it into your Sire
+application. (The following assumes the default Sire installation path.)</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/BioSimSpace
+<span class="nb">cd</span> BioSimSpace/python
+<span class="nv">$HOME</span>/sire.app/bin/python setup,py install
+</pre></div>
+</div>
+<p>Once finished, you can test the installation by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$HOME</span>/sire.app/bin/ipython
+</pre></div>
+</div>
+<p>Then try importing the BioSimSpace package:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="common-issues">
+<h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>If you experience problems with <a class="reference external" href="https://matplotlib.org">Matplotlib</a> when
+importing BioSimSpace on macOS, e.g.</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RuntimeError**: Python is not installed as a framework.
+</pre></div>
+</div>
+<p>simply add the following to <code class="docutils literal notranslate"><span class="pre">~/.matplotlib/matplotlibrc</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>backend: TkAgg
+</pre></div>
+</div>
+<p>Note that plotting functionality will be disabled if you are using
+BioSimSpace on a remote server without X forwarding.</p>
+<ul class="simple">
+<li>If you experience problems with <a class="reference external" href="https://jupyter.org">Jupyter</a> permissions,
+try removing <code class="docutils literal notranslate"><span class="pre">$HOME/.jupyter</span></code> or <code class="docutils literal notranslate"><span class="pre">$HOME/.local/share/jupyter</span></code></li>
+</ul>
+</div>
+<div class="section" id="external-dependencies">
+<h2>External dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Several additional packages are required for full access to all of BioSimSpace’s
+functionality. Please download and install these packages according to their
+recommended installation instructions.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://ambermd.org">Amber / AmberTools</a> – <em>Dynamics / Parameterisation</em></li>
+<li><a class="reference external" href="http://www.gromacs.org">Gromacs</a> – <em>Dynamics / Parameterisation / Solvation</em></li>
+<li><a class="reference external" href="http://www.ks.uiuc.edu/Research/namd">Namd</a> – <em>Dynamics</em></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="api/index.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="BioSimSpace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

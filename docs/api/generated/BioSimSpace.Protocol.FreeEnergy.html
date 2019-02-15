@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Protocol.FreeEnergy &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Protocol.Minimisation" href="BioSimSpace.Protocol.Minimisation.html" />
+    <link rel="prev" title="BioSimSpace.Protocol.Equilibration" href="BioSimSpace.Protocol.Equilibration.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Protocol.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Protocol.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Custom.html">BioSimSpace.Protocol.Custom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Equilibration.html">BioSimSpace.Protocol.Equilibration</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Protocol.FreeEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Minimisation.html">BioSimSpace.Protocol.Minimisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Production.html">BioSimSpace.Protocol.Production</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Protocol.html">BioSimSpace.Protocol</a> &raquo;</li>
+        
+      <li>BioSimSpace.Protocol.FreeEnergy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Protocol.FreeEnergy.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-protocol-freeenergy">
+<h1>BioSimSpace.Protocol.FreeEnergy<a class="headerlink" href="#biosimspace-protocol-freeenergy" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Protocol.FreeEnergy">
+<em class="property">class </em><code class="descclassname">BioSimSpace.Protocol.</code><code class="descname">FreeEnergy</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for storing free energy protocols.</p>
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lam</strong> (<em>float</em>) – The perturbation parameter: [0.0, 1.0]</li>
+<li><strong>lam_vals</strong> (<em>[</em><em>float</em><em>]</em>) – The list of lambda parameters.</li>
+<li><strong>min_lam</strong> (<em>float</em>) – The minimum lambda value.</li>
+<li><strong>max_lam</strong> (<em>float</em>) – The maximum lambda value.</li>
+<li><strong>num_lam</strong> (<em>int</em>) – The number of lambda values.</li>
+<li><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration timestep.</li>
+<li><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The running time.</li>
+<li><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The temperature.</li>
+<li><strong>ensemble</strong> (<em>str</em>) – The thermodynamic ensemble.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.__init__" title="BioSimSpace.Protocol.FreeEnergy.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([lam,&nbsp;lam_vals,&nbsp;min_lam,&nbsp;max_lam,&nbsp;…])</td>
+<td>Constructor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getEnsemble" title="BioSimSpace.Protocol.FreeEnergy.getEnsemble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEnsemble</span></code></a>()</td>
+<td>Return the thermodynamic ensemble.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getLambda" title="BioSimSpace.Protocol.FreeEnergy.getLambda"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambda</span></code></a>()</td>
+<td>Get the value of the perturbation parameter.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getLambdaValues" title="BioSimSpace.Protocol.FreeEnergy.getLambdaValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambdaValues</span></code></a>()</td>
+<td>Get the list of lambda values.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getRunTime" title="BioSimSpace.Protocol.FreeEnergy.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</td>
+<td>Return the running time.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getTemperature" title="BioSimSpace.Protocol.FreeEnergy.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</td>
+<td>Return temperature.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getTimeStep" title="BioSimSpace.Protocol.FreeEnergy.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</td>
+<td>Return the time step.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setEnsemble" title="BioSimSpace.Protocol.FreeEnergy.setEnsemble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setEnsemble</span></code></a>(ensemble)</td>
+<td>Set the thermodynamic ensemble.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setLambdaValues" title="BioSimSpace.Protocol.FreeEnergy.setLambdaValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLambdaValues</span></code></a>(lam[,&nbsp;lam_vals,&nbsp;min_lam,&nbsp;…])</td>
+<td>Set the list of lambda values.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setRunTime" title="BioSimSpace.Protocol.FreeEnergy.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</td>
+<td>Set the running time.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setTemperature" title="BioSimSpace.Protocol.FreeEnergy.setTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code></a>(temperature)</td>
+<td>Set the temperature.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setTimeStep" title="BioSimSpace.Protocol.FreeEnergy.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</td>
+<td>Set the time step.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getEnsemble">
+<code class="descname">getEnsemble</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the thermodynamic ensemble.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>ensemble</strong> – The thermodynamic ensemble.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getLambda">
+<code class="descname">getLambda</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getLambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the perturbation parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>lam</strong> – The value of the perturbation parameter.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getLambdaValues">
+<code class="descname">getLambdaValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getLambdaValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of lambda values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>lam_vals</strong> – The list of lambda values.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[float]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getRunTime">
+<code class="descname">getRunTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getRunTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the running time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>runtime</strong> – The simulation run time.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getTemperature">
+<code class="descname">getTemperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return temperature.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>temperature</strong> – The simulation temperature.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.getTimeStep">
+<code class="descname">getTimeStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getTimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the time step.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>timestep</strong> – The integration time step.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.setEnsemble">
+<code class="descname">setEnsemble</code><span class="sig-paren">(</span><em>ensemble</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setEnsemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the thermodynamic ensemble.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ensemble</strong> (<em>str</em>) – The thermodynamic ensemble.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.setLambdaValues">
+<code class="descname">setLambdaValues</code><span class="sig-paren">(</span><em>lam</em>, <em>lam_vals=None</em>, <em>min_lam=None</em>, <em>max_lam=None</em>, <em>num_lam=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setLambdaValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of lambda values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lam</strong> (<em>float</em>) – The perturbation parameter: [0.0, 1.0]</li>
+<li><strong>lam_vals</strong> (<em>[</em><em>float</em><em>]</em>) – A list of lambda values.</li>
+<li><strong>min_lam</strong> (<em>float</em>) – The minimum lambda value.</li>
+<li><strong>max_lam</strong> (<em>float</em>) – The maximum lambda value.</li>
+<li><strong>num_lam</strong> (<em>int</em>) – The number of lambda values.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.setRunTime">
+<code class="descname">setRunTime</code><span class="sig-paren">(</span><em>runtime</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setRunTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the running time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The simulation run time.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.setTemperature">
+<code class="descname">setTemperature</code><span class="sig-paren">(</span><em>temperature</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the temperature.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The simulation temperature.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.FreeEnergy.setTimeStep">
+<code class="descname">setTimeStep</code><span class="sig-paren">(</span><em>timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setTimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the time step.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration time step.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Protocol.Minimisation.html" class="btn btn-neutral float-right" title="BioSimSpace.Protocol.Minimisation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BioSimSpace.Protocol.Equilibration.html" class="btn btn-neutral" title="BioSimSpace.Protocol.Equilibration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

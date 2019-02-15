@@ -1,0 +1,347 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Gateway &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BioSimSpace.Gateway.Node" href="generated/BioSimSpace.Gateway.Node.html" />
+    <link rel="prev" title="BioSimSpace.FreeEnergy.Solvation" href="generated/BioSimSpace.FreeEnergy.Solvation.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Gateway</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html">BioSimSpace.Gateway.Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#requirement-types">Requirement types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Boolean.html">BioSimSpace.Gateway.Boolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Integer.html">BioSimSpace.Gateway.Integer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Float.html">BioSimSpace.Gateway.Float</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.String.html">BioSimSpace.Gateway.String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.File.html">BioSimSpace.Gateway.File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.FileSet.html">BioSimSpace.Gateway.FileSet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Length.html">BioSimSpace.Gateway.Length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Area.html">BioSimSpace.Gateway.Area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Volume.html">BioSimSpace.Gateway.Volume</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Charge.html">BioSimSpace.Gateway.Charge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Energy.html">BioSimSpace.Gateway.Energy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Pressure.html">BioSimSpace.Gateway.Pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Temperature.html">BioSimSpace.Gateway.Temperature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Gateway.Time.html">BioSimSpace.Gateway.Time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Documentation</a> &raquo;</li>
+        
+      <li>BioSimSpace.Gateway</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index_Gateway.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-gateway">
+<span id="ref-gateway"></span><h1>BioSimSpace.Gateway<a class="headerlink" href="#biosimspace-gateway" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Gateway</em> package provides functionality to act as a bridge between
+BioSimSpace and the outside world. It allows the user to define robust
+and portable workflow components (nodes) that can be run from a variety
+of environments, e.g. within <a class="reference external" href="https://jupyter.org">Jupyter</a>, or from
+the command-line.</p>
+<span class="target" id="module-BioSimSpace.Gateway"></span><div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Node</span></code></a>(description[,&nbsp;name])</td>
+<td>A class for interfacing with BioSimSpace nodes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="requirement-types">
+<h2>Requirement types<a class="headerlink" href="#requirement-types" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Boolean.html#BioSimSpace.Gateway.Boolean" title="BioSimSpace.Gateway.Boolean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Boolean</span></code></a>([help,&nbsp;default])</td>
+<td>A boolean requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Integer.html#BioSimSpace.Gateway.Integer" title="BioSimSpace.Gateway.Integer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Integer</span></code></a>([help,&nbsp;default,&nbsp;minimum,&nbsp;maximum,&nbsp;…])</td>
+<td>An integer requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Float.html#BioSimSpace.Gateway.Float" title="BioSimSpace.Gateway.Float"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Float</span></code></a>([help,&nbsp;default,&nbsp;minimum,&nbsp;maximum,&nbsp;allowed])</td>
+<td>A floating point requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.String.html#BioSimSpace.Gateway.String" title="BioSimSpace.Gateway.String"><code class="xref py py-obj docutils literal notranslate"><span class="pre">String</span></code></a>([help,&nbsp;default,&nbsp;allowed])</td>
+<td>A string requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.File.html#BioSimSpace.Gateway.File" title="BioSimSpace.Gateway.File"><code class="xref py py-obj docutils literal notranslate"><span class="pre">File</span></code></a>([help,&nbsp;optional])</td>
+<td>A file requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.FileSet.html#BioSimSpace.Gateway.FileSet" title="BioSimSpace.Gateway.FileSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FileSet</span></code></a>([help,&nbsp;optional])</td>
+<td>A file requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Length.html#BioSimSpace.Gateway.Length" title="BioSimSpace.Gateway.Length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A length requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Area.html#BioSimSpace.Gateway.Area" title="BioSimSpace.Gateway.Area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>An area requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Volume.html#BioSimSpace.Gateway.Volume" title="BioSimSpace.Gateway.Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A volume requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Charge.html#BioSimSpace.Gateway.Charge" title="BioSimSpace.Gateway.Charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A charge requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Energy.html#BioSimSpace.Gateway.Energy" title="BioSimSpace.Gateway.Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>An energy requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Pressure.html#BioSimSpace.Gateway.Pressure" title="BioSimSpace.Gateway.Pressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pressure</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A pressure requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Temperature.html#BioSimSpace.Gateway.Temperature" title="BioSimSpace.Gateway.Temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A temperature requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Gateway.Time.html#BioSimSpace.Gateway.Time" title="BioSimSpace.Gateway.Time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a>([help,&nbsp;default,&nbsp;unit,&nbsp;minimum,&nbsp;…])</td>
+<td>A time requirement.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/BioSimSpace.Gateway.Node.html" class="btn btn-neutral float-right" title="BioSimSpace.Gateway.Node" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/BioSimSpace.FreeEnergy.Solvation.html" class="btn btn-neutral" title="BioSimSpace.FreeEnergy.Solvation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

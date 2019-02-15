@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Integer
+===========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Integer
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Integer.__init__
+      ~Integer.getAllowedValues
+      ~Integer.getArgType
+      ~Integer.getDefault
+      ~Integer.getHelp
+      ~Integer.getMax
+      ~Integer.getMin
+      ~Integer.getUnit
+      ~Integer.getValue
+      ~Integer.isMulti
+      ~Integer.isOptional
+      ~Integer.setValue
+   
+   
+
+   
+   
+   

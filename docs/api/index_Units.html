@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Units &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BioSimSpace.Units.Length.meter" href="generated/BioSimSpace.Units.Length.meter.html" />
+    <link rel="prev" title="BioSimSpace.Types.Volume" href="generated/BioSimSpace.Types.Volume.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Units</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#length-units">Length units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Length.meter.html">BioSimSpace.Units.Length.meter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Length.angstrom.html">BioSimSpace.Units.Length.angstrom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Length.nanometer.html">BioSimSpace.Units.Length.nanometer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Length.picometer.html">BioSimSpace.Units.Length.picometer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#area-units">Area units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Area.meter2.html">BioSimSpace.Units.Area.meter2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Area.angstrom2.html">BioSimSpace.Units.Area.angstrom2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Area.nanometer2.html">BioSimSpace.Units.Area.nanometer2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Area.picometer2.html">BioSimSpace.Units.Area.picometer2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#volume-units">Volume units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Volume.meter3.html">BioSimSpace.Units.Volume.meter3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Volume.angstrom3.html">BioSimSpace.Units.Volume.angstrom3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Volume.nanometer3.html">BioSimSpace.Units.Volume.nanometer3</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Volume.picometer3.html">BioSimSpace.Units.Volume.picometer3</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#charge-units">Charge units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Charge.electron_charge.html">BioSimSpace.Units.Charge.electron_charge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Charge.coulomb.html">BioSimSpace.Units.Charge.coulomb</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#energy-units">Energy units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kcal_per_mol.html">BioSimSpace.Units.Energy.kcal_per_mol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kj_per_mol.html">BioSimSpace.Units.Energy.kj_per_mol</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kt.html">BioSimSpace.Units.Energy.kt</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pressure-units">Pressure units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.atm.html">BioSimSpace.Units.Pressure.atm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.bar.html">BioSimSpace.Units.Pressure.bar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-units">Temperature units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.kelvin.html">BioSimSpace.Units.Temperature.kelvin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.celsius.html">BioSimSpace.Units.Temperature.celsius</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.fahrenheit.html">BioSimSpace.Units.Temperature.fahrenheit</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#time-units">Time units</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.day.html">BioSimSpace.Units.Time.day</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.hour.html">BioSimSpace.Units.Time.hour</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.minute.html">BioSimSpace.Units.Time.minute</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.second.html">BioSimSpace.Units.Time.second</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.millisecond.html">BioSimSpace.Units.Time.millisecond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.nanosecond.html">BioSimSpace.Units.Time.nanosecond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.picosecond.html">BioSimSpace.Units.Time.picosecond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Units.Time.femtosecond.html">BioSimSpace.Units.Time.femtosecond</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Documentation</a> &raquo;</li>
+        
+      <li>BioSimSpace.Units</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index_Units.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-units">
+<span id="ref-units"></span><h1>BioSimSpace.Units<a class="headerlink" href="#biosimspace-units" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Units</em> package provides a set of common physical units required by BioSimSpace.
+This provide short-hand access to BioSimSpace <a class="reference internal" href="index_Types.html#ref-types"><span class="std std-ref">BioSimSpace.Types</span></a>.</p>
+<span class="target" id="module-BioSimSpace.Units"></span><div class="section" id="length-units">
+<h2>Length units<a class="headerlink" href="#length-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.meter.html#BioSimSpace.Units.Length.meter" title="BioSimSpace.Units.Length.meter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.meter</span></code></a></td>
+<td>A length type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.angstrom.html#BioSimSpace.Units.Length.angstrom" title="BioSimSpace.Units.Length.angstrom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.angstrom</span></code></a></td>
+<td>A length type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.nanometer.html#BioSimSpace.Units.Length.nanometer" title="BioSimSpace.Units.Length.nanometer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.nanometer</span></code></a></td>
+<td>A length type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.picometer.html#BioSimSpace.Units.Length.picometer" title="BioSimSpace.Units.Length.picometer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.picometer</span></code></a></td>
+<td>A length type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="area-units">
+<h2>Area units<a class="headerlink" href="#area-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.meter2.html#BioSimSpace.Units.Area.meter2" title="BioSimSpace.Units.Area.meter2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.meter2</span></code></a></td>
+<td>An area type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.angstrom2.html#BioSimSpace.Units.Area.angstrom2" title="BioSimSpace.Units.Area.angstrom2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.angstrom2</span></code></a></td>
+<td>An area type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.nanometer2.html#BioSimSpace.Units.Area.nanometer2" title="BioSimSpace.Units.Area.nanometer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.nanometer2</span></code></a></td>
+<td>An area type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.picometer2.html#BioSimSpace.Units.Area.picometer2" title="BioSimSpace.Units.Area.picometer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.picometer2</span></code></a></td>
+<td>An area type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="volume-units">
+<h2>Volume units<a class="headerlink" href="#volume-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.meter3.html#BioSimSpace.Units.Volume.meter3" title="BioSimSpace.Units.Volume.meter3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.meter3</span></code></a></td>
+<td>A volume type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.angstrom3.html#BioSimSpace.Units.Volume.angstrom3" title="BioSimSpace.Units.Volume.angstrom3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.angstrom3</span></code></a></td>
+<td>A volume type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.nanometer3.html#BioSimSpace.Units.Volume.nanometer3" title="BioSimSpace.Units.Volume.nanometer3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.nanometer3</span></code></a></td>
+<td>A volume type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.picometer3.html#BioSimSpace.Units.Volume.picometer3" title="BioSimSpace.Units.Volume.picometer3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.picometer3</span></code></a></td>
+<td>A volume type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="charge-units">
+<h2>Charge units<a class="headerlink" href="#charge-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Charge.electron_charge.html#BioSimSpace.Units.Charge.electron_charge" title="BioSimSpace.Units.Charge.electron_charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge.electron_charge</span></code></a></td>
+<td>A charge type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Charge.coulomb.html#BioSimSpace.Units.Charge.coulomb" title="BioSimSpace.Units.Charge.coulomb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge.coulomb</span></code></a></td>
+<td>A charge type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="energy-units">
+<h2>Energy units<a class="headerlink" href="#energy-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kcal_per_mol.html#BioSimSpace.Units.Energy.kcal_per_mol" title="BioSimSpace.Units.Energy.kcal_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kcal_per_mol</span></code></a></td>
+<td>An energy type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kj_per_mol.html#BioSimSpace.Units.Energy.kj_per_mol" title="BioSimSpace.Units.Energy.kj_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kj_per_mol</span></code></a></td>
+<td>An energy type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kt.html#BioSimSpace.Units.Energy.kt" title="BioSimSpace.Units.Energy.kt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kt</span></code></a></td>
+<td>An energy type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="pressure-units">
+<h2>Pressure units<a class="headerlink" href="#pressure-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.atm.html#BioSimSpace.Units.Pressure.atm" title="BioSimSpace.Units.Pressure.atm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pressure.atm</span></code></a></td>
+<td>A pressure type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.bar.html#BioSimSpace.Units.Pressure.bar" title="BioSimSpace.Units.Pressure.bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pressure.bar</span></code></a></td>
+<td>A pressure type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="temperature-units">
+<h2>Temperature units<a class="headerlink" href="#temperature-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.kelvin.html#BioSimSpace.Units.Temperature.kelvin" title="BioSimSpace.Units.Temperature.kelvin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.kelvin</span></code></a></td>
+<td>A temperature type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.celsius.html#BioSimSpace.Units.Temperature.celsius" title="BioSimSpace.Units.Temperature.celsius"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.celsius</span></code></a></td>
+<td>A temperature type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.fahrenheit.html#BioSimSpace.Units.Temperature.fahrenheit" title="BioSimSpace.Units.Temperature.fahrenheit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.fahrenheit</span></code></a></td>
+<td>A temperature type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="time-units">
+<h2>Time units<a class="headerlink" href="#time-units" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.day.html#BioSimSpace.Units.Time.day" title="BioSimSpace.Units.Time.day"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.day</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.hour.html#BioSimSpace.Units.Time.hour" title="BioSimSpace.Units.Time.hour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.hour</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.minute.html#BioSimSpace.Units.Time.minute" title="BioSimSpace.Units.Time.minute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.minute</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.second.html#BioSimSpace.Units.Time.second" title="BioSimSpace.Units.Time.second"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.second</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.millisecond.html#BioSimSpace.Units.Time.millisecond" title="BioSimSpace.Units.Time.millisecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.millisecond</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.nanosecond.html#BioSimSpace.Units.Time.nanosecond" title="BioSimSpace.Units.Time.nanosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.nanosecond</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.picosecond.html#BioSimSpace.Units.Time.picosecond" title="BioSimSpace.Units.Time.picosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.picosecond</span></code></a></td>
+<td>A time type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.femtosecond.html#BioSimSpace.Units.Time.femtosecond" title="BioSimSpace.Units.Time.femtosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.femtosecond</span></code></a></td>
+<td>A time type.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/BioSimSpace.Units.Length.meter.html" class="btn btn-neutral float-right" title="BioSimSpace.Units.Length.meter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/BioSimSpace.Types.Volume.html" class="btn btn-neutral" title="BioSimSpace.Types.Volume" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

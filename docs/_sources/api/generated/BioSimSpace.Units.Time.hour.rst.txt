@@ -1,0 +1,6 @@
+BioSimSpace.Units.Time.hour
+===========================
+
+.. currentmodule:: BioSimSpace.Units.Time
+
+.. autodata:: hour

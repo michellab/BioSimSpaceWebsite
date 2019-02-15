@@ -1,0 +1,6 @@
+BioSimSpace.Units.Area.nanometer2
+=================================
+
+.. currentmodule:: BioSimSpace.Units.Area
+
+.. autodata:: nanometer2

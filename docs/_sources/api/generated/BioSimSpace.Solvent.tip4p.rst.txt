@@ -1,0 +1,6 @@
+BioSimSpace.Solvent.tip4p
+=========================
+
+.. currentmodule:: BioSimSpace.Solvent
+
+.. autofunction:: tip4p

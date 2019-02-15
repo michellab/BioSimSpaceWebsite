@@ -1,0 +1,28 @@
+BioSimSpace.Types.Volume
+========================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Volume
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Volume.__init__
+      ~Volume.angstroms3
+      ~Volume.magnitude
+      ~Volume.meters3
+      ~Volume.nanometers3
+      ~Volume.picometers3
+      ~Volume.unit
+   
+   
+
+   
+   
+   

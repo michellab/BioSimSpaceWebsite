@@ -1,0 +1,6 @@
+BioSimSpace.Align.matchAtoms
+============================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: matchAtoms

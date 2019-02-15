@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Area
+========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Area
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Area.__init__
+      ~Area.getAllowedValues
+      ~Area.getArgType
+      ~Area.getDefault
+      ~Area.getHelp
+      ~Area.getMax
+      ~Area.getMin
+      ~Area.getUnit
+      ~Area.getValue
+      ~Area.isMulti
+      ~Area.isOptional
+      ~Area.setValue
+   
+   
+
+   
+   
+   

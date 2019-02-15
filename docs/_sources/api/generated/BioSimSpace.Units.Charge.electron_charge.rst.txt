@@ -1,0 +1,6 @@
+BioSimSpace.Units.Charge.electron\_charge
+=========================================
+
+.. currentmodule:: BioSimSpace.Units.Charge
+
+.. autodata:: electron_charge

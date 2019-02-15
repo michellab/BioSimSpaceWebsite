@@ -1,0 +1,6 @@
+BioSimSpace.Units.Area.meter2
+=============================
+
+.. currentmodule:: BioSimSpace.Units.Area
+
+.. autodata:: meter2

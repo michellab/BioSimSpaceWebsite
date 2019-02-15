@@ -1,0 +1,33 @@
+BioSimSpace.Gateway.Charge
+==========================
+
+.. currentmodule:: BioSimSpace.Gateway
+
+.. autoclass:: Charge
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Charge.__init__
+      ~Charge.getAllowedValues
+      ~Charge.getArgType
+      ~Charge.getDefault
+      ~Charge.getHelp
+      ~Charge.getMax
+      ~Charge.getMin
+      ~Charge.getUnit
+      ~Charge.getValue
+      ~Charge.isMulti
+      ~Charge.isOptional
+      ~Charge.setValue
+   
+   
+
+   
+   
+   

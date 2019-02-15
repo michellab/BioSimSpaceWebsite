@@ -1,0 +1,37 @@
+BioSimSpace.Protocol.Equilibration
+==================================
+
+.. currentmodule:: BioSimSpace.Protocol
+
+.. autoclass:: Equilibration
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Equilibration.__init__
+      ~Equilibration.getEndTemperature
+      ~Equilibration.getEnsemble
+      ~Equilibration.getFrames
+      ~Equilibration.getRunTime
+      ~Equilibration.getStartTemperature
+      ~Equilibration.getTimeStep
+      ~Equilibration.isConstantTemp
+      ~Equilibration.isRestrained
+      ~Equilibration.setEndTemperature
+      ~Equilibration.setEnsemble
+      ~Equilibration.setFrames
+      ~Equilibration.setRestraint
+      ~Equilibration.setRunTime
+      ~Equilibration.setStartTemperature
+      ~Equilibration.setTimeStep
+   
+   
+
+   
+   
+   

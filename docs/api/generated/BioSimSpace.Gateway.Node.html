@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Gateway.Node &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Gateway.Boolean" href="BioSimSpace.Gateway.Boolean.html" />
+    <link rel="prev" title="BioSimSpace.Gateway" href="../index_Gateway.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Gateway.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Gateway.Node</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Gateway.html#requirement-types">Requirement types</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Gateway.html">BioSimSpace.Gateway</a> &raquo;</li>
+        
+      <li>BioSimSpace.Gateway.Node</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Gateway.Node.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-gateway-node">
+<h1>BioSimSpace.Gateway.Node<a class="headerlink" href="#biosimspace-gateway-node" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Gateway.Node">
+<em class="property">class </em><code class="descclassname">BioSimSpace.Gateway.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>description</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for interfacing with BioSimSpace nodes.</p>
+<p>Nodes are used to collect and validate user input, document the
+intentions of the workflow component, track and report errors,
+and validate output. Once written, a node can be run from within
+Jupyter, from the command-line, or plugged into a workflow engine,
+such as Knime.</p>
+<p class="rubric">Example</p>
+<p>A generic energy minimisation node:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Perform energy minimisation&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">addAuthor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lester Hedges&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;lester.hedges@bristol.ac.uk&quot;</span><span class="p">,</span> <span class="n">affiliation</span><span class="o">=</span><span class="s2">&quot;University of Bristol&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">setLicence</span><span class="p">(</span><span class="s2">&quot;GPLv3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">addInput</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">,</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">FileSet</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A set of molecular input files.&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">addInput</span><span class="p">(</span><span class="s2">&quot;steps&quot;</span><span class="p">,</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Integer</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;The number of minimisation steps.&quot;</span><span class="p">,</span> <span class="n">minimum</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mi">100000</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10000</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">addOutput</span><span class="p">(</span><span class="s2">&quot;minimised&quot;</span><span class="p">,</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">FileSet</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;The minimised molecular system.&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">showControls</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">node</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="s2">&quot;files&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="n">node</span><span class="o">.</span><span class="n">getInput</span><span class="p">(</span><span class="s2">&quot;steps&quot;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">process</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">MD</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">protocol</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">setOutput</span><span class="p">(</span><span class="s2">&quot;minimised&quot;</span><span class="p">,</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">saveMolecules</span><span class="p">(</span><span class="s2">&quot;minimised&quot;</span><span class="p">,</span> <span class="n">process</span><span class="o">.</span><span class="n">getSystem</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">system</span><span class="o">.</span><span class="n">fileFormat</span><span class="p">()))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>description</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>description</strong> (<em>str</em>) – A description of the node.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of the node.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.__init__" title="BioSimSpace.Gateway.Node.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(description[,&nbsp;name])</td>
+<td>Constructor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.addAuthor" title="BioSimSpace.Gateway.Node.addAuthor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAuthor</span></code></a>([name,&nbsp;email,&nbsp;affiliation])</td>
+<td>Add an author for the node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.addError" title="BioSimSpace.Gateway.Node.addError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addError</span></code></a>(error)</td>
+<td>Add an error message.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.addInput" title="BioSimSpace.Gateway.Node.addInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addInput</span></code></a>(name,&nbsp;input)</td>
+<td>Add an input requirement.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.addOutput" title="BioSimSpace.Gateway.Node.addOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addOutput</span></code></a>(name,&nbsp;output)</td>
+<td>Add an output requirement.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.getAuthors" title="BioSimSpace.Gateway.Node.getAuthors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAuthors</span></code></a>()</td>
+<td>Return the list of authors.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.getInput" title="BioSimSpace.Gateway.Node.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(name)</td>
+<td>Get the value of the named input.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.getInputs" title="BioSimSpace.Gateway.Node.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>()</td>
+<td>Get all of the input requirements.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.getLicense" title="BioSimSpace.Gateway.Node.getLicense"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLicense</span></code></a>()</td>
+<td>Return the license.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.setLicense" title="BioSimSpace.Gateway.Node.setLicense"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLicense</span></code></a>(license)</td>
+<td>Set the license for the node.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.setOutput" title="BioSimSpace.Gateway.Node.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(name,&nbsp;value)</td>
+<td>Set the value of an output.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.showControls" title="BioSimSpace.Gateway.Node.showControls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showControls</span></code></a>()</td>
+<td>Show the Jupyter widget GUI to allow the user to enter input.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Gateway.Node.validate" title="BioSimSpace.Gateway.Node.validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate</span></code></a>([file_prefix])</td>
+<td>Whether the output requirements are satisfied.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addAuthor">
+<code class="descname">addAuthor</code><span class="sig-paren">(</span><em>name=None</em>, <em>email=None</em>, <em>affiliation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addAuthor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an author for the node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The author’s name.</li>
+<li><strong>email</strong> (<em>str</em>) – The author’s email address.</li>
+<li><strong>affiliation</strong> (<em>str</em>) – The author’s affiliation.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addError">
+<code class="descname">addError</code><span class="sig-paren">(</span><em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an error message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>error</strong> (<em>str</em>) – The error message.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addInput">
+<code class="descname">addInput</code><span class="sig-paren">(</span><em>name</em>, <em>input</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an input requirement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the input.</li>
+<li><strong>input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code>) – The input requirement object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addOutput">
+<code class="descname">addOutput</code><span class="sig-paren">(</span><em>name</em>, <em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an output requirement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the output.</li>
+<li><strong>output</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code>) – The output requirement object.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getAuthors">
+<code class="descname">getAuthors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getAuthors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of authors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>authors</strong> – A list of author dictionaries.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[dict]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getInput">
+<code class="descname">getInput</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the named input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The name of the input requirement.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The value of the named input requirement.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">input</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getInputs">
+<code class="descname">getInputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all of the input requirements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>inputs</strong> – The dictionary of input requirements.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">{ str : <code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code> }</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getLicense">
+<code class="descname">getLicense</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the license.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>license</strong> – The license of the node.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.setLicense">
+<code class="descname">setLicense</code><span class="sig-paren">(</span><em>license</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.setLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the license for the node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>license</strong> (<em>str</em>) – The license type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.setOutput">
+<code class="descname">setOutput</code><span class="sig-paren">(</span><em>name</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.setOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of an output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the output.</li>
+<li><strong>value</strong> – The value of the output.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.showControls">
+<code class="descname">showControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.showControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the Jupyter widget GUI to allow the user to enter input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>controls</strong> – A gui control panel for setting input requirements.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">ipywidgets.form</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>file_prefix='output'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the output requirements are satisfied.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file_prefix</strong> (<em>str</em>) – The prefix of the output file name.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>output</strong> – If running interatvely: A link to a zipfile containing the
+validated output, else the name of a YAML file containing
+the node output.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">IPython.lib.display.FileLink, str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Gateway.Boolean.html" class="btn btn-neutral float-right" title="BioSimSpace.Gateway.Boolean" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index_Gateway.html" class="btn btn-neutral" title="BioSimSpace.Gateway" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

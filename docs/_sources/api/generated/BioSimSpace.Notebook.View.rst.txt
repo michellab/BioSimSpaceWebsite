@@ -1,0 +1,29 @@
+BioSimSpace.Notebook.View
+=========================
+
+.. currentmodule:: BioSimSpace.Notebook
+
+.. autoclass:: View
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~View.__init__
+      ~View.molecule
+      ~View.molecules
+      ~View.nViews
+      ~View.reload
+      ~View.reset
+      ~View.savePDB
+      ~View.system
+   
+   
+
+   
+   
+   

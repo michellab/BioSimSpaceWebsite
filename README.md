@@ -1,4 +1,4 @@
-# BioSimSpace Website + Notebook Installation
+# BioSimSpace Website & Notebook Installation
 
 This directory contains all of the files needed to set up and configure
 the BioSimSpace website and jupyter notebooks (including building all
@@ -24,7 +24,7 @@ This sets up six D4v3 nodes. Each node has 4 fast cores, 16 GB RAM and 100 GB di
 These cost $0.24 per node hour, so $34.56 per day, $1036.80 per month and $12614.40
 per year. There is the option for reserving these for 3 years. This would bring
 the cost down to $0.106 per node hour, so $15.26 per day, $457.90 per month or
-$5571.36 per year 
+$5571.36 per year
 
 (Using UK pricing, £0.179 per hour, £25.776 per day, £773.28 per month
 and £9408.24 per year. There is a 3 year option that brings down the annual cost to £4152 per year
@@ -42,4 +42,3 @@ $ az network public-ip show -g MC_biosimspace_biosimspace_eastus -n static_ip --
 
 I then setup up the router, website, notebook and workshops are detailed
 in the subdirectories below.
-

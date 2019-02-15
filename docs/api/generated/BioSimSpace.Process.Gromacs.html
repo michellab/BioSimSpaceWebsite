@@ -1,0 +1,2147 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Process.Namd" href="BioSimSpace.Process.Namd.html" />
+    <link rel="prev" title="BioSimSpace.Process.Amber" href="BioSimSpace.Process.Amber.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Process.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Process.html#md-driver-classes">MD driver classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Amber.html">BioSimSpace.Process.Amber</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Process.Gromacs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Namd.html">BioSimSpace.Process.Namd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Process.Somd.html">BioSimSpace.Process.Somd</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Process.html#multi-process-simulation-tools">Multi process simulation tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Process.html">BioSimSpace.Process</a> &raquo;</li>
+        
+      <li>BioSimSpace.Process.Gromacs</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Process.Gromacs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-process-gromacs">
+<h1>BioSimSpace.Process.Gromacs<a class="headerlink" href="#biosimspace-process-gromacs" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Process.Gromacs">
+<em class="property">class </em><code class="descclassname">BioSimSpace.Process.</code><code class="descname">Gromacs</code><span class="sig-paren">(</span><em>system</em>, <em>protocol</em>, <em>exe=None</em>, <em>name='gromacs'</em>, <em>work_dir=None</em>, <em>seed=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for running simulations using GROMACS.</p>
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol</em>, <em>exe=None</em>, <em>name='gromacs'</em>, <em>work_dir=None</em>, <em>seed=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</li>
+<li><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The protocol for the GROMACS process.</li>
+<li><strong>exe</strong> (<em>str</em>) – The full path to the GROMACS executable.</li>
+<li><strong>name</strong> (<em>str</em>) – The name of the process.</li>
+<li><strong>work_dir</strong> – The working directory for the process.</li>
+<li><strong>seed</strong> (<em>int</em>) – A random number seed.</li>
+<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.__init__" title="BioSimSpace.Process.Gromacs.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system,&nbsp;protocol[,&nbsp;exe,&nbsp;name,&nbsp;…])</td>
+<td>Constructor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.addArgs" title="BioSimSpace.Process.Gromacs.addArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addArgs</span></code></a>(args)</td>
+<td>Append additional command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.addToConfig" title="BioSimSpace.Process.Gromacs.addToConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addToConfig</span></code></a>(config)</td>
+<td>Add a string to the configuration list.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.clearArgs" title="BioSimSpace.Process.Gromacs.clearArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearArgs</span></code></a>()</td>
+<td>Clear all of the command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.command" title="BioSimSpace.Process.Gromacs.command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code></a>()</td>
+<td>Return the command-line string used to run the process.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.deleteArg" title="BioSimSpace.Process.Gromacs.deleteArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteArg</span></code></a>(arg)</td>
+<td>Delete an argument from the dictionary.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.exe" title="BioSimSpace.Process.Gromacs.exe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exe</span></code></a>()</td>
+<td>Return the executable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getAngleEnergy" title="BioSimSpace.Process.Gromacs.getAngleEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAngleEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the angle energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getArgString" title="BioSimSpace.Process.Gromacs.getArgString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgString</span></code></a>()</td>
+<td>Get the command-line arguments string.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getArgStringList" title="BioSimSpace.Process.Gromacs.getArgStringList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgStringList</span></code></a>()</td>
+<td>Convert the argument dictionary into a list of strings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getArgs" title="BioSimSpace.Process.Gromacs.getArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgs</span></code></a>()</td>
+<td>Get the dictionary of command-line arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getBondEnergy" title="BioSimSpace.Process.Gromacs.getBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBondEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the bond energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getConfig" title="BioSimSpace.Process.Gromacs.getConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConfig</span></code></a>()</td>
+<td>Get the list of configuration file strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getConservedEnergy" title="BioSimSpace.Process.Gromacs.getConservedEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConservedEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the conserved energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getConstraintRMSD" title="BioSimSpace.Process.Gromacs.getConstraintRMSD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConstraintRMSD</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the RMSD of the constrained atoms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCoulomb14" title="BioSimSpace.Process.Gromacs.getCoulomb14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoulomb14</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the Coulomb energy between atoms 1 and 4.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCoulombReciprocal" title="BioSimSpace.Process.Gromacs.getCoulombReciprocal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoulombReciprocal</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the reciprocal space Coulomb energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCoulombSR" title="BioSimSpace.Process.Gromacs.getCoulombSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoulombSR</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the short-range Coulomb energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentAngleEnergy" title="BioSimSpace.Process.Gromacs.getCurrentAngleEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentAngleEnergy</span></code></a>([time_series])</td>
+<td>Get the current angle energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentBondEnergy" title="BioSimSpace.Process.Gromacs.getCurrentBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentBondEnergy</span></code></a>([time_series])</td>
+<td>Get the current bond energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentConservedEnergy" title="BioSimSpace.Process.Gromacs.getCurrentConservedEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentConservedEnergy</span></code></a>([time_series])</td>
+<td>Get the current conserved energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentConstraintRMSD" title="BioSimSpace.Process.Gromacs.getCurrentConstraintRMSD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentConstraintRMSD</span></code></a>([time_series])</td>
+<td>Get the current RMSD of the constrained atoms.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentCoulomb14" title="BioSimSpace.Process.Gromacs.getCurrentCoulomb14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentCoulomb14</span></code></a>([time_series])</td>
+<td>Get the current Coulomb energy between atoms 1 and 4.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentCoulombReciprocal" title="BioSimSpace.Process.Gromacs.getCurrentCoulombReciprocal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentCoulombReciprocal</span></code></a>([time_series])</td>
+<td>Get the current reciprocal space Coulomb energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentCoulombSR" title="BioSimSpace.Process.Gromacs.getCurrentCoulombSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentCoulombSR</span></code></a>([time_series])</td>
+<td>Get the current short-range Coulomb energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy" title="BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code></a>([time_series])</td>
+<td>Get the current dihedral energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection" title="BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDispersionCorrection</span></code></a>([time_series])</td>
+<td>Get the current dispersion correction.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentImproperEnergy" title="BioSimSpace.Process.Gromacs.getCurrentImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentImproperEnergy</span></code></a>([time_series])</td>
+<td>Get the current improper energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentKineticEnergy" title="BioSimSpace.Process.Gromacs.getCurrentKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentKineticEnergy</span></code></a>([time_series])</td>
+<td>Get the current kinetic energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentLennardJones14" title="BioSimSpace.Process.Gromacs.getCurrentLennardJones14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentLennardJones14</span></code></a>([time_series])</td>
+<td>Get the current Lennard-Jones energy between atoms 1 and 4.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentLennardJonesSR" title="BioSimSpace.Process.Gromacs.getCurrentLennardJonesSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentLennardJonesSR</span></code></a>([time_series])</td>
+<td>Get the current short-range Lennard-Jones energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentPotentialEnergy" title="BioSimSpace.Process.Gromacs.getCurrentPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPotentialEnergy</span></code></a>([time_series])</td>
+<td>Get the current potential energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentPressure" title="BioSimSpace.Process.Gromacs.getCurrentPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressure</span></code></a>([time_series])</td>
+<td>Get the current pressure.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentPressureDC" title="BioSimSpace.Process.Gromacs.getCurrentPressureDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressureDC</span></code></a>([time_series])</td>
+<td>Get the current DC pressure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecord" title="BioSimSpace.Process.Gromacs.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[,&nbsp;time_series,&nbsp;unit])</td>
+<td>Get a current record from the stdout dictionary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecords" title="BioSimSpace.Process.Gromacs.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</td>
+<td>Return the current dictionary of stdout time-series records.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy" title="BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRestraintEnergy</span></code></a>([time_series])</td>
+<td>Get the current position restraint energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentStep" title="BioSimSpace.Process.Gromacs.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</td>
+<td>Get the current number of integration steps.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentSystem" title="BioSimSpace.Process.Gromacs.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</td>
+<td>Get the latest molecular system.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTemperature" title="BioSimSpace.Process.Gromacs.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</td>
+<td>Get the current temperature.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTime" title="BioSimSpace.Process.Gromacs.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</td>
+<td>Get the current time (in nanoseconds).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTotalEnergy" title="BioSimSpace.Process.Gromacs.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</td>
+<td>Get the current total energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDihedralEnergy" title="BioSimSpace.Process.Gromacs.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the dihedral energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDispersionCorrection" title="BioSimSpace.Process.Gromacs.getDispersionCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDispersionCorrection</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the dispersion correction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getImproperEnergy" title="BioSimSpace.Process.Gromacs.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the improper energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getKinetecEnergy" title="BioSimSpace.Process.Gromacs.getKinetecEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKinetecEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the kinetic energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJones14" title="BioSimSpace.Process.Gromacs.getLennardJones14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJones14</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the Lennard-Jones energy between atoms 1 and 4.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJonesSR" title="BioSimSpace.Process.Gromacs.getLennardJonesSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJonesSR</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the short-range Lennard-Jones energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getName" title="BioSimSpace.Process.Gromacs.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</td>
+<td>Return the process name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getOutput" title="BioSimSpace.Process.Gromacs.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name,&nbsp;block])</td>
+<td>Return a link to a zip file of the working directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPackageName" title="BioSimSpace.Process.Gromacs.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</td>
+<td>Return the package name.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPotentialEnergy" title="BioSimSpace.Process.Gromacs.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the potential energy.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressure" title="BioSimSpace.Process.Gromacs.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the pressure.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressureDC" title="BioSimSpace.Process.Gromacs.getPressureDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureDC</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the DC pressure.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getRecord" title="BioSimSpace.Process.Gromacs.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[,&nbsp;time_series,&nbsp;unit,&nbsp;block])</td>
+<td>Get a record from the stdout dictionary.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getRecords" title="BioSimSpace.Process.Gromacs.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</td>
+<td>Return the dictionary of stdout time-series records.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getRestraintEnergy" title="BioSimSpace.Process.Gromacs.getRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the position restraint energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getSeed" title="BioSimSpace.Process.Gromacs.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</td>
+<td>Return the random number seed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getStderr" title="BioSimSpace.Process.Gromacs.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</td>
+<td>Return the entire stderr for the process as a list of strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getStdout" title="BioSimSpace.Process.Gromacs.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</td>
+<td>Return the entire stdout for the process as a list of strings.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getStep" title="BioSimSpace.Process.Gromacs.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the number of integration steps.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getSystem" title="BioSimSpace.Process.Gromacs.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</td>
+<td>Get the latest molecular system.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getTemperature" title="BioSimSpace.Process.Gromacs.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the temperature.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getTime" title="BioSimSpace.Process.Gromacs.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the time (in nanoseconds).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getTotalEnergy" title="BioSimSpace.Process.Gromacs.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series,&nbsp;block])</td>
+<td>Get the total energy.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getTrajectory" title="BioSimSpace.Process.Gromacs.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</td>
+<td>Return a trajectory object.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.inputFiles" title="BioSimSpace.Process.Gromacs.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</td>
+<td>Return the list of input files.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.insertArg" title="BioSimSpace.Process.Gromacs.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg,&nbsp;value,&nbsp;index)</td>
+<td>Insert a command-line argument at a specific index.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.isError" title="BioSimSpace.Process.Gromacs.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</td>
+<td>Return whether the process errored.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.isQueued" title="BioSimSpace.Process.Gromacs.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</td>
+<td>Return whether the process is queued.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.isRunning" title="BioSimSpace.Process.Gromacs.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</td>
+<td>Return whether the process is running.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.kill" title="BioSimSpace.Process.Gromacs.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</td>
+<td>Kill the running process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.resetArgs" title="BioSimSpace.Process.Gromacs.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</td>
+<td>Reset the command-line arguments.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.resetConfig" title="BioSimSpace.Process.Gromacs.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</td>
+<td>Reset the configuration parameters.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.run" title="BioSimSpace.Process.Gromacs.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system,&nbsp;protocol,&nbsp;autostart,&nbsp;restart])</td>
+<td>Create and run a new process.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.runTime" title="BioSimSpace.Process.Gromacs.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</td>
+<td>Return the running time for the process (in minutes).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.setArg" title="BioSimSpace.Process.Gromacs.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg,&nbsp;value)</td>
+<td>Set a specific command-line argument.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.setArgs" title="BioSimSpace.Process.Gromacs.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</td>
+<td>Set the dictionary of command-line arguments.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.setConfig" title="BioSimSpace.Process.Gromacs.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</td>
+<td>Set the list of configuration file strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.setName" title="BioSimSpace.Process.Gromacs.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</td>
+<td>Set the process name.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.setSeed" title="BioSimSpace.Process.Gromacs.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</td>
+<td>Set the random number seed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.start" title="BioSimSpace.Process.Gromacs.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</td>
+<td>Start the GROMACS process.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.stderr" title="BioSimSpace.Process.Gromacs.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</td>
+<td>Print the last n lines of the stderr buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.stdout" title="BioSimSpace.Process.Gromacs.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</td>
+<td>Print the last n lines of the stdout buffer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.wait" title="BioSimSpace.Process.Gromacs.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</td>
+<td>Wait for the process to finish.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.workDir" title="BioSimSpace.Process.Gromacs.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</td>
+<td>Return the working directory.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Gromacs.writeConfig" title="BioSimSpace.Process.Gromacs.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</td>
+<td>Write the configuration to file.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.addArgs">
+<code class="descname">addArgs</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.addArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append additional command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command line arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.addToConfig">
+<code class="descname">addToConfig</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.addToConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a string to the configuration list.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – A configuration string, a list of configuration strings, or a
+path to a configuration file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.clearArgs">
+<code class="descname">clearArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.clearArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear all of the command-line arguments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.command">
+<code class="descname">command</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the command-line string used to run the process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>command</strong> – The command string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.deleteArg">
+<code class="descname">deleteArg</code><span class="sig-paren">(</span><em>arg</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.deleteArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete an argument from the dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg</strong> (<em>str</em>) – The argument to delete.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.exe">
+<code class="descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.exe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the executable.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>exe</strong> – The path to the executable.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getAngleEnergy">
+<code class="descname">getAngleEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getAngleEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the angle energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The angle energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getArgString">
+<code class="descname">getArgString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getArgString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the command-line arguments string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>arg_string</strong> – The command-line argument string.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getArgStringList">
+<code class="descname">getArgStringList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getArgStringList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the argument dictionary into a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>arg_string_list</strong> – The list of command-line arguments.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getArgs">
+<code class="descname">getArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dictionary of command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>args</strong> – The dictionary of command-line arguments.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">collections.OrderedDict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getBondEnergy">
+<code class="descname">getBondEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getBondEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the bond energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The bond energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getConfig">
+<code class="descname">getConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of configuration file strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>config</strong> – The list of configuration strings.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getConservedEnergy">
+<code class="descname">getConservedEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getConservedEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conserved energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The conserved energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getConstraintRMSD">
+<code class="descname">getConstraintRMSD</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getConstraintRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the RMSD of the constrained atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>length</strong> – The constrained RMSD.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCoulomb14">
+<code class="descname">getCoulomb14</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCoulomb14" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Coulomb energy between atoms 1 and 4.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The Coulomb energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCoulombReciprocal">
+<code class="descname">getCoulombReciprocal</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCoulombReciprocal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the reciprocal space Coulomb energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The Coulomb energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCoulombSR">
+<code class="descname">getCoulombSR</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCoulombSR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the short-range Coulomb energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The Coulomb energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentAngleEnergy">
+<code class="descname">getCurrentAngleEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentAngleEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current angle energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The angle energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentBondEnergy">
+<code class="descname">getCurrentBondEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentBondEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current bond energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The bond energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentConservedEnergy">
+<code class="descname">getCurrentConservedEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentConservedEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current conserved energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The conserved energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentConstraintRMSD">
+<code class="descname">getCurrentConstraintRMSD</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentConstraintRMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current RMSD of the constrained atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>length</strong> – The current constrained RMSD.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentCoulomb14">
+<code class="descname">getCurrentCoulomb14</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentCoulomb14" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current Coulomb energy between atoms 1 and 4.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The Coulomb energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentCoulombReciprocal">
+<code class="descname">getCurrentCoulombReciprocal</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentCoulombReciprocal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current reciprocal space Coulomb energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The Coulomb energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentCoulombSR">
+<code class="descname">getCurrentCoulombSR</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentCoulombSR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current short-range Coulomb energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The Coulomb energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy">
+<code class="descname">getCurrentDihedralEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current dihedral energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The dihedral energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection">
+<code class="descname">getCurrentDispersionCorrection</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current dispersion correction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The dispersion correction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentImproperEnergy">
+<code class="descname">getCurrentImproperEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentImproperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current improper energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The improper energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentKineticEnergy">
+<code class="descname">getCurrentKineticEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentKineticEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current kinetic energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The kinetic energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentLennardJones14">
+<code class="descname">getCurrentLennardJones14</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentLennardJones14" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current Lennard-Jones energy between atoms 1 and 4.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The Lennard-Jones energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentLennardJonesSR">
+<code class="descname">getCurrentLennardJonesSR</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentLennardJonesSR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current short-range Lennard-Jones energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The Lennard-Jones energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentPotentialEnergy">
+<code class="descname">getCurrentPotentialEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentPotentialEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current potential energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The potential energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentPressure">
+<code class="descname">getCurrentPressure</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentPressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>pressure</strong> – The current pressure.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentPressureDC">
+<code class="descname">getCurrentPressureDC</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentPressureDC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current DC pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>pressure</strong> – The current pressure.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentRecord">
+<code class="descname">getCurrentRecord</code><span class="sig-paren">(</span><em>record</em>, <em>time_series=False</em>, <em>unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a current record from the stdout dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>record</strong> (<em>str</em>) – The record key.</li>
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>unit</strong> (<a class="reference internal" href="../index_Units.html#module-BioSimSpace.Units" title="BioSimSpace.Units"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unit</span></code></a>) – The unit to convert the record to.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>record</strong> – The matching record.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentRecords">
+<code class="descname">getCurrentRecords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentRecords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current dictionary of stdout time-series records.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>records</strong> – The dictionary of time-series records.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiDict</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy">
+<code class="descname">getCurrentRestraintEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current position restraint energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The dispersion correction.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentStep">
+<code class="descname">getCurrentStep</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current number of integration steps.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>step</strong> – The current number of integration steps.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentSystem">
+<code class="descname">getCurrentSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the latest molecular system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>system</strong> – The latest molecular system.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentTemperature">
+<code class="descname">getCurrentTemperature</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current temperature.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>temperature</strong> – The current temperature.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentTime">
+<code class="descname">getCurrentTime</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current time (in nanoseconds).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>time</strong> – The current simulation time in nanoseconds.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentTotalEnergy">
+<code class="descname">getCurrentTotalEnergy</code><span class="sig-paren">(</span><em>time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentTotalEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current total energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>energy</strong> – The total energy.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getDihedralEnergy">
+<code class="descname">getDihedralEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getDihedralEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dihedral energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The dihedral energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getDispersionCorrection">
+<code class="descname">getDispersionCorrection</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getDispersionCorrection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the dispersion correction.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The dispersion correction.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getImproperEnergy">
+<code class="descname">getImproperEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getImproperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the improper energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The improper energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getKinetecEnergy">
+<code class="descname">getKinetecEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getKinetecEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the kinetic energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The kinetic energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getLennardJones14">
+<code class="descname">getLennardJones14</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getLennardJones14" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the Lennard-Jones energy between atoms 1 and 4.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The Lennard-Jones energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getLennardJonesSR">
+<code class="descname">getLennardJonesSR</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getLennardJonesSR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the short-range Lennard-Jones energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The short-range Lennard-Jones energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getName">
+<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the process name.</p>
+<p>Returns:</p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>The name of the process.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getOutput">
+<code class="descname">getOutput</code><span class="sig-paren">(</span><em>name=None</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a link to a zip file of the working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>name</strong> (<em>str</em>) – The name of the zip file.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>ouput</strong> – A path, or file link, to an archive of the process output.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str, IPython.display.FileLink</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getPackageName">
+<code class="descname">getPackageName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getPackageName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the package name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the package.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getPotentialEnergy">
+<code class="descname">getPotentialEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getPotentialEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the potential energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The potential energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getPressure">
+<code class="descname">getPressure</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getPressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressure</strong> – The pressure.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getPressureDC">
+<code class="descname">getPressureDC</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getPressureDC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the DC pressure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressure</strong> – The DC pressure.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getRecord">
+<code class="descname">getRecord</code><span class="sig-paren">(</span><em>record</em>, <em>time_series=False</em>, <em>unit=None</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getRecord" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a record from the stdout dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>record</strong> (<em>str</em>) – The record key.</li>
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>unit</strong> (<a class="reference internal" href="../index_Units.html#module-BioSimSpace.Units" title="BioSimSpace.Units"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unit</span></code></a>) – The unit to convert the record to.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>record</strong> – The matching record.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getRecords">
+<code class="descname">getRecords</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getRecords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dictionary of stdout time-series records.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>records</strong> – The dictionary of time-series records.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiDict</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getRestraintEnergy">
+<code class="descname">getRestraintEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getRestraintEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position restraint energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The dispersion correction.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getSeed">
+<code class="descname">getSeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getSeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the random number seed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>seed</strong> – The random number seed.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getStderr">
+<code class="descname">getStderr</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getStderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire stderr for the process as a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>error</strong> – The list of stderror strings.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getStdout">
+<code class="descname">getStdout</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getStdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire stdout for the process as a list of strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>output</strong> – The list of stdout strings.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getStep">
+<code class="descname">getStep</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of integration steps.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>step</strong> – The current number of integration steps.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getSystem">
+<code class="descname">getSystem</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the latest molecular system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>system</strong> – The latest molecular system.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getTemperature">
+<code class="descname">getTemperature</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the temperature.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>temperature</strong> – The temperature.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getTime">
+<code class="descname">getTime</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the time (in nanoseconds).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>time</strong> – The current simulation time in nanoseconds.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getTotalEnergy">
+<code class="descname">getTotalEnergy</code><span class="sig-paren">(</span><em>time_series=False</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getTotalEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total energy.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</li>
+<li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>energy</strong> – The total energy.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getTrajectory">
+<code class="descname">getTrajectory</code><span class="sig-paren">(</span><em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getTrajectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a trajectory object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><strong>trajectory</strong> – The latest trajectory object.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Trajectory.Trajectory.html#BioSimSpace.Trajectory.Trajectory" title="BioSimSpace.Trajectory.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.inputFiles">
+<code class="descname">inputFiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.inputFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of input files.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>input_files</strong> – The list of autogenerated input files.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.insertArg">
+<code class="descname">insertArg</code><span class="sig-paren">(</span><em>arg</em>, <em>value</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.insertArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a command-line argument at a specific index.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg</strong> (<em>str</em>) – The argument to set.</li>
+<li><strong>value</strong> – The value of the argument.</li>
+<li><strong>index</strong> (<em>int</em>) – The index in the dictionary.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.isError">
+<code class="descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.isError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process errored.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_error</strong> – Whether the process errored.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.isQueued">
+<code class="descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.isQueued" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process is queued.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_queued</strong> – Whether the process is queued.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.isRunning">
+<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.isRunning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether the process is running.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_running</strong> – Whether the process is running.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.kill">
+<code class="descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.kill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kill the running process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.resetArgs">
+<code class="descname">resetArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.resetArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the command-line arguments.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.resetConfig">
+<code class="descname">resetConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.resetConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the configuration parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>system=None</em>, <em>protocol=None</em>, <em>autostart=True</em>, <em>restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and run a new process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</li>
+<li><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The simulation protocol.</li>
+<li><strong>autostart</strong> (<em>bool</em>) – Whether to start the process automatically.</li>
+<li><strong>restart</strong> (<em>bool</em>) – Whether to restart the simulation, i.e. use the original system.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>process</strong> – The new process object.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Procees</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.runTime">
+<code class="descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.runTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the running time for the process (in minutes).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>runtime</strong> – The runtime in minutes.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.setArg">
+<code class="descname">setArg</code><span class="sig-paren">(</span><em>arg</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.setArg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a specific command-line argument.</p>
+<p>For command-line flags, i.e. boolean arguments, the key should
+specify whether the flag is enabled (True) or not (False).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>arg</strong> (<em>str</em>) – The argument to set.</li>
+<li><strong>value</strong> (<em>bool</em><em>, </em><em>str</em>) – The value of the argument.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.setArgs">
+<code class="descname">setArgs</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.setArgs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the dictionary of command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command line arguments.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.setConfig">
+<code class="descname">setConfig</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.setConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of configuration file strings.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – The list of configuration strings, or a path to a configuration
+file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.setName">
+<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.setName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the process name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The process name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.setSeed">
+<code class="descname">setSeed</code><span class="sig-paren">(</span><em>seed</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.setSeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the random number seed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>seed</strong> (<em>int</em>) – The random number seed.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the GROMACS process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>process</strong> – A handle to the GROMACS process.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#BioSimSpace.Process.Gromacs" title="BioSimSpace.Process.Gromacs"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process.Gromacs</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.stderr">
+<code class="descname">stderr</code><span class="sig-paren">(</span><em>n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.stderr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the last n lines of the stderr buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – The number of lines to print.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.stdout">
+<code class="descname">stdout</code><span class="sig-paren">(</span><em>n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.stdout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the last n lines of the stdout buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) – The number of lines to print.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><em>max_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for the process to finish.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>max_time</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>, int, float) – The maximimum time to wait (in minutes).</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.workDir">
+<code class="descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.workDir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>work_dir</strong> – The path of the working directory.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.writeConfig">
+<code class="descname">writeConfig</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.writeConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the configuration to file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>file</strong> (<em>str</em>) – The path to a file.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Process.Namd.html" class="btn btn-neutral float-right" title="BioSimSpace.Process.Namd" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BioSimSpace.Process.Amber.html" class="btn btn-neutral" title="BioSimSpace.Process.Amber" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

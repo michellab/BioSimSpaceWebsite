@@ -1,0 +1,6 @@
+BioSimSpace.Solvent.solvate
+===========================
+
+.. currentmodule:: BioSimSpace.Solvent
+
+.. autofunction:: solvate

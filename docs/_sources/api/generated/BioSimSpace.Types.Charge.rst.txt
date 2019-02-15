@@ -1,0 +1,26 @@
+BioSimSpace.Types.Charge
+========================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Charge
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Charge.__init__
+      ~Charge.coulomb
+      ~Charge.electron_charge
+      ~Charge.magnitude
+      ~Charge.unit
+   
+   
+
+   
+   
+   

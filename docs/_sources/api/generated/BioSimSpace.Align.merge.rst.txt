@@ -1,0 +1,6 @@
+BioSimSpace.Align.merge
+=======================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: merge

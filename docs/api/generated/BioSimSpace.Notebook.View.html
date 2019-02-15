@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Notebook.View &mdash; BioSimSpace 2018.1.1+712.g23cf502 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Parameters" href="../index_Parameters.html" />
+    <link rel="prev" title="BioSimSpace.Notebook.plot" href="BioSimSpace.Notebook.plot.html" /> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Notebook.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Notebook.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Notebook.View</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Notebook.html">BioSimSpace.Notebook</a> &raquo;</li>
+        
+      <li>BioSimSpace.Notebook.View</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Notebook.View.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-notebook-view">
+<h1>BioSimSpace.Notebook.View<a class="headerlink" href="#biosimspace-notebook-view" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Notebook.View">
+<em class="property">class </em><code class="descclassname">BioSimSpace.Notebook.</code><code class="descname">View</code><span class="sig-paren">(</span><em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for handling interactive molecular visualisations.</p>
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>handle</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – A handle to a process or system.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.__init__" title="BioSimSpace.Notebook.View.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(handle)</td>
+<td>Constructor.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.molecule" title="BioSimSpace.Notebook.View.molecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecule</span></code></a>([index,&nbsp;gui])</td>
+<td>View a specific molecule.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.molecules" title="BioSimSpace.Notebook.View.molecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecules</span></code></a>([indices,&nbsp;gui])</td>
+<td>View specific molecules.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.nViews" title="BioSimSpace.Notebook.View.nViews"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nViews</span></code></a>()</td>
+<td>Return the number of views.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.reload" title="BioSimSpace.Notebook.View.reload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reload</span></code></a>([index,&nbsp;gui])</td>
+<td>Reload a particular view.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.reset" title="BioSimSpace.Notebook.View.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a>()</td>
+<td>Reset the object, clearing all view files.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.savePDB" title="BioSimSpace.Notebook.View.savePDB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">savePDB</span></code></a>(file[,&nbsp;index])</td>
+<td>Save a specific view as a PDB file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Notebook.View.system" title="BioSimSpace.Notebook.View.system"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system</span></code></a>([gui])</td>
+<td>View the entire molecular system.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.molecule">
+<code class="descname">molecule</code><span class="sig-paren">(</span><em>index=0</em>, <em>gui=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.molecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>View a specific molecule.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>int</em>) – The molecule index.</li>
+<li><strong>gui</strong> (<em>bool</em>) – Whether to display the gui.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.molecules">
+<code class="descname">molecules</code><span class="sig-paren">(</span><em>indices=None</em>, <em>gui=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.molecules" title="Permalink to this definition">¶</a></dt>
+<dd><p>View specific molecules.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>indices</strong> (<em>[</em><em>int</em><em>]</em><em>, </em><em>range</em>) – A list of molecule indices.</li>
+<li><strong>gui</strong> (<em>bool</em>) – Whether to display the gui.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.nViews">
+<code class="descname">nViews</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.nViews" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of views.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>num_views</strong> – The number of views.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.reload">
+<code class="descname">reload</code><span class="sig-paren">(</span><em>index=None</em>, <em>gui=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload a particular view.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>index</strong> (<em>int</em>) – The view index.</li>
+<li><strong>gui</strong> (<em>bool</em>) – Whether to display the gui.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset the object, clearing all view files.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.savePDB">
+<code class="descname">savePDB</code><span class="sig-paren">(</span><em>file</em>, <em>index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.savePDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save a specific view as a PDB file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>file</strong> (<em>str</em>) – The name of the file to write to.</li>
+<li><strong>index</strong> (<em>int</em>) – The view index.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Notebook.View.system">
+<code class="descname">system</code><span class="sig-paren">(</span><em>gui=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.View.system" title="Permalink to this definition">¶</a></dt>
+<dd><p>View the entire molecular system.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>gui</strong> (<em>bool</em>) – Whether to display the gui.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../index_Parameters.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BioSimSpace.Notebook.plot.html" class="btn btn-neutral" title="BioSimSpace.Notebook.plot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      Last updated on Feb 10, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
