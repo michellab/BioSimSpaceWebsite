@@ -1,19 +1,24 @@
 proxy:
-  secretToken: "b10fad2fe03bcfa7f6f442c63301b01e5f1f8cea8da3bb1ac57dd2341e6a9a27"
+  secretToken: "XXX"
+  https:
+    hosts:
+      - notebook.biosimspace.org
+    letsencrypt:
+      contactEmail: chryswoods@gmail.com
 rbac:
   enabled: true
 singleuser:
   image:
     name: chryswoods/bss-workshop
-    tag: latest
+    tag: v5
   storage:
     type: none
   memory:
-    limit: 5.0G
-    guarantee: 1.0G
+    limit: 2.0G
+    guarantee: 0.2G
   cpu:
-    limit: 5.0
-    guarantee: 0.5
+    limit: 2.0
+    guarantee: 0.1
 cull:
   timeout: 2400
   every: 600
