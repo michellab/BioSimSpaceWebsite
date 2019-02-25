@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2018.1.1+716.g169b20d documentation</title>
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2018.1.1+721.g428d6d5 documentation</title>
   
 
   
@@ -234,7 +234,7 @@ computing the above RMSD score.</dd>
 <li><strong>matches</strong> (<em>int</em>) – The maximum number of matches to return. (Sorted in order of score).</li>
 <li><strong>return_scores</strong> (<em>bool</em>) – Whether to return a list containing the scores for each mapping.</li>
 <li><strong>prematch</strong> (<em>dict</em>) – A pre-match to use as the basis of the search.</li>
-<li><strong>timeout</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><em>BioSimSpace.Types.Time</em></a>) – The timeout for the matching algorithm.</li>
+<li><strong>timeout</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The timeout for the matching algorithm.</li>
 <li><strong>match_light</strong> (<em>bool</em>) – Whether to match light atoms.</li>
 <li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
@@ -255,6 +255,29 @@ list of best mappings and a list of the corresponding scores.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Find the best maximum common substructure mapping between two molecules.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Find the 5 best mappings.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span> <span class="o">=</span> <span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Find the 5 best mappings along with their ranking scores.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Find the best mapping that contains a prematch (this is a dictionary mapping
+atom indices in molecule0 to those in molecule1).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">Sire.Mol</span> <span class="k">import</span> <span class="n">AtomIdx</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">prematch</span><span class="o">=</span><span class="p">{</span><span class="n">AtomIdx</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">AtomIdx</span><span class="p">(</span><span class="mi">10</span><span class="p">)})</span>
+</pre></div>
+</div>
+<p>Find the best mapping, excluding light atoms.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">match_light</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -281,7 +304,7 @@ list of best mappings and a list of the corresponding scores.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 23, 2019.
+        Last updated on Feb 25, 2019.
       </span>
 
     </p>

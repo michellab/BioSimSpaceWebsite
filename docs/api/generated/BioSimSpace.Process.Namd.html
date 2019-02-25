@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2018.1.1+716.g169b20d documentation</title>
+  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2018.1.1+721.g428d6d5 documentation</title>
   
 
   
@@ -380,7 +380,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 <tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Namd.getName" title="BioSimSpace.Process.Namd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</td>
 <td>Return the process name.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name,&nbsp;block])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name,&nbsp;block,&nbsp;file_link])</td>
 <td>Return a link to a zip file of the working directory.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.Namd.getPackageName" title="BioSimSpace.Process.Namd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</td>
@@ -1383,7 +1383,7 @@ path to a configuration file.</td>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.getOutput">
-<code class="descname">getOutput</code><span class="sig-paren">(</span><em>name=None</em>, <em>block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getOutput" title="Permalink to this definition">¶</a></dt>
+<code class="descname">getOutput</code><span class="sig-paren">(</span><em>name=None</em>, <em>block='AUTO'</em>, <em>file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getOutput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a link to a zip file of the working directory.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1392,6 +1392,7 @@ path to a configuration file.</td>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>name</strong> (<em>str</em>) – The name of the zip file.</li>
 <li><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</li>
+<li><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</li>
 </ul>
 </td>
 </tr>
@@ -2175,7 +2176,7 @@ file.</td>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 23, 2019.
+        Last updated on Feb 25, 2019.
       </span>
 
     </p>
