@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.formatInfo &mdash; BioSimSpace 2018.1.1+723.ged6265b documentation</title>
+  <title>BioSimSpace.IO.formatInfo &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
   
 
   
@@ -215,6 +215,18 @@
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Display information regarding the PDB format.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BSS</span><span class="o">.</span><span class="n">formatInfo</span><span class="p">(</span><span class="s2">&quot;PDB&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Print information for each of the supported file formats.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="nb">format</span> <span class="ow">in</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">fileFormats</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">formatInfo</span><span class="p">(</span><span class="nb">format</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>

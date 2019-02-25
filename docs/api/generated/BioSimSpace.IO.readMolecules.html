@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2018.1.1+723.ged6265b documentation</title>
+  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
   
 
   
@@ -223,6 +223,26 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Load a molecular system from two AMBER format files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Load the same system, but map the “charge” property to the key “my-charge”.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Load a molecular system from all of the files contained within a directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;dir/*&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
