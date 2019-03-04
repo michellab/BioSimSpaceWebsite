@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -231,6 +231,59 @@
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Print the list of the supported water models.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">waterModels</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Solvate a molecule in a 5 <a class="reference internal" href="generated/BioSimSpace.Units.Length.nanometer.html#BioSimSpace.Units.Length.nanometer" title="BioSimSpace.Units.Length.nanometer"><code class="xref py py-class docutils literal notranslate"><span class="pre">nanometer</span></code></a>
+periodic box of TIP3P water with an ion concentration of 0.1 mol per litre.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Load a molecule from file.</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Solvate the molecule.</span>
+<span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">tip3p</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                             <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
+                             <span class="n">ion_conc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The same as above, but instead passing “TIP3P” as an argument to the
+<a class="reference internal" href="generated/BioSimSpace.Solvent.solvate.html#BioSimSpace.Solvent.solvate" title="BioSimSpace.Solvent.solvate"><code class="xref py py-class docutils literal notranslate"><span class="pre">solvate</span></code></a> function. This function should
+be used in any interoperable workflow <a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a>
+where the water model is specified as an input requirement by the user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Load a molecule from file.</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Solvate the molecule.</span>
+<span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">solvate</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                               <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
+                               <span class="n">ion_conc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Solvate the molecule with a shell of at least 2 nanometers of SPC water.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Load a molecule from file.</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Solvate the molecule.</span>
+<span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">spc</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
+                           <span class="n">shell</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Create a 50 <a class="reference internal" href="generated/BioSimSpace.Units.Length.angstrom.html#BioSimSpace.Units.Length.angstrom" title="BioSimSpace.Units.Length.angstrom"><code class="xref py py-class docutils literal notranslate"><span class="pre">angstrom</span></code></a> periodic
+box of pure SPC/E water.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">water</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">spce</span><span class="p">(</span><span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">50</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">])</span>
+</pre></div>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -258,7 +311,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>

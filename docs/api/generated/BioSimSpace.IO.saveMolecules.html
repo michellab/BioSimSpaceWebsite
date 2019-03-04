@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.saveMolecules &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>BioSimSpace.IO.saveMolecules &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -227,8 +227,8 @@ with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<p>Load a molecular system from two AMBER format files then try to save it
-to all supported file formats.</p>
+<p>Load a molecular system from AMBER coordinate and topology files then
+try to save it to all supported file formats.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="nb">format</span> <span class="ow">in</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">fileFormats</span><span class="p">():</span>
@@ -238,8 +238,9 @@ to all supported file formats.</p>
 <span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Could not convert to format: &#39;</span><span class="si">%s</span><span class="s2">&#39;&quot;</span> <span class="o">%</span> <span class="nb">format</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Load a molecular system from two AMBER format files then try to save it
-to GROMACS format, mapping and un-mapping the charge property along the way.</p>
+<p>Load a molecular system from AMBER coordinate and topology files then
+try to save it to GROMACS format, mapping and un-mapping the charge
+property along the way.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">saveMolecules</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gro87&quot;</span><span class="p">,</span> <span class="s2">&quot;grotop&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
@@ -271,7 +272,7 @@ to GROMACS format, mapping and un-mapping the charge property along the way.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.MD &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>BioSimSpace.MD &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -195,6 +195,24 @@
 <span id="ref-md"></span><h1>BioSimSpace.MD<a class="headerlink" href="#biosimspace-md" title="Permalink to this headline">¶</a></h1>
 <p>The <em>MD</em> package provides functionality for automatically configuring and
 running molecular dynamics simulations.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Load a molecular system from file.</span>
+<span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create a default minimisation protocol.</span>
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">()</span>
+
+<span class="c1"># Find a molecular dynamics package on the host system that supports the</span>
+<span class="c1"># system and protocol defined above. If a package exists, BioSimSpace</span>
+<span class="c1"># will auto-generate all of the required input files and return a handle</span>
+<span class="c1"># to a process that can run the simulation.</span>
+<span class="n">process</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">MD</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">system</span><span class="p">,</span> <span class="n">protocol</span><span class="p">)</span>
+
+<span class="c1"># Now start the process in the background.</span>
+<span class="n">process</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
 <span class="target" id="module-BioSimSpace.MD"></span><div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -235,7 +253,7 @@ running molecular dynamics simulations.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>

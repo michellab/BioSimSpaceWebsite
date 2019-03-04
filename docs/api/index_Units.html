@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Units &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>BioSimSpace.Units &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -244,7 +244,21 @@
   <div class="section" id="biosimspace-units">
 <span id="ref-units"></span><h1>BioSimSpace.Units<a class="headerlink" href="#biosimspace-units" title="Permalink to this headline">¶</a></h1>
 <p>The <em>Units</em> package provides a set of common physical units required by BioSimSpace.
-This provide short-hand access to BioSimSpace <a class="reference internal" href="index_Types.html#ref-types"><span class="std std-ref">BioSimSpace.Types</span></a>.</p>
+This provides convenient, short-hand access to <a class="reference internal" href="index_Types.html#ref-types"><span class="std std-ref">BioSimSpace.Types</span></a>.</p>
+<p>Some examples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Create a length of 14.3 Angstrom.</span>
+<span class="n">length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mf">14.3</span><span class="p">,</span> <span class="s2">&quot;Angstrom&quot;</span><span class="p">)</span> <span class="c1"># Long-winded way.</span>
+<span class="n">length</span> <span class="o">=</span> <span class="mf">14.3</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span>     <span class="c1"># Simplified way.</span>
+
+<span class="c1"># Create an area by multiplying two lengths.</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">3.6</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span> <span class="o">*</span> <span class="mi">12</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span>
+
+<span class="c1"># Create a time of 100 milliseconds.</span>
+<span class="n">time</span> <span class="o">=</span> <span class="mi">100</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">millisecond</span>
+</pre></div>
+</div>
 <span class="target" id="module-BioSimSpace.Units"></span><div class="section" id="length-units">
 <h2>Length units<a class="headerlink" href="#length-units" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -254,16 +268,16 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.meter.html#BioSimSpace.Units.Length.meter" title="BioSimSpace.Units.Length.meter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.meter</span></code></a></td>
-<td>A length type.</td>
+<td>A length in meters.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.angstrom.html#BioSimSpace.Units.Length.angstrom" title="BioSimSpace.Units.Length.angstrom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.angstrom</span></code></a></td>
-<td>A length type.</td>
+<td>A length in Angstrom.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.nanometer.html#BioSimSpace.Units.Length.nanometer" title="BioSimSpace.Units.Length.nanometer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.nanometer</span></code></a></td>
-<td>A length type.</td>
+<td>A length in nanometers.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Length.picometer.html#BioSimSpace.Units.Length.picometer" title="BioSimSpace.Units.Length.picometer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length.picometer</span></code></a></td>
-<td>A length type.</td>
+<td>A length in picometers.</td>
 </tr>
 </tbody>
 </table>
@@ -277,16 +291,16 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.meter2.html#BioSimSpace.Units.Area.meter2" title="BioSimSpace.Units.Area.meter2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.meter2</span></code></a></td>
-<td>An area type.</td>
+<td>An area in square meters.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.angstrom2.html#BioSimSpace.Units.Area.angstrom2" title="BioSimSpace.Units.Area.angstrom2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.angstrom2</span></code></a></td>
-<td>An area type.</td>
+<td>An area in square Angstrom.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.nanometer2.html#BioSimSpace.Units.Area.nanometer2" title="BioSimSpace.Units.Area.nanometer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.nanometer2</span></code></a></td>
-<td>An area type.</td>
+<td>An area in square nanometers.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Area.picometer2.html#BioSimSpace.Units.Area.picometer2" title="BioSimSpace.Units.Area.picometer2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area.picometer2</span></code></a></td>
-<td>An area type.</td>
+<td>An area in square picometers.</td>
 </tr>
 </tbody>
 </table>
@@ -300,16 +314,16 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.meter3.html#BioSimSpace.Units.Volume.meter3" title="BioSimSpace.Units.Volume.meter3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.meter3</span></code></a></td>
-<td>A volume type.</td>
+<td>A volume in cube meters.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.angstrom3.html#BioSimSpace.Units.Volume.angstrom3" title="BioSimSpace.Units.Volume.angstrom3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.angstrom3</span></code></a></td>
-<td>A volume type.</td>
+<td>A volume in cube Angstrom.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.nanometer3.html#BioSimSpace.Units.Volume.nanometer3" title="BioSimSpace.Units.Volume.nanometer3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.nanometer3</span></code></a></td>
-<td>A volume type.</td>
+<td>A volume in cube nanometers.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Volume.picometer3.html#BioSimSpace.Units.Volume.picometer3" title="BioSimSpace.Units.Volume.picometer3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume.picometer3</span></code></a></td>
-<td>A volume type.</td>
+<td>A volume in cube picometers.</td>
 </tr>
 </tbody>
 </table>
@@ -323,10 +337,10 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Charge.electron_charge.html#BioSimSpace.Units.Charge.electron_charge" title="BioSimSpace.Units.Charge.electron_charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge.electron_charge</span></code></a></td>
-<td>A charge type.</td>
+<td>A charge in electron charge.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Charge.coulomb.html#BioSimSpace.Units.Charge.coulomb" title="BioSimSpace.Units.Charge.coulomb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge.coulomb</span></code></a></td>
-<td>A charge type.</td>
+<td>A charge in Coulomb.</td>
 </tr>
 </tbody>
 </table>
@@ -340,13 +354,13 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kcal_per_mol.html#BioSimSpace.Units.Energy.kcal_per_mol" title="BioSimSpace.Units.Energy.kcal_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kcal_per_mol</span></code></a></td>
-<td>An energy type.</td>
+<td>An energy in kcal per mol.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kj_per_mol.html#BioSimSpace.Units.Energy.kj_per_mol" title="BioSimSpace.Units.Energy.kj_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kj_per_mol</span></code></a></td>
-<td>An energy type.</td>
+<td>An energy in kJ per mol.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Energy.kt.html#BioSimSpace.Units.Energy.kt" title="BioSimSpace.Units.Energy.kt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy.kt</span></code></a></td>
-<td>An energy type.</td>
+<td>An energy in KT.</td>
 </tr>
 </tbody>
 </table>
@@ -360,10 +374,10 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.atm.html#BioSimSpace.Units.Pressure.atm" title="BioSimSpace.Units.Pressure.atm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pressure.atm</span></code></a></td>
-<td>A pressure type.</td>
+<td>A pressure in atmosphere.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Pressure.bar.html#BioSimSpace.Units.Pressure.bar" title="BioSimSpace.Units.Pressure.bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pressure.bar</span></code></a></td>
-<td>A pressure type.</td>
+<td>A pressure in bar.</td>
 </tr>
 </tbody>
 </table>
@@ -377,13 +391,13 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.kelvin.html#BioSimSpace.Units.Temperature.kelvin" title="BioSimSpace.Units.Temperature.kelvin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.kelvin</span></code></a></td>
-<td>A temperature type.</td>
+<td>A temperature in Kelvin.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.celsius.html#BioSimSpace.Units.Temperature.celsius" title="BioSimSpace.Units.Temperature.celsius"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.celsius</span></code></a></td>
-<td>A temperature type.</td>
+<td>A temperature in Celsius.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Temperature.fahrenheit.html#BioSimSpace.Units.Temperature.fahrenheit" title="BioSimSpace.Units.Temperature.fahrenheit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Temperature.fahrenheit</span></code></a></td>
-<td>A temperature type.</td>
+<td>A temperature in Fahrenheit.</td>
 </tr>
 </tbody>
 </table>
@@ -397,28 +411,28 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.day.html#BioSimSpace.Units.Time.day" title="BioSimSpace.Units.Time.day"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.day</span></code></a></td>
-<td>A time type.</td>
+<td>A time in days.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.hour.html#BioSimSpace.Units.Time.hour" title="BioSimSpace.Units.Time.hour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.hour</span></code></a></td>
-<td>A time type.</td>
+<td>A time in hours.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.minute.html#BioSimSpace.Units.Time.minute" title="BioSimSpace.Units.Time.minute"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.minute</span></code></a></td>
-<td>A time type.</td>
+<td>A time in minutes.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.second.html#BioSimSpace.Units.Time.second" title="BioSimSpace.Units.Time.second"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.second</span></code></a></td>
-<td>A time type.</td>
+<td>A time in seconds.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.millisecond.html#BioSimSpace.Units.Time.millisecond" title="BioSimSpace.Units.Time.millisecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.millisecond</span></code></a></td>
-<td>A time type.</td>
+<td>A time in milliseconds.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.nanosecond.html#BioSimSpace.Units.Time.nanosecond" title="BioSimSpace.Units.Time.nanosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.nanosecond</span></code></a></td>
-<td>A time type.</td>
+<td>A time in nanoseconds.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.picosecond.html#BioSimSpace.Units.Time.picosecond" title="BioSimSpace.Units.Time.picosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.picosecond</span></code></a></td>
-<td>A time type.</td>
+<td>A time in picoseconds.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/BioSimSpace.Units.Time.femtosecond.html#BioSimSpace.Units.Time.femtosecond" title="BioSimSpace.Units.Time.femtosecond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time.femtosecond</span></code></a></td>
-<td>A time type.</td>
+<td>A time in femtoseconds.</td>
 </tr>
 </tbody>
 </table>
@@ -449,7 +463,7 @@ This provide short-hand access to BioSimSpace <a class="reference internal" href
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>

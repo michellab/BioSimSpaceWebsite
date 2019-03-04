@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Developer’s guide &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>Developer’s guide &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -277,7 +277,7 @@ should be used to explicitly modify member data.</p>
 <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="c1"># The private member data has been modified!</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -299,7 +299,7 @@ should be used to explicitly modify member data.</p>
 <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="c1"># The private member data is untouched.</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -354,7 +354,7 @@ to locate the tests. Valid names start or end with <em>test</em>, e.g.:</p>
 </pre></div>
 </div>
 <p>(This assumes that you have made the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory of your BioSimSpace or
-Sire installation available to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.))</p>
+Sire installation available to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.)</p>
 <p>To run tests for a specific sub-module, e.g.:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest test/Process
 </pre></div>
@@ -546,7 +546,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>

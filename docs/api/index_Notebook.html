@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Notebook &mdash; BioSimSpace 2018.1.1+728.ga3218ca documentation</title>
+  <title>BioSimSpace.Notebook &mdash; BioSimSpace 2018.1.1+760.g7e75e7d documentation</title>
   
 
   
@@ -212,6 +212,21 @@ interactively, e.g. within a <a class="reference external" href="https://jupyter
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Generate a line graph using two lists of data.</p>
+<a class="reference internal image-reference" href="../_images/plot_01.png"><img alt="../_images/plot_01.png" class="align-center" src="../_images/plot_01.png" style="width: 800px;" /></a>
+<p>If no argument is passed for the <code class="docutils literal notranslate"><span class="pre">x</span></code> data then each <code class="docutils literal notranslate"><span class="pre">y</span></code> data value is
+plotted against its list index.</p>
+<a class="reference internal image-reference" href="../_images/plot_02.png"><img alt="../_images/plot_02.png" class="align-center" src="../_images/plot_02.png" style="width: 800px;" /></a>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">xlabel</span></code> and <code class="docutils literal notranslate"><span class="pre">ylabel</span></code> arguments to add labels to your plots.</p>
+<a class="reference internal image-reference" href="../_images/plot_03.png"><img alt="../_images/plot_03.png" class="align-center" src="../_images/plot_03.png" style="width: 800px;" /></a>
+<p>Error bars can be added using <code class="docutils literal notranslate"><span class="pre">xerror</span></code> and <code class="docutils literal notranslate"><span class="pre">yerror</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/plot_04.png"><img alt="../_images/plot_04.png" class="align-center" src="../_images/plot_04.png" style="width: 800px;" /></a>
+<p>It is possible to generate plots from the output of a real-time simulation.
+Where functions return time-series data containing <a class="reference internal" href="index_Types.html#ref-types"><span class="std std-ref">BioSimSpace.Types</span></a>, then
+axis labels will be automatically generated. (The <code class="docutils literal notranslate"><span class="pre">xlabel</span></code> and <code class="docutils literal notranslate"><span class="pre">ylabel</span></code>
+still take precedence.)</p>
+<a class="reference internal image-reference" href="../_images/plot_05.png"><img alt="../_images/plot_05.png" class="align-center" src="../_images/plot_05.png" style="width: 800px;" /></a>
 </div>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
@@ -226,6 +241,13 @@ interactively, e.g. within a <a class="reference external" href="https://jupyter
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Load and visualise a molecular system.</p>
+<a class="reference internal image-reference" href="../_images/view_01.png"><img alt="../_images/view_01.png" class="align-center" src="../_images/view_01.png" style="width: 800px;" /></a>
+<p>Attach a <a class="reference internal" href="generated/BioSimSpace.Notebook.View.html#BioSimSpace.Notebook.View" title="BioSimSpace.Notebook.View"><code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code></a> to a running molecular
+dynamics <a class="reference internal" href="index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Process</span></code></a> and visualise the first molecule in
+the system from the latest configuration in real-time.</p>
+<a class="reference internal image-reference" href="../_images/view_02.png"><img alt="../_images/view_02.png" class="align-center" src="../_images/view_02.png" style="width: 800px;" /></a>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -253,7 +275,7 @@ interactively, e.g. within a <a class="reference external" href="https://jupyter
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 25, 2019.
+        Last updated on Mar 04, 2019.
       </span>
 
     </p>
