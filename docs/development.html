@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Developer’s guide &mdash; BioSimSpace 2018.1.1+763.gfe24c20 documentation</title>
+  <title>Developer’s guide &mdash; BioSimSpace 2018.1.1+775.g3bffa3d documentation</title>
   
 
   
@@ -509,6 +509,11 @@ commiting. When happy, commit your changes, e.g.</p>
 </pre></div>
 </div>
 <p>Remember that it is better to make small changes and commit frequently.</p>
+<p>If your edits don’t change to the BioSimSpace source code, or documentation,
+e.g. fixing typos, then please add <code class="docutils literal notranslate"><span class="pre">***NO_CI***</span></code> to your commit message.
+This will avoid unnecessarily running the
+<a class="reference external" href="https://dev.azure.com/michellab/BioSimSpace/_build">Azure pipelines</a>, e.g.
+building a new BioSimSpace binary, updating the website, etc.</p>
 <p>Next, push your changes to the remote server, e.g.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Push to the feature branch on the main BioSimSpace repo, if you have access.</span>
 git push origin feature
@@ -546,7 +551,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 04, 2019.
+        Last updated on Mar 05, 2019.
       </span>
 
     </p>

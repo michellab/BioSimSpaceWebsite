@@ -13,11 +13,11 @@ BioSimSpace.Trajectory.Trajectory
 
    .. autosummary::
    
-      ~Trajectory.RMSD
       ~Trajectory.__init__
       ~Trajectory.getFrames
       ~Trajectory.getTrajectory
       ~Trajectory.nFrames
+      ~Trajectory.rmsd
    
    
 

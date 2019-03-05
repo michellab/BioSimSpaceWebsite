@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2018.1.1+763.gfe24c20 documentation</title>
+  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2018.1.1+775.g3bffa3d documentation</title>
   
 
   
@@ -225,48 +225,23 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.RMSD" title="BioSimSpace.Trajectory.Trajectory.RMSD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RMSD</span></code></a>([frame,&nbsp;atoms,&nbsp;molecule])</td>
-<td>Compute the root mean squared displacement.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="BioSimSpace.Trajectory.Trajectory.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([process,&nbsp;trajectory,&nbsp;topology])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="BioSimSpace.Trajectory.Trajectory.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([process,&nbsp;trajectory,&nbsp;topology])</td>
 <td>Constructor.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="BioSimSpace.Trajectory.Trajectory.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>([indices])</td>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="BioSimSpace.Trajectory.Trajectory.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>([indices])</td>
 <td>Get trajectory frames as a list of System objects.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="BioSimSpace.Trajectory.Trajectory.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([format])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="BioSimSpace.Trajectory.Trajectory.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([format])</td>
 <td>Get the current trajectory object.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.nFrames" title="BioSimSpace.Trajectory.Trajectory.nFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nFrames</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.nFrames" title="BioSimSpace.Trajectory.Trajectory.nFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nFrames</span></code></a>()</td>
 <td>Return the current number of trajectory frames.</td>
 </tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="BioSimSpace.Trajectory.Trajectory.RMSD">
-<code class="descname">RMSD</code><span class="sig-paren">(</span><em>frame=None</em>, <em>atoms=None</em>, <em>molecule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.RMSD" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the root mean squared displacement.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>frame</strong> (<em>int</em>) – The index of the reference frame.</li>
-<li><strong>atoms</strong> (<em>[</em><em>int</em><em>]</em>) – A list of reference atom indices.</li>
-<li><strong>molecule</strong> (<em>int</em>) – The index of the reference molecule.</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>rmsd</strong> – A list containing the RMSD value at each time point.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">[float]</p>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="BioSimSpace.Trajectory.Trajectory.rmsd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsd</span></code></a>([frame,&nbsp;atoms,&nbsp;molecule])</td>
+<td>Compute the root mean squared displacement.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.getFrames">
 <code class="descname">getFrames</code><span class="sig-paren">(</span><em>indices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="Permalink to this definition">¶</a></dt>
@@ -319,6 +294,31 @@
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="BioSimSpace.Trajectory.Trajectory.rmsd">
+<code class="descname">rmsd</code><span class="sig-paren">(</span><em>frame=None</em>, <em>atoms=None</em>, <em>molecule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the root mean squared displacement.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>frame</strong> (<em>int</em>) – The index of the reference frame.</li>
+<li><strong>atoms</strong> (<em>[</em><em>int</em><em>]</em>) – A list of reference atom indices.</li>
+<li><strong>molecule</strong> (<em>int</em>) – The index of the reference molecule.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>rmsd</strong> – A list containing the RMSD value at each time point.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">[float]</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -345,7 +345,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 04, 2019.
+        Last updated on Mar 05, 2019.
       </span>
 
     </p>

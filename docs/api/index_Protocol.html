@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2018.1.1+763.gfe24c20 documentation</title>
+  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2018.1.1+775.g3bffa3d documentation</title>
   
 
   
@@ -203,7 +203,8 @@
   <div class="section" id="biosimspace-protocol">
 <span id="ref-protocol"></span><h1>BioSimSpace.Protocol<a class="headerlink" href="#biosimspace-protocol" title="Permalink to this headline">¶</a></h1>
 <p>The <em>Protocol</em> package contains functionality for defining generic molecular
-dynamics protocols.</p>
+dynamics protocols. The protocols contain configurable options that are
+common across different molecular dynamics packages.</p>
 <span class="target" id="module-BioSimSpace.Protocol"></span><div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="longtable docutils">
@@ -246,6 +247,40 @@ dynamics protocols.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Print the list of supported protocols.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">protocols</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Create a default minimisation protocol and print the number of steps.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The same as above, but instead passing “Minimisation” as an argument to the
+<a class="reference internal" href="generated/BioSimSpace.Protocol.createProtocol.html#BioSimSpace.Protocol.createProtocol" title="BioSimSpace.Protocol.createProtocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">createProtocol</span></code></a> function. This
+function should be used in any interoperable workflow
+<a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a> where the protocol is specified
+as an input requirement by the user.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">createProtocol</span><span class="p">(</span><span class="s2">&quot;minimisation&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Create an equilibration protocol that heats the system from 0 to 300 Kelvin
+while restraining the positions of any backbone atoms.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Equilibration</span><span class="p">(</span><span class="n">temperature_start</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Temperature</span><span class="o">.</span><span class="n">kelvin</span><span class="p">,</span>
+                                      <span class="n">temperature_end</span><span class="o">=</span><span class="mi">300</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Temperature</span><span class="o">.</span><span class="n">kelvin</span><span class="p">,</span>
+                                      <span class="n">restrain_backbone</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -273,7 +308,7 @@ dynamics protocols.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 04, 2019.
+        Last updated on Mar 05, 2019.
       </span>
 
     </p>
