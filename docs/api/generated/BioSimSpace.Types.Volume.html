@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Volume &mdash; BioSimSpace 2018.1.1+800.gd7a43a7 documentation</title>
+  <title>BioSimSpace.Types.Volume &mdash; BioSimSpace 2018.1.1+807.g61f5048 documentation</title>
   
 
   
@@ -225,6 +225,24 @@ of the volume, e.g. “100 pm^3”.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Create an object representing a volume of 100 cube nanometers then
+print the volume in cube Angstrom.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="s2">&quot;nm^3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">volume</span><span class="o">.</span><span class="n">angstroms3</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The same as above, except passing a string representation of the
+volume to the constructor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="s2">&quot;100 nm^3&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">volume</span><span class="o">.</span><span class="n">angstroms3</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The string matching is extremeley flexible, so all of the following
+would be valid arguments: “100 nm^3”, “100 cube nanometers”,
+“100 nanometers cubed”.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>

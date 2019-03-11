@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Area &mdash; BioSimSpace 2018.1.1+800.gd7a43a7 documentation</title>
+  <title>BioSimSpace.Types.Area &mdash; BioSimSpace 2018.1.1+807.g61f5048 documentation</title>
   
 
   
@@ -226,18 +226,18 @@ of the area, e.g. “30 nm^2”.</p>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<p>Create an object representing an area of 20 square nanometers then
+<p>Create an object representing an area of 30 square nanometers then
 print the area in square Angstrom.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">area</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Area</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;nm^2&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="o">.</span><span class="n">angstrom2</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="o">.</span><span class="n">angstroms2</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The same as above, except passing a string representation of the
 area to the constructor.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">area</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Area</span><span class="p">(</span><span class="s2">&quot;30 nm^2&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="o">.</span><span class="n">angstrom2</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="o">.</span><span class="n">angstroms2</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The string matching is extremeley flexible, so all of the following

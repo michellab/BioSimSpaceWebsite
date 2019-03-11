@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Temperature &mdash; BioSimSpace 2018.1.1+800.gd7a43a7 documentation</title>
+  <title>BioSimSpace.Types.Temperature &mdash; BioSimSpace 2018.1.1+807.g61f5048 documentation</title>
   
 
   
@@ -219,12 +219,29 @@ of the temperature, e.g. “298 K”.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>magnitude</strong> (<em>float</em>) – The magnitude.</li>
 <li><strong>unit</strong> (<em>str</em>) – The unit.</li>
-<li><strong>string</strong> (<em>str</em>) – A string representation of the volume.</li>
+<li><strong>string</strong> (<em>str</em>) – A string representation of the temperature.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Create an object representing a temperature of 298 Kelvin then
+print the temperature in Celsius.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">temperature</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Temperature</span><span class="p">(</span><span class="mi">298</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The same as above, except passing a string representation of the
+temperature to the constructor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">time</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Temperature</span><span class="p">(</span><span class="s2">&quot;298 K&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="o">.</span><span class="n">celsius</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The string matching is extremeley flexible, so all of the following
+would be valid arguments: “298 K”, “298 kelvin”, “2.98e2 k”.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>

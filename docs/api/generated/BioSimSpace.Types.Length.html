@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Length &mdash; BioSimSpace 2018.1.1+800.gd7a43a7 documentation</title>
+  <title>BioSimSpace.Types.Length &mdash; BioSimSpace 2018.1.1+807.g61f5048 documentation</title>
   
 
   
@@ -225,6 +225,23 @@ of the length, e.g. “12 Angstrom”.</p>
 </tr>
 </tbody>
 </table>
+<p class="rubric">Examples</p>
+<p>Create an object representing a length of 148.6 Angstrom then
+print the length in nanometers.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="mf">148.6</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">nanometers</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The same as above, except passing a string representation of the
+length to the constructor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="s2">&quot;148.6 A&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">nanometers</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The string matching is extremeley flexible, so all of the following
+would be valid arguments: “148.6 A”, “148.6 angstrom”, “1.48e2 Angstrom”.</p>
 </dd></dl>
 
 <p class="rubric">Methods</p>
