@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2018.1.1+814.g3459dca documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2018.1.1+818.g7d313d1 documentation</title>
   
 
   
@@ -198,11 +198,11 @@
 <h1>BioSimSpace.FreeEnergy.Binding<a class="headerlink" href="#biosimspace-freeenergy-binding" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.FreeEnergy.Binding">
-<em class="property">class </em><code class="descclassname">BioSimSpace.FreeEnergy.</code><code class="descname">Binding</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">BioSimSpace.FreeEnergy.</code><code class="descname">Binding</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine='GROMACS'</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running binding free energy simulations.</p>
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Binding.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine='GROMACS'</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -212,6 +212,8 @@
 <li><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</li>
 <li><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.FreeEnergy</span></code></a>) – The simulation protocol.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</li>
+<li><strong>engine</strong> (<em>str</em>) – The molecular dynamics engine used to run the simulation. Available
+options are “GROMACS”, or “SOMD”.</li>
 <li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</li>
