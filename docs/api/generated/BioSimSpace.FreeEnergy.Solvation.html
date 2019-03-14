@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2018.1.1+818.g7d313d1 documentation</title>
+  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2018.1.1+820.gae14f29 documentation</title>
   
 
   
@@ -198,11 +198,11 @@
 <h1>BioSimSpace.FreeEnergy.Solvation<a class="headerlink" href="#biosimspace-freeenergy-solvation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.FreeEnergy.Solvation">
-<em class="property">class </em><code class="descclassname">BioSimSpace.FreeEnergy.</code><code class="descname">Solvation</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine='GROMACS'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">BioSimSpace.FreeEnergy.</code><code class="descname">Solvation</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running solvation free energy simulations.</p>
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Solvation.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine='GROMACS'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>system</em>, <em>protocol=None</em>, <em>work_dir=None</em>, <em>engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -213,7 +213,8 @@
 <li><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.FreeEnergy</span></code></a>) – The simulation protocol.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</li>
 <li><strong>engine</strong> (<em>str</em>) – The molecular dynamics engine used to run the simulation. Available
-options are “GROMACS”, or “SOMD”.</li>
+options are “GROMACS”, or “SOMD”. If this argument is omitted then
+BioSimSpace will choose an appropriate engine for you.</li>
 </ul>
 </td>
 </tr>
