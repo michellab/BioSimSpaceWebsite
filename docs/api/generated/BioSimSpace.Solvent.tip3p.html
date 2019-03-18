@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent.tip3p &mdash; BioSimSpace 2018.1.1+829.g554692f documentation</title>
+  <title>BioSimSpace.Solvent.tip3p &mdash; BioSimSpace 2018.1.1+830.g22ffd0e documentation</title>
   
 
   
@@ -212,7 +212,10 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
 <li><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>,                   <a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – A molecule, or system of molecules.</li>
 <li><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the box size in each dimension (in nm).</li>
-<li><strong>shell</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code> &lt;BioSimSpace.Types.Length&gt;`) – Thickness of the water shell around the solute.</li>
+<li><strong>shell</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code> &lt;BioSimSpace.Types.Length&gt;`) – Thickness of the water shell around the solute. Note that the
+base length of the resulting box must be at least twice as large
+as the cutoff used by the chosen molecular dynamics engine. As such,
+the shell option is often unsuitable for small molecules.</li>
 <li><strong>ion_conc</strong> (<em>float</em>) – The ion concentration in (mol per litre).</li>
 <li><strong>is_neutral</strong> (<em>bool</em>) – Whether to neutralise the system.</li>
 <li><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</li>
