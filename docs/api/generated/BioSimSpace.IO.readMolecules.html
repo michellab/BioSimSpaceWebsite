@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2018.1.1+837.ge7d71ef documentation</title>
+  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2018.1.1+839.gd292df8 documentation</title>
   
 
   
@@ -203,26 +203,22 @@
 <dt id="BioSimSpace.IO.readMolecules">
 <code class="descclassname">BioSimSpace.IO.</code><code class="descname">readMolecules</code><span class="sig-paren">(</span><em>files</em>, <em>property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readMolecules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a molecular system from file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>files</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – A file name, or a list of file names.</li>
-<li><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>files</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – A file name, or a list of file names.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</li>
+own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>system</strong> – A molecular system.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>system</strong> – A molecular system.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>Load a molecular system from AMBER coordinate and topology files.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
@@ -269,7 +265,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 26, 2019.
+        Last updated on Apr 01, 2019.
       </span>
 
     </p>

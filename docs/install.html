@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2018.1.1+837.ge7d71ef documentation</title>
+  <title>Installation &mdash; BioSimSpace 2018.1.1+839.gd292df8 documentation</title>
   
 
   
@@ -178,8 +178,8 @@
 <p>The latest self-extracting binary for the development version of BioSimSpace
 can be downloaded from one of the following links:</p>
 <ul class="simple">
-<li>Linux: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/ZH4wscDHe59T28yVJtrMH8uqifI_ih0NL5IyqxXQjSo/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_linux.run">biosimspace_devel_latest_linux.run</a></li>
-<li>Mac OS X: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/whcwfvWfndjA4RxupM-4gsVsjcdR0w5I9aP1RJKPruQ/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_osx.run">biosimspace_devel_latest_osx.run</a></li>
+<li><p>Linux: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/ZH4wscDHe59T28yVJtrMH8uqifI_ih0NL5IyqxXQjSo/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_linux.run">biosimspace_devel_latest_linux.run</a></p></li>
+<li><p>Mac OS X: <a class="reference external" href="https://objectstorage.eu-frankfurt-1.oraclecloud.com/p/whcwfvWfndjA4RxupM-4gsVsjcdR0w5I9aP1RJKPruQ/n/chryswoods/b/biosimspace_releases/o/biosimspace_devel_latest_osx.run">biosimspace_devel_latest_osx.run</a></p></li>
 </ul>
 <p>(these are portable X86-64 binaries that should work on any Linux distribution released
 since ~2011, or any OS X &gt;= 10.9[Mavericks, released 2013]. Note that they are compiled with AVX
@@ -203,8 +203,8 @@ this will be into <code class="docutils literal notranslate"><span class="pre">$
 starting, you’ll need working <a class="reference external" href="https://git-scm.com">Git</a> and <a class="reference external" href="https://cmake.org">CMake</a>
 installations.</p>
 <ol class="arabic simple">
-<li>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
-molecular simulation framework. To download and install Sire:</li>
+<li><p>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
+molecular simulation framework. To download and install Sire:</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/Sire
 <span class="nb">cd</span> Sire
@@ -214,8 +214,8 @@ molecular simulation framework. To download and install Sire:</li>
 <p>Assuming the default installation path, this will install Sire into <code class="docutils literal notranslate"><span class="pre">$HOME/sire.app</span></code>.</p>
 <p>(Note that the installation is slow and can take in excess of an hour.)</p>
 <ol class="arabic simple" start="2">
-<li>Next you will need to download BioSimSpace and install it into your Sire
-application. (The following assumes the default Sire installation path.)</li>
+<li><p>Next you will need to download BioSimSpace and install it into your Sire
+application. (The following assumes the default Sire installation path.)</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/BioSimSpace
 <span class="nb">cd</span> BioSimSpace/python
@@ -249,8 +249,8 @@ environment variable <code class="docutils literal notranslate"><span class="pre
 <div class="section" id="common-issues">
 <h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>If you experience problems with <a class="reference external" href="https://matplotlib.org">Matplotlib</a> when
-importing BioSimSpace on macOS, e.g.</li>
+<li><p>If you experience problems with <a class="reference external" href="https://matplotlib.org">Matplotlib</a> when
+importing BioSimSpace on macOS, e.g.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RuntimeError**: Python is not installed as a framework.
 </pre></div>
@@ -262,8 +262,8 @@ importing BioSimSpace on macOS, e.g.</li>
 <p>Note that plotting functionality will be disabled if you are using
 BioSimSpace on a remote server without X forwarding.</p>
 <ul class="simple">
-<li>If you experience problems with <a class="reference external" href="https://jupyter.org">Jupyter</a> permissions,
-try removing <code class="docutils literal notranslate"><span class="pre">$HOME/.jupyter</span></code> or <code class="docutils literal notranslate"><span class="pre">$HOME/.local/share/jupyter</span></code></li>
+<li><p>If you experience problems with <a class="reference external" href="https://jupyter.org">Jupyter</a> permissions,
+try removing <code class="docutils literal notranslate"><span class="pre">$HOME/.jupyter</span></code> or <code class="docutils literal notranslate"><span class="pre">$HOME/.local/share/jupyter</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="external-dependencies">
@@ -272,9 +272,9 @@ try removing <code class="docutils literal notranslate"><span class="pre">$HOME/
 functionality. Please download and install these packages according to their
 recommended installation instructions.</p>
 <ul class="simple">
-<li><a class="reference external" href="http://ambermd.org">Amber / AmberTools</a> – <em>Dynamics / Parameterisation</em></li>
-<li><a class="reference external" href="http://www.gromacs.org">Gromacs</a> – <em>Dynamics / Parameterisation / Solvation</em></li>
-<li><a class="reference external" href="http://www.ks.uiuc.edu/Research/namd">Namd</a> – <em>Dynamics</em></li>
+<li><p><a class="reference external" href="http://ambermd.org">Amber / AmberTools</a> – <em>Dynamics / Parameterisation</em></p></li>
+<li><p><a class="reference external" href="http://www.gromacs.org">Gromacs</a> – <em>Dynamics / Parameterisation / Solvation</em></p></li>
+<li><p><a class="reference external" href="http://www.ks.uiuc.edu/Research/namd">Namd</a> – <em>Dynamics</em></p></li>
 </ul>
 </div>
 </div>
@@ -301,7 +301,7 @@ recommended installation instructions.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 26, 2019.
+        Last updated on Apr 01, 2019.
       </span>
 
     </p>

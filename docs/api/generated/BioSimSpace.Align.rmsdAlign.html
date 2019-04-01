@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.rmsdAlign &mdash; BioSimSpace 2018.1.1+837.ge7d71ef documentation</title>
+  <title>BioSimSpace.Align.rmsdAlign &mdash; BioSimSpace 2018.1.1+839.gd292df8 documentation</title>
   
 
   
@@ -203,30 +203,26 @@ between matched atom indices. The molecule is aligned based on
 a root mean squared displacement (RMSD) fit to find the optimal
 translation vector (as opposed to merely taking the difference of
 centroids).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to align.</li>
-<li><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule.</li>
-<li><strong>mapping</strong> (<em>dict</em>) – A dictionary mapping atoms in molecule0 to those in molecule1.</li>
-<li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to align.</p></li>
+<li><p><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule.</p></li>
+<li><p><strong>mapping</strong> (<em>dict</em>) – A dictionary mapping atoms in molecule0 to those in molecule1.</p></li>
+<li><p><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-<li><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
-defined values.</li>
+with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
+defined values.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>molecule</strong> – The aligned molecule.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a></p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>molecule</strong> – The aligned molecule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a></p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>Align molecule0 to molecule1 based on a precomputed mapping.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
@@ -266,7 +262,7 @@ with default options.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 26, 2019.
+        Last updated on Apr 01, 2019.
       </span>
 
     </p>

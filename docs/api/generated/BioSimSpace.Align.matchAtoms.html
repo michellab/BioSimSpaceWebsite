@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2018.1.1+837.ge7d71ef documentation</title>
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2018.1.1+839.gd292df8 documentation</title>
   
 
   
@@ -204,57 +204,52 @@ When requesting more than one match, the mappings will be sorted using
 a scoring function and returned in order of best to worst score. (Note
 that, depending on the scoring function the “best” score may have the
 lowest value.)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule of interest.</li>
-<li><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule.</li>
-<li><strong>scoring_function</strong> (<em>str</em>) – <dl class="docutils">
-<dt>The scoring function used to match atoms. Available options are:</dt>
-<dd><ul class="first last">
-<li><dl class="first docutils">
-<dt>”RMSD”</dt>
-<dd>Calculate the root mean squared distance between the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule of interest.</p></li>
+<li><p><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule.</p></li>
+<li><p><strong>scoring_function</strong> (<em>str</em>) – <dl class="simple">
+<dt>The scoring function used to match atoms. Available options are:</dt><dd><ul>
+<li><dl class="simple">
+<dt>”RMSD”</dt><dd><p>Calculate the root mean squared distance between the
 coordinates of atoms in molecule0 to those that they
-map to in molecule1.</dd>
+map to in molecule1.</p>
+</dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>”RMSD align”</dt>
-<dd>Align molecule0 to molecule1 based on the mapping before
-computing the above RMSD score.</dd>
+<li><dl class="simple">
+<dt>”RMSD align”</dt><dd><p>Align molecule0 to molecule1 based on the mapping before
+computing the above RMSD score.</p>
+</dd>
 </dl>
 </li>
 </ul>
 </dd>
 </dl>
-</li>
-<li><strong>matches</strong> (<em>int</em>) – The maximum number of matches to return. (Sorted in order of score).</li>
-<li><strong>return_scores</strong> (<em>bool</em>) – Whether to return a list containing the scores for each mapping.</li>
-<li><strong>prematch</strong> (<em>dict</em>) – A pre-match to use as the basis of the search.</li>
-<li><strong>timeout</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The timeout for the matching algorithm.</li>
-<li><strong>match_light</strong> (<em>bool</em>) – Whether to match light atoms.</li>
-<li><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
+</p></li>
+<li><p><strong>matches</strong> (<em>int</em>) – The maximum number of matches to return. (Sorted in order of score).</p></li>
+<li><p><strong>return_scores</strong> (<em>bool</em>) – Whether to return a list containing the scores for each mapping.</p></li>
+<li><p><strong>prematch</strong> (<em>dict</em>) – A pre-match to use as the basis of the search.</p></li>
+<li><p><strong>timeout</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The timeout for the matching algorithm.</p></li>
+<li><p><strong>match_light</strong> (<em>bool</em>) – Whether to match light atoms.</p></li>
+<li><p><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
-with their own naming scheme, e.g. { “charge” : “my-charge” }</li>
-<li><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
-defined values.</li>
-<li><strong>verbose</strong> (<em>bool</em>) – Whether to print status information from the matcher.</li>
+with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
+defined values.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – Whether to print status information from the matcher.</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>matches</strong> – The best atom mapping, a list containing a user specified number of
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>matches</strong> – The best atom mapping, a list containing a user specified number of
 the best mappings ranked by their score, or a tuple containing the
 list of best mappings and a list of the corresponding scores.</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict, [dict], ([dict], list)</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict, [dict], ([dict], list)</p>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <p>Find the best maximum common substructure mapping between two molecules.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
@@ -309,7 +304,7 @@ atom indices in molecule0 to those in molecule1).</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 26, 2019.
+        Last updated on Apr 01, 2019.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2018.1.1+837.ge7d71ef documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2018.1.1+839.gd292df8 documentation</title>
   
 
   
@@ -206,98 +206,94 @@ a free energy simulation at multiple lambda values.</p>
 <dt id="BioSimSpace.Process.ProcessRunner.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>processes</em>, <em>name='runner'</em>, <em>work_dir=None</em>, <em>nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>processes</strong> ([<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – A list of process objects.</li>
-<li><strong>name</strong> (<em>str</em>) – The name of the of processes.</li>
-<li><strong>work_dir</strong> (<em>str</em>) – The working directory for the processes.</li>
-<li><strong>nest_dirs</strong> (<em>bool</em>) – Whether to nest the working directory of the processes inside
-the process runner top-level directory.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>processes</strong> ([<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – A list of process objects.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the of processes.</p></li>
+<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the processes.</p></li>
+<li><p><strong>nest_dirs</strong> (<em>bool</em>) – Whether to nest the working directory of the processes inside
+the process runner top-level directory.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.__init__" title="BioSimSpace.Process.ProcessRunner.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(processes[,&nbsp;name,&nbsp;work_dir,&nbsp;nest_dirs])</td>
-<td>Constructor.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.__init__" title="BioSimSpace.Process.ProcessRunner.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(processes[, name, work_dir, nest_dirs])</p></td>
+<td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="BioSimSpace.Process.ProcessRunner.addProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addProcess</span></code></a>(process)</td>
-<td>Add a process to the runner.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="BioSimSpace.Process.ProcessRunner.addProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addProcess</span></code></a>(process)</p></td>
+<td><p>Add a process to the runner.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.errored" title="BioSimSpace.Process.ProcessRunner.errored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errored</span></code></a>()</td>
-<td>Return the indices of the errored processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.errored" title="BioSimSpace.Process.ProcessRunner.errored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errored</span></code></a>()</p></td>
+<td><p>Return the indices of the errored processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.getName" title="BioSimSpace.Process.ProcessRunner.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</td>
-<td>Return the process runner name.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.getName" title="BioSimSpace.Process.ProcessRunner.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<td><p>Return the process runner name.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isError" title="BioSimSpace.Process.ProcessRunner.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</td>
-<td>Return whether each process is in an error state.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isError" title="BioSimSpace.Process.ProcessRunner.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
+<td><p>Return whether each process is in an error state.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="BioSimSpace.Process.ProcessRunner.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</td>
-<td>Return whether each process is queued.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="BioSimSpace.Process.ProcessRunner.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
+<td><p>Return whether each process is queued.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="BioSimSpace.Process.ProcessRunner.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</td>
-<td>Return whether each process is running.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="BioSimSpace.Process.ProcessRunner.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
+<td><p>Return whether each process is running.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</td>
-<td>Kill a specific process. The same can be achieved using:</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</p></td>
+<td><p>Kill a specific process. The same can be achieved using:</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</td>
-<td>Kill all of the processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</p></td>
+<td><p>Kill all of the processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nError" title="BioSimSpace.Process.ProcessRunner.nError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nError</span></code></a>()</td>
-<td>Return the number of errored processes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nError" title="BioSimSpace.Process.ProcessRunner.nError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nError</span></code></a>()</p></td>
+<td><p>Return the number of errored processes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="BioSimSpace.Process.ProcessRunner.nProcesses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nProcesses</span></code></a>()</td>
-<td>Return the number of processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="BioSimSpace.Process.ProcessRunner.nProcesses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nProcesses</span></code></a>()</p></td>
+<td><p>Return the number of processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="BioSimSpace.Process.ProcessRunner.nQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nQueued</span></code></a>()</td>
-<td>Return the number of queued processes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="BioSimSpace.Process.ProcessRunner.nQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nQueued</span></code></a>()</p></td>
+<td><p>Return the number of queued processes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="BioSimSpace.Process.ProcessRunner.nRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nRunning</span></code></a>()</td>
-<td>Return the number of running processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="BioSimSpace.Process.ProcessRunner.nRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nRunning</span></code></a>()</p></td>
+<td><p>Return the number of running processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.processes" title="BioSimSpace.Process.ProcessRunner.processes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processes</span></code></a>()</td>
-<td>Return the list of processes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.processes" title="BioSimSpace.Process.ProcessRunner.processes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processes</span></code></a>()</p></td>
+<td><p>Return the list of processes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.queued" title="BioSimSpace.Process.ProcessRunner.queued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">queued</span></code></a>()</td>
-<td>Return the indices of the queued processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.queued" title="BioSimSpace.Process.ProcessRunner.queued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">queued</span></code></a>()</p></td>
+<td><p>Return the indices of the queued processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="BioSimSpace.Process.ProcessRunner.removeProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeProcess</span></code></a>(index)</td>
-<td>Remove a process from the runner.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="BioSimSpace.Process.ProcessRunner.removeProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeProcess</span></code></a>(index)</p></td>
+<td><p>Remove a process from the runner.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="BioSimSpace.Process.ProcessRunner.restartFailed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restartFailed</span></code></a>()</td>
-<td>Restart any jobs that are in an error state.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="BioSimSpace.Process.ProcessRunner.restartFailed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restartFailed</span></code></a>()</p></td>
+<td><p>Restart any jobs that are in an error state.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.runTime" title="BioSimSpace.Process.ProcessRunner.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</td>
-<td>Return the run time for each process.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.runTime" title="BioSimSpace.Process.ProcessRunner.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
+<td><p>Return the run time for each process.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.running" title="BioSimSpace.Process.ProcessRunner.running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">running</span></code></a>()</td>
-<td>Return the indices of the running processes.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.running" title="BioSimSpace.Process.ProcessRunner.running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">running</span></code></a>()</p></td>
+<td><p>Return the indices of the running processes.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.setName" title="BioSimSpace.Process.ProcessRunner.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</td>
-<td>Set the process runner name.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.setName" title="BioSimSpace.Process.ProcessRunner.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<td><p>Set the process runner name.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</td>
-<td>Start a specific process. The same can be achieved using:</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
+<td><p>Start a specific process. The same can be achieved using:</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>()</td>
-<td>Start all of the processes.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>()</p></td>
+<td><p>Start all of the processes.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.workDir" title="BioSimSpace.Process.ProcessRunner.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</td>
-<td>Return the working directory.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.workDir" title="BioSimSpace.Process.ProcessRunner.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
+<td><p>Return the working directory.</p></td>
 </tr>
 </tbody>
 </table>
@@ -305,111 +301,95 @@ the process runner top-level directory.</li>
 <dt id="BioSimSpace.Process.ProcessRunner.addProcess">
 <code class="descname">addProcess</code><span class="sig-paren">(</span><em>process</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a process to the runner.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>process</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>,                      [<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – The process/processes to add.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>process</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>,                      [<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – The process/processes to add.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.errored">
 <code class="descname">errored</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.errored" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the errored processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>idx_errored</strong> – A list containing the indices of the errored processes.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>idx_errored</strong> – A list containing the indices of the errored processes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.getName">
 <code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.getName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the process runner name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>name</strong> – The name of the process.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>name</strong> – The name of the process.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isError">
 <code class="descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is in an error state.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_error</strong> – A list indicating whether each process is in an error state.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[bool]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_error</strong> – A list indicating whether each process is in an error state.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[bool]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isQueued">
 <code class="descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is queued.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_queued</strong> – A list indicating whether each process is queued.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[ bool ]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_queued</strong> – A list indicating whether each process is queued.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[ bool ]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isRunning">
 <code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is running.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>is_running</strong> – A list indicating whether each process is running.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[ bool ]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_running</strong> – A list indicating whether each process is running.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[ bool ]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.kill">
 <code class="descname">kill</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.kill" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Kill a specific process. The same can be achieved using:</dt>
-<dd>runner.processes()[index].kill()</dd>
+<dd><dl class="simple">
+<dt>Kill a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].kill()</p>
+</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the process.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -422,110 +402,95 @@ the process runner top-level directory.</li>
 <dt id="BioSimSpace.Process.ProcessRunner.nError">
 <code class="descname">nError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of errored processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>n_error</strong> – The number of processes that are in an error state.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>n_error</strong> – The number of processes that are in an error state.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nProcesses">
 <code class="descname">nProcesses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>n_processes</strong> – The number of processes managed by the runner.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>n_processes</strong> – The number of processes managed by the runner.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nQueued">
 <code class="descname">nQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of queued processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>n_queued</strong> – The number of processes that are queued.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>n_queued</strong> – The number of processes that are queued.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nRunning">
 <code class="descname">nRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of running processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>n_running</strong> – The number of processes that are running.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>n_running</strong> – The number of processes that are running.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.processes">
 <code class="descname">processes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.processes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the list of processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>processes</strong> – The list of processes.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>processes</strong> – The list of processes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.queued">
 <code class="descname">queued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.queued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the queued processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>idx_queued</strong> – A list containing the indices of the queued processes.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>idx_queued</strong> – A list containing the indices of the queued processes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.removeProcess">
 <code class="descname">removeProcess</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a process from the runner.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the process.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -538,63 +503,53 @@ the process runner top-level directory.</li>
 <dt id="BioSimSpace.Process.ProcessRunner.runTime">
 <code class="descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.runTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the run time for each process.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>run_time</strong> – A list containing the run time of each process.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[ <a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time">BioSimSpace.Types.Time</a> ]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>run_time</strong> – A list containing the run time of each process.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[ <a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time">BioSimSpace.Types.Time</a> ]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.running">
 <code class="descname">running</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.running" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the running processes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>idx_running</strong> – A list containing the indices of the running processes.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">[ int ]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>idx_running</strong> – A list containing the indices of the running processes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[ int ]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.setName">
 <code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.setName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the process runner name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) – The process runner name.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The process runner name.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.start">
 <code class="descname">start</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Start a specific process. The same can be achieved using:</dt>
-<dd>runner.processes()[index].start()</dd>
+<dd><dl class="simple">
+<dt>Start a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].start()</p>
+</dd>
 </dl>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>index</strong> (<em>int</em>) – The index of the process.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -607,16 +562,14 @@ the process runner top-level directory.</li>
 <dt id="BioSimSpace.Process.ProcessRunner.workDir">
 <code class="descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.workDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the working directory.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><strong>work_dir</strong> – The working directory.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>work_dir</strong> – The working directory.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -645,7 +598,7 @@ the process runner top-level directory.</li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 26, 2019.
+        Last updated on Apr 01, 2019.
       </span>
 
     </p>
