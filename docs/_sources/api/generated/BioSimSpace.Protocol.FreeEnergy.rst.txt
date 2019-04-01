@@ -20,11 +20,15 @@ BioSimSpace.Protocol.FreeEnergy
       ~FreeEnergy.getRunTime
       ~FreeEnergy.getTemperature
       ~FreeEnergy.getTimeStep
+      ~FreeEnergy.getZeroDummyDihedrals
+      ~FreeEnergy.getZeroDummyImpropers
       ~FreeEnergy.setEnsemble
       ~FreeEnergy.setLambdaValues
       ~FreeEnergy.setRunTime
       ~FreeEnergy.setTemperature
       ~FreeEnergy.setTimeStep
+      ~FreeEnergy.setZeroDummyDihedrals
+      ~FreeEnergy.setZeroDummyImpropers
    
    
 
