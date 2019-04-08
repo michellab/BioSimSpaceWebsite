@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol.FreeEnergy &mdash; BioSimSpace 2018.1.1+840.g32632fc documentation</title>
+  <title>BioSimSpace.Protocol.FreeEnergy &mdash; BioSimSpace 2018.1.1+852.gb2434ee documentation</title>
   
 
   
@@ -202,11 +202,11 @@
 <h1>BioSimSpace.Protocol.FreeEnergy<a class="headerlink" href="#biosimspace-protocol-freeenergy" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Protocol.FreeEnergy">
-<em class="property">class </em><code class="descclassname">BioSimSpace.Protocol.</code><code class="descname">FreeEnergy</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>zero_dummy_dihedrals=True</em>, <em>zero_dummy_impropers=True</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">BioSimSpace.Protocol.</code><code class="descname">FreeEnergy</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing free energy protocols.</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.FreeEnergy.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>zero_dummy_dihedrals=True</em>, <em>zero_dummy_impropers=True</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>lam=0.0</em>, <em>lam_vals=None</em>, <em>min_lam=0.0</em>, <em>max_lam=1.0</em>, <em>num_lam=11</em>, <em>timestep=2.0000 fs</em>, <em>runtime=1.0000 ns</em>, <em>temperature=300.0000 K</em>, <em>ensemble='NPT'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -219,10 +219,6 @@
 <li><p><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration timestep.</p></li>
 <li><p><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The running time.</p></li>
 <li><p><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The temperature.</p></li>
-<li><p><strong>zero_dummy_dihedrals</strong> (<em>bool</em>) – Whether to zero the barrier height for dihedrals involving
-dummy atoms.</p></li>
-<li><p><strong>zero_dummy_impropers</strong> (<em>bool</em>) – Whether to zero the barrier height for impropers involving
-dummy atoms.</p></li>
 <li><p><strong>ensemble</strong> (<em>str</em>) – The thermodynamic ensemble.</p></li>
 </ul>
 </dd>
@@ -257,12 +253,6 @@ dummy atoms.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getTimeStep" title="BioSimSpace.Protocol.FreeEnergy.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
 <td><p>Return the time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getZeroDummyDihedrals" title="BioSimSpace.Protocol.FreeEnergy.getZeroDummyDihedrals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getZeroDummyDihedrals</span></code></a>()</p></td>
-<td><p>Return whether the barrier height is zeroed for dihedrals involving dummy atoms.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getZeroDummyImpropers" title="BioSimSpace.Protocol.FreeEnergy.getZeroDummyImpropers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getZeroDummyImpropers</span></code></a>()</p></td>
-<td><p>Return whether the barrier height is zeroed for impropers involving dummy atoms.</p></td>
-</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setEnsemble" title="BioSimSpace.Protocol.FreeEnergy.setEnsemble"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setEnsemble</span></code></a>(ensemble)</p></td>
 <td><p>Set the thermodynamic ensemble.</p></td>
 </tr>
@@ -277,12 +267,6 @@ dummy atoms.</p></li>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setTimeStep" title="BioSimSpace.Protocol.FreeEnergy.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</p></td>
 <td><p>Set the time step.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setZeroDummyDihedrals" title="BioSimSpace.Protocol.FreeEnergy.setZeroDummyDihedrals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setZeroDummyDihedrals</span></code></a>(zero_dummy_dihedrals)</p></td>
-<td><p>Set the flag for zeroing the barrier height for dihedrals involving dummy atoms.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setZeroDummyImpropers" title="BioSimSpace.Protocol.FreeEnergy.setZeroDummyImpropers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setZeroDummyImpropers</span></code></a>(zero_dummy_impropers)</p></td>
-<td><p>Set the flag for zeroing the barrier height for impropers involving dummy atoms.</p></td>
 </tr>
 </tbody>
 </table>
@@ -371,36 +355,6 @@ dummy atoms.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getZeroDummyDihedrals">
-<code class="descname">getZeroDummyDihedrals</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getZeroDummyDihedrals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether the barrier height is zeroed for dihedrals involving
-dummy atoms.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>zero_dummy_dihedrals</strong> – Whether dihedrals involving dummy atoms are zeroed.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getZeroDummyImpropers">
-<code class="descname">getZeroDummyImpropers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getZeroDummyImpropers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether the barrier height is zeroed for impropers involving
-dummy atoms.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>zero_dummy_impropers</strong> – Whether impropers involving dummy atoms are zeroed.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="BioSimSpace.Protocol.FreeEnergy.setEnsemble">
 <code class="descname">setEnsemble</code><span class="sig-paren">(</span><em>ensemble</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setEnsemble" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the thermodynamic ensemble.</p>
@@ -461,30 +415,6 @@ dummy atoms.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setZeroDummyDihedrals">
-<code class="descname">setZeroDummyDihedrals</code><span class="sig-paren">(</span><em>zero_dummy_dihedrals</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setZeroDummyDihedrals" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the flag for zeroing the barrier height for dihedrals involving
-dummy atoms.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>zero_dummy_dihedrals</strong> (<em>bool</em>) – Whether dihedrals involving dummy atoms are zeroed.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setZeroDummyImpropers">
-<code class="descname">setZeroDummyImpropers</code><span class="sig-paren">(</span><em>zero_dummy_impropers</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setZeroDummyImpropers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the flag for zeroing the barrier height for impropers involving
-dummy atoms.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>zero_dummy_impropers</strong> (<em>bool</em>) – Whether impropers involving dummy atoms are zeroed.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -511,7 +441,7 @@ dummy atoms.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Apr 01, 2019.
+        Last updated on Apr 08, 2019.
       </span>
 
     </p>
