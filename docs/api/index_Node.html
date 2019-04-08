@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Node &mdash; BioSimSpace 2018.1.1+863.g55345fe documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BioSimSpace.Node.help" href="generated/BioSimSpace.Node.help.html" />
+    <link rel="prev" title="BioSimSpace.MD.run" href="generated/BioSimSpace.MD.run.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2018.1.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Node</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.help.html">BioSimSpace.Node.help</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.list.html">BioSimSpace.Node.list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.run.html">BioSimSpace.Node.run</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Documentation</a> &raquo;</li>
+        
+      <li>BioSimSpace.Node</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index_Node.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-node">
+<span id="ref-node"></span><h1>BioSimSpace.Node<a class="headerlink" href="#biosimspace-node" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Node</em> package contains tools for running BioSimSpace nodes.</p>
+<span class="target" id="module-BioSimSpace.Node"></span><div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Node.help" title="BioSimSpace.Node.help"><code class="xref py py-obj docutils literal notranslate"><span class="pre">help</span></code></a>(name)</p></td>
+<td><p>Print the help message for the named node.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Node.list" title="BioSimSpace.Node.list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a>()</p></td>
+<td><p>Return a list of the available nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Node.run" title="BioSimSpace.Node.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(name[, args])</p></td>
+<td><p>Run a node.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Print the list of available nodes.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Node</span><span class="o">.</span><span class="n">list</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Get help on the “minimisation” node.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">BSS</span><span class="o">.</span><span class="n">Node</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;minimisation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run the minimisation node.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Generate a dictionary of input arguments.</span>
+<span class="nb">input</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;steps&quot;</span> <span class="p">:</span> <span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;amber/ala/ala.top&quot;</span><span class="p">,</span> <span class="s2">&quot;amber/ala/ala.crd&quot;</span><span class="p">]}</span>
+
+<span class="c1"># Run the node and get the output as a dictionary.</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Node</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;minimisation&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="BioSimSpace.Node.help">
+<code class="descclassname">BioSimSpace.Node.</code><code class="descname">help</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Node.help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the help message for the named node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the node.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="BioSimSpace.Node.list">
+<code class="descclassname">BioSimSpace.Node.</code><code class="descname">list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Node.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of the available nodes.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="BioSimSpace.Node.run">
+<code class="descclassname">BioSimSpace.Node.</code><code class="descname">run</code><span class="sig-paren">(</span><em>name</em>, <em>args={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Node.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the node.</p></li>
+<li><p><strong>args</strong> (<em>dict</em>) – A dictionary of arguments to be passed to the node.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – A dictionary containing the output of the node.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="generated/BioSimSpace.Node.help.html" class="btn btn-neutral float-right" title="BioSimSpace.Node.help" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="generated/BioSimSpace.MD.run.html" class="btn btn-neutral float-left" title="BioSimSpace.MD.run" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      <span class="lastupdated">
+        Last updated on Apr 08, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
