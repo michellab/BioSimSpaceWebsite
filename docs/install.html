@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2018.1.1+864.g013f526 documentation</title>
+  <title>Installation &mdash; BioSimSpace 2018.1.1+878.gf962065 documentation</title>
   
 
   
@@ -91,6 +91,7 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#conda-install">Conda install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#binary-install">Binary install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#for-developers">For developers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#common-issues">Common issues</a></li>
@@ -173,6 +174,28 @@
             
   <div class="section" id="installation">
 <span id="ref-install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="conda-install">
+<h2>Conda install<a class="headerlink" href="#conda-install" title="Permalink to this headline">¶</a></h2>
+<p>The easiest way to install Sire is using our <a class="reference external" href="https://anaconda.org/michellab/repo">conda channel</a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c michellab biosimspace
+</pre></div>
+</div>
+<p>To install the latest development version you can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>conda install -c conda-forge -c omnia -c michellab/label/dev biosimspace</p>
+</div></blockquote>
+<p>Following this, you’ll need to use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install some additional, non-conda,
+packages into your environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>pip install fileupload pygtail pypdb</p>
+</div></blockquote>
+</div>
 <div class="section" id="binary-install">
 <h2>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this headline">¶</a></h2>
 <p>The latest self-extracting binary for the development version of BioSimSpace
@@ -241,8 +264,8 @@ e.g.</p>
 </pre></div>
 </div>
 <p>You can also skip installation of external dependencies by setting the
-environment variable <code class="docutils literal notranslate"><span class="pre">BSS_SKIP_INSTALL</span></code>, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_INSTALL</span><span class="o">=</span><span class="m">1</span> <span class="nv">$HOME</span>/sire.app/bin/python setup.py install
+environment variable <code class="docutils literal notranslate"><span class="pre">BSS_SKIP_DEPENDENCIES</span></code>, e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True <span class="nv">$HOME</span>/sire.app/bin/python setup.py install
 </pre></div>
 </div>
 </div>
