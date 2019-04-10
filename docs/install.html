@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2018.1.1+880.gdc69a2e documentation</title>
+  <title>Installation &mdash; BioSimSpace 2018.1.1+893.g5c1694e documentation</title>
   
 
   
@@ -189,6 +189,11 @@ packages into your environment:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install fileupload pygtail pypdb
 </pre></div>
 </div>
+<p>Unless you add the required channels to your Conda configuration, then you’ll
+need to add them when updating, e.g., for the development package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c conda-forge -c omnia -c michellab/label/dev biosimspace
+</pre></div>
+</div>
 </div>
 <div class="section" id="binary-install">
 <h2>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this headline">¶</a></h2>
@@ -217,8 +222,7 @@ this will be into <code class="docutils literal notranslate"><span class="pre">$
 <div class="section" id="for-developers">
 <h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
 <p>The following documents a full installation of BioSimSpace from source. Before
-starting, you’ll need working <a class="reference external" href="https://git-scm.com">Git</a> and <a class="reference external" href="https://cmake.org">CMake</a>
-installations.</p>
+starting, you’ll need a working <a class="reference external" href="https://git-scm.com">Git</a> installation.</p>
 <ol class="arabic simple">
 <li><p>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
 molecular simulation framework. To download and install Sire:</p></li>
@@ -318,7 +322,7 @@ recommended installation instructions.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Apr 09, 2019.
+        Last updated on Apr 10, 2019.
       </span>
 
     </p>
