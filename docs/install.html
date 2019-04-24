@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2018.1.1+895.g45de498 documentation</title>
+  <title>Installation &mdash; BioSimSpace 2018.1.1+899.gbbf5d62 documentation</title>
   
 
   
@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#conda-install">Conda install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#binary-install">Binary install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#for-developers">For developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#openmm-compatibility">OpenMM compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#common-issues">Common issues</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#external-dependencies">External dependencies</a></li>
 </ul>
@@ -267,6 +268,27 @@ environment variable <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 </div>
+<div class="section" id="openmm-compatibility">
+<h2>OpenMM compatibility<a class="headerlink" href="#openmm-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>Some BioSimSpace functionality requires <a class="reference external" href="http://openmm.org">OpenMM</a>. Although
+a bundled version is provided as part of the installation, this may not
+be appropriate for your GPU drivers. To automatically detect and install
+a suitable version of OpenMM, simply run the following command post-install:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>optimise_openmm
+</pre></div>
+</div>
+<p>(Note that, depending on your installation method, <code class="docutils literal notranslate"><span class="pre">optimise_openmm</span></code> may
+be location in <code class="docutils literal notranslate"><span class="pre">$HOME/sire.app/bin</span></code>.)</p>
+<p>Alternatively, to manually install a particular version of OpenMM you can
+use a specific Conda label, e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c omnia/label/cuda90 openmm
+</pre></div>
+</div>
+<p>If you have compiled Sire against a custom OpenMM installation, then you’ll
+need to set the <code class="docutils literal notranslate"><span class="pre">OPENMM_PLUGIN_DIR</span></code> environment variable to point to the
+correct plugin location. By default this variable is set to the plugin
+directory of the bundled OpenMM package.</p>
+</div>
 <div class="section" id="common-issues">
 <h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -322,7 +344,7 @@ recommended installation instructions.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Apr 15, 2019.
+        Last updated on Apr 24, 2019.
       </span>
 
     </p>
