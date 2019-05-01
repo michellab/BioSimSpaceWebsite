@@ -15,16 +15,16 @@ BioSimSpace.Protocol.Equilibration
    
       ~Equilibration.__init__
       ~Equilibration.getEndTemperature
-      ~Equilibration.getEnsemble
       ~Equilibration.getFrames
+      ~Equilibration.getPressure
       ~Equilibration.getRunTime
       ~Equilibration.getStartTemperature
       ~Equilibration.getTimeStep
       ~Equilibration.isConstantTemp
       ~Equilibration.isRestrained
       ~Equilibration.setEndTemperature
-      ~Equilibration.setEnsemble
       ~Equilibration.setFrames
+      ~Equilibration.setPressure
       ~Equilibration.setRestraint
       ~Equilibration.setRunTime
       ~Equilibration.setStartTemperature
