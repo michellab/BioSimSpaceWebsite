@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2019.1.0+6.g3764b3e documentation</title>
+  <title>Installation &mdash; BioSimSpace 2019.1.0+7.gb06ad26 documentation</title>
   
 
   
@@ -178,11 +178,11 @@
 <div class="section" id="conda-install">
 <h2>Conda install<a class="headerlink" href="#conda-install" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to install BioSimSpace is using our <a class="reference external" href="https://anaconda.org/michellab/repo">conda channel</a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c rdkit -c michellab biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c rdkit -c conda-forge -c omnia -c michellab biosimspace
 </pre></div>
 </div>
 <p>To install the latest development version you can use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c rdkit -c michellab/label/dev biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c rdkit -c conda-forge -c omnia -c michellab/label/dev biosimspace
 </pre></div>
 </div>
 <p>Following this, you’ll need to use <code class="docutils literal notranslate"><span class="pre">pip</span></code> to install some additional, non-conda,
@@ -192,7 +192,7 @@ packages into your environment:</p>
 </div>
 <p>Unless you add the required channels to your Conda configuration, then you’ll
 need to add them when updating, e.g., for the development package:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c conda-forge -c omnia -c rdkit -c michellab/label/dev biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c rdkit -c conda-forge -c omnia -c michellab/label/dev biosimspace
 </pre></div>
 </div>
 <p>Note that on OS X you will need to run Python scripts with the <code class="docutils literal notranslate"><span class="pre">sire_python</span></code>
