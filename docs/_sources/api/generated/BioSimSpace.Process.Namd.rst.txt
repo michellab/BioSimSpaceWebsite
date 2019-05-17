@@ -58,6 +58,7 @@ BioSimSpace.Process.Namd
       ~Namd.getGPressure
       ~Namd.getGPressureAverage
       ~Namd.getImproperEnergy
+      ~Namd.getInput
       ~Namd.getKineticEnergy
       ~Namd.getMiscEnergy
       ~Namd.getName

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2019.1.0+27.g90a0123 documentation</title>
+  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2019.1.0+36.g67a6e06 documentation</title>
   
 
   
@@ -359,133 +359,136 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getHydrogenBondEnergy" title="BioSimSpace.Process.Amber.getHydrogenBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHydrogenBondEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the hydrogen bond energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getKineticEnergy" title="BioSimSpace.Process.Amber.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getInput" title="BioSimSpace.Process.Amber.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
+<td><p>Return a link to a zip file containing the input files used by the process.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getKineticEnergy" title="BioSimSpace.Process.Amber.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the kinetic energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getName" title="BioSimSpace.Process.Amber.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getName" title="BioSimSpace.Process.Amber.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Return the process name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getNonBondedEnergy14" title="BioSimSpace.Process.Amber.getNonBondedEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNonBondedEnergy14</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getNonBondedEnergy14" title="BioSimSpace.Process.Amber.getNonBondedEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNonBondedEnergy14</span></code></a>([time_series, block])</p></td>
 <td><p>Get the non-bonded energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getOutput" title="BioSimSpace.Process.Amber.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getOutput" title="BioSimSpace.Process.Amber.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
 <td><p>Return a link to a zip file of the working directory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPackageName" title="BioSimSpace.Process.Amber.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPackageName" title="BioSimSpace.Process.Amber.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
 <td><p>Return the package name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPotentialEnergy" title="BioSimSpace.Process.Amber.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPotentialEnergy" title="BioSimSpace.Process.Amber.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the potential energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPressure" title="BioSimSpace.Process.Amber.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPressure" title="BioSimSpace.Process.Amber.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecord" title="BioSimSpace.Process.Amber.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecord" title="BioSimSpace.Process.Amber.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
 <td><p>Get a record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecords" title="BioSimSpace.Process.Amber.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecords" title="BioSimSpace.Process.Amber.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</p></td>
 <td><p>Return the dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRestraintEnergy" title="BioSimSpace.Process.Amber.getRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRestraintEnergy" title="BioSimSpace.Process.Amber.getRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the restraint energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSeed" title="BioSimSpace.Process.Amber.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSeed" title="BioSimSpace.Process.Amber.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</p></td>
 <td><p>Return the random number seed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStderr" title="BioSimSpace.Process.Amber.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStderr" title="BioSimSpace.Process.Amber.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</p></td>
 <td><p>Return the entire stderr for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStdout" title="BioSimSpace.Process.Amber.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStdout" title="BioSimSpace.Process.Amber.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</p></td>
 <td><p>Return the entire stdout for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStep" title="BioSimSpace.Process.Amber.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStep" title="BioSimSpace.Process.Amber.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series, block])</p></td>
 <td><p>Get the number of integration steps.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSystem" title="BioSimSpace.Process.Amber.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSystem" title="BioSimSpace.Process.Amber.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTemperature" title="BioSimSpace.Process.Amber.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTemperature" title="BioSimSpace.Process.Amber.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series, block])</p></td>
 <td><p>Get the temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTime" title="BioSimSpace.Process.Amber.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTime" title="BioSimSpace.Process.Amber.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series, block])</p></td>
 <td><p>Get the time (in nanoseconds).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTotalEnergy" title="BioSimSpace.Process.Amber.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTotalEnergy" title="BioSimSpace.Process.Amber.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTrajectory" title="BioSimSpace.Process.Amber.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTrajectory" title="BioSimSpace.Process.Amber.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</p></td>
 <td><p>Return a trajectory object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVanDerWaalsEnergy" title="BioSimSpace.Process.Amber.getVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVanDerWaalsEnergy" title="BioSimSpace.Process.Amber.getVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the Van der Vaals energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVirial" title="BioSimSpace.Process.Amber.getVirial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVirial</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVirial" title="BioSimSpace.Process.Amber.getVirial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVirial</span></code></a>([time_series, block])</p></td>
 <td><p>Get the virial.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVolume" title="BioSimSpace.Process.Amber.getVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVolume" title="BioSimSpace.Process.Amber.getVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code></a>([time_series, block])</p></td>
 <td><p>Get the volume.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.inputFiles" title="BioSimSpace.Process.Amber.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.inputFiles" title="BioSimSpace.Process.Amber.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</p></td>
 <td><p>Return the list of input files.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.insertArg" title="BioSimSpace.Process.Amber.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg, value, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.insertArg" title="BioSimSpace.Process.Amber.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg, value, index)</p></td>
 <td><p>Insert a command-line argument at a specific index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isError" title="BioSimSpace.Process.Amber.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isError" title="BioSimSpace.Process.Amber.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
 <td><p>Return whether the process errored.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isQueued" title="BioSimSpace.Process.Amber.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isQueued" title="BioSimSpace.Process.Amber.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
 <td><p>Return whether the process is queued.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isRunning" title="BioSimSpace.Process.Amber.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isRunning" title="BioSimSpace.Process.Amber.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
 <td><p>Return whether the process is running.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.kill" title="BioSimSpace.Process.Amber.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.kill" title="BioSimSpace.Process.Amber.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
 <td><p>Kill the running process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetArgs" title="BioSimSpace.Process.Amber.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetArgs" title="BioSimSpace.Process.Amber.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</p></td>
 <td><p>Reset the command-line arguments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetConfig" title="BioSimSpace.Process.Amber.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetConfig" title="BioSimSpace.Process.Amber.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
 <td><p>Reset the configuration parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.run" title="BioSimSpace.Process.Amber.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, autostart, restart])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.run" title="BioSimSpace.Process.Amber.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, autostart, restart])</p></td>
 <td><p>Create and run a new process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.runTime" title="BioSimSpace.Process.Amber.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.runTime" title="BioSimSpace.Process.Amber.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
 <td><p>Return the running time for the process (in minutes).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArg" title="BioSimSpace.Process.Amber.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg, value)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArg" title="BioSimSpace.Process.Amber.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg, value)</p></td>
 <td><p>Set a specific command-line argument.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArgs" title="BioSimSpace.Process.Amber.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArgs" title="BioSimSpace.Process.Amber.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</p></td>
 <td><p>Set the dictionary of command-line arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setConfig" title="BioSimSpace.Process.Amber.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setConfig" title="BioSimSpace.Process.Amber.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</p></td>
 <td><p>Set the list of configuration file strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setName" title="BioSimSpace.Process.Amber.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setName" title="BioSimSpace.Process.Amber.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
 <td><p>Set the process name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setSeed" title="BioSimSpace.Process.Amber.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setSeed" title="BioSimSpace.Process.Amber.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</p></td>
 <td><p>Set the random number seed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.start" title="BioSimSpace.Process.Amber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.start" title="BioSimSpace.Process.Amber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</p></td>
 <td><p>Start the AMBER process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stderr" title="BioSimSpace.Process.Amber.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stderr" title="BioSimSpace.Process.Amber.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</p></td>
 <td><p>Print the last n lines of the stderr buffer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stdout" title="BioSimSpace.Process.Amber.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stdout" title="BioSimSpace.Process.Amber.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</p></td>
 <td><p>Print the last n lines of the stdout buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.wait" title="BioSimSpace.Process.Amber.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.wait" title="BioSimSpace.Process.Amber.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</p></td>
 <td><p>Wait for the process to finish.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.workDir" title="BioSimSpace.Process.Amber.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.workDir" title="BioSimSpace.Process.Amber.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
 <td><p>Return the working directory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.writeConfig" title="BioSimSpace.Process.Amber.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.writeConfig" title="BioSimSpace.Process.Amber.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</p></td>
 <td><p>Write the configuration to file.</p></td>
 </tr>
 </tbody>
@@ -1162,6 +1165,27 @@ path to a configuration file.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Amber.getInput">
+<code class="descname">getInput</code><span class="sig-paren">(</span><em>name=None</em>, <em>file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a link to a zip file containing the input files used by
+the process.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the zip file.</p></li>
+<li><p><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ouput</strong> – A path, or file link, to an archive of the process input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, IPython.display.FileLink</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1857,7 +1881,7 @@ file.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on May 16, 2019.
+        Last updated on May 17, 2019.
       </span>
 
     </p>
