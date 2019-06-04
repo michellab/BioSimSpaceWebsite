@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2019.1.0+54.g728c078 documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2019.1.0+57.gfee2883 documentation</title>
   
 
   
@@ -200,12 +200,12 @@
 <h1>BioSimSpace.Process.ProcessRunner<a class="headerlink" href="#biosimspace-process-processrunner" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Process.ProcessRunner">
-<em class="property">class </em><code class="descclassname">BioSimSpace.Process.</code><code class="descname">ProcessRunner</code><span class="sig-paren">(</span><em>processes</em>, <em>name='runner'</em>, <em>work_dir=None</em>, <em>nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">ProcessRunner</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for managing and running multiple simulation processes, e.g.
 a free energy simulation at multiple lambda values.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>processes</em>, <em>name='runner'</em>, <em>work_dir=None</em>, <em>nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -221,7 +221,7 @@ the process runner top-level directory.</p></li>
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -300,7 +300,7 @@ the process runner top-level directory.</p></li>
 </table>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.addProcess">
-<code class="descname">addProcess</code><span class="sig-paren">(</span><em>process</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addProcess</code><span class="sig-paren">(</span><em class="sig-param">process</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a process to the runner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -311,7 +311,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.errored">
-<code class="descname">errored</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.errored" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">errored</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.errored" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the errored processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -325,7 +325,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.getName">
-<code class="descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.getName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.getName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the process runner name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -339,7 +339,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isError">
-<code class="descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is in an error state.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -353,7 +353,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isQueued">
-<code class="descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is queued.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -367,7 +367,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.isRunning">
-<code class="descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether each process is running.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -381,7 +381,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.kill">
-<code class="descname">kill</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.kill" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">kill</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.kill" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Kill a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].kill()</p>
 </dd>
@@ -395,13 +395,13 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.killAll">
-<code class="descname">killAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.killAll" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">killAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.killAll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Kill all of the processes.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nError">
-<code class="descname">nError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of errored processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -415,7 +415,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nProcesses">
-<code class="descname">nProcesses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nProcesses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -429,7 +429,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nQueued">
-<code class="descname">nQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of queued processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -443,7 +443,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.nRunning">
-<code class="descname">nRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of running processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -457,7 +457,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.processes">
-<code class="descname">processes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.processes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">processes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.processes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the list of processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -471,7 +471,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.queued">
-<code class="descname">queued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.queued" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">queued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.queued" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the queued processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -485,7 +485,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.removeProcess">
-<code class="descname">removeProcess</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">removeProcess</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove a process from the runner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -496,13 +496,13 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.restartFailed">
-<code class="descname">restartFailed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">restartFailed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart any jobs that are in an error state.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.runTime">
-<code class="descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.runTime" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.runTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the run time for each process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -516,7 +516,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.running">
-<code class="descname">running</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.running" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">running</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.running" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the indices of the running processes.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -530,7 +530,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.setName">
-<code class="descname">setName</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.setName" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setName</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.setName" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the process runner name.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -541,7 +541,7 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.start">
-<code class="descname">start</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Start a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].start()</p>
 </dd>
@@ -555,13 +555,13 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.startAll">
-<code class="descname">startAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.startAll" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">startAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.startAll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start all of the processes.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.workDir">
-<code class="descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.workDir" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.workDir" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the working directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -599,7 +599,7 @@ the process runner top-level directory.</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on May 20, 2019.
+        Last updated on Jun 04, 2019.
       </span>
 
     </p>

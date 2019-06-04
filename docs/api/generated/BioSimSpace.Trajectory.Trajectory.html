@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2019.1.0+54.g728c078 documentation</title>
+  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2019.1.0+57.gfee2883 documentation</title>
   
 
   
@@ -198,11 +198,11 @@
 <h1>BioSimSpace.Trajectory.Trajectory<a class="headerlink" href="#biosimspace-trajectory-trajectory" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Trajectory.Trajectory">
-<em class="property">class </em><code class="descclassname">BioSimSpace.Trajectory.</code><code class="descname">Trajectory</code><span class="sig-paren">(</span><em>process=None</em>, <em>trajectory=None</em>, <em>topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Trajectory.</code><code class="sig-name descname">Trajectory</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for reading a manipulating biomolecular trajectories.</p>
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>process=None</em>, <em>trajectory=None</em>, <em>topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -216,7 +216,7 @@
 </dd></dl>
 
 <p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
+<table class="longtable docutils align-default">
 <colgroup>
 <col style="width: 10%" />
 <col style="width: 90%" />
@@ -241,7 +241,7 @@
 </table>
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.getFrames">
-<code class="descname">getFrames</code><span class="sig-paren">(</span><em>indices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getFrames</code><span class="sig-paren">(</span><em class="sig-param">indices=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get trajectory frames as a list of System objects.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -258,7 +258,7 @@
 
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.getTrajectory">
-<code class="descname">getTrajectory</code><span class="sig-paren">(</span><em>format='mdtraj'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getTrajectory</code><span class="sig-paren">(</span><em class="sig-param">format='mdtraj'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current trajectory object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -275,7 +275,7 @@
 
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.nFrames">
-<code class="descname">nFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.nFrames" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">nFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.nFrames" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the current number of trajectory frames.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -289,7 +289,7 @@
 
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.rmsd">
-<code class="descname">rmsd</code><span class="sig-paren">(</span><em>frame=None</em>, <em>atoms=None</em>, <em>molecule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rmsd</code><span class="sig-paren">(</span><em class="sig-param">frame=None</em>, <em class="sig-param">atoms=None</em>, <em class="sig-param">molecule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the root mean squared displacement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -334,7 +334,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on May 20, 2019.
+        Last updated on Jun 04, 2019.
       </span>
 
     </p>
