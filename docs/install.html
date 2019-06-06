@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2019.1.0+61.gcab5e83 documentation</title>
+  <title>Installation &mdash; BioSimSpace 2019.1.0+63.g5976f38 documentation</title>
   
 
   
@@ -190,6 +190,15 @@ packages into your environment:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install fileupload pygtail pypdb
 </pre></div>
 </div>
+<p>If you plan on using BioSimSpace interactively via Jupyter, then you’ll also
+need to install and enable the required notebook extensions within your Conda
+environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-nbextension install fileupload --py --sys-prefix
+jupyter-nbextension <span class="nb">enable</span> fileupload --py --sys-prefix
+jupyter-nbextension install nglview --py --sys-prefix
+jupyter-nbextension <span class="nb">enable</span> nglview --py --sys-prefix
+</pre></div>
+</div>
 <p>Unless you add the required channels to your Conda configuration, then you’ll
 need to add them when updating, e.g., for the development package:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c rdkit -c conda-forge -c omnia -c michellab/label/dev biosimspace
@@ -349,7 +358,7 @@ recommended installation instructions.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jun 05, 2019.
+        Last updated on Jun 06, 2019.
       </span>
 
     </p>
