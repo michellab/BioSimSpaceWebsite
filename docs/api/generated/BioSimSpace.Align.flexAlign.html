@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Parameters.gaff &mdash; BioSimSpace 2019.1.0+72.gba1fe43 documentation</title>
+  <title>BioSimSpace.Align.flexAlign &mdash; BioSimSpace 2019.1.0+72.gba1fe43 documentation</title>
   
 
   
@@ -37,8 +37,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.Parameters.gaff2" href="BioSimSpace.Parameters.gaff2.html" />
-    <link rel="prev" title="BioSimSpace.Parameters.ff14SB" href="BioSimSpace.Parameters.ff14SB.html" /> 
+    <link rel="next" title="BioSimSpace.Align.merge" href="BioSimSpace.Align.merge.html" />
+    <link rel="prev" title="BioSimSpace.Align.rmsdAlign" href="BioSimSpace.Align.rmsdAlign.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,27 +94,20 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Align.html#module-BioSimSpace.Align">API</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index_Align.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.parameterise.html">BioSimSpace.Parameters.parameterise</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99.html">BioSimSpace.Parameters.ff99</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SB.html">BioSimSpace.Parameters.ff99SB</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SBildn.html">BioSimSpace.Parameters.ff99SBildn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.gaff</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff2.html">BioSimSpace.Parameters.gaff2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.forceFields.html">BioSimSpace.Parameters.forceFields</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
@@ -180,15 +173,15 @@
         
           <li><a href="../index.html">Documentation</a> &raquo;</li>
         
-          <li><a href="../index_Parameters.html">BioSimSpace.Parameters</a> &raquo;</li>
+          <li><a href="../index_Align.html">BioSimSpace.Align</a> &raquo;</li>
         
-      <li>BioSimSpace.Parameters.gaff</li>
+      <li>BioSimSpace.Align.flexAlign</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/BioSimSpace.Parameters.gaff.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Align.flexAlign.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -201,30 +194,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-parameters-gaff">
-<h1>BioSimSpace.Parameters.gaff<a class="headerlink" href="#biosimspace-parameters-gaff" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="biosimspace-align-flexalign">
+<h1>BioSimSpace.Align.flexAlign<a class="headerlink" href="#biosimspace-align-flexalign" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace.Parameters.gaff">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">gaff</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">options={}</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.gaff" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parameterise using the gaff force field.</p>
+<dt id="BioSimSpace.Align.flexAlign">
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">flexAlign</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.flexAlign" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flexibly align atoms in molecule0 to those in molecule1 using the
+mapping between matched atom indices.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to parameterise.</p></li>
-<li><p><strong>options</strong> (<em>dict</em>) – A dictionary of keyword options to override the protocol defaults.</p></li>
-<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
-<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to align.</p></li>
+<li><p><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule.</p></li>
+<li><p><strong>mapping</strong> (<em>dict</em>) – A dictionary mapping atoms in molecule0 to those in molecule1.</p></li>
+<li><p><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
+defined values. This allows the user to refer to properties
+with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
+defined values.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>molecule</strong> – The parameterised molecule.</p>
+<dd class="field-even"><p><strong>molecule</strong> – The aligned molecule.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a></p>
 </dd>
 </dl>
+<p class="rubric">Examples</p>
+<p>Align molecule0 to molecule1 based on a precomputed mapping.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molecule0</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">flexAlign</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Align molecule0 to molecule1. Since no mapping is passed one will be
+autogenerated using <a class="reference internal" href="BioSimSpace.Align.matchAtoms.html#BioSimSpace.Align.matchAtoms" title="BioSimSpace.Align.matchAtoms"><code class="xref py py-class docutils literal notranslate"><span class="pre">matchAtoms</span></code></a>
+with default options.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">molecule0</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">flexAlign</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -237,10 +246,10 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BioSimSpace.Parameters.gaff2.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters.gaff2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="BioSimSpace.Align.merge.html" class="btn btn-neutral float-right" title="BioSimSpace.Align.merge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BioSimSpace.Parameters.ff14SB.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.ff14SB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BioSimSpace.Align.rmsdAlign.html" class="btn btn-neutral float-left" title="BioSimSpace.Align.rmsdAlign" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

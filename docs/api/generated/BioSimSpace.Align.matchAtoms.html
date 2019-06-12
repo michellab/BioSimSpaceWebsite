@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2019.1.0+71.g44c8b96 documentation</title>
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2019.1.0+72.gba1fe43 documentation</title>
   
 
   
@@ -227,7 +227,8 @@ computing the above RMSD score.</p>
 </li>
 <li><dl class="simple">
 <dt>”rmsd_flex_align”</dt><dd><p>Flexibly align molecule0 to molecule1 based on the mapping
-before computing the above RMSD score. (Requires ‘fkcombu’.)</p>
+before computing the above RMSD score. (Requires the
+‘fkcombu’. package: <a class="reference external" href="http://strcomp.protein.osaka-u.ac.jp/kcombu">http://strcomp.protein.osaka-u.ac.jp/kcombu</a>)</p>
 </dd>
 </dl>
 </li>
@@ -269,6 +270,14 @@ list of best mappings and a list of the corresponding scores.</p>
 <p>Find the 5 best mappings along with their ranking scores.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Find the 5 best mappings along with their ranking scores. Score
+by flexibly aligning molecule0 to molecule1 based on each mapping
+and computing the root mean squared displacement of the matched
+atoms.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scoring_function</span><span class="o">=</span><span class="s2">&quot;rmsd_flex_align&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Find the best mapping that contains a prematch (this is a dictionary mapping

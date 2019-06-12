@@ -1,0 +1,6 @@
+BioSimSpace.Align.flexAlign
+===========================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: flexAlign
