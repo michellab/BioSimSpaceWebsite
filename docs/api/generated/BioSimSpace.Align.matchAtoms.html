@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2019.1.0+67.geb99b17 documentation</title>
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2019.1.0+70.g8539d8f documentation</title>
   
 
   
@@ -198,7 +198,7 @@
 <h1>BioSimSpace.Align.matchAtoms<a class="headerlink" href="#biosimspace-align-matchatoms" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Align.matchAtoms">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">matchAtoms</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">scoring_function='RMSD align'</em>, <em class="sig-param">matches=1</em>, <em class="sig-param">return_scores=False</em>, <em class="sig-param">prematch={}</em>, <em class="sig-param">timeout=5.0000 secs</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">matchAtoms</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">scoring_function='rmsd_align'</em>, <em class="sig-param">matches=1</em>, <em class="sig-param">return_scores=False</em>, <em class="sig-param">prematch={}</em>, <em class="sig-param">timeout=5.0000 secs</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find mappings between atom indices in molecule0 to those in molecule1.
 Molecules are aligned using a Maximum Common Substructure (MCS) search.
 When requesting more than one match, the mappings will be sorted using
@@ -213,15 +213,21 @@ lowest value.)</p>
 <li><p><strong>scoring_function</strong> (<em>str</em>) – <dl class="simple">
 <dt>The scoring function used to match atoms. Available options are:</dt><dd><ul>
 <li><dl class="simple">
-<dt>”RMSD”</dt><dd><p>Calculate the root mean squared distance between the
+<dt>”rmsd”</dt><dd><p>Calculate the root mean squared distance between the
 coordinates of atoms in molecule0 to those that they
 map to in molecule1.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>”RMSD align”</dt><dd><p>Align molecule0 to molecule1 based on the mapping before
+<dt>”rmsd_align”</dt><dd><p>Align molecule0 to molecule1 based on the mapping before
 computing the above RMSD score.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>”rmsd_flex_align”</dt><dd><p>Flexibly align molecule0 to molecule1 based on the mapping
+before computing the above RMSD score. (Requires ‘fkcombu’.)</p>
 </dd>
 </dl>
 </li>
@@ -298,7 +304,7 @@ atom indices in molecule0 to those in molecule1).</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jun 10, 2019.
+        Last updated on Jun 12, 2019.
       </span>
 
     </p>
