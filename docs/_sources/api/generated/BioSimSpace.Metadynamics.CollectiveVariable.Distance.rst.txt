@@ -1,0 +1,46 @@
+BioSimSpace.Metadynamics.CollectiveVariable.Distance
+====================================================
+
+.. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable
+
+.. autoclass:: Distance
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Distance.__init__
+      ~Distance.getAtom0
+      ~Distance.getAtom1
+      ~Distance.getCoM0
+      ~Distance.getCoM1
+      ~Distance.getComponent
+      ~Distance.getGrid
+      ~Distance.getHillWidth
+      ~Distance.getLowerBound
+      ~Distance.getPeriodicBoundaries
+      ~Distance.getUpperBound
+      ~Distance.getWeights0
+      ~Distance.getWeights1
+      ~Distance.setAtom0
+      ~Distance.setAtom1
+      ~Distance.setCoM0
+      ~Distance.setCoM1
+      ~Distance.setComponent
+      ~Distance.setGrid
+      ~Distance.setHillWidth
+      ~Distance.setLowerBound
+      ~Distance.setPeriodicBoundaries
+      ~Distance.setUpperBound
+      ~Distance.setWeights0
+      ~Distance.setWeights1
+   
+   
+
+   
+   
+   

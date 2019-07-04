@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.Types &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -37,7 +38,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.Types.Area" href="generated/BioSimSpace.Types.Area.html" />
+    <link rel="next" title="BioSimSpace.Types.Angle" href="generated/BioSimSpace.Types.Angle.html" />
     <link rel="prev" title="BioSimSpace.Trajectory.Trajectory" href="generated/BioSimSpace.Trajectory.Trajectory.html" /> 
 </head>
 
@@ -98,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -108,13 +110,16 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Types</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Angle.html">BioSimSpace.Types.Angle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Area.html">BioSimSpace.Types.Area</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Charge.html">BioSimSpace.Types.Charge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Coordinate.html">BioSimSpace.Types.Coordinate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Energy.html">BioSimSpace.Types.Energy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Length.html">BioSimSpace.Types.Length</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Pressure.html">BioSimSpace.Types.Pressure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Temperature.html">BioSimSpace.Types.Temperature</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Time.html">BioSimSpace.Types.Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Vector.html">BioSimSpace.Types.Vector</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Types.Volume.html">BioSimSpace.Types.Volume</a></li>
 </ul>
 </li>
@@ -210,11 +215,17 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Area.html#BioSimSpace.Types.Area" title="BioSimSpace.Types.Area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area</span></code></a>(*args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Angle</span></code></a>(*args)</p></td>
+<td><p>An angle type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Area.html#BioSimSpace.Types.Area" title="BioSimSpace.Types.Area"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Area</span></code></a>(*args)</p></td>
 <td><p>An area type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Charge.html#BioSimSpace.Types.Charge" title="BioSimSpace.Types.Charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge</span></code></a>(*args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Charge.html#BioSimSpace.Types.Charge" title="BioSimSpace.Types.Charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Charge</span></code></a>(*args)</p></td>
 <td><p>A charge type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Coordinate.html#BioSimSpace.Types.Coordinate" title="BioSimSpace.Types.Coordinate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Coordinate</span></code></a>(x, y, z)</p></td>
+<td><p>A coordinate (position vector).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Energy</span></code></a>(*args)</p></td>
 <td><p>An energy type.</p></td>
@@ -231,7 +242,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Time</span></code></a>(*args)</p></td>
 <td><p>A time type.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Volume.html#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume</span></code></a>(*args)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Vector.html#BioSimSpace.Types.Vector" title="BioSimSpace.Types.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>(x, y, z)</p></td>
+<td><p>A three-vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Types.Volume.html#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Volume</span></code></a>(*args)</p></td>
 <td><p>A volume type.</p></td>
 </tr>
 </tbody>
@@ -249,7 +263,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="generated/BioSimSpace.Types.Area.html" class="btn btn-neutral float-right" title="BioSimSpace.Types.Area" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="generated/BioSimSpace.Types.Angle.html" class="btn btn-neutral float-right" title="BioSimSpace.Types.Angle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="generated/BioSimSpace.Trajectory.Trajectory.html" class="btn btn-neutral float-left" title="BioSimSpace.Trajectory.Trajectory" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -263,7 +277,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

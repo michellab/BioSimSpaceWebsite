@@ -1,0 +1,26 @@
+BioSimSpace.Types.Angle
+=======================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Angle
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Angle.__init__
+      ~Angle.degrees
+      ~Angle.magnitude
+      ~Angle.radians
+      ~Angle.unit
+   
+   
+
+   
+   
+   

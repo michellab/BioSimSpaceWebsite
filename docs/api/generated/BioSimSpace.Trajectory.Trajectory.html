@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -98,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -234,7 +236,7 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.nFrames" title="BioSimSpace.Trajectory.Trajectory.nFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nFrames</span></code></a>()</p></td>
 <td><p>Return the current number of trajectory frames.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="BioSimSpace.Trajectory.Trajectory.rmsd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsd</span></code></a>([frame, atoms, molecule])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="BioSimSpace.Trajectory.Trajectory.rmsd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsd</span></code></a>([frame, atoms])</p></td>
 <td><p>Compute the root mean squared displacement.</p></td>
 </tr>
 </tbody>
@@ -289,14 +291,13 @@
 
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.rmsd">
-<code class="sig-name descname">rmsd</code><span class="sig-paren">(</span><em class="sig-param">frame=None</em>, <em class="sig-param">atoms=None</em>, <em class="sig-param">molecule=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rmsd</code><span class="sig-paren">(</span><em class="sig-param">frame=None</em>, <em class="sig-param">atoms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.rmsd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the root mean squared displacement.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>frame</strong> (<em>int</em>) – The index of the reference frame.</p></li>
 <li><p><strong>atoms</strong> (<em>[</em><em>int</em><em>]</em>) – A list of reference atom indices.</p></li>
-<li><p><strong>molecule</strong> (<em>int</em>) – The index of the reference molecule.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -334,7 +335,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

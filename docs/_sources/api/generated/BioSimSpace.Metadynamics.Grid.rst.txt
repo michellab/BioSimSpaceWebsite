@@ -1,0 +1,28 @@
+BioSimSpace.Metadynamics.Grid
+=============================
+
+.. currentmodule:: BioSimSpace.Metadynamics
+
+.. autoclass:: Grid
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Grid.__init__
+      ~Grid.getBins
+      ~Grid.getMaximum
+      ~Grid.getMinimum
+      ~Grid.setBins
+      ~Grid.setMaximum
+      ~Grid.setMinimum
+   
+   
+
+   
+   
+   

@@ -1,0 +1,40 @@
+BioSimSpace.Protocol.Metadynamics
+=================================
+
+.. currentmodule:: BioSimSpace.Protocol
+
+.. autoclass:: Metadynamics
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Metadynamics.__init__
+      ~Metadynamics.getBiasFactor
+      ~Metadynamics.getCollectiveVariable
+      ~Metadynamics.getHillFrequency
+      ~Metadynamics.getHillHeight
+      ~Metadynamics.getPressure
+      ~Metadynamics.getRunTime
+      ~Metadynamics.getTemperature
+      ~Metadynamics.getTimeStep
+      ~Metadynamics.isRestart
+      ~Metadynamics.setBiasFactor
+      ~Metadynamics.setCollectiveVariable
+      ~Metadynamics.setHillFrequency
+      ~Metadynamics.setHillHeight
+      ~Metadynamics.setPressure
+      ~Metadynamics.setRestart
+      ~Metadynamics.setRunTime
+      ~Metadynamics.setTemperature
+      ~Metadynamics.setTimeStep
+   
+   
+
+   
+   
+   

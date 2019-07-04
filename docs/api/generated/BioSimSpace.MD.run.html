@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.MD.run &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.MD.run &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -98,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_MD.html#functions">Functions</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.MD.run</a></li>
@@ -198,7 +200,7 @@
 <h1>BioSimSpace.MD.run<a class="headerlink" href="#biosimspace-md-run" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.MD.run">
-<code class="sig-prename descclassname">BioSimSpace.MD.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">gpu_support=False</em>, <em class="sig-param">autostart=True</em>, <em class="sig-param">name='md'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.MD.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.MD.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">gpu_support=False</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">name='md'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.MD.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Auto-configure and run a molecular dynamics process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -206,7 +208,7 @@
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The simulation protocol.</p></li>
 <li><p><strong>gpu_support</strong> (<em>bool</em>) – Whether to choose a package with GPU support.</p></li>
-<li><p><strong>autostart</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
+<li><p><strong>auto_start</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the process.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
 <li><p><strong>seed</strong> (<em>int</em>) – A random number seed.</p></li>
@@ -248,7 +250,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

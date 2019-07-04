@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Types.Angle &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Types.Area" href="BioSimSpace.Types.Area.html" />
+    <link rel="prev" title="BioSimSpace.Types" href="../index_Types.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2019.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Types.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Types.Angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Area.html">BioSimSpace.Types.Area</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Charge.html">BioSimSpace.Types.Charge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Coordinate.html">BioSimSpace.Types.Coordinate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Energy.html">BioSimSpace.Types.Energy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Length.html">BioSimSpace.Types.Length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Pressure.html">BioSimSpace.Types.Pressure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Temperature.html">BioSimSpace.Types.Temperature</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Time.html">BioSimSpace.Types.Time</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Vector.html">BioSimSpace.Types.Vector</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Types.Volume.html">BioSimSpace.Types.Volume</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Types.html">BioSimSpace.Types</a> &raquo;</li>
+        
+      <li>BioSimSpace.Types.Angle</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Types.Angle.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-types-angle">
+<h1>BioSimSpace.Types.Angle<a class="headerlink" href="#biosimspace-types-angle" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Types.Angle">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Angle</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>An angle type.</p>
+<dl class="method">
+<dt id="BioSimSpace.Types.Angle.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can be a magnitude and unit, or a string representation
+of the angle, e.g. “3 radians”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>magnitude</strong> (<em>float</em>) – The magnitude.</p></li>
+<li><p><strong>unit</strong> (<em>str</em>) – The unit.</p></li>
+<li><p><strong>string</strong> (<em>str</em>) – A string representation of the angle.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>Create an object representing an angle of 3.14 radians then
+print the length in degrees.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Angle</span><span class="p">(</span><span class="mf">3.14</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">degrees</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The same as above, except passing a string representation of the
+angle to the constructor.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Types</span><span class="o">.</span><span class="n">Angle</span><span class="p">(</span><span class="s2">&quot;3.14 R&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="o">.</span><span class="n">degrees</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>The string matching is extremeley flexible, so all of the following
+would be valid arguments: “3.14 R”, “3.14 radians”, “314e-2 Radians”.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Angle.__init__" title="BioSimSpace.Types.Angle.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args)</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Angle.degrees" title="BioSimSpace.Types.Angle.degrees"><code class="xref py py-obj docutils literal notranslate"><span class="pre">degrees</span></code></a>()</p></td>
+<td><p>Return the angle in degrees.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Angle.magnitude" title="BioSimSpace.Types.Angle.magnitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code></a>()</p></td>
+<td><p>Return the magnitude.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Angle.radians" title="BioSimSpace.Types.Angle.radians"><code class="xref py py-obj docutils literal notranslate"><span class="pre">radians</span></code></a>()</p></td>
+<td><p>Return the angle in radians.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Angle.unit" title="BioSimSpace.Types.Angle.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
+<td><p>Return the unit.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Types.Angle.degrees">
+<code class="sig-name descname">degrees</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle.degrees" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the angle in degrees.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The angle in degrees.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Angle.magnitude">
+<code class="sig-name descname">magnitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle.magnitude" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the magnitude.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>magnitude</strong> – The magnitude of the type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Angle.radians">
+<code class="sig-name descname">radians</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle.radians" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the angle in radians.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The angle in radians.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Angle.unit">
+<code class="sig-name descname">unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Angle.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>unit</strong> – The unit of the type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Types.Area.html" class="btn btn-neutral float-right" title="BioSimSpace.Types.Area" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index_Types.html" class="btn btn-neutral float-left" title="BioSimSpace.Types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      <span class="lastupdated">
+        Last updated on Jul 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

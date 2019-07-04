@@ -19,7 +19,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.copy
       ~System.fileFormat
       ~System.getBox
-      ~System.getMolWithResName
+      ~System.getIndex
       ~System.getMolecules
       ~System.getPerturbableMolecules
       ~System.getWaterMolecules
@@ -31,6 +31,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.nWaterMolecules
       ~System.removeMolecules
       ~System.removeWaterMolecules
+      ~System.search
       ~System.setBox
       ~System.translate
       ~System.updateMolecules

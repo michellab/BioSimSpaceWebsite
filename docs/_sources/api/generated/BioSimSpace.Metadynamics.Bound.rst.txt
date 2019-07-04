@@ -1,0 +1,30 @@
+BioSimSpace.Metadynamics.Bound
+==============================
+
+.. currentmodule:: BioSimSpace.Metadynamics
+
+.. autoclass:: Bound
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Bound.__init__
+      ~Bound.getEpsilon
+      ~Bound.getExponent
+      ~Bound.getForceConstant
+      ~Bound.getValue
+      ~Bound.setEpsilon
+      ~Bound.setExponent
+      ~Bound.setForceConstant
+      ~Bound.setValue
+   
+   
+
+   
+   
+   

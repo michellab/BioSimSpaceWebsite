@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.Volume &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.Gateway.Volume &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -118,6 +119,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -215,7 +217,7 @@
 <em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Gateway.</code><code class="sig-name descname">Volume</code><span class="sig-paren">(</span><em class="sig-param">help=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">minimum=None</em>, <em class="sig-param">maximum=None</em>, <em class="sig-param">allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>A volume requirement.</p>
 <p class="rubric">Examples</p>
-<p>Create an area requirement with a default of 10 cubed Angstrom.</p>
+<p>Create a volume requirement with a default of 10 cubed Angstrom.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A volume requirement&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;angstrom3&quot;</span><span class="p">)</span>
 </pre></div>
@@ -227,7 +229,7 @@ for the default.</p>
 </pre></div>
 </div>
 <p>Create a volume requirement with a default of 10 cubed Angstrom and a maximum
-of 50 square nanometers. Note that the unit is taken from the default value.</p>
+of 50 cubed nanometers. Note that the unit is taken from the default value.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_volume</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Volume</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A volume requirement&quot;</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Volume</span><span class="o">.</span><span class="n">angstrom3</span><span class="p">,</span>
@@ -453,7 +455,7 @@ of 50 square nanometers. Note that the unit is taken from the default value.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

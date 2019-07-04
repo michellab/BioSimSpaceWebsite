@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -98,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -467,7 +469,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.resetConfig" title="BioSimSpace.Process.Namd.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
 <td><p>Reset the configuration parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.run" title="BioSimSpace.Process.Namd.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, autostart, restart])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.run" title="BioSimSpace.Process.Namd.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, auto_start, restart])</p></td>
 <td><p>Create and run a new process.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.runTime" title="BioSimSpace.Process.Namd.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
@@ -1794,14 +1796,14 @@ the process.</p>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">autostart=True</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create and run a new process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The simulation protocol.</p></li>
-<li><p><strong>autostart</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
+<li><p><strong>auto_start</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
 <li><p><strong>restart</strong> (<em>bool</em>) – Whether to restart the simulation, i.e. use the original system.</p></li>
 </ul>
 </dd>
@@ -1987,7 +1989,7 @@ file.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

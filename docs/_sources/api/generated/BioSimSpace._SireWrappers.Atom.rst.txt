@@ -1,0 +1,30 @@
+BioSimSpace.\_SireWrappers.Atom
+===============================
+
+.. currentmodule:: BioSimSpace._SireWrappers
+
+.. autoclass:: Atom
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Atom.__init__
+      ~Atom.charge
+      ~Atom.copy
+      ~Atom.element
+      ~Atom.index
+      ~Atom.moleculeNumber
+      ~Atom.name
+      ~Atom.toMolecule
+      ~Atom.translate
+   
+   
+
+   
+   
+   

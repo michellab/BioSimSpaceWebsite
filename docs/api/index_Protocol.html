@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2019.1.0+89.g08dac00 documentation</title>
+  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
   
 
   
@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../_static/underscore.js"></script>
         <script type="text/javascript" src="../_static/doctools.js"></script>
         <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -98,6 +99,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -113,6 +115,7 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Custom.html">BioSimSpace.Protocol.Custom</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Equilibration.html">BioSimSpace.Protocol.Equilibration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.FreeEnergy.html">BioSimSpace.Protocol.FreeEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Metadynamics.html">BioSimSpace.Protocol.Metadynamics</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Minimisation.html">BioSimSpace.Protocol.Minimisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Protocol.Production.html">BioSimSpace.Protocol.Production</a></li>
 </ul>
@@ -242,10 +245,13 @@ be used to create a molecular dynamics <a class="reference internal" href="index
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FreeEnergy</span></code></a>([lam, lam_vals, min_lam, …])</p></td>
 <td><p>A class for storing free energy protocols.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.Minimisation.html#BioSimSpace.Protocol.Minimisation" title="BioSimSpace.Protocol.Minimisation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Minimisation</span></code></a>([steps])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.Metadynamics.html#BioSimSpace.Protocol.Metadynamics" title="BioSimSpace.Protocol.Metadynamics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Metadynamics</span></code></a>(collective_variable[, …])</p></td>
+<td><p>A class for storing metadynamics protocols.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.Minimisation.html#BioSimSpace.Protocol.Minimisation" title="BioSimSpace.Protocol.Minimisation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Minimisation</span></code></a>([steps])</p></td>
 <td><p>A class for storing minimisation protocols.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.Production.html#BioSimSpace.Protocol.Production" title="BioSimSpace.Protocol.Production"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Production</span></code></a>([timestep, runtime, temperature, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Protocol.Production.html#BioSimSpace.Protocol.Production" title="BioSimSpace.Protocol.Production"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Production</span></code></a>([timestep, runtime, temperature, …])</p></td>
 <td><p>A class for storing production protocols.</p></td>
 </tr>
 </tbody>
@@ -311,7 +317,7 @@ while restraining the positions of any backbone atoms.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 02, 2019.
+        Last updated on Jul 04, 2019.
       </span>
 
     </p>

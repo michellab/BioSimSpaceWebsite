@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BioSimSpace.Metadynamics.Grid &mdash; BioSimSpace 2019.1.0+168.g76d01c5 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Metadynamics.CollectiveVariable" href="../index_Metadynamics_CollectiveVariable.html" />
+    <link rel="prev" title="BioSimSpace.Metadynamics.Bound" href="BioSimSpace.Metadynamics.Bound.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2019.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html">BioSimSpace.Metadynamics.Bound</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Metadynamics.Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a> &raquo;</li>
+        
+      <li>BioSimSpace.Metadynamics.Grid</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/BioSimSpace.Metadynamics.Grid.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-metadynamics-grid">
+<h1>BioSimSpace.Metadynamics.Grid<a class="headerlink" href="#biosimspace-metadynamics-grid" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Metadynamics.Grid">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">Grid</code><span class="sig-paren">(</span><em class="sig-param">minimum</em>, <em class="sig-param">maximum</em>, <em class="sig-param">num_bins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">minimum</em>, <em class="sig-param">maximum</em>, <em class="sig-param">num_bins=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<p>Define a grid for use in metadynamics simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mimumum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>) – The minimum value of the grid.</p></li>
+<li><p><strong>maximum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>) – The maximum value of the grid.</p></li>
+<li><p><strong>num_bins</strong> (<em>int</em>) – The number of bins in the grid. If None, then the number will
+be automatically generated from the metadynamics hill width.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.__init__" title="BioSimSpace.Metadynamics.Grid.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(minimum, maximum[, num_bins])</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.getBins" title="BioSimSpace.Metadynamics.Grid.getBins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBins</span></code></a>()</p></td>
+<td><p>Get the number of bins in the grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.getMaximum" title="BioSimSpace.Metadynamics.Grid.getMaximum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMaximum</span></code></a>()</p></td>
+<td><p>Get the maximum value of the grid.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.getMinimum" title="BioSimSpace.Metadynamics.Grid.getMinimum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMinimum</span></code></a>()</p></td>
+<td><p>Get the minimum value of the grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.setBins" title="BioSimSpace.Metadynamics.Grid.setBins"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBins</span></code></a>(num_bins)</p></td>
+<td><p>Set the number of bins in the grid.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.setMaximum" title="BioSimSpace.Metadynamics.Grid.setMaximum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setMaximum</span></code></a>(maximum)</p></td>
+<td><p>Set the maximum value of the grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Grid.setMinimum" title="BioSimSpace.Metadynamics.Grid.setMinimum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setMinimum</span></code></a>(minimum)</p></td>
+<td><p>Set the minimum value of the grid.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.getBins">
+<code class="sig-name descname">getBins</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.getBins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the number of bins in the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>num_bins</strong> – The number of bins in the grid.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.getMaximum">
+<code class="sig-name descname">getMaximum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.getMaximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the maximum value of the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>maximum</strong> – The maximum value of the grid.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.getMinimum">
+<code class="sig-name descname">getMinimum</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.getMinimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the minimum value of the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>minimum</strong> – The minimum value of the grid.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.setBins">
+<code class="sig-name descname">setBins</code><span class="sig-paren">(</span><em class="sig-param">num_bins</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.setBins" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of bins in the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>num_bins</strong> (<em>int</em>) – The number of bins in the grid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.setMaximum">
+<code class="sig-name descname">setMaximum</code><span class="sig-paren">(</span><em class="sig-param">maximum</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.setMaximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the maximum value of the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>maximum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>) – The maximum value of the grid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Grid.setMinimum">
+<code class="sig-name descname">setMinimum</code><span class="sig-paren">(</span><em class="sig-param">minimum</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Grid.setMinimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the minimum value of the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>minimum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code>) – The minimum value of the grid.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../index_Metadynamics_CollectiveVariable.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.CollectiveVariable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BioSimSpace.Metadynamics.Bound.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.Bound" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      <span class="lastupdated">
+        Last updated on Jul 04, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+BioSimSpace.Metadynamics.CollectiveVariable.Torsion
+===================================================
+
+.. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable
+
+.. autoclass:: Torsion
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Torsion.__init__
+      ~Torsion.getAtoms
+      ~Torsion.getGrid
+      ~Torsion.getHillWidth
+      ~Torsion.getLowerBound
+      ~Torsion.getPeriodicBoundaries
+      ~Torsion.getUpperBound
+      ~Torsion.setAtoms
+      ~Torsion.setGrid
+      ~Torsion.setHillWidth
+      ~Torsion.setLowerBound
+      ~Torsion.setPeriodicBoundaries
+      ~Torsion.setUpperBound
+   
+   
+
+   
+   
+   

@@ -16,6 +16,8 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.__init__
       ~Molecule.charge
       ~Molecule.copy
+      ~Molecule.getAtoms
+      ~Molecule.getResidues
       ~Molecule.isMerged
       ~Molecule.isWater
       ~Molecule.molecule0
@@ -23,6 +25,8 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.nAtoms
       ~Molecule.nChains
       ~Molecule.nResidues
+      ~Molecule.number
+      ~Molecule.search
       ~Molecule.toSystem
       ~Molecule.translate
    

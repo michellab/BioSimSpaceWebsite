@@ -1,0 +1,30 @@
+BioSimSpace.Types.Vector
+========================
+
+.. currentmodule:: BioSimSpace.Types
+
+.. autoclass:: Vector
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Vector.__init__
+      ~Vector.angle
+      ~Vector.cross
+      ~Vector.dot
+      ~Vector.magnitude
+      ~Vector.normalise
+      ~Vector.x
+      ~Vector.y
+      ~Vector.z
+   
+   
+
+   
+   
+   
