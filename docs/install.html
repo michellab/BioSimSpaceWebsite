@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2019.1.0+169.g0da72d8 documentation</title>
+  <title>Installation &mdash; BioSimSpace 2019.1.0+176.g00be5fc documentation</title>
   
 
   
@@ -197,7 +197,20 @@ need to add them when updating, e.g., for the development package:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c rdkit -c conda-forge -c omnia -c michellab/label/dev biosimspace
 </pre></div>
 </div>
-<p>Note that on OS X you will need to run Python scripts with the <code class="docutils literal notranslate"><span class="pre">sire_python</span></code>
+<p>Note that because of Conda’s peculiar scoring metrics you might not end up with
+the latest version of BioSimSpace when performing a fresh install or update.
+(It tries to minimise various things, such as the number of dependencies
+installed, which is difficult when your package depends on many other packages.)
+To see what packages are available, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda search -c michellab/label/dev biosimspace
+</pre></div>
+</div>
+<p>You can then install the latest version by explicitly stating the full package
+name, e.g.:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c rdkit -c conda-forge -c omnia -c michellab/label/dev <span class="nv">biosimspace</span><span class="o">=</span><span class="m">2019</span>.1.0<span class="o">=</span>py37h14c3975_85
+</pre></div>
+</div>
+<p>On OS X you will need to run Python scripts with the <code class="docutils literal notranslate"><span class="pre">sire_python</span></code>
 interpreter. This is due to an issue with the default Python interpreter that
 is installed via Conda. (This applies to all installation methods.)</p>
 </div>
@@ -351,7 +364,7 @@ recommended installation instructions.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 04, 2019.
+        Last updated on Jul 05, 2019.
       </span>
 
     </p>
