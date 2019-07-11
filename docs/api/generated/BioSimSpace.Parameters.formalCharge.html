@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Notebook.plot &mdash; BioSimSpace 2019.1.0+194.g13f8bc7 documentation</title>
+  <title>BioSimSpace.Parameters.formalCharge &mdash; BioSimSpace 2019.1.0+194.g13f8bc7 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.Notebook.View" href="BioSimSpace.Notebook.View.html" />
-    <link rel="prev" title="BioSimSpace.Notebook" href="../index_Notebook.html" /> 
+    <link rel="next" title="BioSimSpace.Process" href="../index_Process.html" />
+    <link rel="prev" title="BioSimSpace.Parameters.forceFields" href="BioSimSpace.Parameters.forceFields.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,15 +102,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_Notebook.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Notebook.plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.parameterise.html">BioSimSpace.Parameters.parameterise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99.html">BioSimSpace.Parameters.ff99</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SB.html">BioSimSpace.Parameters.ff99SB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SBildn.html">BioSimSpace.Parameters.ff99SBildn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff.html">BioSimSpace.Parameters.gaff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff2.html">BioSimSpace.Parameters.gaff2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.forceFields.html">BioSimSpace.Parameters.forceFields</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.formalCharge</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Notebook.html#classes">Classes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
@@ -176,15 +183,15 @@
         
           <li><a href="../index.html">Documentation</a> &raquo;</li>
         
-          <li><a href="../index_Notebook.html">BioSimSpace.Notebook</a> &raquo;</li>
+          <li><a href="../index_Parameters.html">BioSimSpace.Parameters</a> &raquo;</li>
         
-      <li>BioSimSpace.Notebook.plot</li>
+      <li>BioSimSpace.Parameters.formalCharge</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/BioSimSpace.Notebook.plot.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Parameters.formalCharge.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,24 +204,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-notebook-plot">
-<h1>BioSimSpace.Notebook.plot<a class="headerlink" href="#biosimspace-notebook-plot" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="biosimspace-parameters-formalcharge">
+<h1>BioSimSpace.Parameters.formalCharge<a class="headerlink" href="#biosimspace-parameters-formalcharge" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace.Notebook.plot">
-<code class="sig-prename descclassname">BioSimSpace.Notebook.</code><code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param">x=None</em>, <em class="sig-param">y=None</em>, <em class="sig-param">xerr=None</em>, <em class="sig-param">yerr=None</em>, <em class="sig-param">xlabel=None</em>, <em class="sig-param">ylabel=None</em>, <em class="sig-param">logx=False</em>, <em class="sig-param">logy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Notebook.plot" title="Permalink to this definition">¶</a></dt>
-<dd><p>A simple function to create x/y plots with matplotlib.</p>
+<dt id="BioSimSpace.Parameters.formalCharge">
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">formalCharge</code><span class="sig-paren">(</span><em class="sig-param">molecule</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.formalCharge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the formal charge on a molecule. This function requires that
+the molecule has explicit hydrogen atoms.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>x</strong> (<em>list</em>) – A list of x data values.</p></li>
-<li><p><strong>y</strong> (<em>list</em>) – A list of y data values.</p></li>
-<li><p><strong>xerr</strong> (<em>list</em>) – A list of error values for the x data.</p></li>
-<li><p><strong>yerr</strong> (<em>list</em>) – A list of error values for the y data.</p></li>
-<li><p><strong>xlabel</strong> (<em>str</em>) – The x axis label string.</p></li>
-<li><p><strong>ylabel</strong> (<em>str</em>) – The y axis label string.</p></li>
-<li><p><strong>logx</strong> (<em>bool</em>) – Whether the x axis is logarithmic.</p></li>
-<li><p><strong>logy</strong> (<em>bool</em>) – Whether the y axis is logarithmic.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – A molecule object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>formal_charge</strong> – The total formal charge on the molecule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Charge.html#BioSimSpace.Types.Charge" title="BioSimSpace.Types.Charge"><code class="xref py py-class docutils literal notranslate"><span class="pre">Charge</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -229,10 +234,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BioSimSpace.Notebook.View.html" class="btn btn-neutral float-right" title="BioSimSpace.Notebook.View" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../index_Process.html" class="btn btn-neutral float-right" title="BioSimSpace.Process" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index_Notebook.html" class="btn btn-neutral float-left" title="BioSimSpace.Notebook" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BioSimSpace.Parameters.forceFields.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.forceFields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
