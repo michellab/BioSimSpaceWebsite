@@ -17,6 +17,7 @@ BioSimSpace.\_SireWrappers.Residue
       ~Residue.charge
       ~Residue.copy
       ~Residue.getAtoms
+      ~Residue.getAxisAlignedBoundingBox
       ~Residue.index
       ~Residue.moleculeNumber
       ~Residue.nAtoms

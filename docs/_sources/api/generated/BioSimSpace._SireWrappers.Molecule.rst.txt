@@ -17,6 +17,7 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.charge
       ~Molecule.copy
       ~Molecule.getAtoms
+      ~Molecule.getAxisAlignedBoundingBox
       ~Molecule.getResidues
       ~Molecule.isMerged
       ~Molecule.isWater

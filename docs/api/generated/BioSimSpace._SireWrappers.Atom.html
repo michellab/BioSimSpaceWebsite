@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace._SireWrappers.Atom &mdash; BioSimSpace 2019.1.0+209.g37f453b documentation</title>
+  <title>BioSimSpace._SireWrappers.Atom &mdash; BioSimSpace 2019.1.0+211.ga01cf1d documentation</title>
   
 
   
@@ -236,19 +236,22 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.element" title="BioSimSpace._SireWrappers.Atom.element"><code class="xref py py-obj docutils literal notranslate"><span class="pre">element</span></code></a>([property_map])</p></td>
 <td><p>Return the element.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.index" title="BioSimSpace._SireWrappers.Atom.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.getAxisAlignedBoundingBox" title="BioSimSpace._SireWrappers.Atom.getAxisAlignedBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAxisAlignedBoundingBox</span></code></a>([property_map])</p></td>
+<td><p>Get the axis-aligned bounding box enclosing the object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.index" title="BioSimSpace._SireWrappers.Atom.index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">index</span></code></a>()</p></td>
 <td><p>Return the index of the atom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.moleculeNumber" title="BioSimSpace._SireWrappers.Atom.moleculeNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moleculeNumber</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.moleculeNumber" title="BioSimSpace._SireWrappers.Atom.moleculeNumber"><code class="xref py py-obj docutils literal notranslate"><span class="pre">moleculeNumber</span></code></a>()</p></td>
 <td><p>Return the number of the molecule to which this atom belongs.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.name" title="BioSimSpace._SireWrappers.Atom.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.name" title="BioSimSpace._SireWrappers.Atom.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</p></td>
 <td><p>Return the name of the atom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.toMolecule" title="BioSimSpace._SireWrappers.Atom.toMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toMolecule</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.toMolecule" title="BioSimSpace._SireWrappers.Atom.toMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toMolecule</span></code></a>()</p></td>
 <td><p>Convert a single Atom to a Molecule.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.translate" title="BioSimSpace._SireWrappers.Atom.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.translate" title="BioSimSpace._SireWrappers.Atom.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate the object.</p></td>
 </tr>
 </tbody>
@@ -304,6 +307,28 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.Atom.getAxisAlignedBoundingBox">
+<code class="sig-name descname">getAxisAlignedBoundingBox</code><span class="sig-paren">(</span><em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Atom.getAxisAlignedBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axis-aligned bounding box enclosing the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>box_min</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The minimum coordinates of the axis-aligned bounding box in
+each dimension.</p></li>
+<li><p><strong>box_max</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The minimum coordinates of the axis-aligned bounding box in
+each dimension.</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -406,7 +431,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 24, 2019.
+        Last updated on Jul 25, 2019.
       </span>
 
     </p>

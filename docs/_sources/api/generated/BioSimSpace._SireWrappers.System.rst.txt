@@ -18,6 +18,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.charge
       ~System.copy
       ~System.fileFormat
+      ~System.getAxisAlignedBoundingBox
       ~System.getBox
       ~System.getIndex
       ~System.getMolecules

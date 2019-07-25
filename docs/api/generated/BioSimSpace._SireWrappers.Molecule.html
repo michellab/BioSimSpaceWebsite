@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace._SireWrappers.Molecule &mdash; BioSimSpace 2019.1.0+209.g37f453b documentation</title>
+  <title>BioSimSpace._SireWrappers.Molecule &mdash; BioSimSpace 2019.1.0+211.ga01cf1d documentation</title>
   
 
   
@@ -236,40 +236,43 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.getAtoms" title="BioSimSpace._SireWrappers.Molecule.getAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtoms</span></code></a>()</p></td>
 <td><p>Return a list containing the atoms in the molecule.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.getResidues" title="BioSimSpace._SireWrappers.Molecule.getResidues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResidues</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.getAxisAlignedBoundingBox" title="BioSimSpace._SireWrappers.Molecule.getAxisAlignedBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAxisAlignedBoundingBox</span></code></a>([property_map])</p></td>
+<td><p>Get the axis-aligned bounding box enclosing the object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.getResidues" title="BioSimSpace._SireWrappers.Molecule.getResidues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResidues</span></code></a>()</p></td>
 <td><p>Return a list containing the residues in the molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isMerged" title="BioSimSpace._SireWrappers.Molecule.isMerged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMerged</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isMerged" title="BioSimSpace._SireWrappers.Molecule.isMerged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMerged</span></code></a>()</p></td>
 <td><p>Whether this molecule has been merged with another.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isWater" title="BioSimSpace._SireWrappers.Molecule.isWater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWater</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isWater" title="BioSimSpace._SireWrappers.Molecule.isWater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWater</span></code></a>()</p></td>
 <td><p>Whether this is a water molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.molecule0" title="BioSimSpace._SireWrappers.Molecule.molecule0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecule0</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.molecule0" title="BioSimSpace._SireWrappers.Molecule.molecule0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecule0</span></code></a>()</p></td>
 <td><p>Return the component of the merged molecule at lambda = 0.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.molecule1" title="BioSimSpace._SireWrappers.Molecule.molecule1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecule1</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.molecule1" title="BioSimSpace._SireWrappers.Molecule.molecule1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecule1</span></code></a>()</p></td>
 <td><p>Return the component of the merged molecule at lambda = 1.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nAtoms" title="BioSimSpace._SireWrappers.Molecule.nAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nAtoms</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nAtoms" title="BioSimSpace._SireWrappers.Molecule.nAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nAtoms</span></code></a>()</p></td>
 <td><p>Return the number of atoms in the molecule.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nChains" title="BioSimSpace._SireWrappers.Molecule.nChains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nChains</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nChains" title="BioSimSpace._SireWrappers.Molecule.nChains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nChains</span></code></a>()</p></td>
 <td><p>Return the number of chains in the molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nResidues" title="BioSimSpace._SireWrappers.Molecule.nResidues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nResidues</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.nResidues" title="BioSimSpace._SireWrappers.Molecule.nResidues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nResidues</span></code></a>()</p></td>
 <td><p>Return the number of residues in the molecule.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.number" title="BioSimSpace._SireWrappers.Molecule.number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.number" title="BioSimSpace._SireWrappers.Molecule.number"><code class="xref py py-obj docutils literal notranslate"><span class="pre">number</span></code></a>()</p></td>
 <td><p>Return the number of the molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.search" title="BioSimSpace._SireWrappers.Molecule.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.search" title="BioSimSpace._SireWrappers.Molecule.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
 <td><p>Search the molecule for atoms and residues.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.toSystem" title="BioSimSpace._SireWrappers.Molecule.toSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toSystem</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.toSystem" title="BioSimSpace._SireWrappers.Molecule.toSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toSystem</span></code></a>()</p></td>
 <td><p>Convert a single Molecule to a System.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.translate" title="BioSimSpace._SireWrappers.Molecule.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.translate" title="BioSimSpace._SireWrappers.Molecule.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate the object.</p></td>
 </tr>
 </tbody>
@@ -320,6 +323,28 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>[<a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.Molecule.getAxisAlignedBoundingBox">
+<code class="sig-name descname">getAxisAlignedBoundingBox</code><span class="sig-paren">(</span><em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Molecule.getAxisAlignedBoundingBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axis-aligned bounding box enclosing the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>box_min</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The minimum coordinates of the axis-aligned bounding box in
+each dimension.</p></li>
+<li><p><strong>box_max</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The minimum coordinates of the axis-aligned bounding box in
+each dimension.</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -541,7 +566,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 24, 2019.
+        Last updated on Jul 25, 2019.
       </span>
 
     </p>

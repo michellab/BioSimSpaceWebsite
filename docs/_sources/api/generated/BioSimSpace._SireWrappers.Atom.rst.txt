@@ -17,6 +17,7 @@ BioSimSpace.\_SireWrappers.Atom
       ~Atom.charge
       ~Atom.copy
       ~Atom.element
+      ~Atom.getAxisAlignedBoundingBox
       ~Atom.index
       ~Atom.moleculeNumber
       ~Atom.name
