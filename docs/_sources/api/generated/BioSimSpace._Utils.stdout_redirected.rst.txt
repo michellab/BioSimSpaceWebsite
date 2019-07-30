@@ -1,0 +1,6 @@
+BioSimSpace.\_Utils.stdout\_redirected
+======================================
+
+.. currentmodule:: BioSimSpace._Utils
+
+.. autofunction:: stdout_redirected

@@ -1,0 +1,6 @@
+BioSimSpace.\_Utils.stderr\_redirected
+======================================
+
+.. currentmodule:: BioSimSpace._Utils
+
+.. autofunction:: stderr_redirected

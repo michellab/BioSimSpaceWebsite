@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Parameters.ff99 &mdash; BioSimSpace 2019.1.0+230.gbb99bc9 documentation</title>
+  <title>BioSimSpace._Utils.stderr_redirected &mdash; BioSimSpace 2019.1.0+230.gbb99bc9 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.Parameters.ff99SB" href="BioSimSpace.Parameters.ff99SB.html" />
-    <link rel="prev" title="BioSimSpace.Parameters.parameterise" href="BioSimSpace.Parameters.parameterise.html" /> 
+    <link rel="next" title="Developer’s guide" href="../../development.html" />
+    <link rel="prev" title="BioSimSpace._Utils.stdout_redirected" href="BioSimSpace._Utils.stdout_redirected.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,21 +103,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.parameterise.html">BioSimSpace.Parameters.parameterise</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.ff99</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SB.html">BioSimSpace.Parameters.ff99SB</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SBildn.html">BioSimSpace.Parameters.ff99SBildn</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff.html">BioSimSpace.Parameters.gaff</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff2.html">BioSimSpace.Parameters.gaff2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.forceFields.html">BioSimSpace.Parameters.forceFields</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.formalCharge.html">BioSimSpace.Parameters.formalCharge</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
@@ -126,7 +112,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Utils.html#context-managers">Context managers</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace._Utils.cd.html">BioSimSpace._Utils.cd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace._Utils.stdout_redirected.html">BioSimSpace._Utils.stdout_redirected</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace._Utils.stderr_redirected</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -183,15 +177,15 @@
         
           <li><a href="../index.html">Documentation</a> &raquo;</li>
         
-          <li><a href="../index_Parameters.html">BioSimSpace.Parameters</a> &raquo;</li>
+          <li><a href="../index_Utils.html">BioSimSpace._Utils</a> &raquo;</li>
         
-      <li>BioSimSpace.Parameters.ff99</li>
+      <li>BioSimSpace._Utils.stderr_redirected</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../_sources/api/generated/BioSimSpace.Parameters.ff99.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace._Utils.stderr_redirected.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,27 +198,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-parameters-ff99">
-<h1>BioSimSpace.Parameters.ff99<a class="headerlink" href="#biosimspace-parameters-ff99" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="biosimspace-utils-stderr-redirected">
+<h1>BioSimSpace._Utils.stderr_redirected<a class="headerlink" href="#biosimspace-utils-stderr-redirected" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace.Parameters.ff99">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">ff99</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.ff99" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parameterise using the ff99 force field.</p>
+<dt id="BioSimSpace._Utils.stderr_redirected">
+<code class="sig-prename descclassname">BioSimSpace._Utils.</code><code class="sig-name descname">stderr_redirected</code><span class="sig-paren">(</span><em class="sig-param">to='/dev/null'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._Utils.stderr_redirected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redirect stderr to a file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to parameterise.</p></li>
-<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
-<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
-values. This allows the user to refer to properties with their
-own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>molecule</strong> – The parameterised molecule.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a></p>
+<dd class="field-odd"><p><strong>to</strong> (<em>str</em>) – The file to which stderr will be redirected.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -239,10 +221,10 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BioSimSpace.Parameters.ff99SB.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters.ff99SB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../development.html" class="btn btn-neutral float-right" title="Developer’s guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BioSimSpace.Parameters.parameterise.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.parameterise" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="BioSimSpace._Utils.stdout_redirected.html" class="btn btn-neutral float-left" title="BioSimSpace._Utils.stdout_redirected" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
