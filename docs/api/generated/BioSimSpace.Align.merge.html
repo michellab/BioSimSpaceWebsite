@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.merge &mdash; BioSimSpace 2019.1.0+232.g8ce392e documentation</title>
+  <title>BioSimSpace.Align.merge &mdash; BioSimSpace 2019.1.0+239.g22656f3 documentation</title>
   
 
   
@@ -200,7 +200,7 @@
 <h1>BioSimSpace.Align.merge<a class="headerlink" href="#biosimspace-align-merge" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Align.merge">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">allow_ring_breaking=False</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.merge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">allow_ring_breaking=False</em>, <em class="sig-param">allow_ring_size_change=False</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a merged molecule from ‘molecule0’ and ‘molecule1’ based on the
 atom index ‘mapping’. The merged molecule can be used in single- and
 dual-toplogy free energy calculations.</p>
@@ -214,6 +214,7 @@ If no mapping is provided, then atoms in molecule0 will be mapped
 to those in molecule1 using “matchAtoms”, with “rmsdAlign” then
 used to align molecule0 to molecule1 based on the resulting mapping.</p></li>
 <li><p><strong>allow_ring_breaking</strong> (<em>bool</em>) – Whether to allow the opening/closing of rings during a merge.</p></li>
+<li><p><strong>allow_ring_size_change</strong> (<em>bool</em>) – Whether to allow changes in ring size.</p></li>
 <li><p><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
 with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -268,7 +269,7 @@ will be used to align molecule0 to molecule1 based on the resulting mapping.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 31, 2019.
+        Last updated on Aug 01, 2019.
       </span>
 
     </p>
