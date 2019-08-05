@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol.Metadynamics &mdash; BioSimSpace 2019.1.0+244.g9729ecd documentation</title>
+  <title>BioSimSpace.Protocol.Metadynamics &mdash; BioSimSpace 2019.1.0+247.g4d0540f documentation</title>
   
 
   
@@ -206,11 +206,11 @@
 <h1>BioSimSpace.Protocol.Metadynamics<a class="headerlink" href="#biosimspace-protocol-metadynamics" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Protocol.Metadynamics">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Metadynamics</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Metadynamics</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing metadynamics protocols.</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,7 +223,17 @@
 <li><p><strong>hill_height</strong> (<a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>) – The height of the Gaussian hills.</p></li>
 <li><p><strong>hill_frequency</strong> (<em>int</em>) – The frequency at which hills are deposited.</p></li>
 <li><p><strong>bias_factor</strong> (<em>float</em>) – The bias factor for well tempered metadynamics.</p></li>
-<li><p><strong>restart</strong> (<em>bool</em>) – Whether this is a continuation of a previous simulation.</p></li>
+<li><p><strong>hills_file</strong> (<em>str</em>) – The path to a HILLS file from a previous simulation. This can
+be used to restart in order to contiune sampling. The information
+in the file must be consistent with the ‘collective_variable’
+argument.</p></li>
+<li><p><strong>grid_file</strong> (<em>str</em>) – The path to a GRID file from a previous simulation. This can
+be used to restart in order to continue sampling. The information
+in the file must be consistent with the ‘collective_variable’
+argument.</p></li>
+<li><p><strong>colvar_file</strong> (<em>str</em>) – The path to a COLVAR file from a previous simulation. The
+information in the file must be consistent with the
+‘collective_variable’ argument.</p></li>
 </ul>
 </dd>
 </dl>
@@ -245,26 +255,32 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getCollectiveVariable" title="BioSimSpace.Protocol.Metadynamics.getCollectiveVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCollectiveVariable</span></code></a>()</p></td>
 <td><p>Return the collective variable (or variables).</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getColvarFile" title="BioSimSpace.Protocol.Metadynamics.getColvarFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getColvarFile</span></code></a>()</p></td>
+<td><p>Return the path to the COLVAR file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getGridFile" title="BioSimSpace.Protocol.Metadynamics.getGridFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGridFile</span></code></a>()</p></td>
+<td><p>Return the path to the GRID file.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getHillFrequency" title="BioSimSpace.Protocol.Metadynamics.getHillFrequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillFrequency</span></code></a>()</p></td>
 <td><p>Return the frequency at which Gaussian hills are deposited.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getHillHeight" title="BioSimSpace.Protocol.Metadynamics.getHillHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillHeight</span></code></a>()</p></td>
 <td><p>Return the height of the Gaussian hills.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getPressure" title="BioSimSpace.Protocol.Metadynamics.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getHillsFile" title="BioSimSpace.Protocol.Metadynamics.getHillsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillsFile</span></code></a>()</p></td>
+<td><p>Return the path to the HILLS file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getPressure" title="BioSimSpace.Protocol.Metadynamics.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getRunTime" title="BioSimSpace.Protocol.Metadynamics.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getRunTime" title="BioSimSpace.Protocol.Metadynamics.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getTemperature" title="BioSimSpace.Protocol.Metadynamics.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getTemperature" title="BioSimSpace.Protocol.Metadynamics.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
 <td><p>Return temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getTimeStep" title="BioSimSpace.Protocol.Metadynamics.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getTimeStep" title="BioSimSpace.Protocol.Metadynamics.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
 <td><p>Return the time step.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.isRestart" title="BioSimSpace.Protocol.Metadynamics.isRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRestart</span></code></a>()</p></td>
-<td><p>Return whether this restart simulation.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setBiasFactor" title="BioSimSpace.Protocol.Metadynamics.setBiasFactor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBiasFactor</span></code></a>([bias_factor])</p></td>
 <td><p>Set the bias factor for well tempered metadynamics.</p></td>
@@ -272,17 +288,23 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setCollectiveVariable" title="BioSimSpace.Protocol.Metadynamics.setCollectiveVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCollectiveVariable</span></code></a>(collective_variable)</p></td>
 <td><p>Set the collective variable (or variables).</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setColvarFile" title="BioSimSpace.Protocol.Metadynamics.setColvarFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColvarFile</span></code></a>(colvar_file)</p></td>
+<td><p>Set the location of an existing COLVAR file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setGridFile" title="BioSimSpace.Protocol.Metadynamics.setGridFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGridFile</span></code></a>(grid_file)</p></td>
+<td><p>Set the location of an existing GRID file.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setHillFrequency" title="BioSimSpace.Protocol.Metadynamics.setHillFrequency"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillFrequency</span></code></a>(hill_frequency)</p></td>
 <td><p>Set the frequency at which Gaussian hills are deposited.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setHillHeight" title="BioSimSpace.Protocol.Metadynamics.setHillHeight"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillHeight</span></code></a>(hill_height)</p></td>
 <td><p>Set the height of the Gaussian hills.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setPressure" title="BioSimSpace.Protocol.Metadynamics.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
-<td><p>Set the pressure.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setHillsFile" title="BioSimSpace.Protocol.Metadynamics.setHillsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillsFile</span></code></a>(hills_file)</p></td>
+<td><p>Set the location of an existing HILLS file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setRestart" title="BioSimSpace.Protocol.Metadynamics.setRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestart</span></code></a>(restart)</p></td>
-<td><p>Set the restart flag.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setPressure" title="BioSimSpace.Protocol.Metadynamics.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
+<td><p>Set the pressure.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setRunTime" title="BioSimSpace.Protocol.Metadynamics.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
 <td><p>Set the running time.</p></td>
@@ -324,6 +346,34 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.getColvarFile">
+<code class="sig-name descname">getColvarFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getColvarFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the COLVAR file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>colvar_file</strong> – The path to the COLVAR file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.getGridFile">
+<code class="sig-name descname">getGridFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getGridFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the GRID file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>grid_file</strong> – The path to the GRID file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.getHillFrequency">
 <code class="sig-name descname">getHillFrequency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getHillFrequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the frequency at which Gaussian hills are deposited.</p>
@@ -347,6 +397,20 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.getHillsFile">
+<code class="sig-name descname">getHillsFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getHillsFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the HILLS file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>hills_file</strong> – The path to the HILLS file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
@@ -408,20 +472,6 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace.Protocol.Metadynamics.isRestart">
-<code class="sig-name descname">isRestart</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.isRestart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether this restart simulation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_restart</strong> – Whether this is a restart simulation.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.setBiasFactor">
 <code class="sig-name descname">setBiasFactor</code><span class="sig-paren">(</span><em class="sig-param">bias_factor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setBiasFactor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the bias factor for well tempered metadynamics.
@@ -440,6 +490,28 @@ Call with no arguments to clear the bias factor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                                 [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) for the simulation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.setColvarFile">
+<code class="sig-name descname">setColvarFile</code><span class="sig-paren">(</span><em class="sig-param">colvar_file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setColvarFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the location of an existing COLVAR file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>colvar_file</strong> (<em>str</em>) – The path to an existing COLVAR file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.setGridFile">
+<code class="sig-name descname">setGridFile</code><span class="sig-paren">(</span><em class="sig-param">grid_file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setGridFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the location of an existing GRID file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>grid_file</strong> (<em>str</em>) – The path to an existing GRID file.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -467,23 +539,23 @@ Call with no arguments to clear the bias factor.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.setHillsFile">
+<code class="sig-name descname">setHillsFile</code><span class="sig-paren">(</span><em class="sig-param">hills_file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setHillsFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the location of an existing HILLS file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hills_file</strong> (<em>str</em>) – The path to an existing HILLS file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.setPressure">
 <code class="sig-name descname">setPressure</code><span class="sig-paren">(</span><em class="sig-param">pressure</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the pressure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.Metadynamics.setRestart">
-<code class="sig-name descname">setRestart</code><span class="sig-paren">(</span><em class="sig-param">restart</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setRestart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the restart flag.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>restart</strong> (<em>bool</em>) – Whether this is a restart simulation.</p>
 </dd>
 </dl>
 </dd></dl>
