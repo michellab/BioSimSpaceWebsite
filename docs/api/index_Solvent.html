@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2019.1.0+270.ge7ee47d documentation</title>
+  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2019.1.0+276.g71a62ac documentation</title>
   
 
   
@@ -246,7 +246,7 @@ periodic box of TIP3P water with an ion concentration of 0.1 mol per litre.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a system and extract the first molecule.</span>
-<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">tip3p</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
@@ -261,7 +261,7 @@ where the water model is specified as an input requirement by the user.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a system and extract the first molecule.</span>
-<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">solvate</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
@@ -273,7 +273,7 @@ where the water model is specified as an input requirement by the user.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a system and extract the first molecule.</span>
-<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">getMolecules</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;amber/ala/*&quot;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">spc</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>

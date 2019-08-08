@@ -21,6 +21,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.getAxisAlignedBoundingBox
       ~System.getBox
       ~System.getIndex
+      ~System.getMolecule
       ~System.getMolecules
       ~System.getPerturbableMolecules
       ~System.getWaterMolecules
