@@ -1,0 +1,30 @@
+BioSimSpace.\_SireWrappers.Molecules
+====================================
+
+.. currentmodule:: BioSimSpace._SireWrappers
+
+.. autoclass:: Molecules
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Molecules.__init__
+      ~Molecules.charge
+      ~Molecules.copy
+      ~Molecules.getAxisAlignedBoundingBox
+      ~Molecules.getMolecule
+      ~Molecules.nMolecules
+      ~Molecules.search
+      ~Molecules.toSystem
+      ~Molecules.translate
+   
+   
+
+   
+   
+   

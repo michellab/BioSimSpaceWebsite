@@ -15,7 +15,7 @@ BioSimSpace.\_SireWrappers.SearchResult
    
       ~SearchResult.__init__
       ~SearchResult.copy
-      ~SearchResult.getResults
+      ~SearchResult.getResult
       ~SearchResult.nResults
    
    

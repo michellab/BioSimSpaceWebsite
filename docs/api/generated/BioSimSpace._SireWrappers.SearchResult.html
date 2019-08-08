@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace._SireWrappers.SearchResult &mdash; BioSimSpace 2019.1.0+258.g2388d69 documentation</title>
+  <title>BioSimSpace._SireWrappers.SearchResult &mdash; BioSimSpace 2019.1.0+266.ga95b243 documentation</title>
   
 
   
@@ -115,6 +115,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="../index_SireWrappers.html#classes">Classes</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html">BioSimSpace._SireWrappers.Atom</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html">BioSimSpace._SireWrappers.Molecule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Molecules.html">BioSimSpace._SireWrappers.Molecules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html">BioSimSpace._SireWrappers.Residue</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.System.html">BioSimSpace._SireWrappers.System</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace._SireWrappers.SearchResult</a></li>
@@ -230,8 +231,8 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.copy" title="BioSimSpace._SireWrappers.SearchResult.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
 <td><p>Create a copy of this object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.getResults" title="BioSimSpace._SireWrappers.SearchResult.getResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResults</span></code></a>()</p></td>
-<td><p>Return a list containing the results.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.getResult" title="BioSimSpace._SireWrappers.SearchResult.getResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResult</span></code></a>(index)</p></td>
+<td><p>Return the result at the given index.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.nResults" title="BioSimSpace._SireWrappers.SearchResult.nResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nResults</span></code></a>()</p></td>
 <td><p>Return the number of results.</p></td>
@@ -253,15 +254,19 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace._SireWrappers.SearchResult.getResults">
-<code class="sig-name descname">getResults</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.getResults" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list containing the results.</p>
+<dt id="BioSimSpace._SireWrappers.SearchResult.getResult">
+<code class="sig-name descname">getResult</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.getResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the result at the given index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>results</strong> – A list of objects matching the search query.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the result.</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[<a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>,                       <a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html#BioSimSpace._SireWrappers.Residue" title="BioSimSpace._SireWrappers.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>,                       <a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>, …]</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The requested molecule.</p></li>
+<li><p><strong>result</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html#BioSimSpace._SireWrappers.Residue" title="BioSimSpace._SireWrappers.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>)</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -306,7 +311,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Aug 07, 2019.
+        Last updated on Aug 08, 2019.
       </span>
 
     </p>
