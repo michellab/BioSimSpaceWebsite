@@ -99,6 +99,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sep-11-2019">2019.2.0 - Sep 11 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-02-2019">2019.1.0 - May 02 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-02-2018">2018.1.1 - May 02 2018</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-01-2018">2018.1.0 - May 01 2018</a></li>
@@ -173,18 +174,20 @@
             
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2019.2.0...2019.1.0">2019.2.0</a> - Sep 11 2019</p>
+<div class="section" id="sep-11-2019">
+<h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2019.2.0...2019.1.0">2019.2.0</a> - Sep 11 2019<a class="headerlink" href="#sep-11-2019" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Switched to using <a class="reference external" href="https://www.rdkit.org/">RDKit</a> for maximum common substructure (MCS) mappings.</p></li>
 <li><p>Handle perturbable molecules for non free-energy protocols with SOMD and GROMACS.</p></li>
 <li><p>Added basic metadynamics functionality with support for distance and torsion collective variables.</p></li>
 <li><p>Added support for inferring formal charge of molecules.</p></li>
-<li><p>Numerous MCS mapping fixes and improvements. Thanks to <a class="reference external" href="https://github.com/maxkuhn">&#64;maxkuhn</a>, <em class="xref py py-obj">&#64;dlukauskis</em>, and <a class="reference external" href="https://github.com/ptosco">&#64;ptosco</a> for help testing and debugging.</p></li>
+<li><p>Numerous MCS mapping fixes and improvements. Thanks to <a class="reference external" href="https://github.com/maxkuhn">&#64;maxkuhn</a>, <a class="reference external" href="https://github.com/dlukauskis">&#64;dlukauskis</a>, and <a class="reference external" href="https://github.com/ptosco">&#64;ptosco</a> for help testing and debugging.</p></li>
 <li><p>Added Dockerfile to build thirdparty packages required by the BioSimSpace notebook server.</p></li>
 <li><p>Exposed Sire search functionality.</p></li>
 <li><p>Added thin-wrappers for several additional Sire objects, e.g. Residue, Atom, and Molecules container.</p></li>
 <li><p>Performance improvements for searching, indexing, and extracting objects from molecular containers, e.g. System, Molecule.</p></li>
 </ul>
+</div>
 <div class="section" id="may-02-2019">
 <h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2018.1.1...2019.1.0">2019.1.0</a> - May 02 2019<a class="headerlink" href="#may-02-2019" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
