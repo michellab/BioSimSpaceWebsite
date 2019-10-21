@@ -1,0 +1,6 @@
+BioSimSpace.Node.setNodeDirectory
+=================================
+
+.. currentmodule:: BioSimSpace.Node
+
+.. autofunction:: setNodeDirectory

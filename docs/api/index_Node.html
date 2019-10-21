@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Node &mdash; BioSimSpace 2019.2.0+17.gbbc219b documentation</title>
+  <title>BioSimSpace.Node &mdash; BioSimSpace 2019.2.0+20.gdb5b4c9 documentation</title>
   
 
   
@@ -106,6 +106,7 @@
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.help.html">BioSimSpace.Node.help</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.list.html">BioSimSpace.Node.list</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.run.html">BioSimSpace.Node.run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Node.setNodeDirectory.html">BioSimSpace.Node.setNodeDirectory</a></li>
 </ul>
 </li>
 </ul>
@@ -125,11 +126,14 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nodes.html">Nodes</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
@@ -219,6 +223,9 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Node.run.html#BioSimSpace.Node.run" title="BioSimSpace.Node.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(name[, args])</p></td>
 <td><p>Run a node.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Node.setNodeDirectory.html#BioSimSpace.Node.setNodeDirectory" title="BioSimSpace.Node.setNodeDirectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setNodeDirectory</span></code></a>(dir)</p></td>
+<td><p>Set the directory of the node library.</p></td>
+</tr>
 </tbody>
 </table>
 <p class="rubric">Examples</p>
@@ -242,6 +249,12 @@
 
 <span class="c1"># Run the node and get the output as a dictionary.</span>
 <span class="n">output</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Node</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;minimisation&quot;</span><span class="p">,</span> <span class="nb">input</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Set a custom directory for the node library.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+
+<span class="n">BSS</span><span class="o">.</span><span class="n">Node</span><span class="o">.</span><span class="n">setNodeDirectory</span><span class="p">(</span><span class="s2">&quot;/path/to/node/library&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -271,7 +284,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 18, 2019.
+        Last updated on Oct 21, 2019.
       </span>
 
     </p>
