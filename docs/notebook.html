@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Media &mdash; BioSimSpace 2019.2.0+22.g364236e documentation</title>
+  <title>Notebook server &mdash; BioSimSpace 2019.2.0+22.g364236e documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Developer’s guide" href="development.html" />
-    <link rel="prev" title="Notebook server" href="notebook.html" /> 
+    <link rel="next" title="Media" href="media.html" />
+    <link rel="prev" title="Nodes" href="nodes.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,11 +99,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebook server</a></li>
-</ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Media</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebook server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#demos">Demos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workshops">Workshops</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Media</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
@@ -156,13 +160,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Media</li>
+      <li>Notebook server</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/media.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/notebook.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -175,22 +179,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="media">
-<span id="ref-media"></span><h1>Media<a class="headerlink" href="#media" title="Permalink to this headline">¶</a></h1>
-<p>This page provides links to talks and presentations about BioSimSpace.</p>
-<hr class="docutils" />
-<p>The following YouTube video is a <a class="reference external" href="https://bioexcel.eu/webinar-biosimspace-filling-the-gaps-between-molecular-simulation-codes-2018-06-27">talk</a>
-given by <a class="reference external" href="https://chryswoods.com">Christopher Woods</a> for the <a class="reference external" href="https://bioexcel.eu">Bioexcel</a>
-webinar series.</p>
-<iframe width="640" height="360" src="//www.youtube.com/embed/pD8mhj3WElE?feature=player_detailpage" frameborder="0" allowfullscreen="1">&nbsp;</iframe><hr class="docutils" />
-<p>The following YouTube video is a talk given by <a class="reference external" href="http://www.julienmichel.net">Julien Michel</a> at
-the <a class="reference external" href="https://drugdesigndata.org/about/d3r-2019-workshop">D3R 2019 workshop</a>:</p>
-<iframe width="640" height="360" src="//www.youtube.com/embed/QyaZ4OST7t4?feature=player_detailpage" frameborder="0" allowfullscreen="1">&nbsp;</iframe><p>(Slides can be found <a class="reference external" href="https://drugdesigndata.org/upload/community-components/d3r/workshop2019/presentations/C-5-jmichel-d3r-bss-0819.pptx">here</a>.)</p>
-<hr class="docutils" />
-<p>This <a class="reference external" href="https://www.cresset-group.com/about/news/flare-alchemical-fep">blog post</a>
-describes how BioSimSpace is used as part of the free energy perturbation
-pipeline within <a class="reference external" href="https://www.cresset-group.com">Cresset’s</a> upcoming
-version 3 release of <a class="reference external" href="https://www.cresset-group.com/software/flare">Flare</a>.</p>
+  <div class="section" id="notebook-server">
+<span id="ref-notebook"></span><h1>Notebook server<a class="headerlink" href="#notebook-server" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>Visit our online notebook server <a class="reference external" href="https://notebook.biosimspace.org">here</a>.
+This will launch a <a class="reference external" href="https://jupyter.org">Jupyter</a> hub running inside of
+a <a class="reference external" href="https://www.docker.com/">Docker</a> container. This includes all of the
+software that is required, allowing you to play around with BioSimSpace and
+learn how it works without needing to install anything yourself.</p>
+<div class="section" id="demos">
+<h2>Demos<a class="headerlink" href="#demos" title="Permalink to this headline">¶</a></h2>
+<p>The notebook server has a set of example nodes to get you started. To run any
+of these, simply navigate to the <code class="docutils literal notranslate"><span class="pre">demo</span></code> directory from the landing page.
+A description of each node is given below:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conversion.ipynb</span></code>: Convert between common molecular file formats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">input_files.ipynb</span></code>: Generate molecular dynamics input files for a range of protocols and molecular dynamics engines.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">molecular_setup.ipynb</span></code>: Parameterise and solvate a molecule ready for simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimisation.ipynb</span></code>: Minimise a molecular configuration.</p></li>
+</ul>
+</div>
+<div class="section" id="workshops">
+<h2>Workshops<a class="headerlink" href="#workshops" title="Permalink to this headline">¶</a></h2>
+<p>The server also contains several BioSimSpace training workshops. Navigate to
+the <code class="docutils literal notranslate"><span class="pre">workshops</span></code> directory from the landing page.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code>: A basic Python programing workshop.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">introduction</span></code>: An introduction to the core concepts of BioSimSpace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">advanced</span></code>: Using BioSimSpace to set up and run advanced sampling simulations, such as free energy pertubation and metadynamics.</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -201,10 +220,10 @@ version 3 release of <a class="reference external" href="https://www.cresset-gro
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="development.html" class="btn btn-neutral float-right" title="Developer’s guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="media.html" class="btn btn-neutral float-right" title="Media" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="notebook.html" class="btn btn-neutral float-left" title="Notebook server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nodes.html" class="btn btn-neutral float-left" title="Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
