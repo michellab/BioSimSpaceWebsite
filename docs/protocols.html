@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Protocols &mdash; BioSimSpace 2019.2.0+26.g1445dbe documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Media" href="media.html" />
+    <link rel="prev" title="Notebook server" href="notebook.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2019.2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebook server</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#customising-protocols">Customising protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-protocols">Writing protocols</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Protocols</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/protocols.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="protocols">
+<span id="ref-protocols"></span><h1>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>BioSimSpace attempts to achieve interoperability by abstracting a range of
+common biomolecular simulation tasks through generic <em>protocols</em>. These
+present the user with a limited set of options which are handled by all of
+the external packages which we support. For example, the various protocols
+used for molecular dynamics simulations are defined <a class="reference internal" href="api/index_Protocol.html#ref-protocol"><span class="std std-ref">here</span></a>.</p>
+<p>Protocols are translated into a package specific implementation during the
+construction of a <a class="reference internal" href="api/index_Process.html#ref-process"><span class="std std-ref">process</span></a> object. It is here that all
+of the required input files are created for the specific process, as well
+as any command-line arguments that need to be passed to the executable.</p>
+<div class="section" id="customising-protocols">
+<h2>Customising protocols<a class="headerlink" href="#customising-protocols" title="Permalink to this headline">¶</a></h2>
+<p>Often a user may wish to customise the protocols that are provided by
+BioSimSpace. For a particular molecular dynamics engine, this can be
+done <em>after</em> the creation of a process by using helper methods, such as
+<code class="docutils literal notranslate"><span class="pre">setConfig</span></code>. This is useful if you wish to make small tweaks to the default
+protocols. For example, see the <a class="reference internal" href="api/generated/BioSimSpace.Process.Amber.html#BioSimSpace.Process.Amber" title="BioSimSpace.Process.Amber"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Process.Amber</span></code></a>
+documentation. (Command-line arguments can be configured in a similar way.)
+Alternatively, a user can directly generate a completely custom procotol using
+<a class="reference internal" href="api/generated/BioSimSpace.Protocol.Custom.html#BioSimSpace.Protocol.Custom" title="BioSimSpace.Protocol.Custom"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Protocol.Custom</span></code></a>, which
+takes a list of configuration strings, or the path to a configuration file,
+as a constructor argument. This will then need to be passed to the constructor
+of the appropriate process object, (e.g. <a class="reference internal" href="api/generated/BioSimSpace.Process.Amber.html#BioSimSpace.Process.Amber" title="BioSimSpace.Process.Amber"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Process.Amber</span></code></a>
+if it were a configuration file for AMBER).</p>
+<p>Note that both of the methods above tie you in to a specific simulation
+engine, i.e. a script written with a custom protocol is no longer
+interoperable since it will only work on a different computer if the <em>same</em>
+simulation engine happens to be installed there.</p>
+<p>Another way to customise the existing protocols is to <em>override</em> the private
+<code class="docutils literal notranslate"><span class="pre">_generate_config</span></code> method in the classes for each of the simulation
+<a class="reference internal" href="api/index_Process.html#ref-process"><span class="std std-ref">processes</span></a>. This could be done in your own Python module,
+which could be installed alongside BioSimSpace to provide an alternative
+interoperable implementation of the protocols.</p>
+</div>
+<div class="section" id="writing-protocols">
+<h2>Writing protocols<a class="headerlink" href="#writing-protocols" title="Permalink to this headline">¶</a></h2>
+<p>Occasionally it might be desirable to write a protocol for a <em>new</em> simulation
+that isn’t currently supported by BioSimSpace. To do so requires the following
+steps:</p>
+<ol class="arabic simple">
+<li><p>Create a new <a class="reference internal" href="api/index_Protocol.html#ref-protocol"><span class="std std-ref">Protocol</span></a> class that accepts keyword
+arguments that are supported across <em>all</em> molecular dynamics engines that
+implement the protocol. (It is not necessary that the protocol is implemented
+by <em>all</em> of the engines, only that the arguments are supported by those
+that do.) The class should provide functionality for setting and getting
+the configuration options, along with checking the type and value of the
+user input.</p></li>
+<li><p>Update the private <code class="docutils literal notranslate"><span class="pre">_generate_config</span></code> method in each of the <a class="reference internal" href="api/index_Process.html#ref-process"><span class="std std-ref">Process</span></a>
+classes that support the protocol to translate the high-level options
+into package specific configuration files. There is no need to make
+modifications to the process classes that don’t support the protocol,
+since a <a class="reference internal" href="api/generated/BioSimSpace._Exceptions.IncompatibleError.html#BioSimSpace._Exceptions.IncompatibleError" title="BioSimSpace._Exceptions.IncompatibleError"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace._Exceptions.IncompatibleError</span></code></a>
+will be raised if the user attempts to create a process to implement
+the protocol.</p></li>
+<li><p>Some protocols require specific command-line arguments to be passed to
+engine’s executable. If this is the case, update the <code class="docutils literal notranslate"><span class="pre">_generate_args</span></code>
+method of the process to modify the argument string when the protocol
+is used.</p></li>
+</ol>
+<p>Protocols are also used in several other places within BioSimSpace, other
+than for defining specific molecular dynamics processes described above.
+In particular:</p>
+<ul class="simple">
+<li><p>Protocols are used to define the way in which a <a class="reference internal" href="api/index_Parameters.html#ref-parameters"><span class="std std-ref">molecular parameterisation</span></a>
+is performed. The <a class="reference internal" href="api/index_Parameters.html#module-BioSimSpace.Parameters" title="BioSimSpace.Parameters"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Parameters</span></code></a>
+package comes with its own set of <a class="reference external" href="https://github.com/michellab/BioSimSpace/tree/devel/python/BioSimSpace/Parameters/Protocol">protocols</a>,
+which can be customised by the user. To do so, either override the <code class="docutils literal notranslate"><span class="pre">run</span></code>
+method of an existing protocol, or define an entirely new protocol that
+inherits from the base class (you would need to do this if, for example,
+you were adding support for a new force field).</p></li>
+<li><p>Complex, multi-stage, molecular simulation protocols, such as free-energy
+perturbation, are typically executed by a separate package, e.g.
+<a class="reference internal" href="api/index_FreeEnergy.html#module-BioSimSpace.FreeEnergy" title="BioSimSpace.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.FreeEnergy</span></code></a>. Here a <code class="docutils literal notranslate"><span class="pre">run</span></code>
+method orchestrates the separate processes that are required by overall
+simulation. This means that the free-energy objects themselves, e.g.
+<a class="reference internal" href="api/generated/BioSimSpace.FreeEnergy.Binding.html#BioSimSpace.FreeEnergy.Binding" title="BioSimSpace.FreeEnergy.Binding"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.FreeEnergy.Binding</span></code></a>,
+can be thought of as a high-level protocol for the simulation method, with
+low-level protocols used to implement the specific stages of the simulation.</p></li>
+<li><p><a class="reference internal" href="api/index_Metadynamics.html#ref-metadynamics"><span class="std std-ref">Metadynamics</span></a> support is provided via a molecular
+simulation engine patched by <a class="reference external" href="https://www.plumed.org">PLUMED</a>. Since it
+is not possible to use PLUMED in isolation, the <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Process.Plumed</span></code>
+class is not exposed to the user, instead being indirectly created as a
+member of another molecular simulation process, e.g.
+<a class="reference internal" href="api/generated/BioSimSpace.Process.Gromacs.html#BioSimSpace.Process.Gromacs" title="BioSimSpace.Process.Gromacs"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Process.Gromacs</span></code></a>, when
+a metadynamics protocol is chosen. Modifications for specific metadynamics
+protocols, e.g. adding support for new collective variables, needs to
+be implemented in the <code class="docutils literal notranslate"><span class="pre">createConfig</span></code> method of the <a class="reference external" href="https://github.com/michellab/BioSimSpace/blob/devel/python/BioSimSpace/Process/_plumed.py">BioSimSpace.Process.Plumed</a> class.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="media.html" class="btn btn-neutral float-right" title="Media" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="notebook.html" class="btn btn-neutral float-left" title="Notebook server" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2019 Michel Lab
+      <span class="lastupdated">
+        Last updated on Oct 28, 2019.
+      </span>
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Notebook server &mdash; BioSimSpace 2019.2.0+26.g1445dbe documentation</title>
+  <title>Compatibility &mdash; BioSimSpace 2019.2.0+26.g1445dbe documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Protocols" href="protocols.html" />
-    <link rel="prev" title="Nodes" href="nodes.html" /> 
+    <link rel="next" title="Documentation" href="api/index.html" />
+    <link rel="prev" title="Installation" href="install.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,8 +93,13 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="compatibility.html">Compatibility</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Compatibility</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#amber">AMBER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gromacs">GROMACS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#namd">NAMD</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">Documentation</a></li>
@@ -106,12 +111,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="nodes.html">Nodes</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebook server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#demos">Demos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#workshops">Workshops</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebook server</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="protocols.html">Protocols</a></li>
@@ -166,13 +167,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Notebook server</li>
+      <li>Compatibility</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/notebook.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/compatibility.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -185,35 +186,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="notebook-server">
-<span id="ref-notebook"></span><h1>Notebook server<a class="headerlink" href="#notebook-server" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<p>Visit our online notebook server <a class="reference external" href="https://notebook.biosimspace.org">here</a>.
-This will launch a <a class="reference external" href="https://jupyter.org">Jupyter</a> hub running inside of
-a <a class="reference external" href="https://www.docker.com/">Docker</a> container. This includes all of the
-software that is required, allowing you to play around with BioSimSpace and
-learn how it works without needing to install anything yourself.</p>
-<div class="section" id="demos">
-<h2>Demos<a class="headerlink" href="#demos" title="Permalink to this headline">¶</a></h2>
-<p>The notebook server has a set of example nodes to get you started. To run any
-of these, simply navigate to the <code class="docutils literal notranslate"><span class="pre">demo</span></code> directory from the landing page.
-A description of each node is given below:</p>
+  <div class="section" id="compatibility">
+<span id="ref-compatibility"></span><h1>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h1>
+<p>BioSimSpace has been tested against the following versions of its
+external dependencies:</p>
+<div class="section" id="amber">
+<h2><a class="reference external" href="http://ambermd.org">AMBER</a><a class="headerlink" href="#amber" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">conversion.ipynb</span></code>: Convert between common molecular file formats.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">input_files.ipynb</span></code>: Generate molecular dynamics input files for a range of protocols and molecular dynamics engines.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">molecular_setup.ipynb</span></code>: Parameterise and solvate a molecule ready for simulation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">minimisation.ipynb</span></code>: Minimise a molecular configuration.</p></li>
+<li><p>AmberTools19</p></li>
+<li><p>AmberTools18</p></li>
 </ul>
 </div>
-<div class="section" id="workshops">
-<h2>Workshops<a class="headerlink" href="#workshops" title="Permalink to this headline">¶</a></h2>
-<p>The server also contains several BioSimSpace training workshops. Navigate to
-the <code class="docutils literal notranslate"><span class="pre">workshops</span></code> directory from the landing page.</p>
+<div class="section" id="gromacs">
+<h2><a class="reference external" href="http://www.gromacs.org">GROMACS</a><a class="headerlink" href="#gromacs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code>: A basic Python programing workshop.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">introduction</span></code>: An introduction to the core concepts of BioSimSpace.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">advanced</span></code>: Using BioSimSpace to set up and run advanced sampling simulations, such as free energy pertubation and metadynamics.</p></li>
+<li><p>2019 series</p></li>
+<li><p>2018 series</p></li>
+</ul>
+</div>
+<div class="section" id="namd">
+<h2><a class="reference external" href="https://www.ks.uiuc.edu/Research/namd">NAMD</a><a class="headerlink" href="#namd" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>2.13</p></li>
+<li><p>2.12</p></li>
 </ul>
 </div>
 </div>
@@ -226,10 +221,10 @@ the <code class="docutils literal notranslate"><span class="pre">workshops</span
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="protocols.html" class="btn btn-neutral float-right" title="Protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="api/index.html" class="btn btn-neutral float-right" title="Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nodes.html" class="btn btn-neutral float-left" title="Nodes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
