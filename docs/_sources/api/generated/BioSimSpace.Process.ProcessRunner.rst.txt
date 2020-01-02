@@ -13,7 +13,28 @@ BioSimSpace.Process.ProcessRunner
 
    .. autosummary::
    
+      ~ProcessRunner.__delattr__
+      ~ProcessRunner.__dir__
+      ~ProcessRunner.__eq__
+      ~ProcessRunner.__format__
+      ~ProcessRunner.__ge__
+      ~ProcessRunner.__getattribute__
+      ~ProcessRunner.__gt__
+      ~ProcessRunner.__hash__
       ~ProcessRunner.__init__
+      ~ProcessRunner.__init_subclass__
+      ~ProcessRunner.__le__
+      ~ProcessRunner.__lt__
+      ~ProcessRunner.__ne__
+      ~ProcessRunner.__new__
+      ~ProcessRunner.__reduce__
+      ~ProcessRunner.__reduce_ex__
+      ~ProcessRunner.__repr__
+      ~ProcessRunner.__setattr__
+      ~ProcessRunner.__sizeof__
+      ~ProcessRunner.__str__
+      ~ProcessRunner.__subclasshook__
+      ~ProcessRunner._nest_directories
       ~ProcessRunner.addProcess
       ~ProcessRunner.errored
       ~ProcessRunner.getName
@@ -40,5 +61,14 @@ BioSimSpace.Process.ProcessRunner
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ProcessRunner.__dict__
+      ~ProcessRunner.__doc__
+      ~ProcessRunner.__module__
+      ~ProcessRunner.__weakref__
    
    

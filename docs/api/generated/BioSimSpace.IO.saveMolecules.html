@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.saveMolecules &mdash; BioSimSpace 2019.3.0+1.g622c397 documentation</title>
+  <title>BioSimSpace.IO.saveMolecules &mdash; BioSimSpace 2019.3.0+2.gb554340 documentation</title>
   
 
   
@@ -242,7 +242,7 @@ with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <p class="rubric">Examples</p>
 <p>Load a molecular system from AMBER coordinate and topology files then
 try to save it to all supported file formats.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="nb">format</span> <span class="ow">in</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">fileFormats</span><span class="p">():</span>
 <span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
@@ -254,7 +254,7 @@ try to save it to all supported file formats.</p>
 <p>Load a molecular system from AMBER coordinate and topology files then
 try to save it to GROMACS format, mapping and un-mapping the charge
 property along the way.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">saveMolecules</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> <span class="n">system</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;gro87&quot;</span><span class="p">,</span> <span class="s2">&quot;grotop&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
 </pre></div>
@@ -285,7 +285,7 @@ property along the way.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Nov 23, 2019.
+        Last updated on Jan 02, 2020.
       </span>
 
     </p>

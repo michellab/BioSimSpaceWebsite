@@ -13,7 +13,28 @@ BioSimSpace.Protocol.Metadynamics
 
    .. autosummary::
    
+      ~Metadynamics.__delattr__
+      ~Metadynamics.__dir__
+      ~Metadynamics.__eq__
+      ~Metadynamics.__format__
+      ~Metadynamics.__ge__
+      ~Metadynamics.__getattribute__
+      ~Metadynamics.__gt__
+      ~Metadynamics.__hash__
       ~Metadynamics.__init__
+      ~Metadynamics.__init_subclass__
+      ~Metadynamics.__le__
+      ~Metadynamics.__lt__
+      ~Metadynamics.__ne__
+      ~Metadynamics.__new__
+      ~Metadynamics.__reduce__
+      ~Metadynamics.__reduce_ex__
+      ~Metadynamics.__repr__
+      ~Metadynamics.__setattr__
+      ~Metadynamics.__sizeof__
+      ~Metadynamics.__str__
+      ~Metadynamics.__subclasshook__
+      ~Metadynamics._setCustomised
       ~Metadynamics.getBiasFactor
       ~Metadynamics.getCollectiveVariable
       ~Metadynamics.getColvarFile
@@ -40,5 +61,14 @@ BioSimSpace.Protocol.Metadynamics
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Metadynamics.__dict__
+      ~Metadynamics.__doc__
+      ~Metadynamics.__module__
+      ~Metadynamics.__weakref__
    
    

@@ -13,7 +13,35 @@ BioSimSpace.\_SireWrappers.Molecules
 
    .. autosummary::
    
+      ~Molecules.__add__
+      ~Molecules.__delattr__
+      ~Molecules.__dir__
+      ~Molecules.__eq__
+      ~Molecules.__format__
+      ~Molecules.__ge__
+      ~Molecules.__getattribute__
+      ~Molecules.__getitem__
+      ~Molecules.__gt__
+      ~Molecules.__hash__
       ~Molecules.__init__
+      ~Molecules.__init_subclass__
+      ~Molecules.__iter__
+      ~Molecules.__le__
+      ~Molecules.__len__
+      ~Molecules.__lt__
+      ~Molecules.__ne__
+      ~Molecules.__new__
+      ~Molecules.__next__
+      ~Molecules.__reduce__
+      ~Molecules.__reduce_ex__
+      ~Molecules.__repr__
+      ~Molecules.__setattr__
+      ~Molecules.__setitem__
+      ~Molecules.__sizeof__
+      ~Molecules.__str__
+      ~Molecules.__subclasshook__
+      ~Molecules._getAABox
+      ~Molecules._getSireObject
       ~Molecules.charge
       ~Molecules.copy
       ~Molecules.getAxisAlignedBoundingBox
@@ -26,5 +54,14 @@ BioSimSpace.\_SireWrappers.Molecules
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Molecules.__dict__
+      ~Molecules.__doc__
+      ~Molecules.__module__
+      ~Molecules.__weakref__
    
    

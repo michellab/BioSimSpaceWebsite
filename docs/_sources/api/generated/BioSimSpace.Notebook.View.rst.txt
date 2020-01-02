@@ -13,7 +13,28 @@ BioSimSpace.Notebook.View
 
    .. autosummary::
    
+      ~View.__delattr__
+      ~View.__dir__
+      ~View.__eq__
+      ~View.__format__
+      ~View.__ge__
+      ~View.__getattribute__
+      ~View.__gt__
+      ~View.__hash__
       ~View.__init__
+      ~View.__init_subclass__
+      ~View.__le__
+      ~View.__lt__
+      ~View.__ne__
+      ~View.__new__
+      ~View.__reduce__
+      ~View.__reduce_ex__
+      ~View.__repr__
+      ~View.__setattr__
+      ~View.__sizeof__
+      ~View.__str__
+      ~View.__subclasshook__
+      ~View._create_view
       ~View.molecule
       ~View.molecules
       ~View.nViews
@@ -25,5 +46,14 @@ BioSimSpace.Notebook.View
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~View.__dict__
+      ~View.__doc__
+      ~View.__module__
+      ~View.__weakref__
    
    

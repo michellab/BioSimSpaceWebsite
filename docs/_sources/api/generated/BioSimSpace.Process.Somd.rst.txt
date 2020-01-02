@@ -13,7 +13,39 @@ BioSimSpace.Process.Somd
 
    .. autosummary::
    
+      ~Somd.__delattr__
+      ~Somd.__dir__
+      ~Somd.__eq__
+      ~Somd.__format__
+      ~Somd.__ge__
+      ~Somd.__getattribute__
+      ~Somd.__gt__
+      ~Somd.__hash__
       ~Somd.__init__
+      ~Somd.__init_subclass__
+      ~Somd.__le__
+      ~Somd.__lt__
+      ~Somd.__ne__
+      ~Somd.__new__
+      ~Somd.__reduce__
+      ~Somd.__reduce_ex__
+      ~Somd.__repr__
+      ~Somd.__setattr__
+      ~Somd.__sizeof__
+      ~Somd.__str__
+      ~Somd.__subclasshook__
+      ~Somd._clear_output
+      ~Somd._generate_args
+      ~Somd._generate_config
+      ~Somd._getCollectiveVariable
+      ~Somd._getFreeEnergy
+      ~Somd._getPlumedConfig
+      ~Somd._getPlumedConfigFile
+      ~Somd._getTime
+      ~Somd._sampleConfigurations
+      ~Somd._setPlumedConfig
+      ~Somd._setup
+      ~Somd._writePlumedConfig
       ~Somd.addArgs
       ~Somd.addToConfig
       ~Somd.clearArgs
@@ -63,5 +95,15 @@ BioSimSpace.Process.Somd
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Somd.__dict__
+      ~Somd.__doc__
+      ~Somd.__module__
+      ~Somd.__weakref__
+      ~Somd._platforms
    
    

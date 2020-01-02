@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol.Production &mdash; BioSimSpace 2019.3.0+1.g622c397 documentation</title>
+  <title>BioSimSpace.Protocol.Production &mdash; BioSimSpace 2019.3.0+2.gb554340 documentation</title>
   
 
   
@@ -249,50 +249,134 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code></p></td>
+<td><p>Implement delattr(self, name).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
+<td><p>Default dir() implementation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></p></td>
+<td><p>Return self==value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code></p></td>
+<td><p>Default object formatter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code></p></td>
+<td><p>Return self&gt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code></p></td>
+<td><p>Return getattr(self, name).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code></p></td>
+<td><p>Return self&gt;value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></p></td>
+<td><p>Return hash(self).</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.__init__" title="BioSimSpace.Protocol.Production.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([timestep, runtime, temperature, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFirstStep" title="BioSimSpace.Protocol.Production.getFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstStep</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
+<td><p>This method is called when a class is subclassed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code></p></td>
+<td><p>Return self&lt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code></p></td>
+<td><p>Return self&lt;value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code></p></td>
+<td><p>Return self!=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code></p></td>
+<td><p>Create and return a new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
+<td><p>Return a string showing how to instantiate the object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code></p></td>
+<td><p>Implement setattr(self, name, value).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code></p></td>
+<td><p>Size of object in memory, in bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
+<td><p>Return a human readable string representation of the object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
+<td><p>Abstract classes can override this to customize issubclass().</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_setCustomised</span></code>(is_customised)</p></td>
+<td><p>Internal function to flag whether a protocol has been customised.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFirstStep" title="BioSimSpace.Protocol.Production.getFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstStep</span></code></a>()</p></td>
 <td><p>Return the first time step.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFrames" title="BioSimSpace.Protocol.Production.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFrames" title="BioSimSpace.Protocol.Production.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>()</p></td>
 <td><p>Return the number of frames.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getPressure" title="BioSimSpace.Protocol.Production.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getPressure" title="BioSimSpace.Protocol.Production.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getRunTime" title="BioSimSpace.Protocol.Production.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getRunTime" title="BioSimSpace.Protocol.Production.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTemperature" title="BioSimSpace.Protocol.Production.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTemperature" title="BioSimSpace.Protocol.Production.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
 <td><p>Return temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTimeStep" title="BioSimSpace.Protocol.Production.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTimeStep" title="BioSimSpace.Protocol.Production.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
 <td><p>Return the time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.isRestart" title="BioSimSpace.Protocol.Production.isRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRestart</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.isRestart" title="BioSimSpace.Protocol.Production.isRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRestart</span></code></a>()</p></td>
 <td><p>Return whether this restart simulation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFirstStep" title="BioSimSpace.Protocol.Production.setFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFirstStep</span></code></a>(first_step)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFirstStep" title="BioSimSpace.Protocol.Production.setFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFirstStep</span></code></a>(first_step)</p></td>
 <td><p>Set the initial time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFrames" title="BioSimSpace.Protocol.Production.setFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFrames</span></code></a>(frames)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFrames" title="BioSimSpace.Protocol.Production.setFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFrames</span></code></a>(frames)</p></td>
 <td><p>Set the number of frames.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setPressure" title="BioSimSpace.Protocol.Production.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setPressure" title="BioSimSpace.Protocol.Production.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
 <td><p>Set the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRestart" title="BioSimSpace.Protocol.Production.setRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestart</span></code></a>(restart)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRestart" title="BioSimSpace.Protocol.Production.setRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestart</span></code></a>(restart)</p></td>
 <td><p>Set the restart flag.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRunTime" title="BioSimSpace.Protocol.Production.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRunTime" title="BioSimSpace.Protocol.Production.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
 <td><p>Set the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setTemperature" title="BioSimSpace.Protocol.Production.setTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code></a>(temperature)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setTemperature" title="BioSimSpace.Protocol.Production.setTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code></a>(temperature)</p></td>
 <td><p>Set the temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setTimeStep" title="BioSimSpace.Protocol.Production.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setTimeStep" title="BioSimSpace.Protocol.Production.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</p></td>
 <td><p>Set the time step.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
+<td><p>list of weak references to the object (if defined)</p></td>
 </tr>
 </tbody>
 </table>
@@ -497,7 +581,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Nov 23, 2019.
+        Last updated on Jan 02, 2020.
       </span>
 
     </p>

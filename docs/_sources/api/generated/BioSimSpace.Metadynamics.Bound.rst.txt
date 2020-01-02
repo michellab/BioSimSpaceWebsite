@@ -13,7 +13,27 @@ BioSimSpace.Metadynamics.Bound
 
    .. autosummary::
    
+      ~Bound.__delattr__
+      ~Bound.__dir__
+      ~Bound.__eq__
+      ~Bound.__format__
+      ~Bound.__ge__
+      ~Bound.__getattribute__
+      ~Bound.__gt__
+      ~Bound.__hash__
       ~Bound.__init__
+      ~Bound.__init_subclass__
+      ~Bound.__le__
+      ~Bound.__lt__
+      ~Bound.__ne__
+      ~Bound.__new__
+      ~Bound.__reduce__
+      ~Bound.__reduce_ex__
+      ~Bound.__repr__
+      ~Bound.__setattr__
+      ~Bound.__sizeof__
+      ~Bound.__str__
+      ~Bound.__subclasshook__
       ~Bound.getEpsilon
       ~Bound.getExponent
       ~Bound.getForceConstant
@@ -26,5 +46,14 @@ BioSimSpace.Metadynamics.Bound
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Bound.__dict__
+      ~Bound.__doc__
+      ~Bound.__module__
+      ~Bound.__weakref__
    
    

@@ -13,7 +13,29 @@ BioSimSpace.Gateway.File
 
    .. autosummary::
    
+      ~File.__delattr__
+      ~File.__dir__
+      ~File.__eq__
+      ~File.__format__
+      ~File.__ge__
+      ~File.__getattribute__
+      ~File.__gt__
+      ~File.__hash__
       ~File.__init__
+      ~File.__init_subclass__
+      ~File.__le__
+      ~File.__lt__
+      ~File.__ne__
+      ~File.__new__
+      ~File.__reduce__
+      ~File.__reduce_ex__
+      ~File.__repr__
+      ~File.__setattr__
+      ~File.__sizeof__
+      ~File.__str__
+      ~File.__subclasshook__
+      ~File._validate
+      ~File._validate_default
       ~File.getAllowedValues
       ~File.getArgType
       ~File.getDefault
@@ -29,5 +51,15 @@ BioSimSpace.Gateway.File
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~File.__dict__
+      ~File.__doc__
+      ~File.__module__
+      ~File.__weakref__
+      ~File._is_multi
    
    

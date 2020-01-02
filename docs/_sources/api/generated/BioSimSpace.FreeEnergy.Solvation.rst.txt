@@ -13,12 +13,47 @@ BioSimSpace.FreeEnergy.Solvation
 
    .. autosummary::
    
+      ~Solvation.__delattr__
+      ~Solvation.__dir__
+      ~Solvation.__eq__
+      ~Solvation.__format__
+      ~Solvation.__ge__
+      ~Solvation.__getattribute__
+      ~Solvation.__gt__
+      ~Solvation.__hash__
       ~Solvation.__init__
+      ~Solvation.__init_subclass__
+      ~Solvation.__le__
+      ~Solvation.__lt__
+      ~Solvation.__ne__
+      ~Solvation.__new__
+      ~Solvation.__reduce__
+      ~Solvation.__reduce_ex__
+      ~Solvation.__repr__
+      ~Solvation.__setattr__
+      ~Solvation.__sizeof__
+      ~Solvation.__str__
+      ~Solvation.__subclasshook__
+      ~Solvation._analyse_gromacs
+      ~Solvation._analyse_somd
+      ~Solvation._initialise_runner
+      ~Solvation._update_run_args
       ~Solvation.analyse
       ~Solvation.run
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Solvation.__dict__
+      ~Solvation.__doc__
+      ~Solvation.__module__
+      ~Solvation.__weakref__
+      ~Solvation._analyse_freenrg
+      ~Solvation._engines
    
    

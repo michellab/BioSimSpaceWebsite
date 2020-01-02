@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2019.3.0+1.g622c397 documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2019.3.0+2.gb554340 documentation</title>
   
 
   
@@ -244,74 +244,158 @@ the process runner top-level directory.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code></p></td>
+<td><p>Implement delattr(self, name).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
+<td><p>Default dir() implementation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></p></td>
+<td><p>Return self==value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code></p></td>
+<td><p>Default object formatter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code></p></td>
+<td><p>Return self&gt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code></p></td>
+<td><p>Return getattr(self, name).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code></p></td>
+<td><p>Return self&gt;value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></p></td>
+<td><p>Return hash(self).</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.__init__" title="BioSimSpace.Process.ProcessRunner.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(processes[, name, work_dir, nest_dirs])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="BioSimSpace.Process.ProcessRunner.addProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addProcess</span></code></a>(process)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
+<td><p>This method is called when a class is subclassed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code></p></td>
+<td><p>Return self&lt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code></p></td>
+<td><p>Return self&lt;value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code></p></td>
+<td><p>Return self!=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code></p></td>
+<td><p>Create and return a new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
+<td><p>Return a human readable string representation of the object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code></p></td>
+<td><p>Implement setattr(self, name, value).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code></p></td>
+<td><p>Size of object in memory, in bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
+<td><p>Return a human readable string representation of the object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
+<td><p>Abstract classes can override this to customize issubclass().</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_nest_directories</span></code>(processes)</p></td>
+<td><p>Helper function to nest processes inside the runner’s working directory.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="BioSimSpace.Process.ProcessRunner.addProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addProcess</span></code></a>(process)</p></td>
 <td><p>Add a process to the runner.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.errored" title="BioSimSpace.Process.ProcessRunner.errored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errored</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.errored" title="BioSimSpace.Process.ProcessRunner.errored"><code class="xref py py-obj docutils literal notranslate"><span class="pre">errored</span></code></a>()</p></td>
 <td><p>Return the indices of the errored processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.getName" title="BioSimSpace.Process.ProcessRunner.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.getName" title="BioSimSpace.Process.ProcessRunner.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Return the process runner name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isError" title="BioSimSpace.Process.ProcessRunner.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isError" title="BioSimSpace.Process.ProcessRunner.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
 <td><p>Return whether each process is in an error state.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="BioSimSpace.Process.ProcessRunner.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isQueued" title="BioSimSpace.Process.ProcessRunner.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
 <td><p>Return whether each process is queued.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="BioSimSpace.Process.ProcessRunner.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.isRunning" title="BioSimSpace.Process.ProcessRunner.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
 <td><p>Return whether each process is running.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</p></td>
 <td><p>Kill a specific process. The same can be achieved using:</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</p></td>
 <td><p>Kill all of the processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nError" title="BioSimSpace.Process.ProcessRunner.nError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nError</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nError" title="BioSimSpace.Process.ProcessRunner.nError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nError</span></code></a>()</p></td>
 <td><p>Return the number of errored processes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="BioSimSpace.Process.ProcessRunner.nProcesses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nProcesses</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nProcesses" title="BioSimSpace.Process.ProcessRunner.nProcesses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nProcesses</span></code></a>()</p></td>
 <td><p>Return the number of processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="BioSimSpace.Process.ProcessRunner.nQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nQueued</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nQueued" title="BioSimSpace.Process.ProcessRunner.nQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nQueued</span></code></a>()</p></td>
 <td><p>Return the number of queued processes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="BioSimSpace.Process.ProcessRunner.nRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nRunning</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.nRunning" title="BioSimSpace.Process.ProcessRunner.nRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nRunning</span></code></a>()</p></td>
 <td><p>Return the number of running processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.processes" title="BioSimSpace.Process.ProcessRunner.processes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processes</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.processes" title="BioSimSpace.Process.ProcessRunner.processes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">processes</span></code></a>()</p></td>
 <td><p>Return the list of processes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.queued" title="BioSimSpace.Process.ProcessRunner.queued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">queued</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.queued" title="BioSimSpace.Process.ProcessRunner.queued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">queued</span></code></a>()</p></td>
 <td><p>Return the indices of the queued processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="BioSimSpace.Process.ProcessRunner.removeProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeProcess</span></code></a>(index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.removeProcess" title="BioSimSpace.Process.ProcessRunner.removeProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeProcess</span></code></a>(index)</p></td>
 <td><p>Remove a process from the runner.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="BioSimSpace.Process.ProcessRunner.restartFailed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restartFailed</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.restartFailed" title="BioSimSpace.Process.ProcessRunner.restartFailed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restartFailed</span></code></a>()</p></td>
 <td><p>Restart any jobs that are in an error state.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.runTime" title="BioSimSpace.Process.ProcessRunner.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.runTime" title="BioSimSpace.Process.ProcessRunner.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
 <td><p>Return the run time for each process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.running" title="BioSimSpace.Process.ProcessRunner.running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">running</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.running" title="BioSimSpace.Process.ProcessRunner.running"><code class="xref py py-obj docutils literal notranslate"><span class="pre">running</span></code></a>()</p></td>
 <td><p>Return the indices of the running processes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.setName" title="BioSimSpace.Process.ProcessRunner.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.setName" title="BioSimSpace.Process.ProcessRunner.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
 <td><p>Set the process runner name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
 <td><p>Start a specific process. The same can be achieved using:</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>()</p></td>
 <td><p>Start all of the processes.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.workDir" title="BioSimSpace.Process.ProcessRunner.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.workDir" title="BioSimSpace.Process.ProcessRunner.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
 <td><p>Return the working directory.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
+<td><p>list of weak references to the object (if defined)</p></td>
 </tr>
 </tbody>
 </table>
@@ -616,7 +700,7 @@ the process runner top-level directory.</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Nov 23, 2019.
+        Last updated on Jan 02, 2020.
       </span>
 
     </p>

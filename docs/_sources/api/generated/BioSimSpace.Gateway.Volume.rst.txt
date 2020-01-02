@@ -13,7 +13,29 @@ BioSimSpace.Gateway.Volume
 
    .. autosummary::
    
+      ~Volume.__delattr__
+      ~Volume.__dir__
+      ~Volume.__eq__
+      ~Volume.__format__
+      ~Volume.__ge__
+      ~Volume.__getattribute__
+      ~Volume.__gt__
+      ~Volume.__hash__
       ~Volume.__init__
+      ~Volume.__init_subclass__
+      ~Volume.__le__
+      ~Volume.__lt__
+      ~Volume.__ne__
+      ~Volume.__new__
+      ~Volume.__reduce__
+      ~Volume.__reduce_ex__
+      ~Volume.__repr__
+      ~Volume.__setattr__
+      ~Volume.__sizeof__
+      ~Volume.__str__
+      ~Volume.__subclasshook__
+      ~Volume._validate
+      ~Volume._validate_default
       ~Volume.getAllowedValues
       ~Volume.getArgType
       ~Volume.getDefault
@@ -29,5 +51,15 @@ BioSimSpace.Gateway.Volume
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Volume.__dict__
+      ~Volume.__doc__
+      ~Volume.__module__
+      ~Volume.__weakref__
+      ~Volume._is_multi
    
    

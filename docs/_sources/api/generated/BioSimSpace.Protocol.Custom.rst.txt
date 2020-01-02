@@ -13,12 +13,42 @@ BioSimSpace.Protocol.Custom
 
    .. autosummary::
    
+      ~Custom.__delattr__
+      ~Custom.__dir__
+      ~Custom.__eq__
+      ~Custom.__format__
+      ~Custom.__ge__
+      ~Custom.__getattribute__
+      ~Custom.__gt__
+      ~Custom.__hash__
       ~Custom.__init__
+      ~Custom.__init_subclass__
+      ~Custom.__le__
+      ~Custom.__lt__
+      ~Custom.__ne__
+      ~Custom.__new__
+      ~Custom.__reduce__
+      ~Custom.__reduce_ex__
+      ~Custom.__repr__
+      ~Custom.__setattr__
+      ~Custom.__sizeof__
+      ~Custom.__str__
+      ~Custom.__subclasshook__
+      ~Custom._setCustomised
       ~Custom.getConfig
       ~Custom.setConfig
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Custom.__dict__
+      ~Custom.__doc__
+      ~Custom.__module__
+      ~Custom.__weakref__
    
    

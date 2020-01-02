@@ -13,7 +13,38 @@ BioSimSpace.Types.Temperature
 
    .. autosummary::
    
+      ~Temperature.__add__
+      ~Temperature.__delattr__
+      ~Temperature.__dir__
+      ~Temperature.__eq__
+      ~Temperature.__format__
+      ~Temperature.__ge__
+      ~Temperature.__getattribute__
+      ~Temperature.__gt__
       ~Temperature.__init__
+      ~Temperature.__init_subclass__
+      ~Temperature.__le__
+      ~Temperature.__lt__
+      ~Temperature.__mul__
+      ~Temperature.__ne__
+      ~Temperature.__neg__
+      ~Temperature.__new__
+      ~Temperature.__pos__
+      ~Temperature.__reduce__
+      ~Temperature.__reduce_ex__
+      ~Temperature.__repr__
+      ~Temperature.__rmul__
+      ~Temperature.__setattr__
+      ~Temperature.__sizeof__
+      ~Temperature.__str__
+      ~Temperature.__sub__
+      ~Temperature.__subclasshook__
+      ~Temperature.__truediv__
+      ~Temperature._convert_to
+      ~Temperature._default_unit
+      ~Temperature._from_string
+      ~Temperature._kelvin
+      ~Temperature._validate_unit
       ~Temperature.celsius
       ~Temperature.fahrenheit
       ~Temperature.kelvin
@@ -23,5 +54,20 @@ BioSimSpace.Types.Temperature
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Temperature.__dict__
+      ~Temperature.__doc__
+      ~Temperature.__hash__
+      ~Temperature.__module__
+      ~Temperature.__weakref__
+      ~Temperature._abbreviations
+      ~Temperature._doc_strings
+      ~Temperature._null_unit
+      ~Temperature._print_format
+      ~Temperature._supported_units
    
    

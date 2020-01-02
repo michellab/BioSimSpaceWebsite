@@ -13,7 +13,29 @@ BioSimSpace.\_SireWrappers.Atom
 
    .. autosummary::
    
+      ~Atom.__delattr__
+      ~Atom.__dir__
+      ~Atom.__eq__
+      ~Atom.__format__
+      ~Atom.__ge__
+      ~Atom.__getattribute__
+      ~Atom.__gt__
+      ~Atom.__hash__
       ~Atom.__init__
+      ~Atom.__init_subclass__
+      ~Atom.__le__
+      ~Atom.__lt__
+      ~Atom.__ne__
+      ~Atom.__new__
+      ~Atom.__reduce__
+      ~Atom.__reduce_ex__
+      ~Atom.__repr__
+      ~Atom.__setattr__
+      ~Atom.__sizeof__
+      ~Atom.__str__
+      ~Atom.__subclasshook__
+      ~Atom._getAABox
+      ~Atom._getSireObject
       ~Atom.charge
       ~Atom.copy
       ~Atom.element
@@ -27,5 +49,14 @@ BioSimSpace.\_SireWrappers.Atom
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Atom.__dict__
+      ~Atom.__doc__
+      ~Atom.__module__
+      ~Atom.__weakref__
    
    

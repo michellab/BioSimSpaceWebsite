@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.Length &mdash; BioSimSpace 2019.3.0+1.g622c397 documentation</title>
+  <title>BioSimSpace.Gateway.Length &mdash; BioSimSpace 2019.3.0+2.gb554340 documentation</title>
   
 
   
@@ -233,20 +233,20 @@
 <dd><p>A length requirement.</p>
 <p class="rubric">Examples</p>
 <p>Create a length requirement with a default of 10 Angstrom.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;angstrom&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The same, but explicitly passing a <a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>
 for the default.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Create a length requirement with a default of 10 Angstrom and a maximum
 of 50 nanometers. Note that the unit is taken from the default value.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">maximum</span><span class="o">=</span><span class="mi">50</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">)</span>
@@ -277,8 +277,74 @@ of 50 nanometers. Note that the unit is taken from the default value.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code></p></td>
+<td><p>Implement delattr(self, name).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code></p></td>
+<td><p>Default dir() implementation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code></p></td>
+<td><p>Return self==value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code></p></td>
+<td><p>Default object formatter.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code></p></td>
+<td><p>Return self&gt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code></p></td>
+<td><p>Return getattr(self, name).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code></p></td>
+<td><p>Return self&gt;value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></p></td>
+<td><p>Return hash(self).</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.__init__" title="BioSimSpace.Gateway.Length.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([help, default, unit, minimum, …])</p></td>
 <td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
+<td><p>This method is called when a class is subclassed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code></p></td>
+<td><p>Return self&lt;=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code></p></td>
+<td><p>Return self&lt;value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code></p></td>
+<td><p>Return self!=value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code></p></td>
+<td><p>Create and return a new object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code></p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code></p></td>
+<td><p>Return repr(self).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code></p></td>
+<td><p>Implement setattr(self, name, value).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code></p></td>
+<td><p>Size of object in memory, in bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code></p></td>
+<td><p>Return str(self).</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
+<td><p>Abstract classes can override this to customize issubclass().</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate</span></code>(value)</p></td>
+<td><p>Validate that the value is of the correct type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_default</span></code>()</p></td>
+<td><p>Validate the default value.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getAllowedValues" title="BioSimSpace.Gateway.Length.getAllowedValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAllowedValues</span></code></a>()</p></td>
 <td><p>Return the allowed values.</p></td>
@@ -312,6 +378,30 @@ of 50 nanometers. Note that the unit is taken from the default value.</p>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.setValue" title="BioSimSpace.Gateway.Length.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(value[, name])</p></td>
 <td><p>Validate and set the value.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
+<td><p>list of weak references to the object (if defined)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_is_multi</span></code></p></td>
+<td><p></p></td>
 </tr>
 </tbody>
 </table>
@@ -471,7 +561,7 @@ of 50 nanometers. Note that the unit is taken from the default value.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Nov 23, 2019.
+        Last updated on Jan 02, 2020.
       </span>
 
     </p>

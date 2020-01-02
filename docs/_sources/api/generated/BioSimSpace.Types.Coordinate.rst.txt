@@ -13,7 +13,32 @@ BioSimSpace.Types.Coordinate
 
    .. autosummary::
    
+      ~Coordinate.__add__
+      ~Coordinate.__delattr__
+      ~Coordinate.__dir__
+      ~Coordinate.__eq__
+      ~Coordinate.__format__
+      ~Coordinate.__ge__
+      ~Coordinate.__getattribute__
+      ~Coordinate.__gt__
+      ~Coordinate.__hash__
       ~Coordinate.__init__
+      ~Coordinate.__init_subclass__
+      ~Coordinate.__le__
+      ~Coordinate.__lt__
+      ~Coordinate.__ne__
+      ~Coordinate.__neg__
+      ~Coordinate.__new__
+      ~Coordinate.__pos__
+      ~Coordinate.__reduce__
+      ~Coordinate.__reduce_ex__
+      ~Coordinate.__repr__
+      ~Coordinate.__setattr__
+      ~Coordinate.__sizeof__
+      ~Coordinate.__str__
+      ~Coordinate.__sub__
+      ~Coordinate.__subclasshook__
+      ~Coordinate._from_sire_vector
       ~Coordinate.fromVector
       ~Coordinate.toVector
       ~Coordinate.x
@@ -23,5 +48,14 @@ BioSimSpace.Types.Coordinate
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Coordinate.__dict__
+      ~Coordinate.__doc__
+      ~Coordinate.__module__
+      ~Coordinate.__weakref__
    
    

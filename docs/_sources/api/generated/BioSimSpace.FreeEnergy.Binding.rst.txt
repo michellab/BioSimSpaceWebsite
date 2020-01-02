@@ -13,12 +13,47 @@ BioSimSpace.FreeEnergy.Binding
 
    .. autosummary::
    
+      ~Binding.__delattr__
+      ~Binding.__dir__
+      ~Binding.__eq__
+      ~Binding.__format__
+      ~Binding.__ge__
+      ~Binding.__getattribute__
+      ~Binding.__gt__
+      ~Binding.__hash__
       ~Binding.__init__
+      ~Binding.__init_subclass__
+      ~Binding.__le__
+      ~Binding.__lt__
+      ~Binding.__ne__
+      ~Binding.__new__
+      ~Binding.__reduce__
+      ~Binding.__reduce_ex__
+      ~Binding.__repr__
+      ~Binding.__setattr__
+      ~Binding.__sizeof__
+      ~Binding.__str__
+      ~Binding.__subclasshook__
+      ~Binding._analyse_gromacs
+      ~Binding._analyse_somd
+      ~Binding._initialise_runner
+      ~Binding._update_run_args
       ~Binding.analyse
       ~Binding.run
    
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Binding.__dict__
+      ~Binding.__doc__
+      ~Binding.__module__
+      ~Binding.__weakref__
+      ~Binding._analyse_freenrg
+      ~Binding._engines
    
    

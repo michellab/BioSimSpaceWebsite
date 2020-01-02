@@ -13,7 +13,29 @@ BioSimSpace.Gateway.Charge
 
    .. autosummary::
    
+      ~Charge.__delattr__
+      ~Charge.__dir__
+      ~Charge.__eq__
+      ~Charge.__format__
+      ~Charge.__ge__
+      ~Charge.__getattribute__
+      ~Charge.__gt__
+      ~Charge.__hash__
       ~Charge.__init__
+      ~Charge.__init_subclass__
+      ~Charge.__le__
+      ~Charge.__lt__
+      ~Charge.__ne__
+      ~Charge.__new__
+      ~Charge.__reduce__
+      ~Charge.__reduce_ex__
+      ~Charge.__repr__
+      ~Charge.__setattr__
+      ~Charge.__sizeof__
+      ~Charge.__str__
+      ~Charge.__subclasshook__
+      ~Charge._validate
+      ~Charge._validate_default
       ~Charge.getAllowedValues
       ~Charge.getArgType
       ~Charge.getDefault
@@ -29,5 +51,15 @@ BioSimSpace.Gateway.Charge
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Charge.__dict__
+      ~Charge.__doc__
+      ~Charge.__module__
+      ~Charge.__weakref__
+      ~Charge._is_multi
    
    

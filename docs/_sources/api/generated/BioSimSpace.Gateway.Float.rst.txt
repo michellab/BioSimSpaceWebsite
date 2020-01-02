@@ -13,7 +13,29 @@ BioSimSpace.Gateway.Float
 
    .. autosummary::
    
+      ~Float.__delattr__
+      ~Float.__dir__
+      ~Float.__eq__
+      ~Float.__format__
+      ~Float.__ge__
+      ~Float.__getattribute__
+      ~Float.__gt__
+      ~Float.__hash__
       ~Float.__init__
+      ~Float.__init_subclass__
+      ~Float.__le__
+      ~Float.__lt__
+      ~Float.__ne__
+      ~Float.__new__
+      ~Float.__reduce__
+      ~Float.__reduce_ex__
+      ~Float.__repr__
+      ~Float.__setattr__
+      ~Float.__sizeof__
+      ~Float.__str__
+      ~Float.__subclasshook__
+      ~Float._validate
+      ~Float._validate_default
       ~Float.getAllowedValues
       ~Float.getArgType
       ~Float.getDefault
@@ -29,5 +51,15 @@ BioSimSpace.Gateway.Float
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Float.__dict__
+      ~Float.__doc__
+      ~Float.__module__
+      ~Float.__weakref__
+      ~Float._is_multi
    
    

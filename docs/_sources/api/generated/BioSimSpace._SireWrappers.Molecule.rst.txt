@@ -13,7 +13,39 @@ BioSimSpace.\_SireWrappers.Molecule
 
    .. autosummary::
    
+      ~Molecule.__add__
+      ~Molecule.__delattr__
+      ~Molecule.__dir__
+      ~Molecule.__eq__
+      ~Molecule.__format__
+      ~Molecule.__ge__
+      ~Molecule.__getattribute__
+      ~Molecule.__gt__
+      ~Molecule.__hash__
       ~Molecule.__init__
+      ~Molecule.__init_subclass__
+      ~Molecule.__le__
+      ~Molecule.__lt__
+      ~Molecule.__ne__
+      ~Molecule.__new__
+      ~Molecule.__reduce__
+      ~Molecule.__reduce_ex__
+      ~Molecule.__repr__
+      ~Molecule.__setattr__
+      ~Molecule.__sizeof__
+      ~Molecule.__str__
+      ~Molecule.__subclasshook__
+      ~Molecule._convertFromMergedMolecule
+      ~Molecule._fixCharge
+      ~Molecule._fromPertFile
+      ~Molecule._getAABox
+      ~Molecule._getPropertyMap0
+      ~Molecule._getPropertyMap1
+      ~Molecule._getSireObject
+      ~Molecule._makeCompatibleWith
+      ~Molecule._merge
+      ~Molecule._toPertFile
+      ~Molecule._toRegularMolecule
       ~Molecule.charge
       ~Molecule.copy
       ~Molecule.getAtoms
@@ -34,5 +66,14 @@ BioSimSpace.\_SireWrappers.Molecule
    
 
    
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Molecule.__dict__
+      ~Molecule.__doc__
+      ~Molecule.__module__
+      ~Molecule.__weakref__
    
    
