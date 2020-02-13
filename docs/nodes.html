@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Nodes &mdash; BioSimSpace 2019.3.0+4.g7bd616e documentation</title>
+  <title>Nodes &mdash; BioSimSpace 2019.3.0+17.g894f11f documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -201,7 +201,7 @@ output requirements, along with restrictions on their types and values.</p>
 <h2>Writing nodes<a class="headerlink" href="#writing-nodes" title="Permalink to this headline">¶</a></h2>
 <p>As an example, the following code snippet shows how we could write a node to
 perform an energy minimisation on a molecular system loaded from file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Initialise the Node object.</span>
 <span class="n">node</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Minimise a molecular system and save to file.&quot;</span><span class="p">)</span>
@@ -239,7 +239,7 @@ perform an energy minimisation on a molecular system loaded from file:</p>
 <span class="c1"># to query the running process in real time when running interactively.)</span>
 <span class="c1"># Note that the original file format of the system is preserved on write.</span>
 <span class="n">node</span><span class="o">.</span><span class="n">setOutput</span><span class="p">(</span><span class="s2">&quot;minimised&quot;</span><span class="p">,</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">saveMolecules</span><span class="p">(</span><span class="s2">&quot;minimised&quot;</span><span class="p">,</span>
-    <span class="n">process</span><span class="o">.</span><span class="n">getSystem</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">system</span><span class="o">.</span><span class="n">fileFormat</span><span class="p">()))</span>
+    <span class="n">process</span><span class="o">.</span><span class="n">getSystem</span><span class="p">(</span><span class="n">block</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">system</span><span class="o">.</span><span class="n">fileFormat</span><span class="p">()))</span>
 
 <span class="c1"># Finally, validate the node to make sure that outputs are set correctly</span>
 <span class="c1"># and no errors have been raised. If running interactively, this will</span>
@@ -314,7 +314,7 @@ that the node supports the latest functionality of the package version that is
 installed. The following code snippet shows a node that can be used to convert
 to any supported molecular file format, which will continue to work as
 additional formats are added.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Initialise the Node object.</span>
 <span class="n">node</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Convert between molecular file formats.&quot;</span><span class="p">)</span>
@@ -383,7 +383,7 @@ modification.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jan 02, 2020.
+        Last updated on Feb 13, 2020.
       </span>
 
     </p>

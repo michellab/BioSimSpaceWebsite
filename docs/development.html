@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Developer’s guide &mdash; BioSimSpace 2019.3.0+4.g7bd616e documentation</title>
+  <title>Developer’s guide &mdash; BioSimSpace 2019.3.0+17.g894f11f documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -228,7 +228,7 @@ consequences.</p>
 <li><p>Variables: snake_case</p></li>
 </ul>
 <p>For example, to instantiate a minimisation protocol from the <code class="docutils literal notranslate"><span class="pre">Protocol</span></code> package:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -287,14 +287,14 @@ should be used to explicitly modify member data.</p>
 <span class="c1"># Create an instance of the class.</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
 <span class="c1"># Update n.</span>
 <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="c1"># The private member data has been modified!</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -309,14 +309,14 @@ should be used to explicitly modify member data.</p>
 <span class="c1"># Create an instance of the class.</span>
 <span class="n">c</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">()</span>
 <span class="n">n</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
 <span class="c1"># Update n.</span>
 <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="c1"># The private member data is untouched.</span>
-<span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">getList</span><span class="p">())</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -422,7 +422,7 @@ it might be desirable to write your tests before implementing the functionality,
 i.e. you are asserting what the <em>output</em> of a function should be, not how it should
 be <em>implemented</em>. In this case, you can make use of the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> <em>skip</em> decorator
 to flag that a unit test should be skipped, e.g.:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest.mark.skip</span><span class="p">(</span><span class="n">reason</span><span class="o">=</span><span class="s2">&quot;Not yet implemented.&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="n">reason</span><span class="o">=</span><span class="s2">&quot;Not yet implemented.&quot;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">test_new_feature</span><span class="p">():</span>
     <span class="c1"># A unit test for an, as yet, unimplemented feature.</span>
     <span class="o">...</span>
@@ -436,8 +436,8 @@ This can be achieved using the <code class="docutils literal notranslate"><span 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
 <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">mul</span>
 
-<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
 <span class="k">def</span> <span class="nf">test_mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Test the mul function. &quot;&quot;&quot;</span>
     <span class="k">assert</span> <span class="n">mul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="n">mul</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
@@ -449,7 +449,7 @@ parameter pairs <code class="docutils literal notranslate"><span class="pre">(x,
 <p>Alternatively:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
 <span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">sub</span>
-<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;x, y, expected&quot;</span><span class="p">,</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;x, y, expected&quot;</span><span class="p">,</span>
                         <span class="p">[(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
                          <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">),</span>
                          <span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">58</span><span class="p">,</span> <span class="o">-</span><span class="mi">37</span><span class="p">)])</span>
@@ -481,7 +481,7 @@ suppose we had a function that raises an <code class="docutils literal notransla
 <div class="section" id="custom-attributes">
 <h5>Custom attributes<a class="headerlink" href="#custom-attributes" title="Permalink to this headline">¶</a></h5>
 <p>It’s possible to mark test functions with any attribute you like. For example:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest.mark.slow</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">slow</span>
 <span class="k">def</span> <span class="nf">test_slow_function</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot; A unit test that takes a really long time. &quot;&quot;&quot;</span>
     <span class="o">...</span>
@@ -577,7 +577,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jan 02, 2020.
+        Last updated on Feb 13, 2020.
       </span>
 
     </p>

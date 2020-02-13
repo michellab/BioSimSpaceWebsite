@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2019.3.0+4.g7bd616e documentation</title>
+  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2019.3.0+17.g894f11f documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -260,13 +260,13 @@ a range of force fields.</p>
 </table>
 <p class="rubric">Examples</p>
 <p>Print the list of supported force fields.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">forceFields</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">forceFields</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>Parameterise a molecule using GAFF.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a molecule from file.</span>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="s2">&quot;molecules/benzene.pdb&quot;</span><span class="p">)</span>
@@ -284,7 +284,7 @@ a range of force fields.</p>
 </div>
 <p>The same as above, but immediately getting the parameterised molecule from
 the process object, i.e. not saving it as an intermediate variable.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a molecule from file.</span>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="s2">&quot;molecules/benzene.pdb&quot;</span><span class="p">)</span>
@@ -299,7 +299,7 @@ the process object, i.e. not saving it as an intermediate variable.</p>
 function should be used in any interoperable workflow
 <a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a> where the force field is specified
 as an input requirement by the user.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a molecule from file.</span>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="s2">&quot;molecules/benzene.pdb&quot;</span><span class="p">)</span>
@@ -312,7 +312,7 @@ as an input requirement by the user.</p>
 <p>Parameterise a molecule using GAFF, passing the net formal charge computed
 by BioSimSpace. This is useful when your input PDB file has missing or
 incorrect formal charge information.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="c1"># Load a molecule from file.</span>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="s2">&quot;molecules/benzene.pdb&quot;</span><span class="p">)</span>
@@ -358,7 +358,7 @@ incorrect formal charge information.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jan 02, 2020.
+        Last updated on Feb 13, 2020.
       </span>
 
     </p>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2019.3.0+4.g7bd616e documentation</title>
+  <title>BioSimSpace.Protocol &mdash; BioSimSpace 2019.3.0+17.g894f11f documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -273,16 +273,16 @@ be used to create a molecular dynamics <a class="reference internal" href="index
 </table>
 <p class="rubric">Examples</p>
 <p>Print the list of supported protocols.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">protocols</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">protocols</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>Create a default minimisation protocol and print the number of steps.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The same as above, but instead passing “Minimisation” as an argument to the
@@ -290,19 +290,19 @@ be used to create a molecular dynamics <a class="reference internal" href="index
 function should be used in any interoperable workflow
 <a class="reference internal" href="generated/BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></a> where the protocol is specified
 as an input requirement by the user.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">createProtocol</span><span class="p">(</span><span class="s2">&quot;minimisation&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">protocol</span><span class="o">.</span><span class="n">getSteps</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>Create an equilibration protocol that heats the system from 0 to 300 Kelvin
 while restraining the positions of any backbone atoms.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="kn">as</span> <span class="nn">BSS</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
 <span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Equilibration</span><span class="p">(</span><span class="n">temperature_start</span><span class="o">=</span><span class="mi">0</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Temperature</span><span class="o">.</span><span class="n">kelvin</span><span class="p">,</span>
                                       <span class="n">temperature_end</span><span class="o">=</span><span class="mi">300</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Temperature</span><span class="o">.</span><span class="n">kelvin</span><span class="p">,</span>
-                                      <span class="n">restrain_backbone</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                                      <span class="n">restrain_backbone</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -332,7 +332,7 @@ while restraining the positions of any backbone atoms.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jan 02, 2020.
+        Last updated on Feb 13, 2020.
       </span>
 
     </p>
