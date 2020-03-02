@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2019.3.0+33.gb6dd4a4 documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2019.3.0+41.g569cc18 documentation</title>
   
 
   
@@ -216,11 +216,11 @@
 <h1>BioSimSpace.FreeEnergy.Binding<a class="headerlink" href="#biosimspace-freeenergy-binding" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.FreeEnergy.Binding">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">free_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running binding free energy simulations.</p>
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Binding.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">free_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -230,6 +230,8 @@
 <li><p><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the box size in each dimension. This box will be
 used for the “free” leg of the simulation, which typically can be
 run with a significantly smaller box than the “bound” leg.</p></li>
+<li><p><strong>free_leg</strong> (<em>bool</em>) – Whether to simulation the free leg of the simulation. Set to False
+if you only wish to run the bound leg.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
 <li><p><strong>engine</strong> (<em>str</em>) – The molecular dynamics engine used to run the simulation. Available
 options are “GROMACS”, or “SOMD”. If this argument is omitted then
@@ -273,7 +275,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></p></td>
 <td><p>Return hash(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="BioSimSpace.FreeEnergy.Binding.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, box, work_dir, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="BioSimSpace.FreeEnergy.Binding.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, box, free_leg, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
@@ -411,7 +413,7 @@ contains the lambda value, the PMF, and the standard error.</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 19, 2020.
+        Last updated on Mar 02, 2020.
       </span>
 
     </p>

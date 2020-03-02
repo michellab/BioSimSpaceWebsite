@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2019.3.0+33.gb6dd4a4 documentation</title>
+  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2019.3.0+41.g569cc18 documentation</title>
   
 
   
@@ -216,17 +216,19 @@
 <h1>BioSimSpace.FreeEnergy.Solvation<a class="headerlink" href="#biosimspace-freeenergy-solvation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.FreeEnergy.Solvation">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Solvation</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Solvation</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running solvation free energy simulations.</p>
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Solvation.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.FreeEnergy</span></code></a>) – The simulation protocol.</p></li>
+<li><p><strong>vacuum_leg</strong> (<em>bool</em>) – Whether to simulation the vacuum leg of the simulation. Set to False
+if you only wish to run the free leg.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
 <li><p><strong>engine</strong> (<em>str</em>) – The molecular dynamics engine used to run the simulation. Available
 options are “GROMACS”, or “SOMD”. If this argument is omitted then
@@ -267,7 +269,7 @@ BioSimSpace will choose an appropriate engine for you.</p></li>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code></p></td>
 <td><p>Return hash(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="BioSimSpace.FreeEnergy.Solvation.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, work_dir, engine])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="BioSimSpace.FreeEnergy.Solvation.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, vacuum_leg, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
@@ -405,7 +407,7 @@ contains the lambda value, the PMF, and the standard error.</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Feb 19, 2020.
+        Last updated on Mar 02, 2020.
       </span>
 
     </p>
