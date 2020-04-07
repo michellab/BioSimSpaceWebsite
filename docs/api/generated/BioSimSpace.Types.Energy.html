@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Energy &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Types.Energy &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -223,13 +223,13 @@
             
   <div class="section" id="biosimspace-types-energy">
 <h1>BioSimSpace.Types.Energy<a class="headerlink" href="#biosimspace-types-energy" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Types.Energy">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Energy</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Energy</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy" title="Permalink to this definition">¶</a></dt>
 <dd><p>An energy type.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Types.Energy.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can be a magnitude and unit, or a string representation
 of the energy, e.g. “78.4 kcal/mol”.</p>
@@ -362,19 +362,19 @@ would be valid arguments: “-1038 kcal/mol”, “-1.038e3 kcal/mol”,
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_unit</span></code>(unit)</p></td>
 <td><p>Validate that the unit are supported.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Energy.kcal_per_mol" title="BioSimSpace.Types.Energy.kcal_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kcal_per_mol</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kcal_per_mol</span></code>()</p></td>
 <td><p>Return the energy in kcal per mol.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Energy.kj_per_mol" title="BioSimSpace.Types.Energy.kj_per_mol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kj_per_mol</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kj_per_mol</span></code>()</p></td>
 <td><p>Return the energy in kJ per mol.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Energy.kt" title="BioSimSpace.Types.Energy.kt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kt</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kt</span></code>()</p></td>
 <td><p>Return the energy in KT.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Energy.magnitude" title="BioSimSpace.Types.Energy.magnitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code>()</p></td>
 <td><p>Return the magnitude.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Energy.unit" title="BioSimSpace.Types.Energy.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code>()</p></td>
 <td><p>Return the unit.</p></td>
 </tr>
 </tbody>
@@ -418,76 +418,6 @@ would be valid arguments: “-1038 kcal/mol”, “-1.038e3 kcal/mol”,
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Types.Energy.kcal_per_mol">
-<code class="sig-name descname">kcal_per_mol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.kcal_per_mol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the energy in kcal per mol.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>energy</strong> – The energy in kcal per mol.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Energy.kj_per_mol">
-<code class="sig-name descname">kj_per_mol</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.kj_per_mol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the energy in kJ per mol.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>energy</strong> – The energy in kJ per mol.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Energy.kt">
-<code class="sig-name descname">kt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.kt" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the energy in KT.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>energy</strong> – The energy in KT.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Energy.magnitude">
-<code class="sig-name descname">magnitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.magnitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the magnitude.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>magnitude</strong> – The magnitude of the type.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Energy.unit">
-<code class="sig-name descname">unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Energy.unit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the unit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>unit</strong> – The unit of the type.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -514,7 +444,7 @@ would be valid arguments: “-1038 kcal/mol”, “-1.038e3 kcal/mol”,
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

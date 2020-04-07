@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -214,13 +214,13 @@
             
   <div class="section" id="biosimspace-freeenergy-binding">
 <h1>BioSimSpace.FreeEnergy.Binding<a class="headerlink" href="#biosimspace-freeenergy-binding" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.FreeEnergy.Binding">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">free_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_leg</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running binding free energy simulations.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.FreeEnergy.Binding.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">box=None</em>, <em class="sig-param">free_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_leg</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,10 +326,10 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_update_run_args</span></code>(args)</p></td>
 <td><p>Internal function to update run arguments for all subprocesses.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.analyse" title="BioSimSpace.FreeEnergy.Binding.analyse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code>()</p></td>
 <td><p>Analyse the binding free energy data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.run" title="BioSimSpace.FreeEnergy.Binding.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code>()</p></td>
 <td><p>Run the simulation.</p></td>
 </tr>
 </tbody>
@@ -361,32 +361,6 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.FreeEnergy.Binding.analyse">
-<code class="sig-name descname">analyse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.analyse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Analyse the binding free energy data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>pmf_free</strong> ([(float, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)]) – The potential of mean force (PMF) for the free leg of the
-simulation. The data is a list of tuples, where each tuple
-contains the lambda value, the PMF, and the standard error.</p></li>
-<li><p><strong>pmf_vacuum</strong> ([(float, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)]) – The potential of mean force (PMF) for the vacuum leg of the
-simulation. The data is a list of tuples, where each tuple
-contains the lambda value, the PMF, and the standard error.</p></li>
-<li><p><strong>free_energy</strong> ((<a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)) – The binding free energy difference and its associated error.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.FreeEnergy.Binding.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run the simulation.</p>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -413,7 +387,7 @@ contains the lambda value, the PMF, and the standard error.</p></li>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

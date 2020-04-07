@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -218,13 +218,13 @@
             
   <div class="section" id="biosimspace-process-amber">
 <h1>BioSimSpace.Process.Amber<a class="headerlink" href="#biosimspace-process-amber" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Process.Amber">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Amber</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='amber'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Amber</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span></em>, <em class="sig-param"><span class="n">exe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'amber'</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for running simulations using AMBER.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Process.Amber.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='amber'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span></em>, <em class="sig-param"><span class="n">exe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'amber'</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">seed</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -355,259 +355,259 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_writePlumedConfig</span></code>(file)</p></td>
 <td><p>Write the PLUMED configuration to file.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.addArgs" title="BioSimSpace.Process.Amber.addArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addArgs</span></code></a>(args)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addArgs</span></code>(args)</p></td>
 <td><p>Append additional command-line arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.addToConfig" title="BioSimSpace.Process.Amber.addToConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addToConfig</span></code></a>(config)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addToConfig</span></code>(config)</p></td>
 <td><p>Add a string to the configuration list.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.clearArgs" title="BioSimSpace.Process.Amber.clearArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearArgs</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">clearArgs</span></code>()</p></td>
 <td><p>Clear all of the command-line arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.command" title="BioSimSpace.Process.Amber.command"><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">command</span></code>()</p></td>
 <td><p>Return the command-line string used to run the process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.deleteArg" title="BioSimSpace.Process.Amber.deleteArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteArg</span></code></a>(arg)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">deleteArg</span></code>(arg)</p></td>
 <td><p>Delete an argument from the dictionary.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.exe" title="BioSimSpace.Process.Amber.exe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exe</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">exe</span></code>()</p></td>
 <td><p>Return the executable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getAngleEnergy" title="BioSimSpace.Process.Amber.getAngleEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAngleEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAngleEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the angle energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getArgString" title="BioSimSpace.Process.Amber.getArgString"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgString</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgString</span></code>()</p></td>
 <td><p>Get the command-line arguments string.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getArgStringList" title="BioSimSpace.Process.Amber.getArgStringList"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgStringList</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgStringList</span></code>()</p></td>
 <td><p>Convert the argument dictionary into a list of strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getArgs" title="BioSimSpace.Process.Amber.getArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgs</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgs</span></code>()</p></td>
 <td><p>Get the dictionary of command-line arguments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getBondEnergy" title="BioSimSpace.Process.Amber.getBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBondEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBondEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the bond energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCentreOfMassKineticEnergy" title="BioSimSpace.Process.Amber.getCentreOfMassKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCentreOfMassKineticEnergy</span></code></a>([time_series, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCentreOfMassKineticEnergy</span></code>([time_series, …])</p></td>
 <td><p>Get the kinetic energy of the centre of mass in translation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getConfig" title="BioSimSpace.Process.Amber.getConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConfig</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getConfig</span></code>()</p></td>
 <td><p>Get the list of configuration file strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentAngleEnergy" title="BioSimSpace.Process.Amber.getCurrentAngleEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentAngleEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentAngleEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current angle energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentBondEnergy" title="BioSimSpace.Process.Amber.getCurrentBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentBondEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentBondEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current bond energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentCentreOfMassKineticEnergy" title="BioSimSpace.Process.Amber.getCurrentCentreOfMassKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentCentreOfMassKineticEnergy</span></code></a>([…])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentCentreOfMassKineticEnergy</span></code>([…])</p></td>
 <td><p>Get the current kinetic energy of the centre of mass in translation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentDensity" title="BioSimSpace.Process.Amber.getCurrentDensity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDensity</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDensity</span></code>([time_series])</p></td>
 <td><p>Get the current density.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentDihedralEnergy" title="BioSimSpace.Process.Amber.getCurrentDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current dihedral energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy" title="BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current dihedral energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy14" title="BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy14</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy14</span></code>([time_series])</p></td>
 <td><p>Get the current electrostatic energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentHydrogenBondEnergy" title="BioSimSpace.Process.Amber.getCurrentHydrogenBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentHydrogenBondEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentHydrogenBondEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current hydrogen bond energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentKineticEnergy" title="BioSimSpace.Process.Amber.getCurrentKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentKineticEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentKineticEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current kinetic energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentNonBondedEnergy14" title="BioSimSpace.Process.Amber.getCurrentNonBondedEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentNonBondedEnergy14</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentNonBondedEnergy14</span></code>([time_series])</p></td>
 <td><p>Get the current non-bonded energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentPotentialEnergy" title="BioSimSpace.Process.Amber.getCurrentPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPotentialEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPotentialEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current potential energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentPressure" title="BioSimSpace.Process.Amber.getCurrentPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressure</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressure</span></code>([time_series])</p></td>
 <td><p>Get the current pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentRecord" title="BioSimSpace.Process.Amber.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[, time_series, unit])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code>(record[, time_series, unit])</p></td>
 <td><p>Get a current record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentRecords" title="BioSimSpace.Process.Amber.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code>()</p></td>
 <td><p>Return the current dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentRestraintEnergy" title="BioSimSpace.Process.Amber.getCurrentRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRestraintEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRestraintEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current restraint energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentStep" title="BioSimSpace.Process.Amber.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code>([time_series])</p></td>
 <td><p>Get the current number of integration steps.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentSystem" title="BioSimSpace.Process.Amber.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code>()</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentTemperature" title="BioSimSpace.Process.Amber.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code>([time_series])</p></td>
 <td><p>Get the current temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentTime" title="BioSimSpace.Process.Amber.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code>([time_series])</p></td>
 <td><p>Get the current time (in nanoseconds).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentTotalEnergy" title="BioSimSpace.Process.Amber.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current total energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentVanDerWaalsEnergy" title="BioSimSpace.Process.Amber.getCurrentVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVanDerWaalsEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVanDerWaalsEnergy</span></code>([time_series])</p></td>
 <td><p>Get the current Van der Vaals energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentVirial" title="BioSimSpace.Process.Amber.getCurrentVirial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVirial</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVirial</span></code>([time_series])</p></td>
 <td><p>Get the current virial.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentVolume" title="BioSimSpace.Process.Amber.getCurrentVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVolume</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVolume</span></code>([time_series])</p></td>
 <td><p>Get the current volume.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getDensity" title="BioSimSpace.Process.Amber.getDensity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDensity</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDensity</span></code>([time_series, block])</p></td>
 <td><p>Get the density.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getDihedralEnergy" title="BioSimSpace.Process.Amber.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the dihedral energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getElectrostaticEnergy" title="BioSimSpace.Process.Amber.getElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the electrostatic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getElectrostaticEnergy14" title="BioSimSpace.Process.Amber.getElectrostaticEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy14</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy14</span></code>([time_series, block])</p></td>
 <td><p>Get the electrostatic energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getHydrogenBondEnergy" title="BioSimSpace.Process.Amber.getHydrogenBondEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHydrogenBondEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHydrogenBondEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the hydrogen bond energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getInput" title="BioSimSpace.Process.Amber.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code>([name, file_link])</p></td>
 <td><p>Return a link to a zip file containing the input files used by the process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getKineticEnergy" title="BioSimSpace.Process.Amber.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the kinetic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getName" title="BioSimSpace.Process.Amber.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code>()</p></td>
 <td><p>Return the process name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getNonBondedEnergy14" title="BioSimSpace.Process.Amber.getNonBondedEnergy14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNonBondedEnergy14</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getNonBondedEnergy14</span></code>([time_series, block])</p></td>
 <td><p>Get the non-bonded energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getOutput" title="BioSimSpace.Process.Amber.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code>([name, block, file_link])</p></td>
 <td><p>Return a link to a zip file of the working directory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPackageName" title="BioSimSpace.Process.Amber.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code>()</p></td>
 <td><p>Return the package name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPotentialEnergy" title="BioSimSpace.Process.Amber.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the potential energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getPressure" title="BioSimSpace.Process.Amber.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecord" title="BioSimSpace.Process.Amber.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code>(record[, time_series, unit, block])</p></td>
 <td><p>Get a record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRecords" title="BioSimSpace.Process.Amber.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code>([block])</p></td>
 <td><p>Return the dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getRestraintEnergy" title="BioSimSpace.Process.Amber.getRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the restraint energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSeed" title="BioSimSpace.Process.Amber.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code>()</p></td>
 <td><p>Return the random number seed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStderr" title="BioSimSpace.Process.Amber.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code>([block])</p></td>
 <td><p>Return the entire stderr for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStdout" title="BioSimSpace.Process.Amber.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code>([block])</p></td>
 <td><p>Return the entire stdout for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getStep" title="BioSimSpace.Process.Amber.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code>([time_series, block])</p></td>
 <td><p>Get the number of integration steps.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getSystem" title="BioSimSpace.Process.Amber.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code>([block])</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTemperature" title="BioSimSpace.Process.Amber.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code>([time_series, block])</p></td>
 <td><p>Get the temperature.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTime" title="BioSimSpace.Process.Amber.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code>([time_series, block])</p></td>
 <td><p>Get the time (in nanoseconds).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTotalEnergy" title="BioSimSpace.Process.Amber.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getTrajectory" title="BioSimSpace.Process.Amber.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code>([block])</p></td>
 <td><p>Return a trajectory object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVanDerWaalsEnergy" title="BioSimSpace.Process.Amber.getVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code>([time_series, block])</p></td>
 <td><p>Get the Van der Vaals energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVirial" title="BioSimSpace.Process.Amber.getVirial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVirial</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVirial</span></code>([time_series, block])</p></td>
 <td><p>Get the virial.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getVolume" title="BioSimSpace.Process.Amber.getVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code>([time_series, block])</p></td>
 <td><p>Get the volume.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.inputFiles" title="BioSimSpace.Process.Amber.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code>()</p></td>
 <td><p>Return the list of input files.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.insertArg" title="BioSimSpace.Process.Amber.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg, value, index)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code>(arg, value, index)</p></td>
 <td><p>Insert a command-line argument at a specific index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isError" title="BioSimSpace.Process.Amber.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code>()</p></td>
 <td><p>Return whether the process errored.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isQueued" title="BioSimSpace.Process.Amber.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code>()</p></td>
 <td><p>Return whether the process is queued.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.isRunning" title="BioSimSpace.Process.Amber.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code>()</p></td>
 <td><p>Return whether the process is running.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.kill" title="BioSimSpace.Process.Amber.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code>()</p></td>
 <td><p>Kill the running process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetArgs" title="BioSimSpace.Process.Amber.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code>()</p></td>
 <td><p>Reset the command-line arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.resetConfig" title="BioSimSpace.Process.Amber.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code>()</p></td>
 <td><p>Reset the configuration parameters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.run" title="BioSimSpace.Process.Amber.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, auto_start, restart])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code>([system, protocol, auto_start, restart])</p></td>
 <td><p>Create and run a new process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.runTime" title="BioSimSpace.Process.Amber.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code>()</p></td>
 <td><p>Return the running time for the process (in minutes).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArg" title="BioSimSpace.Process.Amber.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg, value)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code>(arg, value)</p></td>
 <td><p>Set a specific command-line argument.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setArgs" title="BioSimSpace.Process.Amber.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code>(args)</p></td>
 <td><p>Set the dictionary of command-line arguments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setConfig" title="BioSimSpace.Process.Amber.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code>(config)</p></td>
 <td><p>Set the list of configuration file strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setName" title="BioSimSpace.Process.Amber.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code>(name)</p></td>
 <td><p>Set the process name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.setSeed" title="BioSimSpace.Process.Amber.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code>(seed)</p></td>
 <td><p>Set the random number seed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.start" title="BioSimSpace.Process.Amber.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code>()</p></td>
 <td><p>Start the AMBER process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stderr" title="BioSimSpace.Process.Amber.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code>([n])</p></td>
 <td><p>Print the last n lines of the stderr buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.stdout" title="BioSimSpace.Process.Amber.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code>([n])</p></td>
 <td><p>Print the last n lines of the stdout buffer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.wait" title="BioSimSpace.Process.Amber.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code>([max_time])</p></td>
 <td><p>Wait for the process to finish.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.workDir" title="BioSimSpace.Process.Amber.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code>()</p></td>
 <td><p>Return the working directory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.writeConfig" title="BioSimSpace.Process.Amber.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code>(file)</p></td>
 <td><p>Write the configuration to file.</p></td>
 </tr>
 </tbody>
@@ -633,1368 +633,6 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.addArgs">
-<code class="sig-name descname">addArgs</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.addArgs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append additional command-line arguments.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command line arguments.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.addToConfig">
-<code class="sig-name descname">addToConfig</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.addToConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a string to the configuration list.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>config</strong> (<em>str</em><em>, </em><em>[ </em><em>str</em><em> ]</em>) – A configuration string, a list of configuration strings, or a
-path to a configuration file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.clearArgs">
-<code class="sig-name descname">clearArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.clearArgs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clear all of the command-line arguments.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.command">
-<code class="sig-name descname">command</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.command" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the command-line string used to run the process.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>command</strong> – The command string.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.deleteArg">
-<code class="sig-name descname">deleteArg</code><span class="sig-paren">(</span><em class="sig-param">arg</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.deleteArg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Delete an argument from the dictionary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>arg</strong> (<em>str</em>) – The argument to delete.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.exe">
-<code class="sig-name descname">exe</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.exe" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the executable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>exe</strong> – The path to the executable.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getAngleEnergy">
-<code class="sig-name descname">getAngleEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getAngleEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the angle energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The angle energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getArgString">
-<code class="sig-name descname">getArgString</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getArgString" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the command-line arguments string.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>arg_string</strong> – The command-line argument string.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getArgStringList">
-<code class="sig-name descname">getArgStringList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getArgStringList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert the argument dictionary into a list of strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>arg_string_list</strong> – The list of command-line arguments.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getArgs">
-<code class="sig-name descname">getArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getArgs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the dictionary of command-line arguments.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>args</strong> – The dictionary of command-line arguments.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>collections.OrderedDict</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getBondEnergy">
-<code class="sig-name descname">getBondEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getBondEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the bond energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The bond energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCentreOfMassKineticEnergy">
-<code class="sig-name descname">getCentreOfMassKineticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCentreOfMassKineticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the kinetic energy of the centre of mass in translation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The centre of mass kinetic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getConfig">
-<code class="sig-name descname">getConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the list of configuration file strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>config</strong> – The list of configuration strings.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentAngleEnergy">
-<code class="sig-name descname">getCurrentAngleEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentAngleEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current angle energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The angle energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentBondEnergy">
-<code class="sig-name descname">getCurrentBondEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentBondEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current bond energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The bond energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentCentreOfMassKineticEnergy">
-<code class="sig-name descname">getCurrentCentreOfMassKineticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentCentreOfMassKineticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current kinetic energy of the centre of mass in translation.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The centre of mass kinetic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentDensity">
-<code class="sig-name descname">getCurrentDensity</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentDensity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current density.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>density</strong> – The density.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentDihedralEnergy">
-<code class="sig-name descname">getCurrentDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current dihedral energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy">
-<code class="sig-name descname">getCurrentElectrostaticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current dihedral energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The electrostatic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy14">
-<code class="sig-name descname">getCurrentElectrostaticEnergy14</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy14" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current electrostatic energy between atoms 1 and 4.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The electrostatic energy between atoms 1 and 4.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentHydrogenBondEnergy">
-<code class="sig-name descname">getCurrentHydrogenBondEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentHydrogenBondEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current hydrogen bond energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The hydrogen bond energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentKineticEnergy">
-<code class="sig-name descname">getCurrentKineticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentKineticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current kinetic energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The kinetic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentNonBondedEnergy14">
-<code class="sig-name descname">getCurrentNonBondedEnergy14</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentNonBondedEnergy14" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current non-bonded energy between atoms 1 and 4.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The non-bonded energy between atoms 1 and 4.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentPotentialEnergy">
-<code class="sig-name descname">getCurrentPotentialEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentPotentialEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current potential energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The potential energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentPressure">
-<code class="sig-name descname">getCurrentPressure</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentPressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current pressure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>pressure</strong> – The pressure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentRecord">
-<code class="sig-name descname">getCurrentRecord</code><span class="sig-paren">(</span><em class="sig-param">record</em>, <em class="sig-param">time_series=False</em>, <em class="sig-param">unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a current record from the stdout dictionary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>record</strong> (<em>str</em>) – The record key.</p></li>
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>unit</strong> (<a class="reference internal" href="../index_Units.html#module-BioSimSpace.Units" title="BioSimSpace.Units"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unit</span></code></a>) – The unit to convert the record to.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>record</strong> – The matching record.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentRecords">
-<code class="sig-name descname">getCurrentRecords</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentRecords" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the current dictionary of stdout time-series records.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>records</strong> – The dictionary of time-series records.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiDict</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentRestraintEnergy">
-<code class="sig-name descname">getCurrentRestraintEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentRestraintEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current restraint energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The restraint energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentStep">
-<code class="sig-name descname">getCurrentStep</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current number of integration steps.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>step</strong> – The current number of integration steps.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentSystem">
-<code class="sig-name descname">getCurrentSystem</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentSystem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the latest molecular system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>system</strong> – The latest molecular system.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentTemperature">
-<code class="sig-name descname">getCurrentTemperature</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentTemperature" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current temperature.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>temperature</strong> – The temperature.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentTime">
-<code class="sig-name descname">getCurrentTime</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current time (in nanoseconds).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>time</strong> – The current simulation time in nanoseconds.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentTotalEnergy">
-<code class="sig-name descname">getCurrentTotalEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentTotalEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current total energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The total energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentVanDerWaalsEnergy">
-<code class="sig-name descname">getCurrentVanDerWaalsEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentVanDerWaalsEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current Van der Vaals energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The Van der Vaals energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentVirial">
-<code class="sig-name descname">getCurrentVirial</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentVirial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current virial.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>virial</strong> – The virial.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getCurrentVolume">
-<code class="sig-name descname">getCurrentVolume</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current volume.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>volume</strong> – The volume.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Volume.html#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getDensity">
-<code class="sig-name descname">getDensity</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getDensity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the density.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>density</strong> – The density.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getDihedralEnergy">
-<code class="sig-name descname">getDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the dihedral energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getElectrostaticEnergy">
-<code class="sig-name descname">getElectrostaticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getElectrostaticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the electrostatic energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The electrostatic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getElectrostaticEnergy14">
-<code class="sig-name descname">getElectrostaticEnergy14</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getElectrostaticEnergy14" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the electrostatic energy between atoms 1 and 4.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The electrostatic energy between atoms 1 and 4.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getHydrogenBondEnergy">
-<code class="sig-name descname">getHydrogenBondEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getHydrogenBondEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the hydrogen bond energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The hydrogen bond energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getInput">
-<code class="sig-name descname">getInput</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getInput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a link to a zip file containing the input files used by
-the process.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of the zip file.</p></li>
-<li><p><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>ouput</strong> – A path, or file link, to an archive of the process input.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str, IPython.display.FileLink</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getKineticEnergy">
-<code class="sig-name descname">getKineticEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getKineticEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the kinetic energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The kinetic energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getName">
-<code class="sig-name descname">getName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the process name.</p>
-<p>Returns:</p>
-<dl class="simple">
-<dt>name<span class="classifier">str</span></dt><dd><p>The name of the process.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getNonBondedEnergy14">
-<code class="sig-name descname">getNonBondedEnergy14</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getNonBondedEnergy14" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the non-bonded energy between atoms 1 and 4.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The non-bonded energy between atoms 1 and 4.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getOutput">
-<code class="sig-name descname">getOutput</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">block='AUTO'</em>, <em class="sig-param">file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getOutput" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a link to a zip file of the working directory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> (<em>str</em>) – The name of the zip file.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-<li><p><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>ouput</strong> – A path, or file link, to an archive of the process output.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str, IPython.display.FileLink</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getPackageName">
-<code class="sig-name descname">getPackageName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getPackageName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the package name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>name</strong> – The name of the package.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getPotentialEnergy">
-<code class="sig-name descname">getPotentialEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getPotentialEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the potential energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The potential energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getPressure">
-<code class="sig-name descname">getPressure</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getPressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the pressure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>pressure</strong> – The pressure.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getRecord">
-<code class="sig-name descname">getRecord</code><span class="sig-paren">(</span><em class="sig-param">record</em>, <em class="sig-param">time_series=False</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getRecord" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a record from the stdout dictionary.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>record</strong> (<em>str</em>) – The record key.</p></li>
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>unit</strong> (<a class="reference internal" href="../index_Units.html#module-BioSimSpace.Units" title="BioSimSpace.Units"><code class="xref py py-class docutils literal notranslate"><span class="pre">Unit</span></code></a>) – The unit to convert the record to.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>record</strong> – The matching record.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getRecords">
-<code class="sig-name descname">getRecords</code><span class="sig-paren">(</span><em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getRecords" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the dictionary of stdout time-series records.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>records</strong> – The dictionary of time-series records.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MultiDict</span></code></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getRestraintEnergy">
-<code class="sig-name descname">getRestraintEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getRestraintEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the restraint energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The restraint energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getSeed">
-<code class="sig-name descname">getSeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getSeed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the random number seed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>seed</strong> – The random number seed.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getStderr">
-<code class="sig-name descname">getStderr</code><span class="sig-paren">(</span><em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getStderr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the entire stderr for the process as a list of strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>error</strong> – The list of stderror strings.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getStdout">
-<code class="sig-name descname">getStdout</code><span class="sig-paren">(</span><em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getStdout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the entire stdout for the process as a list of strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>output</strong> – The list of stdout strings.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getStep">
-<code class="sig-name descname">getStep</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the number of integration steps.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>step</strong> – The current number of integration steps.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getSystem">
-<code class="sig-name descname">getSystem</code><span class="sig-paren">(</span><em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getSystem" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the latest molecular system.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>system</strong> – The latest molecular system.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getTemperature">
-<code class="sig-name descname">getTemperature</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getTemperature" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the temperature.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>temperature</strong> – The temperature.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getTime">
-<code class="sig-name descname">getTime</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the time (in nanoseconds).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>time</strong> – The current simulation time in nanoseconds.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getTotalEnergy">
-<code class="sig-name descname">getTotalEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getTotalEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the total energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The total energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getTrajectory">
-<code class="sig-name descname">getTrajectory</code><span class="sig-paren">(</span><em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getTrajectory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a trajectory object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>trajectory</strong> – The latest trajectory object.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Trajectory.Trajectory.html#BioSimSpace.Trajectory.Trajectory" title="BioSimSpace.Trajectory.Trajectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">Trajectory</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getVanDerWaalsEnergy">
-<code class="sig-name descname">getVanDerWaalsEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getVanDerWaalsEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the Van der Vaals energy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The Van der Vaals energy.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getVirial">
-<code class="sig-name descname">getVirial</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getVirial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the virial.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>virial</strong> – The virial.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.getVolume">
-<code class="sig-name descname">getVolume</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getVolume" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the volume.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
-<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>volume</strong> – The volume.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Volume.html#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.inputFiles">
-<code class="sig-name descname">inputFiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.inputFiles" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the list of input files.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>input_files</strong> – The list of autogenerated input files.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.insertArg">
-<code class="sig-name descname">insertArg</code><span class="sig-paren">(</span><em class="sig-param">arg</em>, <em class="sig-param">value</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.insertArg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Insert a command-line argument at a specific index.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>arg</strong> (<em>str</em>) – The argument to set.</p></li>
-<li><p><strong>value</strong> – The value of the argument.</p></li>
-<li><p><strong>index</strong> (<em>int</em>) – The index in the dictionary.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.isError">
-<code class="sig-name descname">isError</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.isError" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether the process errored.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_error</strong> – Whether the process errored.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.isQueued">
-<code class="sig-name descname">isQueued</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.isQueued" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether the process is queued.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_queued</strong> – Whether the process is queued.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.isRunning">
-<code class="sig-name descname">isRunning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.isRunning" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether the process is running.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_running</strong> – Whether the process is running.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.kill">
-<code class="sig-name descname">kill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.kill" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kill the running process.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.resetArgs">
-<code class="sig-name descname">resetArgs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.resetArgs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reset the command-line arguments.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.resetConfig">
-<code class="sig-name descname">resetConfig</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.resetConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reset the configuration parameters.</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create and run a new process.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
-<li><p><strong>protocol</strong> (<a class="reference internal" href="../index_Protocol.html#module-BioSimSpace.Protocol" title="BioSimSpace.Protocol"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The simulation protocol.</p></li>
-<li><p><strong>auto_start</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
-<li><p><strong>restart</strong> (<em>bool</em>) – Whether to restart the simulation, i.e. use the original system.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>process</strong> – The new process object.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Procees</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.runTime">
-<code class="sig-name descname">runTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.runTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the running time for the process (in minutes).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>runtime</strong> – The runtime in minutes.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.setArg">
-<code class="sig-name descname">setArg</code><span class="sig-paren">(</span><em class="sig-param">arg</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.setArg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set a specific command-line argument.</p>
-<p>For command-line flags, i.e. boolean arguments, the key should
-specify whether the flag is enabled (True) or not (False).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>arg</strong> (<em>str</em>) – The argument to set.</p></li>
-<li><p><strong>value</strong> (<em>bool</em><em>, </em><em>str</em>) – The value of the argument.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.setArgs">
-<code class="sig-name descname">setArgs</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.setArgs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the dictionary of command-line arguments.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>args</strong> (<em>dict</em><em>, </em><em>collections.OrderedDict</em>) – A dictionary of command-line arguments.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.setConfig">
-<code class="sig-name descname">setConfig</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.setConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the list of configuration file strings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>config</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – The list of configuration strings, or a path to a configuration
-file.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.setName">
-<code class="sig-name descname">setName</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.setName" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the process name.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The process name.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.setSeed">
-<code class="sig-name descname">setSeed</code><span class="sig-paren">(</span><em class="sig-param">seed</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.setSeed" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the random number seed.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>seed</strong> (<em>int</em>) – The random number seed.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.start">
-<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start the AMBER process.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>process</strong> – The process object.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Process.Amber" title="BioSimSpace.Process.Amber"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process.Amber</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.stderr">
-<code class="sig-name descname">stderr</code><span class="sig-paren">(</span><em class="sig-param">n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.stderr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print the last n lines of the stderr buffer.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>n</strong> (<em>int</em>) – The number of lines to print.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.stdout">
-<code class="sig-name descname">stdout</code><span class="sig-paren">(</span><em class="sig-param">n=10</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.stdout" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print the last n lines of the stdout buffer.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>n</strong> (<em>int</em>) – The number of lines to print.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.wait">
-<code class="sig-name descname">wait</code><span class="sig-paren">(</span><em class="sig-param">max_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.wait" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wait for the process to finish.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>max_time</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>, int, float) – The maximimum time to wait (in minutes).</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.workDir">
-<code class="sig-name descname">workDir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.workDir" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the working directory.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>work_dir</strong> – The path of the working directory.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Process.Amber.writeConfig">
-<code class="sig-name descname">writeConfig</code><span class="sig-paren">(</span><em class="sig-param">file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.writeConfig" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write the configuration to file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file</strong> (<em>str</em>) – The path to a file.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -2021,7 +659,7 @@ file.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

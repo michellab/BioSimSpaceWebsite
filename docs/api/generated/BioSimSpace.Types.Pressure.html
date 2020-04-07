@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Pressure &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Types.Pressure &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -223,13 +223,13 @@
             
   <div class="section" id="biosimspace-types-pressure">
 <h1>BioSimSpace.Types.Pressure<a class="headerlink" href="#biosimspace-types-pressure" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Types.Pressure">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Pressure</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Pressure</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>A pressure type.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Types.Pressure.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can be a magnitude and unit, or a string representation
 of the pressure, e.g. “1.38 bar”.</p>
@@ -361,16 +361,16 @@ would be valid arguments: “3.1 atm”, “3.1 atmosphere”, “0.31e1 atm”.
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_unit</span></code>(unit)</p></td>
 <td><p>Validate that the unit are supported.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Pressure.atm" title="BioSimSpace.Types.Pressure.atm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">atm</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">atm</span></code>()</p></td>
 <td><p>Return the atmospheric pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Pressure.bar" title="BioSimSpace.Types.Pressure.bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bar</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">bar</span></code>()</p></td>
 <td><p>Return the pressure in bar.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Pressure.magnitude" title="BioSimSpace.Types.Pressure.magnitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code>()</p></td>
 <td><p>Return the magnitude.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Pressure.unit" title="BioSimSpace.Types.Pressure.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code>()</p></td>
 <td><p>Return the unit.</p></td>
 </tr>
 </tbody>
@@ -414,62 +414,6 @@ would be valid arguments: “3.1 atm”, “3.1 atmosphere”, “0.31e1 atm”.
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Types.Pressure.atm">
-<code class="sig-name descname">atm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.atm" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the atmospheric pressure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>pressure</strong> – The pressure in atomospheres.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Pressure.bar">
-<code class="sig-name descname">bar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.bar" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the pressure in bar.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>pressure</strong> – The pressure in bar.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Pressure.magnitude">
-<code class="sig-name descname">magnitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.magnitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the magnitude.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>magnitude</strong> – The magnitude of the type.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Pressure.unit">
-<code class="sig-name descname">unit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Pressure.unit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the unit.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>unit</strong> – The unit of the type.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -496,7 +440,7 @@ would be valid arguments: “3.1 atm”, “3.1 atmosphere”, “0.31e1 atm”.
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

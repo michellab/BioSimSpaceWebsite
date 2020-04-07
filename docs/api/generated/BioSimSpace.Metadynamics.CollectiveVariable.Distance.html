@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Metadynamics.CollectiveVariable.Distance &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.Distance &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -217,11 +217,11 @@
             
   <div class="section" id="biosimspace-metadynamics-collectivevariable-distance">
 <h1>BioSimSpace.Metadynamics.CollectiveVariable.Distance<a class="headerlink" href="#biosimspace-metadynamics-collectivevariable-distance" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance">
 <em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.CollectiveVariable.</code><code class="sig-name descname">Distance</code><span class="sig-paren">(</span><em class="sig-param">atom0</em>, <em class="sig-param">atom1</em>, <em class="sig-param">hill_width=0.1000 nm</em>, <em class="sig-param">weights0=None</em>, <em class="sig-param">weights1=None</em>, <em class="sig-param">is_com0=None</em>, <em class="sig-param">is_com1=None</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">component=None</em>, <em class="sig-param">pbc=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for distance based collective variables.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">atom0</em>, <em class="sig-param">atom1</em>, <em class="sig-param">hill_width=0.1000 nm</em>, <em class="sig-param">weights0=None</em>, <em class="sig-param">weights1=None</em>, <em class="sig-param">is_com0=None</em>, <em class="sig-param">is_com1=None</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">component=None</em>, <em class="sig-param">pbc=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
@@ -333,76 +333,76 @@ collective variable.</p></li>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate</span></code>()</p></td>
 <td><p>Internal function to check that the object is in a consistent state.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtom0</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtom0</span></code>()</p></td>
 <td><p>Return the atom, atoms, or coordinate, that the distance will be measured from.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtom1</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtom1</span></code>()</p></td>
 <td><p>Return the atom, atoms, or coordinate, that the distance will be measured to.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoM0</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoM0</span></code>()</p></td>
 <td><p>Whether to compute the center of mass of the first atom group.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoM1</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCoM1</span></code>()</p></td>
 <td><p>Whether to compute the center of mass of the first second group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getComponent" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getComponent</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getComponent</span></code>()</p></td>
 <td><p>Whether to use the ‘x’, ‘y’, or ‘z’ component of the distance as the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code>()</p></td>
 <td><p>Get the grid on which the collective variable is sampled.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code>()</p></td>
 <td><p>Return the width of the Gaussian hill used to bias this collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code>()</p></td>
 <td><p>Get the lower bound on the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPeriodicBoundaries</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPeriodicBoundaries</span></code>()</p></td>
 <td><p>Return whether to take account of periodic boundary conditions when computing the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code>()</p></td>
 <td><p>Get the upper bound on the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWeights0</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWeights0</span></code>()</p></td>
 <td><p>Get the weights to be used when computing the center of the first atom group.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWeights1</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWeights1</span></code>()</p></td>
 <td><p>Get the weights to be used when computing the center of the second atom group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtom0</span></code></a>(atom0)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtom0</span></code>(atom0)</p></td>
 <td><p>Set the atom, atoms, or coordinate from which the distance will be measured.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtom1</span></code></a>(atom1)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtom1</span></code>(atom1)</p></td>
 <td><p>Set the atom, atoms, or coordinate to which the distance will be measured.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCoM0</span></code></a>([is_com])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCoM0</span></code>([is_com])</p></td>
 <td><p>Set whether to compute the center of mass of the first atom group.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCoM1</span></code></a>([is_com])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCoM1</span></code>([is_com])</p></td>
 <td><p>Set whether to compute the center of mass of the second atom group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setComponent" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setComponent"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setComponent</span></code></a>([component])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setComponent</span></code>([component])</p></td>
 <td><p>Whether to use the ‘x’, ‘y’, or ‘z’ component of the distance as the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code>([grid])</p></td>
 <td><p>Set a grid on which the collective variable will be sampled.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code>(hill_width)</p></td>
 <td><p>Set the width of the Gaussian hills used to bias this collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code>([lower_bound])</p></td>
 <td><p>Set a lower bound on the value of the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code></a>(pbc)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code>(pbc)</p></td>
 <td><p>Set whether to use periodic_boundaries when calculating the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code>([upper_bound])</p></td>
 <td><p>Set an upper bound on the value of the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights0" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWeights0</span></code></a>([weights0])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWeights0</span></code>([weights0])</p></td>
 <td><p>Set the weights to be used when computing the center of the first atom group.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights1" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWeights1</span></code></a>([weights1])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWeights1</span></code>([weights1])</p></td>
 <td><p>Set the weights to be used when computing the center of the second atom group.</p></td>
 </tr>
 </tbody>
@@ -428,339 +428,6 @@ collective variable.</p></li>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom0">
-<code class="sig-name descname">getAtom0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the atom, atoms, or coordinate, that the distance will be
-measured from.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>atom0</strong> – The atom, group of atoms, or coordinate, that the distance
-will be measured from.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int, [int, int, …], [<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom1">
-<code class="sig-name descname">getAtom1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getAtom1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the atom, atoms, or coordinate, that the distance will be
-measured to.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>atom1</strong> – The atom, group of atoms, or coordinate, that the distance
-will be measured to.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int, [int, int, …], [<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM0">
-<code class="sig-name descname">getCoM0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to compute the center of mass of the first atom group. If
-True, this option will take precedence over any weights that may
-have been set.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_com0</strong> – Whether to compute the center of mass of the first atom group.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM1">
-<code class="sig-name descname">getCoM1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getCoM1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to compute the center of mass of the first second group. If
-True, this option will take precedence over any weights that may
-have been set.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_com1</strong> – Whether to compute the center of mass of the first atom group.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getComponent">
-<code class="sig-name descname">getComponent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getComponent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to use the ‘x’, ‘y’, or ‘z’ component of the distance
-as the collective variable. If unset, then the full Euclidean
-distance is used.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>component</strong> – ‘x’, ‘y’, or ‘z’</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getGrid">
-<code class="sig-name descname">getGrid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getGrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the grid on which the collective variable is sampled.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>grid</strong> – The grid on which the collective variable is sampled.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getHillWidth">
-<code class="sig-name descname">getHillWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getHillWidth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the width of the Gaussian hill used to bias this collective
-variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>hill_width</strong> – The width of the Gaussian hill.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getLowerBound">
-<code class="sig-name descname">getLowerBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getLowerBound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the lower bound on the collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>lower_bound</strong> – The lower bound on the value of the collective variable.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getPeriodicBoundaries">
-<code class="sig-name descname">getPeriodicBoundaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return whether to take account of periodic boundary conditions
-when computing the collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>pbc</strong> – Whether to use periodic boundaries conditions.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>bool</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getUpperBound">
-<code class="sig-name descname">getUpperBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getUpperBound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the upper bound on the collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>upper_bound</strong> – The upper bound on the value of the collective variable.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights0">
-<code class="sig-name descname">getWeights0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the weights to be used when computing the center of the first
-atom group.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>weights0</strong> – A list of weights to be used when computing the center of the
-first atom group.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[float]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights1">
-<code class="sig-name descname">getWeights1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.getWeights1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the weights to be used when computing the center of the second
-atom group.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>weights1</strong> – A list of weights to be used when computing the center of the
-second atom group.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[float]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom0">
-<code class="sig-name descname">setAtom0</code><span class="sig-paren">(</span><em class="sig-param">atom0</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the atom, atoms, or coordinate from which the distance will be
-measured.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>atom0</strong> (int, [int, int, …], [<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The atom, group of atoms, or coordinate, that the distance
-will be measured from.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom1">
-<code class="sig-name descname">setAtom1</code><span class="sig-paren">(</span><em class="sig-param">atom1</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setAtom1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the atom, atoms, or coordinate to which the distance will be
-measured.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>atom1</strong> (int, [int, int, …], [<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The atom, group of atoms, or coordinate, that the distance
-will be measured to.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM0">
-<code class="sig-name descname">setCoM0</code><span class="sig-paren">(</span><em class="sig-param">is_com=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set whether to compute the center of mass of the first atom group.
-If True, this option will take precedence over any weights that may
-have been set. Can be called with no arguments to clear the data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>is_com</strong> (<em>bool</em>) – Whether to compute the center of mass of each atom group.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM1">
-<code class="sig-name descname">setCoM1</code><span class="sig-paren">(</span><em class="sig-param">is_com=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setCoM1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set whether to compute the center of mass of the second atom group.
-If True, this option will take precedence over any weights that may
-have been set. Can be called with no arguments to clear the data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>is_com</strong> (<em>bool</em>) – Whether to compute the center of mass of each atom group.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setComponent">
-<code class="sig-name descname">setComponent</code><span class="sig-paren">(</span><em class="sig-param">component=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setComponent" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to use the ‘x’, ‘y’, or ‘z’ component of the distance
-as the collective variable. If unset, then the full Euclidean
-distance is used. Can be called with no argument to clear the
-data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>component</strong> (<em>str</em>) – ‘x’, ‘y’, or ‘z’</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setGrid">
-<code class="sig-name descname">setGrid</code><span class="sig-paren">(</span><em class="sig-param">grid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setGrid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set a grid on which the collective variable will be sampled.
-Call with no arguments to clear the grid.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>grid</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>) – A grid for the collective variable.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setHillWidth">
-<code class="sig-name descname">setHillWidth</code><span class="sig-paren">(</span><em class="sig-param">hill_width</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setHillWidth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the width of the Gaussian hills used to bias this collective
-variable.</p>
-<dl>
-<dt>hill_width<span class="classifier"><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></span></dt><dd><p>The width of the Gaussian hill.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setLowerBound">
-<code class="sig-name descname">setLowerBound</code><span class="sig-paren">(</span><em class="sig-param">lower_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setLowerBound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set a lower bound on the value of the collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setPeriodicBoundaries">
-<code class="sig-name descname">setPeriodicBoundaries</code><span class="sig-paren">(</span><em class="sig-param">pbc</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set whether to use periodic_boundaries when calculating the
-collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pbc</strong> (<em>bool</em>) – Whether to use periodic boundaries conditions.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setUpperBound">
-<code class="sig-name descname">setUpperBound</code><span class="sig-paren">(</span><em class="sig-param">upper_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setUpperBound" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set an upper bound on the value of the collective variable.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights0">
-<code class="sig-name descname">setWeights0</code><span class="sig-paren">(</span><em class="sig-param">weights0=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the weights to be used when computing the center of the first
-atom group. Can be called with no arguments to clear the weights.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>weights0</strong> (<em>[</em><em>float</em><em>]</em>) – A list of weights to be used when computing the center of the
-first atom group.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights1">
-<code class="sig-name descname">setWeights1</code><span class="sig-paren">(</span><em class="sig-param">weights1=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Distance.setWeights1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the weights to be used when computing the center of the second
-atom group. Can be called with no arguments to clear the weights.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>weights1</strong> (<em>[</em><em>float</em><em>]</em>) – A list of weights to be used when computing the center of the
-second atom group.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -787,7 +454,7 @@ second atom group.</p>
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

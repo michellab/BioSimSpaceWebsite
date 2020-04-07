@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Protocol.FreeEnergy &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Protocol.FreeEnergy &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -219,11 +219,11 @@
             
   <div class="section" id="biosimspace-protocol-freeenergy">
 <h1>BioSimSpace.Protocol.FreeEnergy<a class="headerlink" href="#biosimspace-protocol-freeenergy" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Protocol.FreeEnergy">
 <em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">FreeEnergy</code><span class="sig-paren">(</span><em class="sig-param">lam=0.0</em>, <em class="sig-param">lam_vals=None</em>, <em class="sig-param">min_lam=0.0</em>, <em class="sig-param">max_lam=1.0</em>, <em class="sig-param">num_lam=11</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">frames=20</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing free energy protocols.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Protocol.FreeEnergy.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">lam=0.0</em>, <em class="sig-param">lam_vals=None</em>, <em class="sig-param">min_lam=0.0</em>, <em class="sig-param">max_lam=1.0</em>, <em class="sig-param">num_lam=11</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">frames=20</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
@@ -318,43 +318,43 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_setCustomised</span></code>(is_customised)</p></td>
 <td><p>Internal function to flag whether a protocol has been customised.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getFrames" title="BioSimSpace.Protocol.FreeEnergy.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code>()</p></td>
 <td><p>Return the number of frames.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getLambda" title="BioSimSpace.Protocol.FreeEnergy.getLambda"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambda</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambda</span></code>()</p></td>
 <td><p>Get the value of the perturbation parameter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getLambdaValues" title="BioSimSpace.Protocol.FreeEnergy.getLambdaValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambdaValues</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLambdaValues</span></code>()</p></td>
 <td><p>Get the list of lambda values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getPressure" title="BioSimSpace.Protocol.FreeEnergy.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getRunTime" title="BioSimSpace.Protocol.FreeEnergy.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getTemperature" title="BioSimSpace.Protocol.FreeEnergy.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code>()</p></td>
 <td><p>Return temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.getTimeStep" title="BioSimSpace.Protocol.FreeEnergy.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code>()</p></td>
 <td><p>Return the time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setFrames" title="BioSimSpace.Protocol.FreeEnergy.setFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFrames</span></code></a>(frames)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFrames</span></code>(frames)</p></td>
 <td><p>Set the number of frames.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setLambdaValues" title="BioSimSpace.Protocol.FreeEnergy.setLambdaValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLambdaValues</span></code></a>(lam[, lam_vals, min_lam, …])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLambdaValues</span></code>(lam[, lam_vals, min_lam, …])</p></td>
 <td><p>Set the list of lambda values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setPressure" title="BioSimSpace.Protocol.FreeEnergy.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code>(pressure)</p></td>
 <td><p>Set the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setRunTime" title="BioSimSpace.Protocol.FreeEnergy.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code>(runtime)</p></td>
 <td><p>Set the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setTemperature" title="BioSimSpace.Protocol.FreeEnergy.setTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code></a>(temperature)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code>(temperature)</p></td>
 <td><p>Set the temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.FreeEnergy.setTimeStep" title="BioSimSpace.Protocol.FreeEnergy.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code>(timestep)</p></td>
 <td><p>Set the time step.</p></td>
 </tr>
 </tbody>
@@ -380,176 +380,6 @@
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getFrames">
-<code class="sig-name descname">getFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the number of frames.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>frames</strong> – The number of trajectory frames.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getLambda">
-<code class="sig-name descname">getLambda</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getLambda" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the value of the perturbation parameter.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>lam</strong> – The value of the perturbation parameter.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getLambdaValues">
-<code class="sig-name descname">getLambdaValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getLambdaValues" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the list of lambda values.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>lam_vals</strong> – The list of lambda values.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[float]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getPressure">
-<code class="sig-name descname">getPressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getPressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the pressure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>pressure</strong> – The pressure.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getRunTime">
-<code class="sig-name descname">getRunTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getRunTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the running time.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>runtime</strong> – The simulation run time.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getTemperature">
-<code class="sig-name descname">getTemperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getTemperature" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return temperature.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>temperature</strong> – The simulation temperature.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.getTimeStep">
-<code class="sig-name descname">getTimeStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.getTimeStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the time step.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>timestep</strong> – The integration time step.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setFrames">
-<code class="sig-name descname">setFrames</code><span class="sig-paren">(</span><em class="sig-param">frames</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the number of frames.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>frames</strong> (<em>int</em>) – The number of trajectory frames.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setLambdaValues">
-<code class="sig-name descname">setLambdaValues</code><span class="sig-paren">(</span><em class="sig-param">lam</em>, <em class="sig-param">lam_vals=None</em>, <em class="sig-param">min_lam=None</em>, <em class="sig-param">max_lam=None</em>, <em class="sig-param">num_lam=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setLambdaValues" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the list of lambda values.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>lam</strong> (<em>float</em>) – The perturbation parameter: [0.0, 1.0]</p></li>
-<li><p><strong>lam_vals</strong> (<em>[</em><em>float</em><em>]</em>) – A list of lambda values.</p></li>
-<li><p><strong>min_lam</strong> (<em>float</em>) – The minimum lambda value.</p></li>
-<li><p><strong>max_lam</strong> (<em>float</em>) – The maximum lambda value.</p></li>
-<li><p><strong>num_lam</strong> (<em>int</em>) – The number of lambda values.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setPressure">
-<code class="sig-name descname">setPressure</code><span class="sig-paren">(</span><em class="sig-param">pressure</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setPressure" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the pressure.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setRunTime">
-<code class="sig-name descname">setRunTime</code><span class="sig-paren">(</span><em class="sig-param">runtime</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setRunTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the running time.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The simulation run time.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setTemperature">
-<code class="sig-name descname">setTemperature</code><span class="sig-paren">(</span><em class="sig-param">temperature</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setTemperature" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the temperature.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The simulation temperature.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Protocol.FreeEnergy.setTimeStep">
-<code class="sig-name descname">setTimeStep</code><span class="sig-paren">(</span><em class="sig-param">timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.FreeEnergy.setTimeStep" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the time step.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration time step.</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -576,7 +406,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>

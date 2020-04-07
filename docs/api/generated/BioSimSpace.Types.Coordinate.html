@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Types.Coordinate &mdash; BioSimSpace 2019.3.0+48.gd1e1072 documentation</title>
+  <title>BioSimSpace.Types.Coordinate &mdash; BioSimSpace 2019.3.0+52.gf93482d documentation</title>
   
 
   
@@ -223,13 +223,13 @@
             
   <div class="section" id="biosimspace-types-coordinate">
 <h1>BioSimSpace.Types.Coordinate<a class="headerlink" href="#biosimspace-types-coordinate" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="BioSimSpace.Types.Coordinate">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Coordinate</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">z</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Types.</code><code class="sig-name descname">Coordinate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate" title="Permalink to this definition">¶</a></dt>
 <dd><p>A coordinate (position vector).</p>
-<dl class="method">
+<dl class="py method">
 <dt id="BioSimSpace.Types.Coordinate.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">z</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -327,19 +327,19 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_from_sire_vector</span></code>(vector)</p></td>
 <td><p>Create a coordinate from a Sire.Maths.Vector object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Coordinate.fromVector" title="BioSimSpace.Types.Coordinate.fromVector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromVector</span></code></a>(vector, unit)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">fromVector</span></code>(vector, unit)</p></td>
 <td><p>Convert from a unitless BioSimSpace.Types.Vector object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Coordinate.toVector" title="BioSimSpace.Types.Coordinate.toVector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toVector</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">toVector</span></code>()</p></td>
 <td><p>Convert to a unitless BioSimSpace.Types.Vector object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Coordinate.x" title="BioSimSpace.Types.Coordinate.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code>()</p></td>
 <td><p>Return the x component of the coordinate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Coordinate.y" title="BioSimSpace.Types.Coordinate.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code>()</p></td>
 <td><p>Return the y component of the coordinate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Coordinate.z" title="BioSimSpace.Types.Coordinate.z"><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">z</span></code>()</p></td>
 <td><p>Return the z component of the coordinate.</p></td>
 </tr>
 </tbody>
@@ -365,97 +365,6 @@
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="BioSimSpace.Types.Coordinate.fromVector">
-<em class="property">static </em><code class="sig-name descname">fromVector</code><span class="sig-paren">(</span><em class="sig-param">vector</em>, <em class="sig-param">unit</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.fromVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert from a unitless BioSimSpace.Types.Vector object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><ul class="simple">
-<li><p><strong>vector</strong> (:class: <a class="reference internal" href="BioSimSpace.Types.Vector.html#BioSimSpace.Types.Vector" title="BioSimSpace.Types.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a>) – The unitless vector.</p></li>
-<li><p><strong>unit</strong> (:class: <a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length</span></code></a>) – The coordinate unit.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Coordinate.toVector">
-<code class="sig-name descname">toVector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.toVector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert to a unitless BioSimSpace.Types.Vector object.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>vector</strong> – The unitless vector.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><dl class="field-list simple">
-<dt class="field-odd">class</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Vector.html#BioSimSpace.Types.Vector" title="BioSimSpace.Types.Vector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Vector</span></code></a></p>
-</dd>
-</dl>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Coordinate.x">
-<code class="sig-name descname">x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.x" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the x component of the coordinate.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>x</strong> – The x component of the coordinate.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><dl class="field-list simple">
-<dt class="field-odd">class</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length</span></code></a></p>
-</dd>
-</dl>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Coordinate.y">
-<code class="sig-name descname">y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.y" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the y component of the coordinate.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>y</strong> – The y component of the coordinate.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><dl class="field-list simple">
-<dt class="field-odd">class</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length</span></code></a></p>
-</dd>
-</dl>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Coordinate.z">
-<code class="sig-name descname">z</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Coordinate.z" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the z component of the coordinate.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>z</strong> – The z component of the coordinate.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><dl class="field-list simple">
-<dt class="field-odd">class</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Length</span></code></a></p>
-</dd>
-</dl>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
 </dd></dl>
 
 </div>
@@ -482,7 +391,7 @@
     <p>
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Mar 19, 2020.
+        Last updated on Apr 07, 2020.
       </span>
 
     </p>
