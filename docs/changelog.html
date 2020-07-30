@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Changelog &mdash; BioSimSpace 2019.3.0+59.g3b0a551 documentation</title>
+  <title>Changelog &mdash; BioSimSpace 2020.1.0 documentation</title>
   
 
   
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                2019.3.0
+                2020.1.0
               </div>
             
           
@@ -104,6 +104,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#july-28-2020">2020.1.0 - July 28 2020</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nov-22-2019">2019.3.0 - Nov 22 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sep-11-2019">2019.2.0 - Sep 11 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#may-02-2019">2019.1.0 - May 02 2019</a></li>
@@ -193,6 +194,20 @@
             
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="july-28-2020">
+<h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2020.1.0...2019.3.0">2020.1.0</a> - July 28 2020<a class="headerlink" href="#july-28-2020" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Added logo to website and update theme (<em class="xref py py-obj">&#64;ppxasjsm</em>).</p></li>
+<li><p>Make sure potential terms are sorted when writing to SOMD perturbation files (<em class="xref py py-obj">&#64;ptosco</em>).</p></li>
+<li><p>Switch to using ipywidgets.FileUpload to eliminate non-conda dependencies.</p></li>
+<li><p>Added support for single-leg free energy simulations.</p></li>
+<li><p>Created a KCOMBU mirror to avoid network issues during install.</p></li>
+<li><p>Allow AMBER simulations when system wasn’t loaded from file.</p></li>
+<li><p>Handle GROMACS simulations with non-periodic boxes.</p></li>
+<li><p>Run vacuum simulations on a single thread when using GROMACS to avoid domain decomposition.</p></li>
+<li><p>Make sure BioSimSpace is always built against the latest version of Sire during conda build.</p></li>
+</ul>
+</div>
 <div class="section" id="nov-22-2019">
 <h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2019.3.0...2019.2.0">2019.3.0</a> - Nov 22 2019<a class="headerlink" href="#nov-22-2019" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -269,7 +284,7 @@
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 17, 2020.
+        Last updated on Jul 30, 2020.
       </span>
 
     </p>
