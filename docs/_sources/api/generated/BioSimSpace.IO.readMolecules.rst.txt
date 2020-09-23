@@ -1,4 +1,4 @@
-BioSimSpace.IO.readMolecules
+﻿BioSimSpace.IO.readMolecules
 ============================
 
 .. currentmodule:: BioSimSpace.IO

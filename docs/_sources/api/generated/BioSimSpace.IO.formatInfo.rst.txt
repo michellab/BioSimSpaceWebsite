@@ -1,4 +1,4 @@
-BioSimSpace.IO.formatInfo
+﻿BioSimSpace.IO.formatInfo
 =========================
 
 .. currentmodule:: BioSimSpace.IO

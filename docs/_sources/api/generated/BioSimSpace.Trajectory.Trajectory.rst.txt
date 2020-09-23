@@ -1,4 +1,4 @@
-BioSimSpace.Trajectory.Trajectory
+﻿BioSimSpace.Trajectory.Trajectory
 =================================
 
 .. currentmodule:: BioSimSpace.Trajectory

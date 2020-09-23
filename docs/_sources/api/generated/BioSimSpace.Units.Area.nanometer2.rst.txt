@@ -1,4 +1,4 @@
-BioSimSpace.Units.Area.nanometer2
+﻿BioSimSpace.Units.Area.nanometer2
 =================================
 
 .. currentmodule:: BioSimSpace.Units.Area

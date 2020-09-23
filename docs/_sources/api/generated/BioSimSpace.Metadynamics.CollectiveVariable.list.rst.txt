@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.CollectiveVariable.list
+﻿BioSimSpace.Metadynamics.CollectiveVariable.list
 ================================================
 
 .. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable

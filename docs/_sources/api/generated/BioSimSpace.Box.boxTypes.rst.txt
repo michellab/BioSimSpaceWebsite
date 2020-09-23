@@ -1,0 +1,6 @@
+﻿BioSimSpace.Box.boxTypes
+========================
+
+.. currentmodule:: BioSimSpace.Box
+
+.. autofunction:: boxTypes

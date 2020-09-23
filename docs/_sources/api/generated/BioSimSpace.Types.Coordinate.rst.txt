@@ -1,4 +1,4 @@
-BioSimSpace.Types.Coordinate
+﻿BioSimSpace.Types.Coordinate
 ============================
 
 .. currentmodule:: BioSimSpace.Types

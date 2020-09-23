@@ -1,4 +1,4 @@
-BioSimSpace.Solvent.waterModels
+﻿BioSimSpace.Solvent.waterModels
 ===============================
 
 .. currentmodule:: BioSimSpace.Solvent

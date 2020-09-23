@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+3.gcc522eb documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+14.g0591cfb documentation</title>
   
 
   
@@ -219,20 +219,21 @@
 <h1>BioSimSpace.FreeEnergy.Binding<a class="headerlink" href="#biosimspace-freeenergy-binding" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="BioSimSpace.FreeEnergy.Binding">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_leg</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Binding</code><span class="sig-paren">(</span><em class="sig-param">system, protocol=None, box=None, angles=[90.0000 degrees, 90.0000 degrees, 90.0000 degrees], free_leg=True, work_dir=None, engine=None, property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running binding free energy simulations.</p>
 <dl class="py method">
 <dt id="BioSimSpace.FreeEnergy.Binding.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">system</span></em>, <em class="sig-param"><span class="n">protocol</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">free_leg</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">engine</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system, protocol=None, box=None, angles=[90.0000 degrees, 90.0000 degrees, 90.0000 degrees], free_leg=True, work_dir=None, engine=None, property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.FreeEnergy</span></code></a>) – The simulation protocol.</p></li>
-<li><p><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the box size in each dimension. This box will be
-used for the “free” leg of the simulation, which typically can be
-run with a significantly smaller box than the “bound” leg.</p></li>
+<li><p><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the box size in each dimension: x, y, and z.
+This box will be used for the “free” leg of the simulation, which typically
+can be run with a significantly smaller box than the “bound” leg.</p></li>
+<li><p><strong>angles</strong> ([<a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the angles between the box vectors: yz, xz, and xy.</p></li>
 <li><p><strong>free_leg</strong> (<em>bool</em>) – Whether to simulation the free leg of the simulation. Set to False
 if you only wish to run the bound leg.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
@@ -278,7 +279,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
 <td><p>Return hash(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="BioSimSpace.FreeEnergy.Binding.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, box, free_leg, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.__init__" title="BioSimSpace.FreeEnergy.Binding.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system[, protocol, box, angles, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
@@ -391,7 +392,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 31, 2020.
+        Last updated on Sep 23, 2020.
       </span>
 
     </p>

@@ -1,4 +1,4 @@
-BioSimSpace.Units.Area.angstrom2
+﻿BioSimSpace.Units.Area.angstrom2
 ================================
 
 .. currentmodule:: BioSimSpace.Units.Area

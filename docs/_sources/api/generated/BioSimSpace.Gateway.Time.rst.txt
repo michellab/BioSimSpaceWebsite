@@ -1,4 +1,4 @@
-BioSimSpace.Gateway.Time
+﻿BioSimSpace.Gateway.Time
 ========================
 
 .. currentmodule:: BioSimSpace.Gateway

@@ -1,4 +1,4 @@
-BioSimSpace.Parameters.gaff
+﻿BioSimSpace.Parameters.gaff
 ===========================
 
 .. currentmodule:: BioSimSpace.Parameters

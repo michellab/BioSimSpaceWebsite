@@ -1,4 +1,4 @@
-BioSimSpace.Units.Charge.coulomb
+﻿BioSimSpace.Units.Charge.coulomb
 ================================
 
 .. currentmodule:: BioSimSpace.Units.Charge

@@ -1,4 +1,4 @@
-BioSimSpace.Units.Charge.electron\_charge
+﻿BioSimSpace.Units.Charge.electron\_charge
 =========================================
 
 .. currentmodule:: BioSimSpace.Units.Charge

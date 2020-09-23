@@ -1,4 +1,4 @@
-BioSimSpace.Protocol.Metadynamics
+﻿BioSimSpace.Protocol.Metadynamics
 =================================
 
 .. currentmodule:: BioSimSpace.Protocol

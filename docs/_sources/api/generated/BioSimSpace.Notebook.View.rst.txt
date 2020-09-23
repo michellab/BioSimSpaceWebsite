@@ -1,4 +1,4 @@
-BioSimSpace.Notebook.View
+﻿BioSimSpace.Notebook.View
 =========================
 
 .. currentmodule:: BioSimSpace.Notebook

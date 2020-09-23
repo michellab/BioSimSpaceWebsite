@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.CollectiveVariable.Distance
+﻿BioSimSpace.Metadynamics.CollectiveVariable.Distance
 ====================================================
 
 .. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable

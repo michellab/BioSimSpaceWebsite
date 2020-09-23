@@ -1,4 +1,4 @@
-BioSimSpace.Gateway.Boolean
+﻿BioSimSpace.Gateway.Boolean
 ===========================
 
 .. currentmodule:: BioSimSpace.Gateway

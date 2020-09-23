@@ -1,4 +1,4 @@
-BioSimSpace.Protocol.Minimisation
+﻿BioSimSpace.Protocol.Minimisation
 =================================
 
 .. currentmodule:: BioSimSpace.Protocol

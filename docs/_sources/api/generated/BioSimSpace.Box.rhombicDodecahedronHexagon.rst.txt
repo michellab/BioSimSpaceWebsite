@@ -1,0 +1,6 @@
+﻿BioSimSpace.Box.rhombicDodecahedronHexagon
+==========================================
+
+.. currentmodule:: BioSimSpace.Box
+
+.. autofunction:: rhombicDodecahedronHexagon

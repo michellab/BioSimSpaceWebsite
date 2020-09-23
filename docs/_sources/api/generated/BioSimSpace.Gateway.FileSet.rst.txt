@@ -1,4 +1,4 @@
-BioSimSpace.Gateway.FileSet
+﻿BioSimSpace.Gateway.FileSet
 ===========================
 
 .. currentmodule:: BioSimSpace.Gateway

@@ -1,4 +1,4 @@
-BioSimSpace.Align.rmsdAlign
+﻿BioSimSpace.Align.rmsdAlign
 ===========================
 
 .. currentmodule:: BioSimSpace.Align

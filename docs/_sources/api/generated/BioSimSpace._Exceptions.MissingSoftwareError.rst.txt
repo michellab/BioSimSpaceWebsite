@@ -1,4 +1,4 @@
-BioSimSpace.\_Exceptions.MissingSoftwareError
+﻿BioSimSpace.\_Exceptions.MissingSoftwareError
 =============================================
 
 .. currentmodule:: BioSimSpace._Exceptions

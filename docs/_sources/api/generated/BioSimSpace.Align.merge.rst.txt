@@ -1,4 +1,4 @@
-BioSimSpace.Align.merge
+﻿BioSimSpace.Align.merge
 =======================
 
 .. currentmodule:: BioSimSpace.Align

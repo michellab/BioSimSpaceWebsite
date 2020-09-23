@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.CollectiveVariable.Torsion
+﻿BioSimSpace.Metadynamics.CollectiveVariable.Torsion
 ===================================================
 
 .. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable

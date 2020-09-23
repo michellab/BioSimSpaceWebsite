@@ -1,4 +1,4 @@
-BioSimSpace.Protocol.Equilibration
+﻿BioSimSpace.Protocol.Equilibration
 ==================================
 
 .. currentmodule:: BioSimSpace.Protocol

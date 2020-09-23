@@ -1,4 +1,4 @@
-BioSimSpace.\_SireWrappers.Residue
+﻿BioSimSpace.\_SireWrappers.Residue
 ==================================
 
 .. currentmodule:: BioSimSpace._SireWrappers

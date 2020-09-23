@@ -1,4 +1,4 @@
-BioSimSpace.Units.Temperature.celsius
+﻿BioSimSpace.Units.Temperature.celsius
 =====================================
 
 .. currentmodule:: BioSimSpace.Units.Temperature

@@ -1,4 +1,4 @@
-BioSimSpace.Types.Charge
+﻿BioSimSpace.Types.Charge
 ========================
 
 .. currentmodule:: BioSimSpace.Types

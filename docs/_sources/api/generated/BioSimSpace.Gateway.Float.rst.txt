@@ -1,4 +1,4 @@
-BioSimSpace.Gateway.Float
+﻿BioSimSpace.Gateway.Float
 =========================
 
 .. currentmodule:: BioSimSpace.Gateway

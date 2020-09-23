@@ -1,4 +1,4 @@
-BioSimSpace.Types.Energy
+﻿BioSimSpace.Types.Energy
 ========================
 
 .. currentmodule:: BioSimSpace.Types

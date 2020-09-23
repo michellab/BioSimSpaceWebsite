@@ -1,4 +1,4 @@
-BioSimSpace.Types.Time
+﻿BioSimSpace.Types.Time
 ======================
 
 .. currentmodule:: BioSimSpace.Types

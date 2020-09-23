@@ -1,4 +1,4 @@
-BioSimSpace.Node.help
+﻿BioSimSpace.Node.help
 =====================
 
 .. currentmodule:: BioSimSpace.Node

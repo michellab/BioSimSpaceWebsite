@@ -1,4 +1,4 @@
-BioSimSpace.Protocol.FreeEnergy
+﻿BioSimSpace.Protocol.FreeEnergy
 ===============================
 
 .. currentmodule:: BioSimSpace.Protocol

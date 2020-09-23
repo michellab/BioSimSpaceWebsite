@@ -1,4 +1,4 @@
-BioSimSpace.Types.Temperature
+﻿BioSimSpace.Types.Temperature
 =============================
 
 .. currentmodule:: BioSimSpace.Types

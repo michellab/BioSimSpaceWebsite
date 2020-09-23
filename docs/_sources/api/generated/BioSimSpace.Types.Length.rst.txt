@@ -1,4 +1,4 @@
-BioSimSpace.Types.Length
+﻿BioSimSpace.Types.Length
 ========================
 
 .. currentmodule:: BioSimSpace.Types

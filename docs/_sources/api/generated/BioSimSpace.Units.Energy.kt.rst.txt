@@ -1,4 +1,4 @@
-BioSimSpace.Units.Energy.kt
+﻿BioSimSpace.Units.Energy.kt
 ===========================
 
 .. currentmodule:: BioSimSpace.Units.Energy

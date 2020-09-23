@@ -1,4 +1,4 @@
-BioSimSpace.FreeEnergy.Binding
+﻿BioSimSpace.FreeEnergy.Binding
 ==============================
 
 .. currentmodule:: BioSimSpace.FreeEnergy

@@ -1,4 +1,4 @@
-BioSimSpace.IO.fileFormats
+﻿BioSimSpace.IO.fileFormats
 ==========================
 
 .. currentmodule:: BioSimSpace.IO

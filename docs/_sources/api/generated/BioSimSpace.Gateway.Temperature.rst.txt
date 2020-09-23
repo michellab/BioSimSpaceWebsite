@@ -1,4 +1,4 @@
-BioSimSpace.Gateway.Temperature
+﻿BioSimSpace.Gateway.Temperature
 ===============================
 
 .. currentmodule:: BioSimSpace.Gateway

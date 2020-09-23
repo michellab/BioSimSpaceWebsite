@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.Grid
+﻿BioSimSpace.Metadynamics.Grid
 =============================
 
 .. currentmodule:: BioSimSpace.Metadynamics

@@ -1,4 +1,4 @@
-BioSimSpace.Parameters.formalCharge
+﻿BioSimSpace.Parameters.formalCharge
 ===================================
 
 .. currentmodule:: BioSimSpace.Parameters

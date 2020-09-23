@@ -1,4 +1,4 @@
-BioSimSpace.Align.matchAtoms
+﻿BioSimSpace.Align.matchAtoms
 ============================
 
 .. currentmodule:: BioSimSpace.Align

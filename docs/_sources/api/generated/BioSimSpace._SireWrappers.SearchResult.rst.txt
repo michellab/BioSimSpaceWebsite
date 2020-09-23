@@ -1,4 +1,4 @@
-BioSimSpace.\_SireWrappers.SearchResult
+﻿BioSimSpace.\_SireWrappers.SearchResult
 =======================================
 
 .. currentmodule:: BioSimSpace._SireWrappers

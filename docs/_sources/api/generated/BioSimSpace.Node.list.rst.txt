@@ -1,4 +1,4 @@
-BioSimSpace.Node.list
+﻿BioSimSpace.Node.list
 =====================
 
 .. currentmodule:: BioSimSpace.Node

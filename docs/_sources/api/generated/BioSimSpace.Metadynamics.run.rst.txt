@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.run
+﻿BioSimSpace.Metadynamics.run
 ============================
 
 .. currentmodule:: BioSimSpace.Metadynamics

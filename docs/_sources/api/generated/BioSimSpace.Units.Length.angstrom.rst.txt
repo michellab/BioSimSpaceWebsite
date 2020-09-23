@@ -1,4 +1,4 @@
-BioSimSpace.Units.Length.angstrom
+﻿BioSimSpace.Units.Length.angstrom
 =================================
 
 .. currentmodule:: BioSimSpace.Units.Length

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Solvent.spce &mdash; BioSimSpace 2020.1.0+3.gcc522eb documentation</title>
+  <title>BioSimSpace.Solvent.spce &mdash; BioSimSpace 2020.1.0+14.g0591cfb documentation</title>
   
 
   
@@ -224,13 +224,14 @@
 <h1>BioSimSpace.Solvent.spce<a class="headerlink" href="#biosimspace-solvent-spce" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
 <dt id="BioSimSpace.Solvent.spce">
-<code class="sig-prename descclassname">BioSimSpace.Solvent.</code><code class="sig-name descname">spce</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">molecule</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">box</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shell</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ion_conc</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">is_neutral</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">work_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.spce" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Solvent.</code><code class="sig-name descname">spce</code><span class="sig-paren">(</span><em class="sig-param">molecule=None, box=None, angles=[90.0000 degrees, 90.0000 degrees, 90.0000 degrees], shell=None, ion_conc=0, is_neutral=True, work_dir=None, property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Solvent.spce" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add SPC/E solvent.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>,                   <a class="reference internal" href="BioSimSpace._SireWrappers.Molecules.html#BioSimSpace._SireWrappers.Molecules" title="BioSimSpace._SireWrappers.Molecules"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>,                   <a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – A molecule, or container/system of molecules.</p></li>
 <li><p><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the box size in each dimension.</p></li>
+<li><p><strong>angles</strong> ([<a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – A list containing the angles between the box vectors: yz, xz, and xy.</p></li>
 <li><p><strong>shell</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code> &lt;BioSimSpace.Types.Length&gt;`) – Thickness of the water shell around the solute. Note that the
 base length of the resulting box must be at least twice as large
 as the cutoff used by the chosen molecular dynamics engine. As such,
@@ -277,7 +278,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Jul 31, 2020.
+        Last updated on Sep 23, 2020.
       </span>
 
     </p>

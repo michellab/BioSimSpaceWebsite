@@ -1,4 +1,4 @@
-BioSimSpace.Units.Time.day
+﻿BioSimSpace.Units.Time.day
 ==========================
 
 .. currentmodule:: BioSimSpace.Units.Time

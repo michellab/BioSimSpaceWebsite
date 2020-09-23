@@ -1,4 +1,4 @@
-BioSimSpace.Types.Area
+﻿BioSimSpace.Types.Area
 ======================
 
 .. currentmodule:: BioSimSpace.Types

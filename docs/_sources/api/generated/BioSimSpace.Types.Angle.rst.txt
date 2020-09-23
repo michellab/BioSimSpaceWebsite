@@ -1,4 +1,4 @@
-BioSimSpace.Types.Angle
+﻿BioSimSpace.Types.Angle
 =======================
 
 .. currentmodule:: BioSimSpace.Types

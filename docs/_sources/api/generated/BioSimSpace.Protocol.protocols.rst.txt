@@ -1,4 +1,4 @@
-BioSimSpace.Protocol.protocols
+﻿BioSimSpace.Protocol.protocols
 ==============================
 
 .. currentmodule:: BioSimSpace.Protocol

@@ -1,4 +1,4 @@
-BioSimSpace.Metadynamics.Bound
+﻿BioSimSpace.Metadynamics.Bound
 ==============================
 
 .. currentmodule:: BioSimSpace.Metadynamics

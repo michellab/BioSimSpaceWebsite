@@ -1,4 +1,4 @@
-BioSimSpace.\_Exceptions.IncompatibleError
+﻿BioSimSpace.\_Exceptions.IncompatibleError
 ==========================================
 
 .. currentmodule:: BioSimSpace._Exceptions

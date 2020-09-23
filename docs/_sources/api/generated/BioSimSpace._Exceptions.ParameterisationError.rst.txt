@@ -1,4 +1,4 @@
-BioSimSpace.\_Exceptions.ParameterisationError
+﻿BioSimSpace.\_Exceptions.ParameterisationError
 ==============================================
 
 .. currentmodule:: BioSimSpace._Exceptions

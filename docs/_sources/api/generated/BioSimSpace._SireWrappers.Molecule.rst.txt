@@ -1,4 +1,4 @@
-BioSimSpace.\_SireWrappers.Molecule
+﻿BioSimSpace.\_SireWrappers.Molecule
 ===================================
 
 .. currentmodule:: BioSimSpace._SireWrappers

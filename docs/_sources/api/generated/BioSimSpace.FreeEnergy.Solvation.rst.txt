@@ -1,4 +1,4 @@
-BioSimSpace.FreeEnergy.Solvation
+﻿BioSimSpace.FreeEnergy.Solvation
 ================================
 
 .. currentmodule:: BioSimSpace.FreeEnergy
