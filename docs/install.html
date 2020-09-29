@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Installation &mdash; BioSimSpace 2020.1.0+14.g0591cfb documentation</title>
+  <title>Installation &mdash; BioSimSpace 2020.1.0+22.gc118d2c documentation</title>
   
 
   
@@ -204,6 +204,11 @@
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c michellab/label/dev biosimspace
 </pre></div>
 </div>
+<p>When updating the development version it is generally advised to update <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
+at the same time:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c michellab/label/dev biosimspace sire
+</pre></div>
+</div>
 <p>If you plan on using BioSimSpace interactively via Jupyter, then you might also
 need to enable the required notebook extensions within your Conda environment:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-nbextension <span class="nb">enable</span> nglview --py --sys-prefix
@@ -392,7 +397,7 @@ against.</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Sep 23, 2020.
+        Last updated on Sep 29, 2020.
       </span>
 
     </p>
