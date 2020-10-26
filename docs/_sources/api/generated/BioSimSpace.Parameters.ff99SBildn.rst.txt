@@ -1,4 +1,4 @@
-﻿BioSimSpace.Parameters.ff99SBildn
+BioSimSpace.Parameters.ff99SBildn
 =================================
 
 .. currentmodule:: BioSimSpace.Parameters

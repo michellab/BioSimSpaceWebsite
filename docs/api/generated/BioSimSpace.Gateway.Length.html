@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.Length &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Gateway.Length &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,11 +28,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -101,6 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../index_Gateway.html#classes">Classes</a></li>
@@ -230,34 +231,34 @@
             
   <div class="section" id="biosimspace-gateway-length">
 <h1>BioSimSpace.Gateway.Length<a class="headerlink" href="#biosimspace-gateway-length" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
+<dl class="class">
 <dt id="BioSimSpace.Gateway.Length">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Gateway.</code><code class="sig-name descname">Length</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">help</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Gateway.</code><code class="sig-name descname">Length</code><span class="sig-paren">(</span><em class="sig-param">help=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">minimum=None</em>, <em class="sig-param">maximum=None</em>, <em class="sig-param">allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length" title="Permalink to this definition">¶</a></dt>
 <dd><p>A length requirement.</p>
 <p class="rubric">Examples</p>
 <p>Create a length requirement with a default of 10 Angstrom.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s2">&quot;angstrom&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>The same, but explicitly passing a <a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>
 for the default.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Create a length requirement with a default of 10 Angstrom and a maximum
 of 50 nanometers. Note that the unit is taken from the default value.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">my_length</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Length</span><span class="p">(</span><span class="n">help</span><span class="o">=</span><span class="s2">&quot;A length requirement&quot;</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">,</span>
 <span class="gp">... </span>                               <span class="n">maximum</span><span class="o">=</span><span class="mi">50</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="py method">
+<dl class="method">
 <dt id="BioSimSpace.Gateway.Length.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">help</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">default</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">unit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">minimum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">maximum</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allowed</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">help=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">minimum=None</em>, <em class="sig-param">maximum=None</em>, <em class="sig-param">allowed=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -280,134 +281,174 @@ of 50 nanometers. Note that the unit is taken from the default value.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code>(name, /)</p></td>
-<td><p>Implement delattr(self, name).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code>()</p></td>
-<td><p>Default dir() implementation.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(value, /)</p></td>
-<td><p>Return self==value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code>(format_spec, /)</p></td>
-<td><p>Default object formatter.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code>(name, /)</p></td>
-<td><p>Return getattr(self, name).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
-<td><p>Return hash(self).</p></td>
-</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.__init__" title="BioSimSpace.Gateway.Length.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([help, default, unit, minimum, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
-<td><p>This method is called when a class is subclassed.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code>(value, /)</p></td>
-<td><p>Return self!=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code>(**kwargs)</p></td>
-<td><p>Create and return a new object.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code>()</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code>(protocol, /)</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
-<td><p>Return repr(self).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code>(name, value, /)</p></td>
-<td><p>Implement setattr(self, name, value).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code>()</p></td>
-<td><p>Size of object in memory, in bytes.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
-<td><p>Return str(self).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
-<td><p>Abstract classes can override this to customize issubclass().</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate</span></code>(value)</p></td>
-<td><p>Validate that the value is of the correct type.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_default</span></code>()</p></td>
-<td><p>Validate the default value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAllowedValues</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getAllowedValues" title="BioSimSpace.Gateway.Length.getAllowedValues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAllowedValues</span></code></a>()</p></td>
 <td><p>Return the allowed values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgType</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getArgType" title="BioSimSpace.Gateway.Length.getArgType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getArgType</span></code></a>()</p></td>
 <td><p>The command-line argument type.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDefault</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getDefault" title="BioSimSpace.Gateway.Length.getDefault"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDefault</span></code></a>()</p></td>
 <td><p>Return the default value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHelp</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getHelp" title="BioSimSpace.Gateway.Length.getHelp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHelp</span></code></a>()</p></td>
 <td><p>Return the documentation string.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMax</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getMax" title="BioSimSpace.Gateway.Length.getMax"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMax</span></code></a>()</p></td>
 <td><p>Return the maximum allowed value.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMin</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getMin" title="BioSimSpace.Gateway.Length.getMin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMin</span></code></a>()</p></td>
 <td><p>Return the minimum allowed value.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnit</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getUnit" title="BioSimSpace.Gateway.Length.getUnit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUnit</span></code></a>()</p></td>
 <td><p>Return the unit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getValue</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.getValue" title="BioSimSpace.Gateway.Length.getValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getValue</span></code></a>()</p></td>
 <td><p>Return the value.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMulti</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.isMulti" title="BioSimSpace.Gateway.Length.isMulti"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMulti</span></code></a>()</p></td>
 <td><p>Whether the requirement has multiple values.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOptional</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.isOptional" title="BioSimSpace.Gateway.Length.isOptional"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isOptional</span></code></a>()</p></td>
 <td><p>Whether the requirement is optional.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code>(value[, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Length.setValue" title="BioSimSpace.Gateway.Length.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(value[, name])</p></td>
 <td><p>Validate and set the value.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
-<td><p>list of weak references to the object (if defined)</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_is_multi</span></code></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getAllowedValues">
+<code class="sig-name descname">getAllowedValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getAllowedValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the allowed values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>allowed</strong> – The list of allowed values that the requirement can take.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getArgType">
+<code class="sig-name descname">getArgType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getArgType" title="Permalink to this definition">¶</a></dt>
+<dd><p>The command-line argument type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>arg_type</strong> – The command-line argument type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool, int, float, str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getDefault">
+<code class="sig-name descname">getDefault</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getDefault" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getHelp">
+<code class="sig-name descname">getHelp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getHelp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the documentation string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>help</strong> – The help string.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getMax">
+<code class="sig-name descname">getMax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getMax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum allowed value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getMin">
+<code class="sig-name descname">getMin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getMin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the minimum allowed value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getUnit">
+<code class="sig-name descname">getUnit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getUnit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>unit</strong> – The unit associated with the requirement.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.getValue">
+<code class="sig-name descname">getValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.getValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>value</strong> – The value of the requirement.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.isMulti">
+<code class="sig-name descname">isMulti</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.isMulti" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the requirement has multiple values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_multi</strong> – Whether the requirement has multiple values.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.isOptional">
+<code class="sig-name descname">isOptional</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.isOptional" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the requirement is optional.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>is_optional</strong> – Whether the requirement is optional.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Length.setValue">
+<code class="sig-name descname">setValue</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Length.setValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate and set the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The value of the input requirement.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the requirement.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -435,7 +476,7 @@ of 50 nanometers. Note that the unit is taken from the default value.</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

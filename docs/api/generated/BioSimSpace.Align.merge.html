@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.merge &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Align.merge &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,18 +28,18 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.FreeEnergy" href="../index_FreeEnergy.html" />
+    <link rel="next" title="BioSimSpace.Box" href="../index_Box.html" />
     <link rel="prev" title="BioSimSpace.Align.flexAlign" href="BioSimSpace.Align.flexAlign.html" /> 
 </head>
 
@@ -107,6 +107,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
@@ -216,9 +217,9 @@
             
   <div class="section" id="biosimspace-align-merge">
 <h1>BioSimSpace.Align.merge<a class="headerlink" href="#biosimspace-align-merge" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
+<dl class="function">
 <dt id="BioSimSpace.Align.merge">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">molecule0</span></em>, <em class="sig-param"><span class="n">molecule1</span></em>, <em class="sig-param"><span class="n">mapping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">allow_ring_breaking</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">allow_ring_size_change</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">property_map0</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">property_map1</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.merge" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">merge</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">allow_ring_breaking=False</em>, <em class="sig-param">allow_ring_size_change=False</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.merge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a merged molecule from ‘molecule0’ and ‘molecule1’ based on the
 atom index ‘mapping’. The merged molecule can be used in single- and
 dual-toplogy free energy calculations.</p>
@@ -249,7 +250,7 @@ defined values.</p></li>
 </dl>
 <p class="rubric">Examples</p>
 <p>Merge molecule0 and molecule1 based on a precomputed mapping.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">merged</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">mapping</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -257,7 +258,7 @@ defined values.</p></li>
 autogenerated using <a class="reference internal" href="BioSimSpace.Align.matchAtoms.html#BioSimSpace.Align.matchAtoms" title="BioSimSpace.Align.matchAtoms"><code class="xref py py-class docutils literal notranslate"><span class="pre">matchAtoms</span></code></a>
 with default options, following which <a class="reference internal" href="BioSimSpace.Align.rmsdAlign.html#BioSimSpace.Align.rmsdAlign" title="BioSimSpace.Align.rmsdAlign"><code class="xref py py-class docutils literal notranslate"><span class="pre">rmsdAlign</span></code></a>
 will be used to align molecule0 to molecule1 based on the resulting mapping.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">molecule0</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -273,7 +274,7 @@ will be used to align molecule0 to molecule1 based on the resulting mapping.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../index_FreeEnergy.html" class="btn btn-neutral float-right" title="BioSimSpace.FreeEnergy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../index_Box.html" class="btn btn-neutral float-right" title="BioSimSpace.Box" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="BioSimSpace.Align.flexAlign.html" class="btn btn-neutral float-left" title="BioSimSpace.Align.flexAlign" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -288,7 +289,7 @@ will be used to align molecule0 to molecule1 based on the resulting mapping.</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

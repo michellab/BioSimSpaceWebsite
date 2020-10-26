@@ -1,4 +1,4 @@
-﻿BioSimSpace.Types.Time
+BioSimSpace.Types.Time
 ======================
 
 .. currentmodule:: BioSimSpace.Types
@@ -13,37 +13,7 @@
 
    .. autosummary::
    
-      ~Time.__add__
-      ~Time.__delattr__
-      ~Time.__dir__
-      ~Time.__eq__
-      ~Time.__format__
-      ~Time.__ge__
-      ~Time.__getattribute__
-      ~Time.__gt__
       ~Time.__init__
-      ~Time.__init_subclass__
-      ~Time.__le__
-      ~Time.__lt__
-      ~Time.__mul__
-      ~Time.__ne__
-      ~Time.__neg__
-      ~Time.__new__
-      ~Time.__pos__
-      ~Time.__reduce__
-      ~Time.__reduce_ex__
-      ~Time.__repr__
-      ~Time.__rmul__
-      ~Time.__setattr__
-      ~Time.__sizeof__
-      ~Time.__str__
-      ~Time.__sub__
-      ~Time.__subclasshook__
-      ~Time.__truediv__
-      ~Time._convert_to
-      ~Time._default_unit
-      ~Time._from_string
-      ~Time._validate_unit
       ~Time.days
       ~Time.femtoseconds
       ~Time.hours
@@ -58,20 +28,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Time.__dict__
-      ~Time.__doc__
-      ~Time.__hash__
-      ~Time.__module__
-      ~Time.__weakref__
-      ~Time._abbreviations
-      ~Time._doc_strings
-      ~Time._null_unit
-      ~Time._print_format
-      ~Time._supported_units
    
    

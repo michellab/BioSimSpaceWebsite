@@ -1,4 +1,4 @@
-﻿BioSimSpace.\_SireWrappers.Residue
+BioSimSpace.\_SireWrappers.Residue
 ==================================
 
 .. currentmodule:: BioSimSpace._SireWrappers
@@ -13,34 +13,7 @@
 
    .. autosummary::
    
-      ~Residue.__delattr__
-      ~Residue.__dir__
-      ~Residue.__eq__
-      ~Residue.__format__
-      ~Residue.__ge__
-      ~Residue.__getattribute__
-      ~Residue.__getitem__
-      ~Residue.__gt__
-      ~Residue.__hash__
       ~Residue.__init__
-      ~Residue.__init_subclass__
-      ~Residue.__iter__
-      ~Residue.__le__
-      ~Residue.__len__
-      ~Residue.__lt__
-      ~Residue.__ne__
-      ~Residue.__new__
-      ~Residue.__next__
-      ~Residue.__reduce__
-      ~Residue.__reduce_ex__
-      ~Residue.__repr__
-      ~Residue.__setattr__
-      ~Residue.__setitem__
-      ~Residue.__sizeof__
-      ~Residue.__str__
-      ~Residue.__subclasshook__
-      ~Residue._getAABox
-      ~Residue._getSireObject
       ~Residue.charge
       ~Residue.copy
       ~Residue.getAtoms
@@ -56,14 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Residue.__dict__
-      ~Residue.__doc__
-      ~Residue.__module__
-      ~Residue.__weakref__
    
    

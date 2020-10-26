@@ -1,4 +1,4 @@
-﻿BioSimSpace.Box.rhombicDodecahedronSquare
+BioSimSpace.Box.rhombicDodecahedronSquare
 =========================================
 
 .. currentmodule:: BioSimSpace.Box

@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Angle.degree
+BioSimSpace.Units.Angle.degree
 ==============================
 
 .. currentmodule:: BioSimSpace.Units.Angle

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Box.generateBoxParameters &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Box.generateBoxParameters &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,17 +28,19 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" /> 
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Box.rhombicDodecahedronSquare" href="BioSimSpace.Box.rhombicDodecahedronSquare.html" />
+    <link rel="prev" title="BioSimSpace.Box" href="../index_Box.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,8 +98,39 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Documentation</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Box.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Box.generateBoxParameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Box.rhombicDodecahedronSquare.html">BioSimSpace.Box.rhombicDodecahedronSquare</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Box.rhombicDodecahedronHexagon.html">BioSimSpace.Box.rhombicDodecahedronHexagon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Box.truncatedOctahedron.html">BioSimSpace.Box.truncatedOctahedron</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Box.boxTypes.html">BioSimSpace.Box.boxTypes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
@@ -163,6 +196,10 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Box.html">BioSimSpace.Box</a> &raquo;</li>
+        
       <li>BioSimSpace.Box.generateBoxParameters</li>
     
     
@@ -184,9 +221,9 @@
             
   <div class="section" id="biosimspace-box-generateboxparameters">
 <h1>BioSimSpace.Box.generateBoxParameters<a class="headerlink" href="#biosimspace-box-generateboxparameters" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
+<dl class="function">
 <dt id="BioSimSpace.Box.generateBoxParameters">
-<code class="sig-prename descclassname">BioSimSpace.Box.</code><code class="sig-name descname">generateBoxParameters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">box_type</span></em>, <em class="sig-param"><span class="n">image_distance</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Box.generateBoxParameters" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Box.</code><code class="sig-name descname">generateBoxParameters</code><span class="sig-paren">(</span><em class="sig-param">box_type</em>, <em class="sig-param">image_distance</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Box.generateBoxParameters" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -215,6 +252,15 @@ list of the supported boxes.</p></li>
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BioSimSpace.Box.rhombicDodecahedronSquare.html" class="btn btn-neutral float-right" title="BioSimSpace.Box.rhombicDodecahedronSquare" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index_Box.html" class="btn btn-neutral float-left" title="BioSimSpace.Box" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
@@ -223,7 +269,7 @@ list of the supported boxes.</p></li>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

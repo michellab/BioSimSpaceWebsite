@@ -1,4 +1,4 @@
-﻿BioSimSpace.Solvent.tip4p
+BioSimSpace.Solvent.tip4p
 =========================
 
 .. currentmodule:: BioSimSpace.Solvent

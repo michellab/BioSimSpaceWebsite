@@ -1,4 +1,4 @@
-﻿BioSimSpace.Process.Amber
+BioSimSpace.Process.Amber
 =========================
 
 .. currentmodule:: BioSimSpace.Process
@@ -13,41 +13,7 @@
 
    .. autosummary::
    
-      ~Amber.__delattr__
-      ~Amber.__dir__
-      ~Amber.__eq__
-      ~Amber.__format__
-      ~Amber.__ge__
-      ~Amber.__getattribute__
-      ~Amber.__gt__
-      ~Amber.__hash__
       ~Amber.__init__
-      ~Amber.__init_subclass__
-      ~Amber.__le__
-      ~Amber.__lt__
-      ~Amber.__ne__
-      ~Amber.__new__
-      ~Amber.__reduce__
-      ~Amber.__reduce_ex__
-      ~Amber.__repr__
-      ~Amber.__setattr__
-      ~Amber.__sizeof__
-      ~Amber.__str__
-      ~Amber.__subclasshook__
-      ~Amber._clear_output
-      ~Amber._generate_args
-      ~Amber._generate_config
-      ~Amber._getCollectiveVariable
-      ~Amber._getFreeEnergy
-      ~Amber._getPlumedConfig
-      ~Amber._getPlumedConfigFile
-      ~Amber._getTime
-      ~Amber._get_stdout_record
-      ~Amber._sampleConfigurations
-      ~Amber._setPlumedConfig
-      ~Amber._setup
-      ~Amber._update_energy_dict
-      ~Amber._writePlumedConfig
       ~Amber.addArgs
       ~Amber.addToConfig
       ~Amber.clearArgs
@@ -137,14 +103,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Amber.__dict__
-      ~Amber.__doc__
-      ~Amber.__module__
-      ~Amber.__weakref__
    
    

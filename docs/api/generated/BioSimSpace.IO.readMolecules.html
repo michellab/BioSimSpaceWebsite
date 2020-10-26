@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,11 +28,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -101,6 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a><ul class="current">
@@ -220,9 +221,9 @@
             
   <div class="section" id="biosimspace-io-readmolecules">
 <h1>BioSimSpace.IO.readMolecules<a class="headerlink" href="#biosimspace-io-readmolecules" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
+<dl class="function">
 <dt id="BioSimSpace.IO.readMolecules">
-<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readMolecules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em>, <em class="sig-param"><span class="n">property_map</span><span class="o">=</span><span class="default_value">{}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readMolecules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readMolecules</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readMolecules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a molecular system from file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -242,27 +243,27 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </dl>
 <p class="rubric">Examples</p>
 <p>Load a molecular system from AMBER coordinate and topology files.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Load the same system, but map the “charge” property to the key “my-charge”.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
 </pre></div>
 </div>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>Load a molecular system from all of the files contained within a directory.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;dir/*&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
 <p>Load a molecular system from GROMACS coordinate and topology files using
 a custom GROMACS topology directory.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;mol.gro87&quot;</span><span class="p">,</span> <span class="s2">&quot;mol.grotop&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;GROMACS_PATH&quot;</span> <span class="p">:</span> <span class="s2">&quot;/path/to/gromacs/topology&quot;</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -293,7 +294,7 @@ a custom GROMACS topology directory.</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

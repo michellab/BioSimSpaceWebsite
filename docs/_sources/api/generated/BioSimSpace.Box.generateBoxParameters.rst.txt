@@ -1,4 +1,4 @@
-﻿BioSimSpace.Box.generateBoxParameters
+BioSimSpace.Box.generateBoxParameters
 =====================================
 
 .. currentmodule:: BioSimSpace.Box

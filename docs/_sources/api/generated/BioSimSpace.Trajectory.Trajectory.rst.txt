@@ -1,4 +1,4 @@
-﻿BioSimSpace.Trajectory.Trajectory
+BioSimSpace.Trajectory.Trajectory
 =================================
 
 .. currentmodule:: BioSimSpace.Trajectory
@@ -13,27 +13,7 @@
 
    .. autosummary::
    
-      ~Trajectory.__delattr__
-      ~Trajectory.__dir__
-      ~Trajectory.__eq__
-      ~Trajectory.__format__
-      ~Trajectory.__ge__
-      ~Trajectory.__getattribute__
-      ~Trajectory.__gt__
-      ~Trajectory.__hash__
       ~Trajectory.__init__
-      ~Trajectory.__init_subclass__
-      ~Trajectory.__le__
-      ~Trajectory.__lt__
-      ~Trajectory.__ne__
-      ~Trajectory.__new__
-      ~Trajectory.__reduce__
-      ~Trajectory.__reduce_ex__
-      ~Trajectory.__repr__
-      ~Trajectory.__setattr__
-      ~Trajectory.__sizeof__
-      ~Trajectory.__str__
-      ~Trajectory.__subclasshook__
       ~Trajectory.getFrames
       ~Trajectory.getTrajectory
       ~Trajectory.nFrames
@@ -42,14 +22,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Trajectory.__dict__
-      ~Trajectory.__doc__
-      ~Trajectory.__module__
-      ~Trajectory.__weakref__
    
    

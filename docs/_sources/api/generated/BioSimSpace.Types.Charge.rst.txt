@@ -1,4 +1,4 @@
-﻿BioSimSpace.Types.Charge
+BioSimSpace.Types.Charge
 ========================
 
 .. currentmodule:: BioSimSpace.Types
@@ -13,37 +13,7 @@
 
    .. autosummary::
    
-      ~Charge.__add__
-      ~Charge.__delattr__
-      ~Charge.__dir__
-      ~Charge.__eq__
-      ~Charge.__format__
-      ~Charge.__ge__
-      ~Charge.__getattribute__
-      ~Charge.__gt__
       ~Charge.__init__
-      ~Charge.__init_subclass__
-      ~Charge.__le__
-      ~Charge.__lt__
-      ~Charge.__mul__
-      ~Charge.__ne__
-      ~Charge.__neg__
-      ~Charge.__new__
-      ~Charge.__pos__
-      ~Charge.__reduce__
-      ~Charge.__reduce_ex__
-      ~Charge.__repr__
-      ~Charge.__rmul__
-      ~Charge.__setattr__
-      ~Charge.__sizeof__
-      ~Charge.__str__
-      ~Charge.__sub__
-      ~Charge.__subclasshook__
-      ~Charge.__truediv__
-      ~Charge._convert_to
-      ~Charge._default_unit
-      ~Charge._from_string
-      ~Charge._validate_unit
       ~Charge.coulomb
       ~Charge.electron_charge
       ~Charge.magnitude
@@ -52,20 +22,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Charge.__dict__
-      ~Charge.__doc__
-      ~Charge.__hash__
-      ~Charge.__module__
-      ~Charge.__weakref__
-      ~Charge._abbreviations
-      ~Charge._doc_strings
-      ~Charge._null_unit
-      ~Charge._print_format
-      ~Charge._supported_units
    
    

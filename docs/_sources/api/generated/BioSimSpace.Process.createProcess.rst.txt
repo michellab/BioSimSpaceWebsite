@@ -1,4 +1,4 @@
-﻿BioSimSpace.Process.createProcess
+BioSimSpace.Process.createProcess
 =================================
 
 .. currentmodule:: BioSimSpace.Process

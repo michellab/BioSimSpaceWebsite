@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Integer
+BioSimSpace.Gateway.Integer
 ===========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Integer.__delattr__
-      ~Integer.__dir__
-      ~Integer.__eq__
-      ~Integer.__format__
-      ~Integer.__ge__
-      ~Integer.__getattribute__
-      ~Integer.__gt__
-      ~Integer.__hash__
       ~Integer.__init__
-      ~Integer.__init_subclass__
-      ~Integer.__le__
-      ~Integer.__lt__
-      ~Integer.__ne__
-      ~Integer.__new__
-      ~Integer.__reduce__
-      ~Integer.__reduce_ex__
-      ~Integer.__repr__
-      ~Integer.__setattr__
-      ~Integer.__sizeof__
-      ~Integer.__str__
-      ~Integer.__subclasshook__
-      ~Integer._validate
-      ~Integer._validate_default
       ~Integer.getAllowedValues
       ~Integer.getArgType
       ~Integer.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Integer.__dict__
-      ~Integer.__doc__
-      ~Integer.__module__
-      ~Integer.__weakref__
-      ~Integer._is_multi
    
    

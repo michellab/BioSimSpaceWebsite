@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Time.millisecond
+BioSimSpace.Units.Time.millisecond
 ==================================
 
 .. currentmodule:: BioSimSpace.Units.Time

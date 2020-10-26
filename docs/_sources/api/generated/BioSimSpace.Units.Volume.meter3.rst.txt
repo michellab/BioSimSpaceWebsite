@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Volume.meter3
+BioSimSpace.Units.Volume.meter3
 ===============================
 
 .. currentmodule:: BioSimSpace.Units.Volume

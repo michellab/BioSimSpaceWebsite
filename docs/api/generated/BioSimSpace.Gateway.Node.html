@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Gateway.Node &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Gateway.Node &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,11 +28,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -101,6 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_Gateway.html#classes">Classes</a><ul class="current">
@@ -217,9 +218,9 @@
             
   <div class="section" id="biosimspace-gateway-node">
 <h1>BioSimSpace.Gateway.Node<a class="headerlink" href="#biosimspace-gateway-node" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
+<dl class="class">
 <dt id="BioSimSpace.Gateway.Node">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Gateway.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Gateway.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param">description</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for interfacing with BioSimSpace nodes.</p>
 <p>Nodes are used to collect and validate user input, document the
 intentions of the workflow component, track and report errors,
@@ -228,7 +229,7 @@ Jupyter, from the command-line, or plugged into a workflow engine,
 such as Knime.</p>
 <p class="rubric">Example</p>
 <p>A generic energy minimisation node:</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">node</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Gateway</span><span class="o">.</span><span class="n">Node</span><span class="p">(</span><span class="s2">&quot;Perform energy minimisation&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">addAuthor</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lester Hedges&quot;</span><span class="p">,</span> <span class="n">email</span><span class="o">=</span><span class="s2">&quot;lester.hedges@bristol.ac.uk&quot;</span><span class="p">,</span> <span class="n">affiliation</span><span class="o">=</span><span class="s2">&quot;University of Bristol&quot;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">setLicence</span><span class="p">(</span><span class="s2">&quot;GPLv3&quot;</span><span class="p">)</span>
@@ -243,9 +244,9 @@ such as Knime.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
 </pre></div>
 </div>
-<dl class="py method">
+<dl class="method">
 <dt id="BioSimSpace.Gateway.Node.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">description</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">description</em>, <em class="sig-param">name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -264,155 +265,218 @@ such as Knime.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__del__</span></code>()</p></td>
-<td><p>Destructor.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code>(name, /)</p></td>
-<td><p>Implement delattr(self, name).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code>()</p></td>
-<td><p>Default dir() implementation.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(value, /)</p></td>
-<td><p>Return self==value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code>(format_spec, /)</p></td>
-<td><p>Default object formatter.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;=value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code>(name, /)</p></td>
-<td><p>Return getattr(self, name).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
-<td><p>Return hash(self).</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.__init__" title="BioSimSpace.Gateway.Node.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(description[, name])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.__init__" title="BioSimSpace.Gateway.Node.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(description[, name])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
-<td><p>This method is called when a class is subclassed.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;=value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code>(value, /)</p></td>
-<td><p>Return self!=value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code>(**kwargs)</p></td>
-<td><p>Create and return a new object.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code>()</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code>(protocol, /)</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
-<td><p>Return repr(self).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code>(name, value, /)</p></td>
-<td><p>Implement setattr(self, name, value).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code>()</p></td>
-<td><p>Size of object in memory, in bytes.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
-<td><p>Return str(self).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
-<td><p>Abstract classes can override this to customize issubclass().</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_addInputCommandLine</span></code>(name, input)</p></td>
-<td><p>Add an input requirement for the command-line.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_addInputJupyter</span></code>(name, input[, reset])</p></td>
-<td><p>Add an input requirement for Jupyter.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_addInputKnime</span></code>(name, input)</p></td>
-<td><p>Add an input requirement for Knime.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_help_string</span></code>(input)</p></td>
-<td><p>Create a nicely formatted argparse help string.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_generate_description</span></code>()</p></td>
-<td><p>Generate a formatted output section for the argparse help description.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validateInput</span></code>()</p></td>
-<td><p>Validate the parsed inputs.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAuthor</span></code>([name, email, affiliation])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.addAuthor" title="BioSimSpace.Gateway.Node.addAuthor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addAuthor</span></code></a>([name, email, affiliation])</p></td>
 <td><p>Add an author for the node.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addError</span></code>(error)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.addError" title="BioSimSpace.Gateway.Node.addError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addError</span></code></a>(error)</p></td>
 <td><p>Add an error message.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addInput</span></code>(name, input)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.addInput" title="BioSimSpace.Gateway.Node.addInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addInput</span></code></a>(name, input)</p></td>
 <td><p>Add an input requirement.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">addOutput</span></code>(name, output)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.addOutput" title="BioSimSpace.Gateway.Node.addOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addOutput</span></code></a>(name, output)</p></td>
 <td><p>Add an output requirement.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAuthors</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.getAuthors" title="BioSimSpace.Gateway.Node.getAuthors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAuthors</span></code></a>()</p></td>
 <td><p>Return the list of authors.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.getInput" title="BioSimSpace.Gateway.Node.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>(name)</p></td>
 <td><p>Get the value of the named input.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.getInputs" title="BioSimSpace.Gateway.Node.getInputs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInputs</span></code></a>()</p></td>
 <td><p>Get all of the input requirements.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLicense</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.getLicense" title="BioSimSpace.Gateway.Node.getLicense"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLicense</span></code></a>()</p></td>
 <td><p>Return the license.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLicense</span></code>(license)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.setLicense" title="BioSimSpace.Gateway.Node.setLicense"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLicense</span></code></a>(license)</p></td>
 <td><p>Set the license for the node.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code>(name, value)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.setOutput" title="BioSimSpace.Gateway.Node.setOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setOutput</span></code></a>(name, value)</p></td>
 <td><p>Set the value of an output.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">showControls</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.showControls" title="BioSimSpace.Gateway.Node.showControls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">showControls</span></code></a>()</p></td>
 <td><p>Show the Jupyter widget GUI to allow the user to enter input.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate</span></code>([file_prefix])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Gateway.Node.validate" title="BioSimSpace.Gateway.Node.validate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate</span></code></a>([file_prefix])</p></td>
 <td><p>Whether the output requirements are satisfied.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
-<td><p>list of weak references to the object (if defined)</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_is_knime</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_is_notebook</span></code></p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addAuthor">
+<code class="sig-name descname">addAuthor</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">affiliation=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addAuthor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an author for the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The author’s name.</p></li>
+<li><p><strong>email</strong> (<em>str</em>) – The author’s email address.</p></li>
+<li><p><strong>affiliation</strong> (<em>str</em>) – The author’s affiliation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addError">
+<code class="sig-name descname">addError</code><span class="sig-paren">(</span><em class="sig-param">error</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an error message.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>error</strong> (<em>str</em>) – The error message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addInput">
+<code class="sig-name descname">addInput</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">input</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an input requirement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the input.</p></li>
+<li><p><strong>input</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code>) – The input requirement object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.addOutput">
+<code class="sig-name descname">addOutput</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">output</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.addOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an output requirement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the output.</p></li>
+<li><p><strong>output</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code>) – The output requirement object.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getAuthors">
+<code class="sig-name descname">getAuthors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getAuthors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the list of authors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>authors</strong> – A list of author dictionaries.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getInput">
+<code class="sig-name descname">getInput</code><span class="sig-paren">(</span><em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getInput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the named input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the input requirement.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value of the named input requirement.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>input</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getInputs">
+<code class="sig-name descname">getInputs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getInputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all of the input requirements.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>inputs</strong> – The dictionary of input requirements.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>{ str : <code class="xref py py-class docutils literal notranslate"><span class="pre">Requirement</span></code> }</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.getLicense">
+<code class="sig-name descname">getLicense</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.getLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the license.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>license</strong> – The license of the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.setLicense">
+<code class="sig-name descname">setLicense</code><span class="sig-paren">(</span><em class="sig-param">license</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.setLicense" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the license for the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>license</strong> (<em>str</em>) – The license type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.setOutput">
+<code class="sig-name descname">setOutput</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.setOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of an output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the output.</p></li>
+<li><p><strong>value</strong> – The value of the output.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.showControls">
+<code class="sig-name descname">showControls</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.showControls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show the Jupyter widget GUI to allow the user to enter input.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>controls</strong> – A gui control panel for setting input requirements.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>ipywidgets.form</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Gateway.Node.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param">file_prefix='output'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Gateway.Node.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the output requirements are satisfied.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_prefix</strong> (<em>str</em>) – The prefix of the output file name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – If running interatvely: A link to a zipfile containing the
+validated output, else the name of a YAML file containing
+the node output.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>IPython.lib.display.FileLink, str</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -440,7 +504,7 @@ such as Knime.</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

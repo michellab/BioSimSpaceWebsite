@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Volume.nanometer3
+BioSimSpace.Units.Volume.nanometer3
 ===================================
 
 .. currentmodule:: BioSimSpace.Units.Volume

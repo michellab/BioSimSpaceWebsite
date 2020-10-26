@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Length.meter
+BioSimSpace.Units.Length.meter
 ==============================
 
 .. currentmodule:: BioSimSpace.Units.Length

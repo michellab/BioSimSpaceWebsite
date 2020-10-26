@@ -1,4 +1,4 @@
-﻿BioSimSpace.Types.Area
+BioSimSpace.Types.Area
 ======================
 
 .. currentmodule:: BioSimSpace.Types
@@ -13,37 +13,7 @@
 
    .. autosummary::
    
-      ~Area.__add__
-      ~Area.__delattr__
-      ~Area.__dir__
-      ~Area.__eq__
-      ~Area.__format__
-      ~Area.__ge__
-      ~Area.__getattribute__
-      ~Area.__gt__
       ~Area.__init__
-      ~Area.__init_subclass__
-      ~Area.__le__
-      ~Area.__lt__
-      ~Area.__mul__
-      ~Area.__ne__
-      ~Area.__neg__
-      ~Area.__new__
-      ~Area.__pos__
-      ~Area.__reduce__
-      ~Area.__reduce_ex__
-      ~Area.__repr__
-      ~Area.__rmul__
-      ~Area.__setattr__
-      ~Area.__sizeof__
-      ~Area.__str__
-      ~Area.__sub__
-      ~Area.__subclasshook__
-      ~Area.__truediv__
-      ~Area._convert_to
-      ~Area._default_unit
-      ~Area._from_string
-      ~Area._validate_unit
       ~Area.angstroms2
       ~Area.magnitude
       ~Area.meters2
@@ -54,20 +24,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Area.__dict__
-      ~Area.__doc__
-      ~Area.__hash__
-      ~Area.__module__
-      ~Area.__weakref__
-      ~Area._abbreviations
-      ~Area._doc_strings
-      ~Area._null_unit
-      ~Area._print_format
-      ~Area._supported_units
    
    

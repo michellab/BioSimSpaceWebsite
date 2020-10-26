@@ -1,4 +1,4 @@
-﻿BioSimSpace.Node.run
+BioSimSpace.Node.run
 ====================
 
 .. currentmodule:: BioSimSpace.Node

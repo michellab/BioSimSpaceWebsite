@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.FileSet
+BioSimSpace.Gateway.FileSet
 ===========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~FileSet.__delattr__
-      ~FileSet.__dir__
-      ~FileSet.__eq__
-      ~FileSet.__format__
-      ~FileSet.__ge__
-      ~FileSet.__getattribute__
-      ~FileSet.__gt__
-      ~FileSet.__hash__
       ~FileSet.__init__
-      ~FileSet.__init_subclass__
-      ~FileSet.__le__
-      ~FileSet.__lt__
-      ~FileSet.__ne__
-      ~FileSet.__new__
-      ~FileSet.__reduce__
-      ~FileSet.__reduce_ex__
-      ~FileSet.__repr__
-      ~FileSet.__setattr__
-      ~FileSet.__sizeof__
-      ~FileSet.__str__
-      ~FileSet.__subclasshook__
-      ~FileSet._validate
-      ~FileSet._validate_default
       ~FileSet.getAllowedValues
       ~FileSet.getArgType
       ~FileSet.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~FileSet.__dict__
-      ~FileSet.__doc__
-      ~FileSet.__module__
-      ~FileSet.__weakref__
-      ~FileSet._is_multi
    
    

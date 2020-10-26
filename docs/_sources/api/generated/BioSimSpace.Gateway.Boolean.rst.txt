@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Boolean
+BioSimSpace.Gateway.Boolean
 ===========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Boolean.__delattr__
-      ~Boolean.__dir__
-      ~Boolean.__eq__
-      ~Boolean.__format__
-      ~Boolean.__ge__
-      ~Boolean.__getattribute__
-      ~Boolean.__gt__
-      ~Boolean.__hash__
       ~Boolean.__init__
-      ~Boolean.__init_subclass__
-      ~Boolean.__le__
-      ~Boolean.__lt__
-      ~Boolean.__ne__
-      ~Boolean.__new__
-      ~Boolean.__reduce__
-      ~Boolean.__reduce_ex__
-      ~Boolean.__repr__
-      ~Boolean.__setattr__
-      ~Boolean.__sizeof__
-      ~Boolean.__str__
-      ~Boolean.__subclasshook__
-      ~Boolean._validate
-      ~Boolean._validate_default
       ~Boolean.getAllowedValues
       ~Boolean.getArgType
       ~Boolean.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Boolean.__dict__
-      ~Boolean.__doc__
-      ~Boolean.__module__
-      ~Boolean.__weakref__
-      ~Boolean._is_multi
    
    

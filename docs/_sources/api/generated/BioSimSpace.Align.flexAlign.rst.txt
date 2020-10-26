@@ -1,4 +1,4 @@
-﻿BioSimSpace.Align.flexAlign
+BioSimSpace.Align.flexAlign
 ===========================
 
 .. currentmodule:: BioSimSpace.Align

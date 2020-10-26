@@ -1,4 +1,4 @@
-﻿BioSimSpace.Protocol.FreeEnergy
+BioSimSpace.Protocol.FreeEnergy
 ===============================
 
 .. currentmodule:: BioSimSpace.Protocol
@@ -13,28 +13,7 @@
 
    .. autosummary::
    
-      ~FreeEnergy.__delattr__
-      ~FreeEnergy.__dir__
-      ~FreeEnergy.__eq__
-      ~FreeEnergy.__format__
-      ~FreeEnergy.__ge__
-      ~FreeEnergy.__getattribute__
-      ~FreeEnergy.__gt__
-      ~FreeEnergy.__hash__
       ~FreeEnergy.__init__
-      ~FreeEnergy.__init_subclass__
-      ~FreeEnergy.__le__
-      ~FreeEnergy.__lt__
-      ~FreeEnergy.__ne__
-      ~FreeEnergy.__new__
-      ~FreeEnergy.__reduce__
-      ~FreeEnergy.__reduce_ex__
-      ~FreeEnergy.__repr__
-      ~FreeEnergy.__setattr__
-      ~FreeEnergy.__sizeof__
-      ~FreeEnergy.__str__
-      ~FreeEnergy.__subclasshook__
-      ~FreeEnergy._setCustomised
       ~FreeEnergy.getFrames
       ~FreeEnergy.getLambda
       ~FreeEnergy.getLambdaValues
@@ -52,14 +31,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~FreeEnergy.__dict__
-      ~FreeEnergy.__doc__
-      ~FreeEnergy.__module__
-      ~FreeEnergy.__weakref__
    
    

@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Area
+BioSimSpace.Gateway.Area
 ========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Area.__delattr__
-      ~Area.__dir__
-      ~Area.__eq__
-      ~Area.__format__
-      ~Area.__ge__
-      ~Area.__getattribute__
-      ~Area.__gt__
-      ~Area.__hash__
       ~Area.__init__
-      ~Area.__init_subclass__
-      ~Area.__le__
-      ~Area.__lt__
-      ~Area.__ne__
-      ~Area.__new__
-      ~Area.__reduce__
-      ~Area.__reduce_ex__
-      ~Area.__repr__
-      ~Area.__setattr__
-      ~Area.__sizeof__
-      ~Area.__str__
-      ~Area.__subclasshook__
-      ~Area._validate
-      ~Area._validate_default
       ~Area.getAllowedValues
       ~Area.getArgType
       ~Area.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Area.__dict__
-      ~Area.__doc__
-      ~Area.__module__
-      ~Area.__weakref__
-      ~Area._is_multi
    
    

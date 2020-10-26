@@ -1,4 +1,4 @@
-﻿BioSimSpace.Types.Vector
+BioSimSpace.Types.Vector
 ========================
 
 .. currentmodule:: BioSimSpace.Types
@@ -13,32 +13,7 @@
 
    .. autosummary::
    
-      ~Vector.__add__
-      ~Vector.__delattr__
-      ~Vector.__dir__
-      ~Vector.__eq__
-      ~Vector.__format__
-      ~Vector.__ge__
-      ~Vector.__getattribute__
-      ~Vector.__gt__
-      ~Vector.__hash__
       ~Vector.__init__
-      ~Vector.__init_subclass__
-      ~Vector.__le__
-      ~Vector.__lt__
-      ~Vector.__ne__
-      ~Vector.__neg__
-      ~Vector.__new__
-      ~Vector.__pos__
-      ~Vector.__reduce__
-      ~Vector.__reduce_ex__
-      ~Vector.__repr__
-      ~Vector.__setattr__
-      ~Vector.__sizeof__
-      ~Vector.__str__
-      ~Vector.__sub__
-      ~Vector.__subclasshook__
-      ~Vector._from_sire_vector
       ~Vector.angle
       ~Vector.cross
       ~Vector.dot
@@ -51,14 +26,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Vector.__dict__
-      ~Vector.__doc__
-      ~Vector.__module__
-      ~Vector.__weakref__
    
    

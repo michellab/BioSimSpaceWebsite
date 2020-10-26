@@ -1,4 +1,4 @@
-﻿BioSimSpace.Metadynamics.CollectiveVariable.Torsion
+BioSimSpace.Metadynamics.CollectiveVariable.Torsion
 ===================================================
 
 .. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable
@@ -13,28 +13,7 @@
 
    .. autosummary::
    
-      ~Torsion.__delattr__
-      ~Torsion.__dir__
-      ~Torsion.__eq__
-      ~Torsion.__format__
-      ~Torsion.__ge__
-      ~Torsion.__getattribute__
-      ~Torsion.__gt__
-      ~Torsion.__hash__
       ~Torsion.__init__
-      ~Torsion.__init_subclass__
-      ~Torsion.__le__
-      ~Torsion.__lt__
-      ~Torsion.__ne__
-      ~Torsion.__new__
-      ~Torsion.__reduce__
-      ~Torsion.__reduce_ex__
-      ~Torsion.__repr__
-      ~Torsion.__setattr__
-      ~Torsion.__sizeof__
-      ~Torsion.__str__
-      ~Torsion.__subclasshook__
-      ~Torsion._validate
       ~Torsion.getAtoms
       ~Torsion.getGrid
       ~Torsion.getHillWidth
@@ -51,14 +30,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Torsion.__dict__
-      ~Torsion.__doc__
-      ~Torsion.__module__
-      ~Torsion.__weakref__
    
    

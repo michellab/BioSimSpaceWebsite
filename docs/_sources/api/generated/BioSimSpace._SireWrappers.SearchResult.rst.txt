@@ -1,4 +1,4 @@
-﻿BioSimSpace.\_SireWrappers.SearchResult
+BioSimSpace.\_SireWrappers.SearchResult
 =======================================
 
 .. currentmodule:: BioSimSpace._SireWrappers
@@ -13,33 +13,7 @@
 
    .. autosummary::
    
-      ~SearchResult.__delattr__
-      ~SearchResult.__dir__
-      ~SearchResult.__eq__
-      ~SearchResult.__format__
-      ~SearchResult.__ge__
-      ~SearchResult.__getattribute__
-      ~SearchResult.__getitem__
-      ~SearchResult.__gt__
-      ~SearchResult.__hash__
       ~SearchResult.__init__
-      ~SearchResult.__init_subclass__
-      ~SearchResult.__iter__
-      ~SearchResult.__le__
-      ~SearchResult.__len__
-      ~SearchResult.__lt__
-      ~SearchResult.__ne__
-      ~SearchResult.__new__
-      ~SearchResult.__next__
-      ~SearchResult.__reduce__
-      ~SearchResult.__reduce_ex__
-      ~SearchResult.__repr__
-      ~SearchResult.__setattr__
-      ~SearchResult.__setitem__
-      ~SearchResult.__sizeof__
-      ~SearchResult.__str__
-      ~SearchResult.__subclasshook__
-      ~SearchResult._getSireObject
       ~SearchResult.copy
       ~SearchResult.getResult
       ~SearchResult.nResults
@@ -47,14 +21,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~SearchResult.__dict__
-      ~SearchResult.__doc__
-      ~SearchResult.__module__
-      ~SearchResult.__weakref__
    
    

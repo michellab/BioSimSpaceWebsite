@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Metadynamics.CollectiveVariable.Torsion &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.Torsion &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,11 +28,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -101,6 +101,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
@@ -220,11 +221,11 @@
             
   <div class="section" id="biosimspace-metadynamics-collectivevariable-torsion">
 <h1>BioSimSpace.Metadynamics.CollectiveVariable.Torsion<a class="headerlink" href="#biosimspace-metadynamics-collectivevariable-torsion" title="Permalink to this headline">¶</a></h1>
-<dl class="py class">
+<dl class="class">
 <dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion">
 <em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.CollectiveVariable.</code><code class="sig-name descname">Torsion</code><span class="sig-paren">(</span><em class="sig-param">atoms</em>, <em class="sig-param">hill_width=0.3500 radians</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">pbc=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for torsion based collective variables.</p>
-<dl class="py method">
+<dl class="method">
 <dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">atoms</em>, <em class="sig-param">hill_width=0.3500 radians</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">pbc=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
@@ -252,131 +253,203 @@ collective variable.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__delattr__</span></code>(name, /)</p></td>
-<td><p>Implement delattr(self, name).</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dir__</span></code>()</p></td>
-<td><p>Default dir() implementation.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(value, /)</p></td>
-<td><p>Return self==value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code>(format_spec, /)</p></td>
-<td><p>Default object formatter.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ge__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getattribute__</span></code>(name, /)</p></td>
-<td><p>Return getattr(self, name).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__gt__</span></code>(value, /)</p></td>
-<td><p>Return self&gt;value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
-<td><p>Return hash(self).</p></td>
-</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.__init__" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(atoms[, hill_width, lower_bound, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init_subclass__</span></code></p></td>
-<td><p>This method is called when a class is subclassed.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__le__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__lt__</span></code>(value, /)</p></td>
-<td><p>Return self&lt;value.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code>(value, /)</p></td>
-<td><p>Return self!=value.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code>(**kwargs)</p></td>
-<td><p>Create and return a new object.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce__</span></code>()</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__reduce_ex__</span></code>(protocol, /)</p></td>
-<td><p>Helper for pickle.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
-<td><p>Return a string showing how to instantiate the object.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__setattr__</span></code>(name, value, /)</p></td>
-<td><p>Implement setattr(self, name, value).</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__sizeof__</span></code>()</p></td>
-<td><p>Size of object in memory, in bytes.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
-<td><p>Return a human readable string representation of the object.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__subclasshook__</span></code></p></td>
-<td><p>Abstract classes can override this to customize issubclass().</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate</span></code>()</p></td>
-<td><p>Internal function to check that the object is in a consistent state.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtoms</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getAtoms" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtoms</span></code></a>()</p></td>
 <td><p>Return list of atom indices involved in the torsion.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code></a>()</p></td>
 <td><p>Get the grid on which the collective variable is sampled.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code></a>()</p></td>
 <td><p>Return the width of the Gaussian hill used to bias this collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code></a>()</p></td>
 <td><p>Get the lower bound on the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPeriodicBoundaries</span></code>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPeriodicBoundaries</span></code></a>()</p></td>
 <td><p>Return whether to take account of periodic boundary conditions when computing the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code></a>()</p></td>
 <td><p>Get the upper bound on the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms</span></code>(atoms)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms</span></code></a>(atoms)</p></td>
 <td><p>Set the atoms for which the torsion will be calculated.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code>([grid])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
 <td><p>Set a grid on which the collective variable will be sampled.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code>(hill_width)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
 <td><p>Set the width of the Gaussian hills used to bias this collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code>([lower_bound])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
 <td><p>Set a lower bound on the value of the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code>(pbc)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code></a>(pbc)</p></td>
 <td><p>Set whether to use periodic_boundaries when calculating the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code>([upper_bound])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
 <td><p>Set an upper bound on the value of the collective variable.</p></td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Attributes</p>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__dict__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__doc__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__module__</span></code></p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__weakref__</span></code></p></td>
-<td><p>list of weak references to the object (if defined)</p></td>
-</tr>
-</tbody>
-</table>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getAtoms">
+<code class="sig-name descname">getAtoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of atom indices involved in the torsion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>atoms</strong> – The atom indices involved in the torsion.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int, int, int, int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getGrid">
+<code class="sig-name descname">getGrid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the grid on which the collective variable is sampled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>grid</strong> – The grid on which the collective variable is sampled.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getHillWidth">
+<code class="sig-name descname">getHillWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the width of the Gaussian hill used to bias this collective
+variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>hill_width</strong> – The width of the Gaussian hill.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getLowerBound">
+<code class="sig-name descname">getLowerBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the lower bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> – The lower bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getPeriodicBoundaries">
+<code class="sig-name descname">getPeriodicBoundaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether to take account of periodic boundary conditions
+when computing the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pbc</strong> – Whether to use periodic boundaries conditions.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound">
+<code class="sig-name descname">getUpperBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the upper bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> – The upper bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms">
+<code class="sig-name descname">setAtoms</code><span class="sig-paren">(</span><em class="sig-param">atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the atoms for which the torsion will be calculated.
+measured.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>atoms</strong> (<em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>, </em><em>int</em><em>]</em>) – The atoms involved in the torsion.
+will be measured from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid">
+<code class="sig-name descname">setGrid</code><span class="sig-paren">(</span><em class="sig-param">grid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a grid on which the collective variable will be sampled.
+Call with no arguments to clear the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>grid</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>) – A grid for the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth">
+<code class="sig-name descname">setHillWidth</code><span class="sig-paren">(</span><em class="sig-param">hill_width</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the width of the Gaussian hills used to bias this collective
+variable.</p>
+<dl>
+<dt>hill_width<span class="classifier"><a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a></span></dt><dd><p>The width of the Gaussian hill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound">
+<code class="sig-name descname">setLowerBound</code><span class="sig-paren">(</span><em class="sig-param">lower_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a lower bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries">
+<code class="sig-name descname">setPeriodicBoundaries</code><span class="sig-paren">(</span><em class="sig-param">pbc</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether to use periodic_boundaries when calculating the
+collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pbc</strong> (<em>bool</em>) – Whether to use periodic boundaries conditions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound">
+<code class="sig-name descname">setUpperBound</code><span class="sig-paren">(</span><em class="sig-param">upper_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an upper bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -404,7 +477,7 @@ collective variable.</p></li>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

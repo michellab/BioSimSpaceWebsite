@@ -1,4 +1,4 @@
-﻿BioSimSpace.Types.Angle
+BioSimSpace.Types.Angle
 =======================
 
 .. currentmodule:: BioSimSpace.Types
@@ -13,37 +13,7 @@
 
    .. autosummary::
    
-      ~Angle.__add__
-      ~Angle.__delattr__
-      ~Angle.__dir__
-      ~Angle.__eq__
-      ~Angle.__format__
-      ~Angle.__ge__
-      ~Angle.__getattribute__
-      ~Angle.__gt__
       ~Angle.__init__
-      ~Angle.__init_subclass__
-      ~Angle.__le__
-      ~Angle.__lt__
-      ~Angle.__mul__
-      ~Angle.__ne__
-      ~Angle.__neg__
-      ~Angle.__new__
-      ~Angle.__pos__
-      ~Angle.__reduce__
-      ~Angle.__reduce_ex__
-      ~Angle.__repr__
-      ~Angle.__rmul__
-      ~Angle.__setattr__
-      ~Angle.__sizeof__
-      ~Angle.__str__
-      ~Angle.__sub__
-      ~Angle.__subclasshook__
-      ~Angle.__truediv__
-      ~Angle._convert_to
-      ~Angle._default_unit
-      ~Angle._from_string
-      ~Angle._validate_unit
       ~Angle.degrees
       ~Angle.magnitude
       ~Angle.radians
@@ -52,20 +22,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Angle.__dict__
-      ~Angle.__doc__
-      ~Angle.__hash__
-      ~Angle.__module__
-      ~Angle.__weakref__
-      ~Angle._abbreviations
-      ~Angle._doc_strings
-      ~Angle._null_unit
-      ~Angle._print_format
-      ~Angle._supported_units
    
    

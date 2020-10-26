@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Time
+BioSimSpace.Gateway.Time
 ========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Time.__delattr__
-      ~Time.__dir__
-      ~Time.__eq__
-      ~Time.__format__
-      ~Time.__ge__
-      ~Time.__getattribute__
-      ~Time.__gt__
-      ~Time.__hash__
       ~Time.__init__
-      ~Time.__init_subclass__
-      ~Time.__le__
-      ~Time.__lt__
-      ~Time.__ne__
-      ~Time.__new__
-      ~Time.__reduce__
-      ~Time.__reduce_ex__
-      ~Time.__repr__
-      ~Time.__setattr__
-      ~Time.__sizeof__
-      ~Time.__str__
-      ~Time.__subclasshook__
-      ~Time._validate
-      ~Time._validate_default
       ~Time.getAllowedValues
       ~Time.getArgType
       ~Time.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Time.__dict__
-      ~Time.__doc__
-      ~Time.__module__
-      ~Time.__weakref__
-      ~Time._is_multi
    
    

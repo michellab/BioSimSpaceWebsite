@@ -1,4 +1,4 @@
-﻿BioSimSpace.Solvent.solvate
+BioSimSpace.Solvent.solvate
 ===========================
 
 .. currentmodule:: BioSimSpace.Solvent

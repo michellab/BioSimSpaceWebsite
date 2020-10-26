@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Temperature.fahrenheit
+BioSimSpace.Units.Temperature.fahrenheit
 ========================================
 
 .. currentmodule:: BioSimSpace.Units.Temperature

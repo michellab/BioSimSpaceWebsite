@@ -1,4 +1,4 @@
-﻿BioSimSpace.Protocol.Minimisation
+BioSimSpace.Protocol.Minimisation
 =================================
 
 .. currentmodule:: BioSimSpace.Protocol
@@ -13,42 +13,12 @@
 
    .. autosummary::
    
-      ~Minimisation.__delattr__
-      ~Minimisation.__dir__
-      ~Minimisation.__eq__
-      ~Minimisation.__format__
-      ~Minimisation.__ge__
-      ~Minimisation.__getattribute__
-      ~Minimisation.__gt__
-      ~Minimisation.__hash__
       ~Minimisation.__init__
-      ~Minimisation.__init_subclass__
-      ~Minimisation.__le__
-      ~Minimisation.__lt__
-      ~Minimisation.__ne__
-      ~Minimisation.__new__
-      ~Minimisation.__reduce__
-      ~Minimisation.__reduce_ex__
-      ~Minimisation.__repr__
-      ~Minimisation.__setattr__
-      ~Minimisation.__sizeof__
-      ~Minimisation.__str__
-      ~Minimisation.__subclasshook__
-      ~Minimisation._setCustomised
       ~Minimisation.getSteps
       ~Minimisation.setSteps
    
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Minimisation.__dict__
-      ~Minimisation.__doc__
-      ~Minimisation.__module__
-      ~Minimisation.__weakref__
    
    

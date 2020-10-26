@@ -1,4 +1,4 @@
-﻿BioSimSpace.Metadynamics.Grid
+BioSimSpace.Metadynamics.Grid
 =============================
 
 .. currentmodule:: BioSimSpace.Metadynamics
@@ -13,27 +13,7 @@
 
    .. autosummary::
    
-      ~Grid.__delattr__
-      ~Grid.__dir__
-      ~Grid.__eq__
-      ~Grid.__format__
-      ~Grid.__ge__
-      ~Grid.__getattribute__
-      ~Grid.__gt__
-      ~Grid.__hash__
       ~Grid.__init__
-      ~Grid.__init_subclass__
-      ~Grid.__le__
-      ~Grid.__lt__
-      ~Grid.__ne__
-      ~Grid.__new__
-      ~Grid.__reduce__
-      ~Grid.__reduce_ex__
-      ~Grid.__repr__
-      ~Grid.__setattr__
-      ~Grid.__sizeof__
-      ~Grid.__str__
-      ~Grid.__subclasshook__
       ~Grid.getBins
       ~Grid.getMaximum
       ~Grid.getMinimum
@@ -44,14 +24,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Grid.__dict__
-      ~Grid.__doc__
-      ~Grid.__module__
-      ~Grid.__weakref__
    
    

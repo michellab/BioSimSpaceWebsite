@@ -1,4 +1,4 @@
-﻿BioSimSpace.Node.setNodeDirectory
+BioSimSpace.Node.setNodeDirectory
 =================================
 
 .. currentmodule:: BioSimSpace.Node

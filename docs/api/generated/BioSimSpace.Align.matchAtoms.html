@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2020.1.0+32.g47de17e documentation</title>
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2020.1.0+46.gc51884e documentation</title>
   
 
   
@@ -28,11 +28,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -107,6 +107,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
@@ -216,7 +217,7 @@
             
   <div class="section" id="biosimspace-align-matchatoms">
 <h1>BioSimSpace.Align.matchAtoms<a class="headerlink" href="#biosimspace-align-matchatoms" title="Permalink to this headline">¶</a></h1>
-<dl class="py function">
+<dl class="function">
 <dt id="BioSimSpace.Align.matchAtoms">
 <code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">matchAtoms</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">scoring_function='rmsd_align'</em>, <em class="sig-param">matches=1</em>, <em class="sig-param">return_scores=False</em>, <em class="sig-param">prematch={}</em>, <em class="sig-param">timeout=5.0000 secs</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find mappings between atom indices in molecule0 to those in molecule1.
@@ -278,17 +279,17 @@ list of best mappings and a list of the corresponding scores.</p>
 </dl>
 <p class="rubric">Examples</p>
 <p>Find the best maximum common substructure mapping between two molecules.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Find the 5 best mappings.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Find the 5 best mappings along with their ranking scores.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -296,13 +297,13 @@ list of best mappings and a list of the corresponding scores.</p>
 by flexibly aligning molecule0 to molecule1 based on each mapping
 and computing the root mean squared displacement of the matched
 atoms.</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mappings</span><span class="p">,</span> <span class="n">scores</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">return_scores</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scoring_function</span><span class="o">=</span><span class="s2">&quot;rmsd_flex_align&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Find the best mapping that contains a prematch (this is a dictionary mapping
 atom indices in molecule0 to those in molecule1).</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">mapping</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Align</span><span class="o">.</span><span class="n">matchAtoms</span><span class="p">(</span><span class="n">molecule0</span><span class="p">,</span> <span class="n">molecule1</span><span class="p">,</span> <span class="n">prematch</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span> <span class="p">:</span> <span class="mi">7</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -333,7 +334,7 @@ atom indices in molecule0 to those in molecule1).</p>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 07, 2020.
+        Last updated on Oct 26, 2020.
       </span>
 
     </p>

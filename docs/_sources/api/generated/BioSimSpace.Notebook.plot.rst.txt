@@ -1,4 +1,4 @@
-﻿BioSimSpace.Notebook.plot
+BioSimSpace.Notebook.plot
 =========================
 
 .. currentmodule:: BioSimSpace.Notebook

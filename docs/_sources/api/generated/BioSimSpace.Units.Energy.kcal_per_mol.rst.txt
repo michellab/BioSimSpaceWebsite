@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Energy.kcal\_per\_mol
+BioSimSpace.Units.Energy.kcal\_per\_mol
 =======================================
 
 .. currentmodule:: BioSimSpace.Units.Energy

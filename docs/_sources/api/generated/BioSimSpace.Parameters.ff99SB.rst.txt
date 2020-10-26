@@ -1,4 +1,4 @@
-﻿BioSimSpace.Parameters.ff99SB
+BioSimSpace.Parameters.ff99SB
 =============================
 
 .. currentmodule:: BioSimSpace.Parameters

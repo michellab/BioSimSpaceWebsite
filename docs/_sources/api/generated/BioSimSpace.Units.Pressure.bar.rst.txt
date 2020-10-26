@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Pressure.bar
+BioSimSpace.Units.Pressure.bar
 ==============================
 
 .. currentmodule:: BioSimSpace.Units.Pressure

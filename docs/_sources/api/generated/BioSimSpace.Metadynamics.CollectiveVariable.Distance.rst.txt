@@ -1,4 +1,4 @@
-﻿BioSimSpace.Metadynamics.CollectiveVariable.Distance
+BioSimSpace.Metadynamics.CollectiveVariable.Distance
 ====================================================
 
 .. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable
@@ -13,28 +13,7 @@
 
    .. autosummary::
    
-      ~Distance.__delattr__
-      ~Distance.__dir__
-      ~Distance.__eq__
-      ~Distance.__format__
-      ~Distance.__ge__
-      ~Distance.__getattribute__
-      ~Distance.__gt__
-      ~Distance.__hash__
       ~Distance.__init__
-      ~Distance.__init_subclass__
-      ~Distance.__le__
-      ~Distance.__lt__
-      ~Distance.__ne__
-      ~Distance.__new__
-      ~Distance.__reduce__
-      ~Distance.__reduce_ex__
-      ~Distance.__repr__
-      ~Distance.__setattr__
-      ~Distance.__sizeof__
-      ~Distance.__str__
-      ~Distance.__subclasshook__
-      ~Distance._validate
       ~Distance.getAtom0
       ~Distance.getAtom1
       ~Distance.getCoM0
@@ -63,14 +42,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Distance.__dict__
-      ~Distance.__doc__
-      ~Distance.__module__
-      ~Distance.__weakref__
    
    

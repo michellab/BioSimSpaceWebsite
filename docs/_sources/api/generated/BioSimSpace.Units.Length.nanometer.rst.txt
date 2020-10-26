@@ -1,4 +1,4 @@
-﻿BioSimSpace.Units.Length.nanometer
+BioSimSpace.Units.Length.nanometer
 ==================================
 
 .. currentmodule:: BioSimSpace.Units.Length

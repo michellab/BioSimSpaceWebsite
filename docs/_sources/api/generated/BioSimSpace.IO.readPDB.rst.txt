@@ -1,4 +1,4 @@
-﻿BioSimSpace.IO.readPDB
+BioSimSpace.IO.readPDB
 ======================
 
 .. currentmodule:: BioSimSpace.IO

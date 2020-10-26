@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Temperature
+BioSimSpace.Gateway.Temperature
 ===============================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Temperature.__delattr__
-      ~Temperature.__dir__
-      ~Temperature.__eq__
-      ~Temperature.__format__
-      ~Temperature.__ge__
-      ~Temperature.__getattribute__
-      ~Temperature.__gt__
-      ~Temperature.__hash__
       ~Temperature.__init__
-      ~Temperature.__init_subclass__
-      ~Temperature.__le__
-      ~Temperature.__lt__
-      ~Temperature.__ne__
-      ~Temperature.__new__
-      ~Temperature.__reduce__
-      ~Temperature.__reduce_ex__
-      ~Temperature.__repr__
-      ~Temperature.__setattr__
-      ~Temperature.__sizeof__
-      ~Temperature.__str__
-      ~Temperature.__subclasshook__
-      ~Temperature._validate
-      ~Temperature._validate_default
       ~Temperature.getAllowedValues
       ~Temperature.getArgType
       ~Temperature.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Temperature.__dict__
-      ~Temperature.__doc__
-      ~Temperature.__module__
-      ~Temperature.__weakref__
-      ~Temperature._is_multi
    
    

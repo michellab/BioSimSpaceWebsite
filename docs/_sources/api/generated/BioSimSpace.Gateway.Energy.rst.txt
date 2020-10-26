@@ -1,4 +1,4 @@
-﻿BioSimSpace.Gateway.Energy
+BioSimSpace.Gateway.Energy
 ==========================
 
 .. currentmodule:: BioSimSpace.Gateway
@@ -13,29 +13,7 @@
 
    .. autosummary::
    
-      ~Energy.__delattr__
-      ~Energy.__dir__
-      ~Energy.__eq__
-      ~Energy.__format__
-      ~Energy.__ge__
-      ~Energy.__getattribute__
-      ~Energy.__gt__
-      ~Energy.__hash__
       ~Energy.__init__
-      ~Energy.__init_subclass__
-      ~Energy.__le__
-      ~Energy.__lt__
-      ~Energy.__ne__
-      ~Energy.__new__
-      ~Energy.__reduce__
-      ~Energy.__reduce_ex__
-      ~Energy.__repr__
-      ~Energy.__setattr__
-      ~Energy.__sizeof__
-      ~Energy.__str__
-      ~Energy.__subclasshook__
-      ~Energy._validate
-      ~Energy._validate_default
       ~Energy.getAllowedValues
       ~Energy.getArgType
       ~Energy.getDefault
@@ -51,15 +29,5 @@
    
 
    
-   
-   .. rubric:: Attributes
-
-   .. autosummary::
-   
-      ~Energy.__dict__
-      ~Energy.__doc__
-      ~Energy.__module__
-      ~Energy.__weakref__
-      ~Energy._is_multi
    
    
