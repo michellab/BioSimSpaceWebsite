@@ -22,6 +22,7 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.getResidues
       ~Molecule.isMerged
       ~Molecule.isWater
+      ~Molecule.makeCompatibleWith
       ~Molecule.molecule0
       ~Molecule.molecule1
       ~Molecule.nAtoms
