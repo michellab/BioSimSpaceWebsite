@@ -15,6 +15,7 @@ BioSimSpace.\_SireWrappers.Residue
    
       ~Residue.__init__
       ~Residue.charge
+      ~Residue.coordinates
       ~Residue.copy
       ~Residue.getAtoms
       ~Residue.getAxisAlignedBoundingBox
