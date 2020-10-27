@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+50.g9ff3d66 documentation</title>
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+52.g18e3aa1 documentation</title>
   
 
   
@@ -314,7 +314,10 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.translate" title="BioSimSpace._SireWrappers.System.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate the system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecules" title="BioSimSpace._SireWrappers.System.updateMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecules</span></code></a>(molecules)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecule" title="BioSimSpace._SireWrappers.System.updateMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecule</span></code></a>(index, molecule)</p></td>
+<td><p>Updated the molecule at the given index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecules" title="BioSimSpace._SireWrappers.System.updateMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecules</span></code></a>(molecules)</p></td>
 <td><p>Update a molecule, or list of molecules in the system.</p></td>
 </tr>
 </tbody>
@@ -682,6 +685,20 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace._SireWrappers.System.updateMolecule">
+<code class="sig-name descname">updateMolecule</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">molecule</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.updateMolecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updated the molecule at the given index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>int</em>) – The index of the molecule.</p></li>
+<li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The updated (or replacement) molecule.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.updateMolecules">
 <code class="sig-name descname">updateMolecules</code><span class="sig-paren">(</span><em class="sig-param">molecules</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.updateMolecules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update a molecule, or list of molecules in the system.</p>
@@ -719,7 +736,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
         
         &copy; Copyright 2017-2019 Michel Lab
       <span class="lastupdated">
-        Last updated on Oct 26, 2020.
+        Last updated on Oct 27, 2020.
       </span>
 
     </p>

@@ -36,6 +36,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.search
       ~System.setBox
       ~System.translate
+      ~System.updateMolecule
       ~System.updateMolecules
    
    
