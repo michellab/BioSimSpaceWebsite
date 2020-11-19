@@ -1,0 +1,81 @@
+BioSimSpace.Process.OpenMM
+==========================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: OpenMM
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~OpenMM.__init__
+      ~OpenMM.addArgs
+      ~OpenMM.addToConfig
+      ~OpenMM.clearArgs
+      ~OpenMM.command
+      ~OpenMM.deleteArg
+      ~OpenMM.exe
+      ~OpenMM.getArgString
+      ~OpenMM.getArgStringList
+      ~OpenMM.getArgs
+      ~OpenMM.getConfig
+      ~OpenMM.getCurrentKineticEnergy
+      ~OpenMM.getCurrentPotentialEnergy
+      ~OpenMM.getCurrentRecord
+      ~OpenMM.getCurrentRecords
+      ~OpenMM.getCurrentStep
+      ~OpenMM.getCurrentSystem
+      ~OpenMM.getCurrentTemperature
+      ~OpenMM.getCurrentTime
+      ~OpenMM.getCurrentTotalEnergy
+      ~OpenMM.getCurrentVolume
+      ~OpenMM.getInput
+      ~OpenMM.getKineticEnergy
+      ~OpenMM.getName
+      ~OpenMM.getOutput
+      ~OpenMM.getPackageName
+      ~OpenMM.getPotentialEnergy
+      ~OpenMM.getRecord
+      ~OpenMM.getRecords
+      ~OpenMM.getSeed
+      ~OpenMM.getStderr
+      ~OpenMM.getStdout
+      ~OpenMM.getStep
+      ~OpenMM.getSystem
+      ~OpenMM.getTemperature
+      ~OpenMM.getTime
+      ~OpenMM.getTotalEnergy
+      ~OpenMM.getTrajectory
+      ~OpenMM.getVolume
+      ~OpenMM.inputFiles
+      ~OpenMM.insertArg
+      ~OpenMM.isError
+      ~OpenMM.isQueued
+      ~OpenMM.isRunning
+      ~OpenMM.kill
+      ~OpenMM.resetArgs
+      ~OpenMM.resetConfig
+      ~OpenMM.run
+      ~OpenMM.runTime
+      ~OpenMM.setArg
+      ~OpenMM.setArgs
+      ~OpenMM.setConfig
+      ~OpenMM.setName
+      ~OpenMM.setSeed
+      ~OpenMM.start
+      ~OpenMM.stderr
+      ~OpenMM.stdout
+      ~OpenMM.wait
+      ~OpenMM.workDir
+      ~OpenMM.writeConfig
+   
+   
+
+   
+   
+   

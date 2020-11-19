@@ -59,7 +59,7 @@ BioSimSpace.Process.Gromacs
       ~Gromacs.getDispersionCorrection
       ~Gromacs.getImproperEnergy
       ~Gromacs.getInput
-      ~Gromacs.getKinetecEnergy
+      ~Gromacs.getKineticEnergy
       ~Gromacs.getLennardJones14
       ~Gromacs.getLennardJonesSR
       ~Gromacs.getName
