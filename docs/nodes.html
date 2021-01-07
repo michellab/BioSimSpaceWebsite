@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Nodes &mdash; BioSimSpace 2020.1.0+97.g35a721c documentation</title>
+  <title>Nodes &mdash; BioSimSpace 2020.1.0+108.g7047d5c documentation</title>
   
 
   
@@ -112,6 +112,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Nodes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#writing-nodes">Writing nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#running-nodes">Running nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#common-workflow-language">Common Workflow Language</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#forwards-compatibility">Forwards compatibility</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
 </ul>
@@ -288,7 +289,7 @@ input to another. For example, given the following YAML configuration file,
 </pre></div>
 </div>
 <p>it would be possible to run a minimisation followed by an equilibration as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">minimisation</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">config</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span> <span class="o">&amp;&amp;</span> <span class="n">python</span> <span class="n">equilibration</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">config</span> <span class="n">output</span><span class="o">.</span><span class="n">yaml</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python minimisation.py --config config.yaml <span class="o">&amp;&amp;</span> python equilibration.py --config output.yaml
 </pre></div>
 </div>
 <p>Nodes can also be accessed from within BioSimSpace itself, allowing the user
@@ -307,6 +308,46 @@ directory wherever BioSimSpace is installed, e.g.
 set a custom directory, use the
 <a class="reference internal" href="api/generated/BioSimSpace.Node.setNodeDirectory.html#BioSimSpace.Node.setNodeDirectory" title="BioSimSpace.Node.setNodeDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Node.setNodeDirectory</span></code></a>
 function.)</p>
+</div>
+<div class="section" id="common-workflow-language">
+<h2>Common Workflow Language<a class="headerlink" href="#common-workflow-language" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to export a node as a
+<a class="reference external" href="https://www.commonwl.org/">Common Workflow Language</a> (CWL) wrapper.
+For example, using the <code class="docutils literal notranslate"><span class="pre">minimisation.py</span></code> example from the previous section:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python minimisation.py --export-cwl
+</pre></div>
+</div>
+<p>This will write a wrapper called <code class="docutils literal notranslate"><span class="pre">minimisation.cwl</span></code> to the current directory.</p>
+<p>The node could then be run as part of a CWL workflow using something like:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cwltool minimisation.cwl config.yaml
+</pre></div>
+</div>
+<p>Here <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> is a YAML configuration file, e.g.:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span> <span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span> <span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.top</span><span class="p p-Indicator">}</span>
+  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span> <span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span> <span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.crd</span><span class="p p-Indicator">}</span>
+
+<span class="nt">steps</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">1000</span>
+</pre></div>
+</div>
+<p>At present, using BioSimSpace within CWL is limited to the use of
+<a class="reference internal" href="api/generated/BioSimSpace.Gateway.File.html#BioSimSpace.Gateway.File" title="BioSimSpace.Gateway.File"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.File</span></code></a>
+and
+<a class="reference internal" href="api/generated/BioSimSpace.Gateway.FileSet.html#BioSimSpace.Gateway.FileSet" title="BioSimSpace.Gateway.FileSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.FileSet</span></code></a>
+requirements, which cover the majority of use cases. Due to the way in which
+CWL works, the prefix used for output files must match the name used for the
+requirement, e.g. if a requirement was called <code class="docutils literal notranslate"><span class="pre">output</span></code>, then a file might be
+named <code class="docutils literal notranslate"><span class="pre">output.txt</span></code>. This allows the use of <code class="docutils literal notranslate"><span class="pre">glob</span></code> in the CWL <code class="docutils literal notranslate"><span class="pre">outputBinding</span></code>
+functionality. This requirement is automatically enforced so that files will
+be renamed when a mismatch is found.</p>
+<p>Any unit based input requirement, e.g.
+<a class="reference internal" href="api/generated/BioSimSpace.Gateway.Length.html#BioSimSpace.Gateway.Length" title="BioSimSpace.Gateway.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.Length</span></code></a>, should be
+specifing as a CWL <code class="docutils literal notranslate"><span class="pre">string</span></code> type to allow for greatest flexibility, e.g.:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="forwards-compatibility">
 <h2>Forwards compatibility<a class="headerlink" href="#forwards-compatibility" title="Permalink to this headline">¶</a></h2>
@@ -385,7 +426,7 @@ modification.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jan 05, 2021.
+        Last updated on Jan 07, 2021.
       </span>
 
     </p>
