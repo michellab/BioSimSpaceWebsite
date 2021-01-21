@@ -14,16 +14,18 @@ BioSimSpace.Protocol.FreeEnergy
    .. autosummary::
    
       ~FreeEnergy.__init__
-      ~FreeEnergy.getFrames
       ~FreeEnergy.getLambda
       ~FreeEnergy.getLambdaValues
       ~FreeEnergy.getPressure
+      ~FreeEnergy.getReportInterval
+      ~FreeEnergy.getRestartInterval
       ~FreeEnergy.getRunTime
       ~FreeEnergy.getTemperature
       ~FreeEnergy.getTimeStep
-      ~FreeEnergy.setFrames
       ~FreeEnergy.setLambdaValues
       ~FreeEnergy.setPressure
+      ~FreeEnergy.setReportInterval
+      ~FreeEnergy.setRestartInterval
       ~FreeEnergy.setRunTime
       ~FreeEnergy.setTemperature
       ~FreeEnergy.setTimeStep

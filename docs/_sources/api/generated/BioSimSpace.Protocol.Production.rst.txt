@@ -15,16 +15,18 @@ BioSimSpace.Protocol.Production
    
       ~Production.__init__
       ~Production.getFirstStep
-      ~Production.getFrames
       ~Production.getPressure
+      ~Production.getReportInterval
+      ~Production.getRestartInterval
       ~Production.getRunTime
       ~Production.getTemperature
       ~Production.getTimeStep
       ~Production.isRestart
       ~Production.setFirstStep
-      ~Production.setFrames
       ~Production.setPressure
+      ~Production.setReportInterval
       ~Production.setRestart
+      ~Production.setRestartInterval
       ~Production.setRunTime
       ~Production.setTemperature
       ~Production.setTimeStep

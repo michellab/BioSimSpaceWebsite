@@ -22,6 +22,8 @@ BioSimSpace.Protocol.Metadynamics
       ~Metadynamics.getHillHeight
       ~Metadynamics.getHillsFile
       ~Metadynamics.getPressure
+      ~Metadynamics.getReportInterval
+      ~Metadynamics.getRestartInterval
       ~Metadynamics.getRunTime
       ~Metadynamics.getTemperature
       ~Metadynamics.getTimeStep
@@ -33,6 +35,8 @@ BioSimSpace.Protocol.Metadynamics
       ~Metadynamics.setHillHeight
       ~Metadynamics.setHillsFile
       ~Metadynamics.setPressure
+      ~Metadynamics.setReportInterval
+      ~Metadynamics.setRestartInterval
       ~Metadynamics.setRunTime
       ~Metadynamics.setTemperature
       ~Metadynamics.setTimeStep

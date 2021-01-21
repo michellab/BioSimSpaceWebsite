@@ -1,0 +1,673 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.Funnel &mdash; BioSimSpace 2020.1.0+179.g07a76e0.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion" href="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.html" />
+    <link rel="prev" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #161e3c" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#classes">Classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#packages">Packages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebook.html">Notebook server</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocols.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a> &raquo;</li>
+        
+      <li>BioSimSpace.Metadynamics.CollectiveVariable.Funnel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/generated/BioSimSpace.Metadynamics.CollectiveVariable.Funnel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="biosimspace-metadynamics-collectivevariable-funnel">
+<h1>BioSimSpace.Metadynamics.CollectiveVariable.Funnel<a class="headerlink" href="#biosimspace-metadynamics-collectivevariable-funnel" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.CollectiveVariable.</code><code class="sig-name descname">Funnel</code><span class="sig-paren">(</span><em class="sig-param">atoms0</em>, <em class="sig-param">atoms1</em>, <em class="sig-param">hill_width=0.0250 nm</em>, <em class="sig-param">width=0.6000 nm</em>, <em class="sig-param">buffer=0.1500 nm</em>, <em class="sig-param">steepness=1.5</em>, <em class="sig-param">inflection=2.0000 nm</em>, <em class="sig-param">lower_bound=&lt;BioSimSpace.Metadynamics.Bound: value=0.5000 nm</em>, <em class="sig-param">force_constant=2000.0</em>, <em class="sig-param">exponent=2.0</em>, <em class="sig-param">epsilon=1.0&gt;</em>, <em class="sig-param">upper_bound=&lt;BioSimSpace.Metadynamics.Bound: value=4.0000 nm</em>, <em class="sig-param">force_constant=2000.0</em>, <em class="sig-param">exponent=2.0</em>, <em class="sig-param">epsilon=1.0&gt;</em>, <em class="sig-param">grid=(&lt;BioSimSpace.Metadynamics.Grid: minimum=0.0000e+00 nm</em>, <em class="sig-param">maximum=4.5000 nm</em>, <em class="sig-param">num_bins=400&gt;</em>, <em class="sig-param">&lt;BioSimSpace.Metadynamics.Grid: minimum=0.0000e+00 nm</em>, <em class="sig-param">maximum=0.9000 nm</em>, <em class="sig-param">num_bins=400&gt;)</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for a funnel collective variable.</p>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">atoms0</em>, <em class="sig-param">atoms1</em>, <em class="sig-param">hill_width=0.0250 nm</em>, <em class="sig-param">width=0.6000 nm</em>, <em class="sig-param">buffer=0.1500 nm</em>, <em class="sig-param">steepness=1.5</em>, <em class="sig-param">inflection=2.0000 nm</em>, <em class="sig-param">lower_bound=&lt;BioSimSpace.Metadynamics.Bound: value=0.5000 nm</em>, <em class="sig-param">force_constant=2000.0</em>, <em class="sig-param">exponent=2.0</em>, <em class="sig-param">epsilon=1.0&gt;</em>, <em class="sig-param">upper_bound=&lt;BioSimSpace.Metadynamics.Bound: value=4.0000 nm</em>, <em class="sig-param">force_constant=2000.0</em>, <em class="sig-param">exponent=2.0</em>, <em class="sig-param">epsilon=1.0&gt;</em>, <em class="sig-param">grid=(&lt;BioSimSpace.Metadynamics.Grid: minimum=0.0000e+00 nm</em>, <em class="sig-param">maximum=4.5000 nm</em>, <em class="sig-param">num_bins=400&gt;</em>, <em class="sig-param">&lt;BioSimSpace.Metadynamics.Grid: minimum=0.0000e+00 nm</em>, <em class="sig-param">maximum=0.9000 nm</em>, <em class="sig-param">num_bins=400&gt;)</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>atoms0</strong> (<em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>..</em><em>]</em>) – A list of atom indices that define the origin of the funnel.</p></li>
+<li><p><strong>atoms1</strong> (<em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>..</em><em>]</em>) – A list of atom indices that define the inflection point of the funnel.</p></li>
+<li><p><strong>width</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The funnel “wall width”.</p></li>
+<li><p><strong>buffer</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The funnel “wall buffer”.</p></li>
+<li><p><strong>steepness</strong> (<em>float</em>) – The steepness of the funnel at the inflection point.</p></li>
+<li><p><strong>inflection</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The inflection point as a value of the projection along the
+funnel axis.</p></li>
+<li><p><strong>hill_width</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The width of the Gaussian hill used to sample this variable.</p></li>
+<li><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable. This is
+used to constrain the “projection on axis” component of the
+collective variable, i.e. the distance from the funnel axis to
+the origin, along the axis.</p></li>
+<li><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable. This is
+used to constrain the “projection on axis” component of the
+collective variable, i.e. the distance from the funnel axis to</p></li>
+<li><p><strong>grid</strong> ((<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>, <a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>)) – The grid on which the collective variable will be sampled.
+This can help speed up long metadynamics simulations where
+the number of Gaussian kernels can become prohibitive. The
+collective variable has two components: the “projection on
+the funnel axis” (the distance from the axis to the origin,
+along the axis) and the orthogonal distance between the ligand
+and the axis. The grid should be passed as a tuple with
+the parameters for each component.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.__init__" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(atoms0, atoms1[, hill_width, …])</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms0" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtoms0</span></code></a>()</p></td>
+<td><p>Return indices of the atoms whose center-of-mass defines the origin of the funnel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms1" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtoms1</span></code></a>()</p></td>
+<td><p>Return indices of the atoms whose center-of-mass defines the inflection point of the funnel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getBuffer" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getBuffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBuffer</span></code></a>()</p></td>
+<td><p>Return the funnel “wall buffer”.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code></a>()</p></td>
+<td><p>Get the grid on which the collective variable is sampled.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code></a>()</p></td>
+<td><p>Return the width of the Gaussian hill used to bias this collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getInflection" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getInflection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInflection</span></code></a>()</p></td>
+<td><p>Return the inflection point as a value of the projection along the funnel axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code></a>()</p></td>
+<td><p>Get the lower bound on the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getSteepness" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getSteepness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSteepness</span></code></a>()</p></td>
+<td><p>Return the steepness of the funnel at the inflection point.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code></a>()</p></td>
+<td><p>Get the upper bound on the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWidth</span></code></a>()</p></td>
+<td><p>Return the funnel “wall width”.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.nComponents" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.nComponents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nComponents</span></code></a>()</p></td>
+<td><p>Return the number of components for the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms0" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms0"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms0</span></code></a>(atoms0)</p></td>
+<td><p>Set the list of atom indices whose center-of-mass define the origin of the funnel.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms1" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms1</span></code></a>(atoms1)</p></td>
+<td><p>Set the list of atom indices whose center-of-mass define the inflection point of the funnel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setBuffer" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setBuffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBuffer</span></code></a>(buffer)</p></td>
+<td><p>Set the funnel “wall buffer”.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
+<td><p>Set a grid on which the collective variable will be sampled.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
+<td><p>Set the width of the Gaussian hills used to bias this collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setInflection" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setInflection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setInflection</span></code></a>(inflection)</p></td>
+<td><p>Set the inflection point as a value of the projection along the funnel axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
+<td><p>Set a lower bound on the value of the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setSteepness" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setSteepness"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSteepness</span></code></a>(steepness)</p></td>
+<td><p>Set the steepness of the funnel at the inflection point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
+<td><p>Set an upper bound on the value of the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setWidth</span></code></a>(width)</p></td>
+<td><p>Set the funnel “wall width”.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms0">
+<code class="sig-name descname">getAtoms0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return indices of the atoms whose center-of-mass defines the origin
+of the funnel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>atoms0</strong> – The list of atom indices whose center-of-mass define the origin
+of the funnel.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms1">
+<code class="sig-name descname">getAtoms1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getAtoms1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return indices of the atoms whose center-of-mass defines the
+inflection point of the funnel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>atoms1</strong> – The list of atom indices whose center-of-mass define the
+inflection point of the funnel.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getBuffer">
+<code class="sig-name descname">getBuffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the funnel “wall buffer”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>buffer</strong> – The funnel “wall buffer”.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getGrid">
+<code class="sig-name descname">getGrid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the grid on which the collective variable is sampled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>grid</strong> – The grid on which the two-components of the collective variable are sampled.
+A grid for the two commponents of the collective variable:
+the distance along the funnel projection axis, and the</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>(<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>,: class:<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Grid</span></code></a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getHillWidth">
+<code class="sig-name descname">getHillWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the width of the Gaussian hill used to bias this collective
+variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>hill_width</strong> – The width of the Gaussian hill.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getInflection">
+<code class="sig-name descname">getInflection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getInflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the inflection point as a value of the projection along the
+funnel axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>inflection</strong> – The inflection point as avalue of the projection along the
+funnel axis.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getLowerBound">
+<code class="sig-name descname">getLowerBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the lower bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> – The lower bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getSteepness">
+<code class="sig-name descname">getSteepness</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getSteepness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the steepness of the funnel at the inflection point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>steepness</strong> – The steepness of the funnel at the inflection point.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getUpperBound">
+<code class="sig-name descname">getUpperBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the upper bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> – The upper bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getWidth">
+<code class="sig-name descname">getWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.getWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the funnel “wall width”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>width</strong> – The funnel “wall width”.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.nComponents">
+<code class="sig-name descname">nComponents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.nComponents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of components for the collective variable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms0">
+<code class="sig-name descname">setAtoms0</code><span class="sig-paren">(</span><em class="sig-param">atoms0</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of atom indices whose center-of-mass define the origin
+of the funnel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>atoms0</strong> (<em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>..</em><em>]</em>) – The list of atom indices whose center-of-mass define the origin
+of the funnel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms1">
+<code class="sig-name descname">setAtoms1</code><span class="sig-paren">(</span><em class="sig-param">atoms1</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setAtoms1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the list of atom indices whose center-of-mass define the
+inflection point of the funnel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>atoms1</strong> (<em>[</em><em>int</em><em>, </em><em>int</em><em>, </em><em>..</em><em>]</em>) – The list of atom indices whose center-of-mass define the
+inflection point of the funnel.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setBuffer">
+<code class="sig-name descname">setBuffer</code><span class="sig-paren">(</span><em class="sig-param">buffer</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the funnel “wall buffer”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffer</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The width of the funnel wall buffer.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setGrid">
+<code class="sig-name descname">setGrid</code><span class="sig-paren">(</span><em class="sig-param">grid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a grid on which the collective variable will be sampled.
+Call with no arguments to clear the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>grid</strong> ((<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>,: class:<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Grid</span></code></a>)) – A grid for the two commponents of the collective variable:
+the distance along the funnel projection axis, and the
+orthogonal extent from the axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setHillWidth">
+<code class="sig-name descname">setHillWidth</code><span class="sig-paren">(</span><em class="sig-param">hill_width</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the width of the Gaussian hills used to bias this collective
+variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hill_width</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The width of the Gaussian hill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setInflection">
+<code class="sig-name descname">setInflection</code><span class="sig-paren">(</span><em class="sig-param">inflection</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setInflection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the inflection point as a value of the projection along the
+funnel axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>inflection</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The inflection point as avalue of the projection along the
+funnel axis.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setLowerBound">
+<code class="sig-name descname">setLowerBound</code><span class="sig-paren">(</span><em class="sig-param">lower_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a lower bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setSteepness">
+<code class="sig-name descname">setSteepness</code><span class="sig-paren">(</span><em class="sig-param">steepness</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setSteepness" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the steepness of the funnel at the inflection point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>steepness</strong> (<em>float</em>) – The steepness of the funnel at the inflection point.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setUpperBound">
+<code class="sig-name descname">setUpperBound</code><span class="sig-paren">(</span><em class="sig-param">upper_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an upper bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setWidth">
+<code class="sig-name descname">setWidth</code><span class="sig-paren">(</span><em class="sig-param">width</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Funnel.setWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the funnel “wall width”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>width</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The width of the funnel wall.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2019 Michel Lab.
+      <span class="lastupdated">
+        Last updated on Jan 21, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

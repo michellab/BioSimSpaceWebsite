@@ -26,6 +26,7 @@ BioSimSpace.Metadynamics.CollectiveVariable.Distance
       ~Distance.getUpperBound
       ~Distance.getWeights0
       ~Distance.getWeights1
+      ~Distance.nComponents
       ~Distance.setAtom0
       ~Distance.setAtom1
       ~Distance.setCoM0

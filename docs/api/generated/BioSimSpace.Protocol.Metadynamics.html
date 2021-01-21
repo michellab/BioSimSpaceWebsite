@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Protocol.Metadynamics &mdash; BioSimSpace 2020.1.0+109.g5ce3476 documentation</title>
+  <title>BioSimSpace.Protocol.Metadynamics &mdash; BioSimSpace 2020.1.0+179.g07a76e0.dirty documentation</title>
   
 
   
@@ -230,11 +230,11 @@
 <h1>BioSimSpace.Protocol.Metadynamics<a class="headerlink" href="#biosimspace-protocol-metadynamics" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Protocol.Metadynamics">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Metadynamics</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Metadynamics</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">report_interval=1000</em>, <em class="sig-param">restart_interval=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing metadynamics protocols.</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">hill_height=1.0000 kJ/mol</em>, <em class="sig-param">hill_frequency=1000</em>, <em class="sig-param">report_interval=1000</em>, <em class="sig-param">restart_interval=1000</em>, <em class="sig-param">bias_factor=None</em>, <em class="sig-param">hills_file=None</em>, <em class="sig-param">grid_file=None</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -246,6 +246,9 @@
 <li><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure. Pass pressure=None to use the NVT ensemble.</p></li>
 <li><p><strong>hill_height</strong> (<a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>) – The height of the Gaussian hills.</p></li>
 <li><p><strong>hill_frequency</strong> (<em>int</em>) – The frequency at which hills are deposited.</p></li>
+<li><p><strong>report_interval</strong> (<em>int</em>) – The frequency at which statistics are recorded. (In integration steps.)</p></li>
+<li><p><strong>restart_interval</strong> (<em>int</em>) – The frequency at which restart configurations and trajectory
+frames are saved. (In integration steps.)</p></li>
 <li><p><strong>bias_factor</strong> (<em>float</em>) – The bias factor for well tempered metadynamics.</p></li>
 <li><p><strong>hills_file</strong> (<em>str</em>) – The path to a HILLS file from a previous simulation. This can
 be used to restart in order to contiune sampling. The information
@@ -297,6 +300,12 @@ information in the file must be consistent with the
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getPressure" title="BioSimSpace.Protocol.Metadynamics.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getReportInterval" title="BioSimSpace.Protocol.Metadynamics.getReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReportInterval</span></code></a>()</p></td>
+<td><p>Return the interval between reporting statistics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getRestartInterval" title="BioSimSpace.Protocol.Metadynamics.getRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestartInterval</span></code></a>()</p></td>
+<td><p>Return the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.getRunTime" title="BioSimSpace.Protocol.Metadynamics.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
@@ -329,6 +338,12 @@ information in the file must be consistent with the
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setPressure" title="BioSimSpace.Protocol.Metadynamics.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
 <td><p>Set the pressure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setReportInterval" title="BioSimSpace.Protocol.Metadynamics.setReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setReportInterval</span></code></a>(report_interval)</p></td>
+<td><p>Set the interval at which statistics are reported.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setRestartInterval" title="BioSimSpace.Protocol.Metadynamics.setRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestartInterval</span></code></a>(restart_interval)</p></td>
+<td><p>Set the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Metadynamics.setRunTime" title="BioSimSpace.Protocol.Metadynamics.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
 <td><p>Set the running time.</p></td>
@@ -449,6 +464,36 @@ information in the file must be consistent with the
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.getReportInterval">
+<code class="sig-name descname">getReportInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between reporting statistics. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> – The number of integration steps between reporting statistics.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.getRestartInterval">
+<code class="sig-name descname">getRestartInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.getRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -585,6 +630,30 @@ Call with no arguments to clear the bias factor.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.setReportInterval">
+<code class="sig-name descname">setReportInterval</code><span class="sig-paren">(</span><em class="sig-param">report_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval at which statistics are reported. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> (<em>int</em>) – The number of integration steps between reporting statistics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Metadynamics.setRestartInterval">
+<code class="sig-name descname">setRestartInterval</code><span class="sig-paren">(</span><em class="sig-param">restart_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> (<em>int</em>) – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Protocol.Metadynamics.setRunTime">
 <code class="sig-name descname">setRunTime</code><span class="sig-paren">(</span><em class="sig-param">runtime</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Metadynamics.setRunTime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the running time.</p>
@@ -637,7 +706,7 @@ Call with no arguments to clear the bias factor.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jan 15, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

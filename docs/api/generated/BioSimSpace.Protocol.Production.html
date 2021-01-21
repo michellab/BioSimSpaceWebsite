@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Protocol.Production &mdash; BioSimSpace 2020.1.0+109.g5ce3476 documentation</title>
+  <title>BioSimSpace.Protocol.Production &mdash; BioSimSpace 2020.1.0+179.g07a76e0.dirty documentation</title>
   
 
   
@@ -230,11 +230,11 @@
 <h1>BioSimSpace.Protocol.Production<a class="headerlink" href="#biosimspace-protocol-production" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Protocol.Production">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Production</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">frames=20</em>, <em class="sig-param">first_step=0</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Production</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=100</em>, <em class="sig-param">first_step=0</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing production protocols.</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Production.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">frames=20</em>, <em class="sig-param">first_step=0</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=100</em>, <em class="sig-param">first_step=0</em>, <em class="sig-param">restart=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -243,7 +243,8 @@
 <li><p><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The running time.</p></li>
 <li><p><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The temperature.</p></li>
 <li><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure. Pass pressure=None to use the NVT ensemble.</p></li>
-<li><p><strong>frames</strong> (<em>int</em>) – The number of trajectory frames to record.</p></li>
+<li><p><strong>report_interval</strong> (<em>int</em>) – The frequency at which statistics are recorded. (In integration steps.)</p></li>
+<li><p><strong>restart_interval</strong> (<em>int</em>) – The frequency at which restart configurations and trajectory</p></li>
 <li><p><strong>first_step</strong> (<em>int</em>) – The initial time step (for restart simulations).</p></li>
 <li><p><strong>restart</strong> (<em>bool</em>) – Whether this is a continuation of a previous simulation.</p></li>
 </ul>
@@ -264,35 +265,41 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFirstStep" title="BioSimSpace.Protocol.Production.getFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFirstStep</span></code></a>()</p></td>
 <td><p>Return the first time step.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getFrames" title="BioSimSpace.Protocol.Production.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>()</p></td>
-<td><p>Return the number of frames.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getPressure" title="BioSimSpace.Protocol.Production.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getPressure" title="BioSimSpace.Protocol.Production.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getRunTime" title="BioSimSpace.Protocol.Production.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getReportInterval" title="BioSimSpace.Protocol.Production.getReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReportInterval</span></code></a>()</p></td>
+<td><p>Return the interval between reporting statistics.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getRestartInterval" title="BioSimSpace.Protocol.Production.getRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestartInterval</span></code></a>()</p></td>
+<td><p>Return the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getRunTime" title="BioSimSpace.Protocol.Production.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTemperature" title="BioSimSpace.Protocol.Production.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTemperature" title="BioSimSpace.Protocol.Production.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
 <td><p>Return temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTimeStep" title="BioSimSpace.Protocol.Production.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.getTimeStep" title="BioSimSpace.Protocol.Production.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
 <td><p>Return the time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.isRestart" title="BioSimSpace.Protocol.Production.isRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRestart</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.isRestart" title="BioSimSpace.Protocol.Production.isRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRestart</span></code></a>()</p></td>
 <td><p>Return whether this restart simulation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFirstStep" title="BioSimSpace.Protocol.Production.setFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFirstStep</span></code></a>(first_step)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFirstStep" title="BioSimSpace.Protocol.Production.setFirstStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFirstStep</span></code></a>(first_step)</p></td>
 <td><p>Set the initial time step.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setFrames" title="BioSimSpace.Protocol.Production.setFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setFrames</span></code></a>(frames)</p></td>
-<td><p>Set the number of frames.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setPressure" title="BioSimSpace.Protocol.Production.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
 <td><p>Set the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRestart" title="BioSimSpace.Protocol.Production.setRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestart</span></code></a>(restart)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setReportInterval" title="BioSimSpace.Protocol.Production.setReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setReportInterval</span></code></a>(report_interval)</p></td>
+<td><p>Set the interval at which statistics are reported.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRestart" title="BioSimSpace.Protocol.Production.setRestart"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestart</span></code></a>(restart)</p></td>
 <td><p>Set the restart flag.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRestartInterval" title="BioSimSpace.Protocol.Production.setRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestartInterval</span></code></a>(restart_interval)</p></td>
+<td><p>Set the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Production.setRunTime" title="BioSimSpace.Protocol.Production.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
 <td><p>Set the running time.</p></td>
@@ -320,20 +327,6 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace.Protocol.Production.getFrames">
-<code class="sig-name descname">getFrames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.getFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the number of frames.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>frames</strong> – The number of trajectory frames.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>int</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="BioSimSpace.Protocol.Production.getPressure">
 <code class="sig-name descname">getPressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.getPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the pressure.</p>
@@ -343,6 +336,36 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Production.getReportInterval">
+<code class="sig-name descname">getReportInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.getReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between reporting statistics. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> – The number of integration steps between reporting statistics.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Production.getRestartInterval">
+<code class="sig-name descname">getRestartInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.getRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -415,17 +438,6 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace.Protocol.Production.setFrames">
-<code class="sig-name descname">setFrames</code><span class="sig-paren">(</span><em class="sig-param">frames</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.setFrames" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the number of frames.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>frames</strong> (<em>int</em>) – The number of trajectory frames.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="BioSimSpace.Protocol.Production.setPressure">
 <code class="sig-name descname">setPressure</code><span class="sig-paren">(</span><em class="sig-param">pressure</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.setPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the pressure.</p>
@@ -437,12 +449,36 @@
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Protocol.Production.setReportInterval">
+<code class="sig-name descname">setReportInterval</code><span class="sig-paren">(</span><em class="sig-param">report_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.setReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval at which statistics are reported. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> (<em>int</em>) – The number of integration steps between reporting statistics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Protocol.Production.setRestart">
 <code class="sig-name descname">setRestart</code><span class="sig-paren">(</span><em class="sig-param">restart</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.setRestart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the restart flag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>restart</strong> (<em>bool</em>) – Whether this is a restart simulation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Production.setRestartInterval">
+<code class="sig-name descname">setRestartInterval</code><span class="sig-paren">(</span><em class="sig-param">restart_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Production.setRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> (<em>int</em>) – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -500,7 +536,7 @@
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jan 15, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

@@ -20,6 +20,7 @@ BioSimSpace.Metadynamics.CollectiveVariable.Torsion
       ~Torsion.getLowerBound
       ~Torsion.getPeriodicBoundaries
       ~Torsion.getUpperBound
+      ~Torsion.nComponents
       ~Torsion.setAtoms
       ~Torsion.setGrid
       ~Torsion.setHillWidth

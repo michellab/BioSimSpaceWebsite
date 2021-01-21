@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Metadynamics.CollectiveVariable.Torsion &mdash; BioSimSpace 2020.1.0+109.g5ce3476 documentation</title>
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.Torsion &mdash; BioSimSpace 2020.1.0+179.g07a76e0.dirty documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="BioSimSpace.MD" href="../index_MD.html" />
-    <link rel="prev" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" /> 
+    <link rel="prev" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel" href="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -279,22 +279,25 @@ collective variable.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.getUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code></a>()</p></td>
 <td><p>Get the upper bound on the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms</span></code></a>(atoms)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.nComponents" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.nComponents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nComponents</span></code></a>()</p></td>
+<td><p>Return the number of components for the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAtoms</span></code></a>(atoms)</p></td>
 <td><p>Set the atoms for which the torsion will be calculated.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
 <td><p>Set a grid on which the collective variable will be sampled.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
 <td><p>Set the width of the Gaussian hills used to bias this collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
 <td><p>Set a lower bound on the value of the collective variable.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code></a>(pbc)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code></a>(pbc)</p></td>
 <td><p>Set whether to use periodic_boundaries when calculating the collective variable.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
 <td><p>Set an upper bound on the value of the collective variable.</p></td>
 </tr>
 </tbody>
@@ -386,6 +389,12 @@ when computing the collective variable.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.nComponents">
+<code class="sig-name descname">nComponents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.nComponents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of components for the collective variable.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms">
 <code class="sig-name descname">setAtoms</code><span class="sig-paren">(</span><em class="sig-param">atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.Torsion.setAtoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the atoms for which the torsion will be calculated.
@@ -466,7 +475,7 @@ collective variable.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="../index_MD.html" class="btn btn-neutral float-right" title="BioSimSpace.MD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
@@ -475,7 +484,7 @@ collective variable.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jan 15, 2021.
+        Last updated on Jan 21, 2021.
       </span>
 
     </p>

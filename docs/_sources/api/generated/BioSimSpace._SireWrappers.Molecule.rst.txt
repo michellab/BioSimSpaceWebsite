@@ -20,6 +20,8 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.getAtoms
       ~Molecule.getAxisAlignedBoundingBox
       ~Molecule.getResidues
+      ~Molecule.isAmberWater
+      ~Molecule.isGromacsWater
       ~Molecule.isMerged
       ~Molecule.isWater
       ~Molecule.makeCompatibleWith
