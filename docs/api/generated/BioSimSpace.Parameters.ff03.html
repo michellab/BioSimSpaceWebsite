@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Parameters.forceFields &mdash; BioSimSpace 2020.1.0+199.gc3fce21.dirty documentation</title>
+  <title>BioSimSpace.Parameters.ff03 &mdash; BioSimSpace 2020.1.0+199.gc3fce21.dirty documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.Parameters.gaff" href="BioSimSpace.Parameters.gaff.html" />
-    <link rel="prev" title="BioSimSpace.Parameters.ff99SBildn" href="BioSimSpace.Parameters.ff99SBildn.html" /> 
+    <link rel="next" title="BioSimSpace.Parameters.ff14SB" href="BioSimSpace.Parameters.ff14SB.html" />
+    <link rel="prev" title="BioSimSpace.Parameters.amberForceFields" href="BioSimSpace.Parameters.amberForceFields.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -115,12 +115,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.amberForceFields.html">BioSimSpace.Parameters.amberForceFields</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff03.html">BioSimSpace.Parameters.ff03</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.ff03</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99.html">BioSimSpace.Parameters.ff99</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SB.html">BioSimSpace.Parameters.ff99SB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SBildn.html">BioSimSpace.Parameters.ff99SBildn</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.forceFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.forceFields.html">BioSimSpace.Parameters.forceFields</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff.html">BioSimSpace.Parameters.gaff</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff2.html">BioSimSpace.Parameters.gaff2</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openForceFields.html">BioSimSpace.Parameters.openForceFields</a></li>
@@ -230,13 +230,13 @@
         
           <li><a href="../index_Parameters.html">BioSimSpace.Parameters</a> &raquo;</li>
         
-      <li>BioSimSpace.Parameters.forceFields</li>
+      <li>BioSimSpace.Parameters.ff03</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/api/generated/BioSimSpace.Parameters.forceFields.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Parameters.ff03.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -249,18 +249,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-parameters-forcefields">
-<h1>BioSimSpace.Parameters.forceFields<a class="headerlink" href="#biosimspace-parameters-forcefields" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="biosimspace-parameters-ff03">
+<h1>BioSimSpace.Parameters.ff03<a class="headerlink" href="#biosimspace-parameters-ff03" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace.Parameters.forceFields">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">forceFields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.forceFields" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of the supported force fields.</p>
+<dt id="BioSimSpace.Parameters.ff03">
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">ff03</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">water_model=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.ff03" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameterise using the ff03 force field.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>force_fields</strong> – A list of the supported force fields.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule to parameterise.</p></li>
+<li><p><strong>water_model</strong> (<em>str</em>) – The water model used to parameterise any structural ions.
+Run ‘BioSimSpace.Solvent.waterModels()’ to see the supported
+water models. This is ignored if ions are not present.</p></li>
+<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+</ul>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[str]</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>molecule</strong> – The parameterised molecule.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -273,8 +285,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="BioSimSpace.Parameters.gaff.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters.gaff" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="BioSimSpace.Parameters.ff99SBildn.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.ff99SBildn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BioSimSpace.Parameters.ff14SB.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters.ff14SB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Parameters.amberForceFields.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.amberForceFields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
