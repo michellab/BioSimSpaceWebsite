@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Parameters.ff14SB &mdash; BioSimSpace 2020.1.0+199.gc3fce21.dirty documentation</title>
+  <title>BioSimSpace.Parameters.ff14SB &mdash; BioSimSpace 2020.1.0+200.g7993534.dirty documentation</title>
   
 
   
@@ -253,7 +253,7 @@
 <h1>BioSimSpace.Parameters.ff14SB<a class="headerlink" href="#biosimspace-parameters-ff14sb" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Parameters.ff14SB">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">ff14SB</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">water_model=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.ff14SB" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">ff14SB</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">water_model=None</em>, <em class="sig-param">leap_commands=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.ff14SB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameterise using the ff14SB force field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -262,6 +262,10 @@
 <li><p><strong>water_model</strong> (<em>str</em>) – The water model used to parameterise any structural ions.
 Run ‘BioSimSpace.Solvent.waterModels()’ to see the supported
 water models. This is ignored if ions are not present.</p></li>
+<li><p><strong>leap_commands</strong> (<em>[</em><em>str</em><em>]</em>) – An optional list of extra commands for the LEaP program. These
+will be added before any default commands and can be used to, e.g.,
+load additional parameter files. When this option is set, we can no
+longer fall back on GROMACS’s pdb2gmx.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
