@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2020.1.0+200.g7993534.dirty documentation</title>
+  <title>BioSimSpace.Parameters &mdash; BioSimSpace 2020.1.0+202.g7bb2eab.dirty documentation</title>
   
 
   
@@ -445,9 +445,8 @@ any compatible AMBER force field function, e.g.:</p>
 <span class="n">molecule</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="s2">&quot;molecules/peptide.pdb&quot;</span><span class="p">)</span>
 
 <span class="c1"># Create a list of the additional commands for the LEaP program. These will</span>
-<span class="c1"># be run before any default commands.</span>
-<span class="n">leap_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;addPath /home/lester/Downloads/leap_example/phosphate-params&quot;</span><span class="p">,</span>
-                 <span class="s2">&quot;source leaprc.phosaa10&quot;</span><span class="p">]</span>
+<span class="c1"># be run after any default commands.</span>
+<span class="n">leap_commands</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;addPath phosphate_params&quot;</span><span class="p">,</span> <span class="s2">&quot;source leaprc.phosaa10&quot;</span><span class="p">]</span>
 
 <span class="c1"># Initialise the parameterisation process and block until the molecule is</span>
 <span class="c1"># ready to be returned.</span>
@@ -475,7 +474,7 @@ any compatible AMBER force field function, e.g.:</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jan 29, 2021.
+        Last updated on Feb 03, 2021.
       </span>
 
     </p>
