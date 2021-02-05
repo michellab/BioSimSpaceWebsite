@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+205.g4bcab74.dirty documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+214.g2de8a4e.dirty documentation</title>
   
 
   
@@ -226,12 +226,12 @@
 <h1>BioSimSpace.Process.ProcessRunner<a class="headerlink" href="#biosimspace-process-processrunner" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Process.ProcessRunner">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">ProcessRunner</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">ProcessRunner</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for managing and running multiple simulation processes, e.g.
 a free energy simulation at multiple lambda values.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">nest_dirs=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -239,8 +239,6 @@ a free energy simulation at multiple lambda values.</p>
 <li><p><strong>processes</strong> ([<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – A list of process objects.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the of processes.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the processes.</p></li>
-<li><p><strong>nest_dirs</strong> (<em>bool</em>) – Whether to nest the working directory of the processes inside
-the process runner top-level directory.</p></li>
 </ul>
 </dd>
 </dl>
@@ -253,7 +251,7 @@ the process runner top-level directory.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.__init__" title="BioSimSpace.Process.ProcessRunner.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(processes[, name, work_dir, nest_dirs])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.__init__" title="BioSimSpace.Process.ProcessRunner.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(processes[, name, work_dir])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.addProcess" title="BioSimSpace.Process.ProcessRunner.addProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">addProcess</span></code></a>(process)</p></td>
@@ -316,7 +314,7 @@ the process runner top-level directory.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
 <td><p>Start a specific process. The same can be achieved using:</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>([serial, batch_size, max_retries])</p></td>
 <td><p>Start all of the processes.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.workDir" title="BioSimSpace.Process.ProcessRunner.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
@@ -581,8 +579,24 @@ the process runner top-level directory.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.startAll">
-<code class="sig-name descname">startAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.startAll" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">startAll</code><span class="sig-paren">(</span><em class="sig-param">serial=False</em>, <em class="sig-param">batch_size=None</em>, <em class="sig-param">max_retries=5</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.startAll" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start all of the processes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial</strong> (<em>bool</em>) – Whether to start the processes in serial, i.e. wait for a
+process to finish before starting the next. When running
+in parallel (serial=False) care should be taken to ensure
+that each process doesn’t consume too many resources. We
+normally indend for the ProcessRunner to be used to manage
+single core processes.</p></li>
+<li><p><strong>batch_size</strong> (<em>int</em>) – When running in parallel, how many processes to run at any
+one time. If set to None, then the batch size will be set
+to the output of multiprocess.cpu_count().</p></li>
+<li><p><strong>max_retries</strong> (<em>int</em>) – How many times to retry a process if it fails.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
@@ -619,7 +633,7 @@ the process runner top-level directory.</p></li>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Feb 03, 2021.
+        Last updated on Feb 05, 2021.
       </span>
 
     </p>
