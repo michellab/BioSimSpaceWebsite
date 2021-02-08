@@ -35,6 +35,7 @@ BioSimSpace.Process.ProcessRunner
       ~ProcessRunner.setName
       ~ProcessRunner.start
       ~ProcessRunner.startAll
+      ~ProcessRunner.wait
       ~ProcessRunner.workDir
    
    
