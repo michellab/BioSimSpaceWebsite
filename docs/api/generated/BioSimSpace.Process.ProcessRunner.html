@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+222.g8a7b6ae.dirty documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+223.gcdb4518.dirty documentation</title>
   
 
   
@@ -289,7 +289,7 @@ can be run independently and allocated their own specific resources.</p>
 <td><p>Return whether each process is running.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</p></td>
-<td><p>Kill a specific process. The same can be achieved using:</p></td>
+<td><p>Kill a specific process.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</p></td>
 <td><p>Kill all of the processes.</p></td>
@@ -425,10 +425,10 @@ can be run independently and allocated their own specific resources.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.kill">
 <code class="sig-name descname">kill</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.kill" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Kill a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].kill()</p>
-</dd>
-</dl>
+<dd><p>Kill a specific process. The same can be achieved using:</p>
+<blockquote>
+<div><p>runner.processes()[index].kill()</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
@@ -585,11 +585,10 @@ can be run independently and allocated their own specific resources.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.start">
 <code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a specific process.</p>
-<dl class="simple">
-<dt>The same can be achieved using:</dt><dd><p>runner.processes()[index].start()</p>
-</dd>
-</dl>
+<dd><p>Start a specific process. The same can be achieved using:</p>
+<blockquote>
+<div><p>runner.processes()[index].start()</p>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
