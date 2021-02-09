@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+218.g30eb05d.dirty documentation</title>
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2020.1.0+222.g8a7b6ae.dirty documentation</title>
   
 
   
@@ -229,6 +229,22 @@
 <em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">ProcessRunner</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for managing and running multiple simulation processes, e.g.
 a free energy simulation at multiple lambda values.</p>
+<p>Since BioSimSpace handles its own background processes it is unsuitable
+for use with Python modules such as concurrent.futures, where use of
+objects like a ProcessPoolExecutor would lead to redundant processes,
+i.e. a process would be created, from which BioSimSpace would fork its
+own background process. Instead, we recommend using a ProcessRunner,
+which can handle the running of processes for you, both in serial and
+parallel.</p>
+<p>At present there is no way to allocate specific compute resources to
+individual processes. As such, unless you have access to a large amount
+of compute, when executing the runner in parallel we recommend that the
+individual processes are serial in nature. BioSimSpace is not intended
+to be a workflow manager and the ProcessRunner is only meant to help
+facilitate running of more complex, multi-leg simulation processes. If
+you desire more fine-grained resource control we recommend breaking your
+workflow into separate <a class="reference internal" href="BioSimSpace.Gateway.Node.html#BioSimSpace.Gateway.Node" title="BioSimSpace.Gateway.Node"><code class="xref py py-class docutils literal notranslate"><span class="pre">nodes</span></code></a>, which
+can be run independently and allocated their own specific resources.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">processes</em>, <em class="sig-param">name='runner'</em>, <em class="sig-param">work_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.__init__" title="Permalink to this definition">¶</a></dt>
@@ -312,7 +328,7 @@ a free energy simulation at multiple lambda values.</p>
 <td><p>Set the process runner name.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
-<td><p>Start a specific process. The same can be achieved using:</p></td>
+<td><p>Start a specific process.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>([serial, batch_size, max_retries])</p></td>
 <td><p>Start all of the processes.</p></td>
@@ -569,8 +585,9 @@ a free energy simulation at multiple lambda values.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.start">
 <code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>Start a specific process. The same can be achieved using:</dt><dd><p>runner.processes()[index].start()</p>
+<dd><p>Start a specific process.</p>
+<dl class="simple">
+<dt>The same can be achieved using:</dt><dd><p>runner.processes()[index].start()</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -591,7 +608,7 @@ a free energy simulation at multiple lambda values.</p>
 process to finish before starting the next. When running
 in parallel (serial=False) care should be taken to ensure
 that each process doesn’t consume too many resources. We
-normally indend for the ProcessRunner to be used to manage
+normally intend for the ProcessRunner to be used to manage
 single core processes.</p></li>
 <li><p><strong>batch_size</strong> (<em>int</em>) – When running in parallel, how many processes to run at any
 one time. If set to None, then the batch size will be set
@@ -642,7 +659,7 @@ to the output of multiprocess.cpu_count().</p></li>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Feb 08, 2021.
+        Last updated on Feb 09, 2021.
       </span>
 
     </p>
