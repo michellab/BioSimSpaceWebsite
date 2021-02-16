@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2020.1.0+231.g5582098.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.Solvation &mdash; BioSimSpace 2020.1.0+233.gd320f71.dirty documentation</title>
   
 
   
@@ -225,11 +225,11 @@
 <h1>BioSimSpace.FreeEnergy.Solvation<a class="headerlink" href="#biosimspace-freeenergy-solvation" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.FreeEnergy.Solvation">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Solvation</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">Solvation</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for configuring and running solvation free energy simulations.</p>
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Solvation.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">vacuum_leg=True</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Solvation.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -242,6 +242,12 @@ if you only wish to run the free leg.</p></li>
 <li><p><strong>engine</strong> (<em>str</em>) – The molecular dynamics engine used to run the simulation. Available
 options are “GROMACS”, or “SOMD”. If this argument is omitted then
 BioSimSpace will choose an appropriate engine for you.</p></li>
+<li><p><strong>ignore_warnings</strong> (<em>bool</em>) – Whether to ignore warnings when generating the binary run file.
+This option is specific to GROMACS and will be ignored when a
+different molecular dynamics engine is chosen.</p></li>
+<li><p><strong>show_errors</strong> (<em>bool</em>) – Whether to show warning/error messages when generating the binary
+run file. This option is specific to GROMACS and will be ignored
+when a different molecular dynamics engine is chosen.</p></li>
 </ul>
 </dd>
 </dl>
@@ -311,7 +317,7 @@ contains the lambda value, the PMF, and the standard error.</p></li>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Feb 10, 2021.
+        Last updated on Feb 16, 2021.
       </span>
 
     </p>
