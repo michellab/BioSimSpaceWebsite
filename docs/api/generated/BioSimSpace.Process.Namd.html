@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2020.1.0+237.g07579c3.dirty documentation</title>
+  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2020.1.0+249.gaa2286c.dirty documentation</title>
   
 
   
@@ -363,7 +363,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <td><p>Get the current average temperature.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTime" title="BioSimSpace.Process.Namd.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
-<td><p>Get the current time (in nanoseconds).</p></td>
+<td><p>Get the current simulation time.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotal2Energy" title="BioSimSpace.Process.Namd.getCurrentTotal2Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotal2Energy</span></code></a>([time_series])</p></td>
 <td><p>Get the current total energy.</p></td>
@@ -386,151 +386,154 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getElectrostaticEnergy" title="BioSimSpace.Process.Namd.getElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the electrostatic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressure" title="BioSimSpace.Process.Namd.getGPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getFrame" title="BioSimSpace.Process.Namd.getFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrame</span></code></a>(index)</p></td>
+<td><p>Return a specific trajectory frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressure" title="BioSimSpace.Process.Namd.getGPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressureAverage" title="BioSimSpace.Process.Namd.getGPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressureAverage</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressureAverage" title="BioSimSpace.Process.Namd.getGPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressureAverage</span></code></a>([time_series, block])</p></td>
 <td><p>Get the average pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getImproperEnergy" title="BioSimSpace.Process.Namd.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getImproperEnergy" title="BioSimSpace.Process.Namd.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the improper energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getInput" title="BioSimSpace.Process.Namd.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getInput" title="BioSimSpace.Process.Namd.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
 <td><p>Return a link to a zip file containing the input files used by the process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getKineticEnergy" title="BioSimSpace.Process.Namd.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getKineticEnergy" title="BioSimSpace.Process.Namd.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the kinetic energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getMiscEnergy" title="BioSimSpace.Process.Namd.getMiscEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMiscEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getMiscEnergy" title="BioSimSpace.Process.Namd.getMiscEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMiscEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the external energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getName" title="BioSimSpace.Process.Namd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getName" title="BioSimSpace.Process.Namd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Return the process name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
 <td><p>Return a link to a zip file of the working directory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPackageName" title="BioSimSpace.Process.Namd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPackageName" title="BioSimSpace.Process.Namd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
 <td><p>Return the package name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPotentialEnergy" title="BioSimSpace.Process.Namd.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPotentialEnergy" title="BioSimSpace.Process.Namd.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the potential energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressure" title="BioSimSpace.Process.Namd.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressure" title="BioSimSpace.Process.Namd.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressureAverage" title="BioSimSpace.Process.Namd.getPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureAverage</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressureAverage" title="BioSimSpace.Process.Namd.getPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureAverage</span></code></a>([time_series, block])</p></td>
 <td><p>Get the average pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getRecord" title="BioSimSpace.Process.Namd.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getRecord" title="BioSimSpace.Process.Namd.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
 <td><p>Get a record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getRecords" title="BioSimSpace.Process.Namd.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getRecords" title="BioSimSpace.Process.Namd.getRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecords</span></code></a>([block])</p></td>
 <td><p>Return the dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getSeed" title="BioSimSpace.Process.Namd.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getSeed" title="BioSimSpace.Process.Namd.getSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSeed</span></code></a>()</p></td>
 <td><p>Return the random number seed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStderr" title="BioSimSpace.Process.Namd.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStderr" title="BioSimSpace.Process.Namd.getStderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStderr</span></code></a>([block])</p></td>
 <td><p>Return the entire stderr for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStdout" title="BioSimSpace.Process.Namd.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStdout" title="BioSimSpace.Process.Namd.getStdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStdout</span></code></a>([block])</p></td>
 <td><p>Return the entire stdout for the process as a list of strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStep" title="BioSimSpace.Process.Namd.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getStep" title="BioSimSpace.Process.Namd.getStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStep</span></code></a>([time_series, block])</p></td>
 <td><p>Get the number of integration steps.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getSystem" title="BioSimSpace.Process.Namd.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getSystem" title="BioSimSpace.Process.Namd.getSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSystem</span></code></a>([block])</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTemperature" title="BioSimSpace.Process.Namd.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTemperature" title="BioSimSpace.Process.Namd.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>([time_series, block])</p></td>
 <td><p>Get the temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTemperatureAverage" title="BioSimSpace.Process.Namd.getTemperatureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperatureAverage</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTemperatureAverage" title="BioSimSpace.Process.Namd.getTemperatureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperatureAverage</span></code></a>([time_series, block])</p></td>
 <td><p>Get the average temperature.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTime" title="BioSimSpace.Process.Namd.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series, block])</p></td>
-<td><p>Get the time (in nanoseconds).</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTime" title="BioSimSpace.Process.Namd.getTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTime</span></code></a>([time_series, block])</p></td>
+<td><p>Get the simulation time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotal2Energy" title="BioSimSpace.Process.Namd.getTotal2Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotal2Energy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotal2Energy" title="BioSimSpace.Process.Namd.getTotal2Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotal2Energy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotal3Energy" title="BioSimSpace.Process.Namd.getTotal3Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotal3Energy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotal3Energy" title="BioSimSpace.Process.Namd.getTotal3Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotal3Energy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotalEnergy" title="BioSimSpace.Process.Namd.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTotalEnergy" title="BioSimSpace.Process.Namd.getTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTotalEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTrajectory" title="BioSimSpace.Process.Namd.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getTrajectory" title="BioSimSpace.Process.Namd.getTrajectory"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTrajectory</span></code></a>([block])</p></td>
 <td><p>Return a trajectory object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getVanDerWaalsEnergy" title="BioSimSpace.Process.Namd.getVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getVanDerWaalsEnergy" title="BioSimSpace.Process.Namd.getVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVanDerWaalsEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the Van der Vaals energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getVolume" title="BioSimSpace.Process.Namd.getVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getVolume" title="BioSimSpace.Process.Namd.getVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVolume</span></code></a>([time_series, block])</p></td>
 <td><p>Get the volume.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.inputFiles" title="BioSimSpace.Process.Namd.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.inputFiles" title="BioSimSpace.Process.Namd.inputFiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inputFiles</span></code></a>()</p></td>
 <td><p>Return the list of input files.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.insertArg" title="BioSimSpace.Process.Namd.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg, value, index)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.insertArg" title="BioSimSpace.Process.Namd.insertArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insertArg</span></code></a>(arg, value, index)</p></td>
 <td><p>Insert a command-line argument at a specific index.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isError" title="BioSimSpace.Process.Namd.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isError" title="BioSimSpace.Process.Namd.isError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isError</span></code></a>()</p></td>
 <td><p>Return whether the process exited with an error.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isQueued" title="BioSimSpace.Process.Namd.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isQueued" title="BioSimSpace.Process.Namd.isQueued"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isQueued</span></code></a>()</p></td>
 <td><p>Return whether the process is queued.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isRunning" title="BioSimSpace.Process.Namd.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.isRunning" title="BioSimSpace.Process.Namd.isRunning"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isRunning</span></code></a>()</p></td>
 <td><p>Return whether the process is running.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.kill" title="BioSimSpace.Process.Namd.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.kill" title="BioSimSpace.Process.Namd.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>()</p></td>
 <td><p>Kill the running process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.resetArgs" title="BioSimSpace.Process.Namd.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.resetArgs" title="BioSimSpace.Process.Namd.resetArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetArgs</span></code></a>()</p></td>
 <td><p>Reset the command-line arguments.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.resetConfig" title="BioSimSpace.Process.Namd.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.resetConfig" title="BioSimSpace.Process.Namd.resetConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resetConfig</span></code></a>()</p></td>
 <td><p>Reset the configuration parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.run" title="BioSimSpace.Process.Namd.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, auto_start, restart])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.run" title="BioSimSpace.Process.Namd.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([system, protocol, auto_start, restart])</p></td>
 <td><p>Create and run a new process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.runTime" title="BioSimSpace.Process.Namd.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.runTime" title="BioSimSpace.Process.Namd.runTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">runTime</span></code></a>()</p></td>
 <td><p>Return the running time for the process (in minutes).</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setArg" title="BioSimSpace.Process.Namd.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg, value)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setArg" title="BioSimSpace.Process.Namd.setArg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArg</span></code></a>(arg, value)</p></td>
 <td><p>Set a specific command-line argument.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setArgs" title="BioSimSpace.Process.Namd.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setArgs" title="BioSimSpace.Process.Namd.setArgs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setArgs</span></code></a>(args)</p></td>
 <td><p>Set the dictionary of command-line arguments.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setConfig" title="BioSimSpace.Process.Namd.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setConfig" title="BioSimSpace.Process.Namd.setConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setConfig</span></code></a>(config)</p></td>
 <td><p>Set the list of configuration file strings.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setName" title="BioSimSpace.Process.Namd.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setName" title="BioSimSpace.Process.Namd.setName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setName</span></code></a>(name)</p></td>
 <td><p>Set the process name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setSeed" title="BioSimSpace.Process.Namd.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.setSeed" title="BioSimSpace.Process.Namd.setSeed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSeed</span></code></a>(seed)</p></td>
 <td><p>Set the random number seed.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.start" title="BioSimSpace.Process.Namd.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.start" title="BioSimSpace.Process.Namd.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>()</p></td>
 <td><p>Start the NAMD process.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.stderr" title="BioSimSpace.Process.Namd.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.stderr" title="BioSimSpace.Process.Namd.stderr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stderr</span></code></a>([n])</p></td>
 <td><p>Print the last n lines of the stderr buffer.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.stdout" title="BioSimSpace.Process.Namd.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.stdout" title="BioSimSpace.Process.Namd.stdout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stdout</span></code></a>([n])</p></td>
 <td><p>Print the last n lines of the stdout buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.wait" title="BioSimSpace.Process.Namd.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.wait" title="BioSimSpace.Process.Namd.wait"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait</span></code></a>([max_time])</p></td>
 <td><p>Wait for the process to finish.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.workDir" title="BioSimSpace.Process.Namd.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.workDir" title="BioSimSpace.Process.Namd.workDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">workDir</span></code></a>()</p></td>
 <td><p>Return the working directory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.writeConfig" title="BioSimSpace.Process.Namd.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.writeConfig" title="BioSimSpace.Process.Namd.writeConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">writeConfig</span></code></a>(file)</p></td>
 <td><p>Write the configuration to file.</p></td>
 </tr>
 </tbody>
@@ -1060,7 +1063,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.getCurrentTime">
 <code class="sig-name descname">getCurrentTime</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getCurrentTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current time (in nanoseconds).</p>
+<dd><p>Get the current simulation time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1198,6 +1201,26 @@ path to a configuration file.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Namd.getFrame">
+<code class="sig-name descname">getFrame</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getFrame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a specific trajectory frame.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>index<span class="classifier">int</span></dt><dd><p>The index of the frame.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>frame</strong> – The System object of the corresponding frame.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1596,7 +1619,7 @@ the process.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.getTime">
 <code class="sig-name descname">getTime</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getTime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the time (in nanoseconds).</p>
+<dd><p>Get the simulation time.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2008,7 +2031,7 @@ file.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Mar 01, 2021.
+        Last updated on Mar 18, 2021.
       </span>
 
     </p>

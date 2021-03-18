@@ -57,6 +57,7 @@ BioSimSpace.Process.Gromacs
       ~Gromacs.getCurrentTotalEnergy
       ~Gromacs.getDihedralEnergy
       ~Gromacs.getDispersionCorrection
+      ~Gromacs.getFrame
       ~Gromacs.getImproperEnergy
       ~Gromacs.getInput
       ~Gromacs.getKineticEnergy

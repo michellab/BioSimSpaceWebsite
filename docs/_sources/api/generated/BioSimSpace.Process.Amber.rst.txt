@@ -54,6 +54,7 @@ BioSimSpace.Process.Amber
       ~Amber.getDihedralEnergy
       ~Amber.getElectrostaticEnergy
       ~Amber.getElectrostaticEnergy14
+      ~Amber.getFrame
       ~Amber.getHydrogenBondEnergy
       ~Amber.getInput
       ~Amber.getKineticEnergy

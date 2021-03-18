@@ -1,0 +1,6 @@
+BioSimSpace.Align.generateNetwork
+=================================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: generateNetwork

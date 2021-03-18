@@ -55,6 +55,7 @@ BioSimSpace.Process.Namd
       ~Namd.getCurrentVolume
       ~Namd.getDihedralEnergy
       ~Namd.getElectrostaticEnergy
+      ~Namd.getFrame
       ~Namd.getGPressure
       ~Namd.getGPressureAverage
       ~Namd.getImproperEnergy

@@ -27,6 +27,7 @@ BioSimSpace.Process.Somd
       ~Somd.getCurrentGradient
       ~Somd.getCurrentSystem
       ~Somd.getCurrentTime
+      ~Somd.getFrame
       ~Somd.getGradient
       ~Somd.getInput
       ~Somd.getName
