@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.IO.readMolecules &mdash; BioSimSpace 2020.1.0+257.g69524a3.dirty documentation</title>
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel &mdash; BioSimSpace 2020.1.0+257.g69524a3.dirty documentation</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.IO.readPDB" href="BioSimSpace.IO.readPDB.html" />
-    <link rel="prev" title="BioSimSpace.IO.formatInfo" href="BioSimSpace.IO.formatInfo.html" /> 
+    <link rel="next" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" />
+    <link rel="prev" title="BioSimSpace.Metadynamics.CollectiveVariable.makeFunnel" href="BioSimSpace.Metadynamics.CollectiveVariable.makeFunnel.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -107,18 +107,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_IO.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.IO.fileFormats.html">BioSimSpace.IO.fileFormats</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.IO.formatInfo.html">BioSimSpace.IO.formatInfo</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.IO.readMolecules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.IO.readPDB.html">BioSimSpace.IO.readPDB</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.IO.saveMolecules.html">BioSimSpace.IO.saveMolecules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#classes">Classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#packages">Packages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
@@ -203,15 +201,17 @@
         
           <li><a href="../index.html">Documentation</a> &raquo;</li>
         
-          <li><a href="../index_IO.html">BioSimSpace.IO</a> &raquo;</li>
+          <li><a href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a> &raquo;</li>
         
-      <li>BioSimSpace.IO.readMolecules</li>
+          <li><a href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a> &raquo;</li>
+        
+      <li>BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/api/generated/BioSimSpace.IO.readMolecules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -224,54 +224,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-io-readmolecules">
-<h1>BioSimSpace.IO.readMolecules<a class="headerlink" href="#biosimspace-io-readmolecules" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="biosimspace-metadynamics-collectivevariable-viewfunnel">
+<h1>BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel<a class="headerlink" href="#biosimspace-metadynamics-collectivevariable-viewfunnel" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace.IO.readMolecules">
-<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readMolecules</code><span class="sig-paren">(</span><em class="sig-param">files</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readMolecules" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a molecular system from file.</p>
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel">
+<code class="sig-prename descclassname">BioSimSpace.Metadynamics.CollectiveVariable.</code><code class="sig-name descname">viewFunnel</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">collective_variable</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>files</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – A file name, or a list of file names.</p></li>
+<li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The system of interest. This is assumed to be a solvated
+protein-ligand system.</p></li>
+<li><p><strong>collective_variable</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.html#BioSimSpace.Metadynamics.CollectiveVariable.Funnel" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel"><code class="xref py py-class docutils literal notranslate"><span class="pre">Funnel</span></code></a>) – The funnel collective variable.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>system</strong> – A molecular system.</p>
+<dd class="field-even"><p><strong>view</strong> – A view object showing the system and funnel.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Notebook.View.html#BioSimSpace.Notebook.View" title="BioSimSpace.Notebook.View"><code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code></a></p>
 </dd>
 </dl>
-<p class="rubric">Examples</p>
-<p>Load a molecular system from AMBER coordinate and topology files.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<p>Load the same system, but map the “charge” property to the key “my-charge”.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;charge&quot;</span> <span class="p">:</span> <span class="s2">&quot;my-charge&quot;</span><span class="p">})</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-<p>Load a molecular system from all of the files contained within a directory.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">&quot;dir/*&quot;</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>Load a molecular system from GROMACS coordinate and topology files using
-a custom GROMACS topology directory.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">system</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;mol.gro87&quot;</span><span class="p">,</span> <span class="s2">&quot;mol.grotop&quot;</span><span class="p">],</span> <span class="n">property_map</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;GROMACS_PATH&quot;</span> <span class="p">:</span> <span class="s2">&quot;/path/to/gromacs/topology&quot;</span><span class="p">})</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </div>
@@ -282,8 +258,8 @@ a custom GROMACS topology directory.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="BioSimSpace.IO.readPDB.html" class="btn btn-neutral float-right" title="BioSimSpace.IO.readPDB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="BioSimSpace.IO.formatInfo.html" class="btn btn-neutral float-left" title="BioSimSpace.IO.formatInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Distance.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.CollectiveVariable.Distance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.makeFunnel.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.CollectiveVariable.makeFunnel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

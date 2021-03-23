@@ -1,0 +1,6 @@
+BioSimSpace.Metadynamics.CollectiveVariable.viewFunnel
+======================================================
+
+.. currentmodule:: BioSimSpace.Metadynamics.CollectiveVariable
+
+.. autofunction:: viewFunnel
