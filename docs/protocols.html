@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Protocols &mdash; BioSimSpace 2020.1.0+261.ga5f0533.dirty documentation</title>
+  <title>Protocols &mdash; BioSimSpace 2020.1.0+262.g3ccc59d.dirty documentation</title>
   
 
   
@@ -193,7 +194,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="protocols">
+  <section id="protocols">
 <span id="ref-protocols"></span><h1>Protocols<a class="headerlink" href="#protocols" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
@@ -206,7 +207,7 @@ used for molecular dynamics simulations are defined <a class="reference internal
 construction of a <a class="reference internal" href="api/index_Process.html#ref-process"><span class="std std-ref">process</span></a> object. It is here that all
 of the required input files are created for the specific process, as well
 as any command-line arguments that need to be passed to the executable.</p>
-<div class="section" id="customising-protocols">
+<section id="customising-protocols">
 <h2>Customising protocols<a class="headerlink" href="#customising-protocols" title="Permalink to this headline">¶</a></h2>
 <p>Often a user may wish to customise the protocols that are provided by
 BioSimSpace. For a particular molecular dynamics engine, this can be
@@ -229,8 +230,8 @@ simulation engine happens to be installed there.</p>
 <a class="reference internal" href="api/index_Process.html#ref-process"><span class="std std-ref">processes</span></a>. This could be done in your own Python module,
 which could be installed alongside BioSimSpace to provide an alternative
 interoperable implementation of the protocols.</p>
-</div>
-<div class="section" id="writing-protocols">
+</section>
+<section id="writing-protocols">
 <h2>Writing protocols<a class="headerlink" href="#writing-protocols" title="Permalink to this headline">¶</a></h2>
 <p>Occasionally it might be desirable to write a protocol for a <em>new</em> simulation
 that isn’t currently supported by BioSimSpace. To do so requires the following
@@ -284,8 +285,8 @@ a metadynamics protocol is chosen. Modifications for specific metadynamics
 protocols, e.g. adding support for new collective variables, needs to
 be implemented in the <code class="docutils literal notranslate"><span class="pre">createConfig</span></code> method of the <a class="reference external" href="https://github.com/michellab/BioSimSpace/blob/devel/python/BioSimSpace/Process/_plumed.py">BioSimSpace.Process.Plumed</a> class.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -303,7 +304,7 @@ be implemented in the <code class="docutils literal notranslate"><span class="pr
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 02, 2021.
+        Last updated on Apr 06, 2021.
       </span>
 
     </p>

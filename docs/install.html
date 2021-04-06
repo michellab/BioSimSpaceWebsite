@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Installation &mdash; BioSimSpace 2020.1.0+261.ga5f0533.dirty documentation</title>
+  <title>Installation &mdash; BioSimSpace 2020.1.0+262.g3ccc59d.dirty documentation</title>
   
 
   
@@ -197,9 +198,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="installation">
+  <section id="installation">
 <span id="ref-install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="conda-install">
+<section id="conda-install">
 <h2>Conda install<a class="headerlink" href="#conda-install" title="Permalink to this headline">¶</a></h2>
 <p>The easiest way to install BioSimSpace is using our <a class="reference external" href="https://anaconda.org/michellab/repo">conda channel</a>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge -c omnia -c michellab biosimspace
@@ -250,8 +251,8 @@ on macOS, then we advise using <a class="reference external" href="https://githu
 </pre></div>
 </div>
 <p>(Mamba also always installs/ugrades the most recent version.)</p>
-</div>
-<div class="section" id="binary-install">
+</section>
+<section id="binary-install">
 <h2>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this headline">¶</a></h2>
 <p>The self-extracting binary for the 2020.1.0 release of BioSimSpace
 can be downloaded from one of the following links:</p>
@@ -277,8 +278,8 @@ development package:</p>
 </div>
 <p>This will let you choose where to install BioSimSpace. By default, this will be
 into <code class="docutils literal notranslate"><span class="pre">$HOME/biosimspace.app</span></code>.</p>
-</div>
-<div class="section" id="for-developers">
+</section>
+<section id="for-developers">
 <h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
 <p>The following documents a full installation of BioSimSpace from source. Before
 starting, you’ll need a working <a class="reference external" href="https://git-scm.com">Git</a> installation.</p>
@@ -325,8 +326,8 @@ environment variable <code class="docutils literal notranslate"><span class="pre
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True <span class="nv">$HOME</span>/sire.app/bin/python setup.py install
 </pre></div>
 </div>
-</div>
-<div class="section" id="openmm-compatibility">
+</section>
+<section id="openmm-compatibility">
 <h2>OpenMM compatibility<a class="headerlink" href="#openmm-compatibility" title="Permalink to this headline">¶</a></h2>
 <p>Some BioSimSpace functionality requires <a class="reference external" href="http://openmm.org">OpenMM</a>. Although
 a bundled version is provided as part of the installation, this may not
@@ -346,8 +347,8 @@ use a specific Conda label, e.g.:</p>
 need to set the <code class="docutils literal notranslate"><span class="pre">OPENMM_PLUGIN_DIR</span></code> environment variable to point to the
 correct plugin location. By default this variable is set to the plugin
 directory of the bundled OpenMM package.</p>
-</div>
-<div class="section" id="common-issues">
+</section>
+<section id="common-issues">
 <h2>Common issues<a class="headerlink" href="#common-issues" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>If you experience problems with <a class="reference external" href="https://matplotlib.org">Matplotlib</a> when
@@ -366,8 +367,8 @@ BioSimSpace on a remote server without X forwarding.</p>
 <li><p>If you experience problems with <a class="reference external" href="https://jupyter.org">Jupyter</a> permissions,
 try removing <code class="docutils literal notranslate"><span class="pre">$HOME/.jupyter</span></code> or <code class="docutils literal notranslate"><span class="pre">$HOME/.local/share/jupyter</span></code></p></li>
 </ul>
-</div>
-<div class="section" id="external-dependencies">
+</section>
+<section id="external-dependencies">
 <h2>External dependencies<a class="headerlink" href="#external-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>Several additional packages are required for full access to all of BioSimSpace’s
 functionality. Please download and install these packages according to their
@@ -384,8 +385,8 @@ visible to third-party libraries, such as
 <p>Please visit our <a class="reference internal" href="compatibility.html#ref-compatibility"><span class="std std-ref">compatibility</span></a> page to see which
 versions of the external dependencies BioSimSpace has currently been tested
 against.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -403,7 +404,7 @@ against.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 02, 2021.
+        Last updated on Apr 06, 2021.
       </span>
 
     </p>

@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2020.1.0+261.ga5f0533.dirty documentation</title>
+  <title>BioSimSpace.Solvent &mdash; BioSimSpace 2020.1.0+262.g3ccc59d.dirty documentation</title>
   
 
   
@@ -224,10 +225,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="biosimspace-solvent">
+  <section id="biosimspace-solvent">
 <span id="ref-solvent"></span><h1>BioSimSpace.Solvent<a class="headerlink" href="#biosimspace-solvent" title="Permalink to this headline">¶</a></h1>
 <p>The <em>Solvent</em> package contains tools for solvating molecular systems.</p>
-<span class="target" id="module-BioSimSpace.Solvent"></span><div class="section" id="functions">
+<span class="target" id="module-BioSimSpace.Solvent"></span><section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
 <colgroup>
@@ -274,7 +275,7 @@ periodic box of TIP3P water with an ion concentration of 0.1 mol per litre.</p>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">tip3p</span><span class="p">(</span><span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
-                             <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
+                             <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
                              <span class="n">ion_conc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -289,7 +290,7 @@ where the water model is specified as an input requirement by the user.</p>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">solvate</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
-                               <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
+                               <span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">5</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">],</span>
                                <span class="n">ion_conc</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -301,7 +302,7 @@ where the water model is specified as an input requirement by the user.</p>
 
 <span class="c1"># Solvate the molecule.</span>
 <span class="n">solvated</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">spc</span><span class="p">(</span><span class="s2">&quot;tip3p&quot;</span><span class="p">,</span> <span class="n">molecule</span><span class="o">=</span><span class="n">molecule</span><span class="p">,</span>
-                           <span class="n">shell</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">)</span>
+                           <span class="n">shell</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">nanometer</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Create a 50 <a class="reference internal" href="generated/BioSimSpace.Units.Length.angstrom.html#BioSimSpace.Units.Length.angstrom" title="BioSimSpace.Units.Length.angstrom"><code class="xref py py-class docutils literal notranslate"><span class="pre">angstrom</span></code></a> periodic
@@ -311,10 +312,10 @@ box of pure SPC/E water.</p>
 <span class="n">water</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Solvent</span><span class="o">.</span><span class="n">spce</span><span class="p">(</span><span class="n">box</span><span class="o">=</span><span class="mi">3</span><span class="o">*</span><span class="p">[</span><span class="mi">50</span><span class="o">*</span><span class="n">BSS</span><span class="o">.</span><span class="n">Units</span><span class="o">.</span><span class="n">Length</span><span class="o">.</span><span class="n">angstrom</span><span class="p">])</span>
 </pre></div>
 </div>
-</div>
+</section>
 <div class="toctree-wrapper compound">
 </div>
-</div>
+</section>
 
 
            </div>
@@ -332,7 +333,7 @@ box of pure SPC/E water.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 02, 2021.
+        Last updated on Apr 06, 2021.
       </span>
 
     </p>

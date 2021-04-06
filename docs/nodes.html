@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Nodes &mdash; BioSimSpace 2020.1.0+261.ga5f0533.dirty documentation</title>
+  <title>Nodes &mdash; BioSimSpace 2020.1.0+262.g3ccc59d.dirty documentation</title>
   
 
   
@@ -196,7 +197,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="nodes">
+  <section id="nodes">
 <span id="ref-nodes"></span><h1>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
@@ -206,7 +207,7 @@ perform a single, well-defined, unit of work with clear inputs and outputs.
 The <a class="reference internal" href="api/index_Gateway.html#ref-gateway"><span class="std std-ref">BioSimSpace.Gateway</span></a> package acts as a bridge between BioSimSpace and the
 outside world, allowing a user to construct a node and define the input and
 output requirements, along with restrictions on their types and values.</p>
-<div class="section" id="writing-nodes">
+<section id="writing-nodes">
 <h2>Writing nodes<a class="headerlink" href="#writing-nodes" title="Permalink to this headline">¶</a></h2>
 <p>As an example, the following code snippet shows how we could write a node to
 perform an energy minimisation on a molecular system loaded from file:</p>
@@ -256,8 +257,8 @@ perform an energy minimisation on a molecular system loaded from file:</p>
 <span class="n">node</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="running-nodes">
+</section>
+<section id="running-nodes">
 <h2>Running nodes<a class="headerlink" href="#running-nodes" title="Permalink to this headline">¶</a></h2>
 <p>BioSimSpace nodes are flexible in the way in which they can be used, with the
 same script working seamlessly from within a a <a class="reference external" href="https://jupyter.org">Jupyter</a>
@@ -308,8 +309,8 @@ directory wherever BioSimSpace is installed, e.g.
 set a custom directory, use the
 <a class="reference internal" href="api/generated/BioSimSpace.Node.setNodeDirectory.html#BioSimSpace.Node.setNodeDirectory" title="BioSimSpace.Node.setNodeDirectory"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Node.setNodeDirectory</span></code></a>
 function.)</p>
-</div>
-<div class="section" id="common-workflow-language">
+</section>
+<section id="common-workflow-language">
 <h2>Common Workflow Language<a class="headerlink" href="#common-workflow-language" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to export a node as a
 <a class="reference external" href="https://www.commonwl.org/">Common Workflow Language</a> (CWL) wrapper.
@@ -348,8 +349,8 @@ specifing as a CWL <code class="docutils literal notranslate"><span class="pre">
   <span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="forwards-compatibility">
+</section>
+<section id="forwards-compatibility">
 <h2>Forwards compatibility<a class="headerlink" href="#forwards-compatibility" title="Permalink to this headline">¶</a></h2>
 <p>To ensure that BioSimSpace nodes are forwards compatible as new features are
 added all sub packages can query their own functionality and present this to
@@ -403,12 +404,12 @@ option of argparse on the command-line (bottom). This means that the script is
 adaptive to the support of additional file parsers in future without need for
 modification.</p>
 <a class="reference internal image-reference" href="_images/forwards_compatibility.png"><img alt="_images/forwards_compatibility.png" class="align-center" src="_images/forwards_compatibility.png" style="width: 800px;" /></a>
-</div>
-<div class="section" id="examples">
+</section>
+<section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>A set of example nodes are available on our <a class="reference internal" href="notebook.html#ref-notebook"><span class="std std-ref">notebook server</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -426,7 +427,7 @@ modification.</p>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 02, 2021.
+        Last updated on Apr 06, 2021.
       </span>
 
     </p>

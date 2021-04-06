@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Developer’s guide &mdash; BioSimSpace 2020.1.0+261.ga5f0533.dirty documentation</title>
+  <title>Developer’s guide &mdash; BioSimSpace 2020.1.0+262.g3ccc59d.dirty documentation</title>
   
 
   
@@ -208,12 +209,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="developer-s-guide">
+  <section id="developer-s-guide">
 <h1>Developer’s guide<a class="headerlink" href="#developer-s-guide" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <p>The source code for BioSimSpace is available on <a class="reference external" href="https://github.com/michellab/BioSimSpace">GitHub</a>.</p>
-<div class="section" id="python">
+<section id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <p>BioSimSpace uses the Python programming language. Our aim is to provide a simple
 and robust API where unnecessary implementation details are hidden from the user.</p>
@@ -225,7 +226,7 @@ running with molecular simulation. BioSimSpace also needs to be robust and
 portable, hence we need to use encapsulation to shield the user from unintended
 consequences.</p>
 <p>With this in mind, we use the following coding conventions:</p>
-<div class="section" id="naming">
+<section id="naming">
 <h3>Naming<a class="headerlink" href="#naming" title="Permalink to this headline">¶</a></h3>
 <p>We follow a C++ style naming convention.</p>
 <ul class="simple">
@@ -240,8 +241,8 @@ consequences.</p>
 <span class="n">protocol</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">Minimisation</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="modules">
+</section>
+<section id="modules">
 <h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
 <p>BioSimSpace is a collection of packages, e.g. <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Gateway</span></code> and
 <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Protocol</span></code>. Within each package is a set of modules that
@@ -272,8 +273,8 @@ exposed names. This greatly improves the clarity of the package, allowing
 a new user to quickly determine the available functionality. Any user wishing
 expose further implementation detail can, of course, type an underscore to
 show the hidden names when searching.</p>
-</div>
-<div class="section" id="encapsulation">
+</section>
+<section id="encapsulation">
 <h3>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">¶</a></h3>
 <p>BioSimSpace aims to provide a means of writing robust and portable workflow
 components (nodes). To this end, we choose to use an object oriented approach
@@ -328,11 +329,11 @@ should be used to explicitly modify member data.</p>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="workflow">
+</section>
+</section>
+<section id="workflow">
 <h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="feature-branches">
+<section id="feature-branches">
 <h3>Feature branches<a class="headerlink" href="#feature-branches" title="Permalink to this headline">¶</a></h3>
 <p>First make sure that you are on the development branch of BioSimSpace:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git checkout devel
@@ -353,8 +354,8 @@ of <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/sire.app/bin/python setup.py develop
 </pre></div>
 </div>
-</div>
-<div class="section" id="testing">
+</section>
+<section id="testing">
 <h3>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h3>
 <p>When working on your feature it is important to write tests to ensure that it
 does what is expected and doesn’t break any existing functionality. Tests
@@ -372,7 +373,7 @@ to locate the tests. Valid names start or end with <em>test</em>, e.g.:</p>
 </pre></div>
 </div>
 <p>We use the convention of <code class="docutils literal notranslate"><span class="pre">test_*</span></code> when naming files and functions.</p>
-<div class="section" id="running-tests">
+<section id="running-tests">
 <h4>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h4>
 <p>To run the full test suite, simply type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest
@@ -398,17 +399,17 @@ Sire installation available to your <code class="docutils literal notranslate"><
 </pre></div>
 </div>
 <p>More details regarding how to invoke <code class="docutils literal notranslate"><span class="pre">pytest</span></code> can be found <a class="reference external" href="https://docs.pytest.org/en/latest/usage.html">here</a>.</p>
-</div>
-<div class="section" id="writing-tests">
+</section>
+<section id="writing-tests">
 <h4>Writing tests<a class="headerlink" href="#writing-tests" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="basics">
+<section id="basics">
 <h5>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h5>
 <p>Try to keep individual unit tests short and clear. Aim to test one thing, and
 test it well. Where possible, try to minimise the use of <code class="docutils literal notranslate"><span class="pre">assert</span></code> statements
 within a unit test. Since the test will return on the first failed assertion,
 additional contextual information may be lost.</p>
-</div>
-<div class="section" id="floating-point-comparisons">
+</section>
+<section id="floating-point-comparisons">
 <h5>Floating point comparisons<a class="headerlink" href="#floating-point-comparisons" title="Permalink to this headline">¶</a></h5>
 <p>Make use of the <a class="reference external" href="https://docs.pytest.org/en/latest/builtin.html#comparing-floating-point-numbers">approx</a>
 function from the <code class="docutils literal notranslate"><span class="pre">pytest</span></code> package for performing floating point comparisons, e.g:</p>
@@ -422,8 +423,8 @@ of 1e-6. This can be changed by passing a keyword argument to the function, e.g:
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">==</span> <span class="n">approx</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="skipping-tests">
+</section>
+<section id="skipping-tests">
 <h5>Skipping tests<a class="headerlink" href="#skipping-tests" title="Permalink to this headline">¶</a></h5>
 <p>If you are using <a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development">test-driven development</a>
 it might be desirable to write your tests before implementing the functionality,
@@ -436,8 +437,8 @@ to flag that a unit test should be skipped, e.g.:</p>
     <span class="o">...</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="parametrizing-tests">
+</section>
+<section id="parametrizing-tests">
 <h5>Parametrizing tests<a class="headerlink" href="#parametrizing-tests" title="Permalink to this headline">¶</a></h5>
 <p>Often it is desirable to run a test for a range of different input parameters.
 This can be achieved using the <code class="docutils literal notranslate"><span class="pre">parametrize</span></code> decorator, e.g.:</p>
@@ -468,8 +469,8 @@ parameter pairs <code class="docutils literal notranslate"><span class="pre">(x,
 </div>
 <p>Here we are passing a list containing different parameter sets, with the names
 of the parameters matched against the arguments of the test function.</p>
-</div>
-<div class="section" id="testing-exceptions">
+</section>
+<section id="testing-exceptions">
 <h5>Testing exceptions<a class="headerlink" href="#testing-exceptions" title="Permalink to this headline">¶</a></h5>
 <p>Pytest provides a way of testing your code for known exceptions. For example,
 suppose we had a function that raises an <code class="docutils literal notranslate"><span class="pre">IndexError</span></code>:</p>
@@ -485,8 +486,8 @@ suppose we had a function that raises an <code class="docutils literal notransla
         <span class="n">indexError</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="custom-attributes">
+</section>
+<section id="custom-attributes">
 <h5>Custom attributes<a class="headerlink" href="#custom-attributes" title="Permalink to this headline">¶</a></h5>
 <p>It’s possible to mark test functions with any attribute you like. For example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">slow</span>
@@ -504,10 +505,10 @@ to run or skip tests with a particular mark.</p>
 </div>
 <p>The custom attribute can just be a label, as in this case, or could be your
 own function decorator.</p>
-</div>
-</div>
-</div>
-<div class="section" id="documentation">
+</section>
+</section>
+</section>
+<section id="documentation">
 <h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
 <p>BioSimSpace is fully documented using <a class="reference external" href="https://numpy.org">NumPy</a> style
 docstrings. See <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">here</a>
@@ -524,8 +525,8 @@ additional packages.</p>
 </pre></div>
 </div>
 <p>When finished, point your browser to <code class="docutils literal notranslate"><span class="pre">build/html/index.html</span></code>.</p>
-</div>
-<div class="section" id="committing">
+</section>
+<section id="committing">
 <h3>Committing<a class="headerlink" href="#committing" title="Permalink to this headline">¶</a></h3>
 <p>If you create new tests, please make sure that they pass locally before
 commiting. When happy, commit your changes, e.g.</p>
@@ -559,9 +560,9 @@ git push fork feature
 <p>When the feature is complete, create a <em>pull request</em> on GitHub so that the
 changes can be merged back into the development branch. For information, see
 the documentation <a class="reference external" href="https://help.github.com/articles/about-pull-requests">here</a>.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -579,7 +580,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 02, 2021.
+        Last updated on Apr 06, 2021.
       </span>
 
     </p>
