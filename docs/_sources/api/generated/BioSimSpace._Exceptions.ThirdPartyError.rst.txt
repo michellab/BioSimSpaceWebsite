@@ -1,0 +1,6 @@
+BioSimSpace.\_Exceptions.ThirdPartyError
+========================================
+
+.. currentmodule:: BioSimSpace._Exceptions
+
+.. autoexception:: ThirdPartyError
