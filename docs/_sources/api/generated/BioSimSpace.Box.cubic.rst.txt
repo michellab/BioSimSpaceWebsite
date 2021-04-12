@@ -1,0 +1,6 @@
+BioSimSpace.Box.cubic
+=====================
+
+.. currentmodule:: BioSimSpace.Box
+
+.. autofunction:: cubic
