@@ -1,0 +1,589 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioSimSpace.Metadynamics.CollectiveVariable.RMSD &mdash; BioSimSpace 2020.1.0+317.gfc376ee.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion" href="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.html" />
+    <link rel="prev" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel" href="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #161e3c" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#classes">Classes</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#packages">Packages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebook.html">Notebook server</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocols.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics_CollectiveVariable.html">BioSimSpace.Metadynamics.CollectiveVariable</a> &raquo;</li>
+        
+      <li>BioSimSpace.Metadynamics.CollectiveVariable.RMSD</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/generated/BioSimSpace.Metadynamics.CollectiveVariable.RMSD.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="biosimspace-metadynamics-collectivevariable-rmsd">
+<h1>BioSimSpace.Metadynamics.CollectiveVariable.RMSD<a class="headerlink" href="#biosimspace-metadynamics-collectivevariable-rmsd" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.CollectiveVariable.</code><code class="sig-name descname">RMSD</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">reference</em>, <em class="sig-param">reference_index=None</em>, <em class="sig-param">rmsd_indices=None</em>, <em class="sig-param">hill_width=0.1000 nm</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">alignment_type='optimal'</em>, <em class="sig-param">pbc=True</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for a root-mean-square deviation (RMSD) collective variable.</p>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">reference</em>, <em class="sig-param">reference_index=None</em>, <em class="sig-param">rmsd_indices=None</em>, <em class="sig-param">hill_width=0.1000 nm</em>, <em class="sig-param">lower_bound=None</em>, <em class="sig-param">upper_bound=None</em>, <em class="sig-param">grid=None</em>, <em class="sig-param">alignment_type='optimal'</em>, <em class="sig-param">pbc=True</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system of interest.</p></li>
+<li><p><strong>reference</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule, against which the RMSD will be measured.
+This molecule should match with a single molecule from the
+system, i.e. contain the same residues as the matching molecule
+in the same order.</p></li>
+<li><p><strong>reference_index</strong> (<em>int</em>) – The index of the molecule in the system that matches the
+reference. If none, then we will assume that the molecule with
+the closest number of residues is the match. If not all atoms
+from the reference are matched in the system, then an exception
+will be thrown.</p></li>
+<li><p><strong>rmsd_indices</strong> (<em>None</em>) – The indices of the atoms within the reference that should be
+used when calculating the RMSD. If None, then all atoms from
+the reference will be used. Atoms from the reference that are
+not in rmsd_indices will instead be used for alignment.</p></li>
+<li><p><strong>hill_width</strong> (<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>) – The width of the Gaussian hill used to sample this variable.</p></li>
+<li><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable.</p></li>
+<li><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable.</p></li>
+<li><p><strong>grid</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>) – The grid on which the collective variable will be sampled.
+This can help speed up long metadynamics simulations where
+the number of Gaussian kernels can become prohibitive.</p></li>
+<li><p><strong>alignment_type</strong> (<em>str</em>) – The mannier in which RMSD alignment is performed. Options are
+“optimal” or “simple”.</p></li>
+<li><p><strong>pbc</strong> (<em>bool</em>) – Whether to use periodic boundary conditions when computing the
+collective variable.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.__init__" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(system, reference[, …])</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getAlignmentType" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getAlignmentType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAlignmentType</span></code></a>()</p></td>
+<td><p>Return the RMSD alignment type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGrid</span></code></a>()</p></td>
+<td><p>Get the grid on which the collective variable is sampled.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getHillWidth</span></code></a>()</p></td>
+<td><p>Return the width of the Gaussian hill used to bias this collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getInitialValue" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getInitialValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInitialValue</span></code></a>()</p></td>
+<td><p>Return the initial value of the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLowerBound</span></code></a>()</p></td>
+<td><p>Get the lower bound on the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPeriodicBoundaries</span></code></a>()</p></td>
+<td><p>Return whether to take account of periodic boundary conditions when computing the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferenceIndex" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferenceIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReferenceIndex</span></code></a>()</p></td>
+<td><p>Return the index of the molecule in the system that corresponds to the reference.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferencePDB" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferencePDB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReferencePDB</span></code></a>()</p></td>
+<td><p>Return the reference PDB file as a list of strings.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getUpperBound</span></code></a>()</p></td>
+<td><p>Get the upper bound on the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.nComponents" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.nComponents"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nComponents</span></code></a>()</p></td>
+<td><p>Return the number of components for the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setAlignmentType" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setAlignmentType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setAlignmentType</span></code></a>(alignment_type)</p></td>
+<td><p>Set the RMSD alignment type.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setGrid" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setGrid</span></code></a>([grid])</p></td>
+<td><p>Set a grid on which the collective variable will be sampled.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setHillWidth" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setHillWidth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setHillWidth</span></code></a>(hill_width)</p></td>
+<td><p>Set the width of the Gaussian hills used to bias this collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setLowerBound" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setLowerBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setLowerBound</span></code></a>([lower_bound])</p></td>
+<td><p>Set a lower bound on the value of the collective variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setPeriodicBoundaries" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setPeriodicBoundaries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPeriodicBoundaries</span></code></a>(pbc)</p></td>
+<td><p>Set whether to use periodic_boundaries when calculating the collective variable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setUpperBound" title="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setUpperBound"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setUpperBound</span></code></a>([upper_bound])</p></td>
+<td><p>Set an upper bound on the value of the collective variable.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getAlignmentType">
+<code class="sig-name descname">getAlignmentType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getAlignmentType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the RMSD alignment type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>alignment_type</strong> – The RMSD alignment type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getGrid">
+<code class="sig-name descname">getGrid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the grid on which the collective variable is sampled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>grid</strong> – The grid on which the collective variable is sampled.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getHillWidth">
+<code class="sig-name descname">getHillWidth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the width of the Gaussian hill used to bias this collective
+variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>hill_width</strong> – The width of the Gaussian hill.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getInitialValue">
+<code class="sig-name descname">getInitialValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getInitialValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the initial value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>rmsd</strong> – The initial value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getLowerBound">
+<code class="sig-name descname">getLowerBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the lower bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> – The lower bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getPeriodicBoundaries">
+<code class="sig-name descname">getPeriodicBoundaries</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether to take account of periodic boundary conditions
+when computing the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pbc</strong> – Whether to use periodic boundaries conditions.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferenceIndex">
+<code class="sig-name descname">getReferenceIndex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferenceIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the index of the molecule in the system that corresponds
+to the reference.</p>
+<p>Returns</p>
+<dl class="simple">
+<dt>reference_index<span class="classifier">int</span></dt><dd><p>The index of the molecule in the system that corresponds to
+the reference.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferencePDB">
+<code class="sig-name descname">getReferencePDB</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getReferencePDB" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the reference PDB file as a list of strings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pdb</strong> – The reference PDB file as list of strings.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getUpperBound">
+<code class="sig-name descname">getUpperBound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.getUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the upper bound on the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> – The upper bound on the value of the collective variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.nComponents">
+<code class="sig-name descname">nComponents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.nComponents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of components for the collective variable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setAlignmentType">
+<code class="sig-name descname">setAlignmentType</code><span class="sig-paren">(</span><em class="sig-param">alignment_type</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setAlignmentType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the RMSD alignment type. Options are “optimal” or “simple”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>alignment_type</strong> (<em>str</em>) – The RMSD alignment type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setGrid">
+<code class="sig-name descname">setGrid</code><span class="sig-paren">(</span><em class="sig-param">grid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setGrid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a grid on which the collective variable will be sampled.
+Call with no arguments to clear the grid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>grid</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html#BioSimSpace.Metadynamics.Grid" title="BioSimSpace.Metadynamics.Grid"><code class="xref py py-class docutils literal notranslate"><span class="pre">Grid</span></code></a>) – A grid for the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setHillWidth">
+<code class="sig-name descname">setHillWidth</code><span class="sig-paren">(</span><em class="sig-param">hill_width</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setHillWidth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the width of the Gaussian hills used to bias this collective
+variable.</p>
+<dl>
+<dt>hill_width<span class="classifier"><a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a></span></dt><dd><p>The width of the Gaussian hill.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setLowerBound">
+<code class="sig-name descname">setLowerBound</code><span class="sig-paren">(</span><em class="sig-param">lower_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setLowerBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a lower bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>lower_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – A lower bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setPeriodicBoundaries">
+<code class="sig-name descname">setPeriodicBoundaries</code><span class="sig-paren">(</span><em class="sig-param">pbc</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setPeriodicBoundaries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether to use periodic_boundaries when calculating the
+collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pbc</strong> (<em>bool</em>) – Whether to use periodic boundaries conditions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setUpperBound">
+<code class="sig-name descname">setUpperBound</code><span class="sig-paren">(</span><em class="sig-param">upper_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.CollectiveVariable.RMSD.setUpperBound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set an upper bound on the value of the collective variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>upper_bound</strong> (<a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html#BioSimSpace.Metadynamics.Bound" title="BioSimSpace.Metadynamics.Bound"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bound</span></code></a>) – An upper bound on the value of the collective variable.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Torsion.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.CollectiveVariable.Torsion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Metadynamics.CollectiveVariable.Funnel.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.CollectiveVariable.Funnel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2019 Michel Lab.
+      <span class="lastupdated">
+        Last updated on Apr 19, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

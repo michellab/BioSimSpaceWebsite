@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioSimSpace.Metadynamics.Restraint &mdash; BioSimSpace 2020.1.0+317.gfc376ee.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Metadynamics.CollectiveVariable" href="../index_Metadynamics_CollectiveVariable.html" />
+    <link rel="prev" title="BioSimSpace.Metadynamics.Grid" href="BioSimSpace.Metadynamics.Grid.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #161e3c" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Metadynamics.Bound.html">BioSimSpace.Metadynamics.Bound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Metadynamics.Grid.html">BioSimSpace.Metadynamics.Grid</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Metadynamics.Restraint</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index_Metadynamics.html#packages">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebook.html">Notebook server</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocols.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a> &raquo;</li>
+        
+      <li>BioSimSpace.Metadynamics.Restraint</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/generated/BioSimSpace.Metadynamics.Restraint.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="biosimspace-metadynamics-restraint">
+<h1>BioSimSpace.Metadynamics.Restraint<a class="headerlink" href="#biosimspace-metadynamics-restraint" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Metadynamics.Restraint">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">Restraint</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">force_constant=100.0</em>, <em class="sig-param">slope=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">force_constant=100.0</em>, <em class="sig-param">slope=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<p>Set a restraint on the value of a collective variable.</p>
+<p>The expression for the bias is:</p>
+<div class="math notranslate nohighlight">
+\[k/2 (x - a)^2 + m (x - a)\]</div>
+<p>The default restraint is purely harmonic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (int, float, <a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a>) – The value of the restraint. Use ‘int’ or ‘float’ for dimensionless
+collective variables.</p></li>
+<li><p><strong>force_constant</strong> (<em>float</em>) – The force constant (k) for the harmonic term of the restraint.</p></li>
+<li><p><strong>slope</strong> (<em>float</em>) – The slope (m) for the linar term of the restraint.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.__init__" title="BioSimSpace.Metadynamics.Restraint.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(value[, force_constant, slope])</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.getForceConstant" title="BioSimSpace.Metadynamics.Restraint.getForceConstant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getForceConstant</span></code></a>()</p></td>
+<td><p>Get the force constant (k) for the harmonic term of the restraint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.getSlope" title="BioSimSpace.Metadynamics.Restraint.getSlope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSlope</span></code></a>()</p></td>
+<td><p>Get the slope (m) for the linear term of the restraint.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.getValue" title="BioSimSpace.Metadynamics.Restraint.getValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getValue</span></code></a>()</p></td>
+<td><p>Get the value of the bound.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.setForceConstant" title="BioSimSpace.Metadynamics.Restraint.setForceConstant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setForceConstant</span></code></a>(force_constant)</p></td>
+<td><p>Set the force constant (k) for the harmonic term of the restraint.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.setSlope" title="BioSimSpace.Metadynamics.Restraint.setSlope"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSlope</span></code></a>(slope)</p></td>
+<td><p>Set the slope (m) for the linear term of the restraint.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.Restraint.setValue" title="BioSimSpace.Metadynamics.Restraint.setValue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setValue</span></code></a>(value)</p></td>
+<td><p>Set the value of the bound.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.getForceConstant">
+<code class="sig-name descname">getForceConstant</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.getForceConstant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the force constant (k) for the harmonic term of the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>force_constant</strong> – The force constant for the harmonic term of the restraint.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.getSlope">
+<code class="sig-name descname">getSlope</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.getSlope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the slope (m) for the linear term of the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>slope</strong> – The slope for the linear term of the restraint.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.getValue">
+<code class="sig-name descname">getValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.getValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the value of the bound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>value</strong> – The value of the bound.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int, float, <a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.setForceConstant">
+<code class="sig-name descname">setForceConstant</code><span class="sig-paren">(</span><em class="sig-param">force_constant</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.setForceConstant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the force constant (k) for the harmonic term of the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force_constant</strong> (<em>float</em>) – The force constant for the harmonic term of the restraint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.setSlope">
+<code class="sig-name descname">setSlope</code><span class="sig-paren">(</span><em class="sig-param">slope</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.setSlope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the slope (m) for the linear term of the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>slope</strong> (<em>float</em>) – The slope for the linear term of the restraint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Metadynamics.Restraint.setValue">
+<code class="sig-name descname">setValue</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.Restraint.setValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the bound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (int, float, <a class="reference internal" href="../index_Types.html#module-BioSimSpace.Types" title="BioSimSpace.Types"><code class="xref py py-class docutils literal notranslate"><span class="pre">Type</span></code></a>) – The value of the bound.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../index_Metadynamics_CollectiveVariable.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.CollectiveVariable" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Metadynamics.Grid.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.Grid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2019 Michel Lab.
+      <span class="lastupdated">
+        Last updated on Apr 19, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

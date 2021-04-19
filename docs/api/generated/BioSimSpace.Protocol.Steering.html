@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>BioSimSpace.Protocol.Steering &mdash; BioSimSpace 2020.1.0+317.gfc376ee.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BioSimSpace.Solvent" href="../index_Solvent.html" />
+    <link rel="prev" title="BioSimSpace.Protocol.Production" href="BioSimSpace.Protocol.Production.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #161e3c" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> BioSimSpace
+          
+
+          
+            
+            <img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2020.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../compatibility.html">Compatibility</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index_Protocol.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Protocol.html#classes">Classes</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Custom.html">BioSimSpace.Protocol.Custom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Equilibration.html">BioSimSpace.Protocol.Equilibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.FreeEnergy.html">BioSimSpace.Protocol.FreeEnergy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Metadynamics.html">BioSimSpace.Protocol.Metadynamics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Minimisation.html">BioSimSpace.Protocol.Minimisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Protocol.Production.html">BioSimSpace.Protocol.Production</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Protocol.Steering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../notebook.html">Notebook server</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../protocols.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../legal.html">Legal notices</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">BioSimSpace</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Documentation</a> &raquo;</li>
+        
+          <li><a href="../index_Protocol.html">BioSimSpace.Protocol</a> &raquo;</li>
+        
+      <li>BioSimSpace.Protocol.Steering</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/api/generated/BioSimSpace.Protocol.Steering.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="biosimspace-protocol-steering">
+<h1>BioSimSpace.Protocol.Steering<a class="headerlink" href="#biosimspace-protocol-steering" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="BioSimSpace.Protocol.Steering">
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Steering</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">schedule</em>, <em class="sig-param">restraints</em>, <em class="sig-param">verse='both'</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">report_interval=1000</em>, <em class="sig-param">restart_interval=1000</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering" title="Permalink to this definition">¶</a></dt>
+<dd><p>A class for storing steered molecular dynamics protocols.</p>
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em>, <em class="sig-param">schedule</em>, <em class="sig-param">restraints</em>, <em class="sig-param">verse='both'</em>, <em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=1.0000 ns</em>, <em class="sig-param">temperature=300.0000 K</em>, <em class="sig-param">pressure=1.0000 atm</em>, <em class="sig-param">report_interval=1000</em>, <em class="sig-param">restart_interval=1000</em>, <em class="sig-param">colvar_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                                 [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) used to perform the steering.</p></li>
+<li><p><strong>schedule</strong> ([:class:<a href="#id1"><span class="problematic" id="id2">`</span></a>Time &lt;BioSimSpace.Types.Time&gt;]) – The time schedule for the steering.</p></li>
+<li><p><strong>restraints</strong> ([:class`Restraint &lt;BioSimSpace.Metadynamics.Restraint&gt;`]                         [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
+each stage of the schedule.</p></li>
+<li><p><strong>verse</strong> (<em>str</em>) – Whether the restraint is acting for values of the collective
+variable “larger” or “smaller” than the restraint, or acting
+on “both” sides (default).</p></li>
+<li><p><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration timestep.</p></li>
+<li><p><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The running time.</p></li>
+<li><p><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The temperature.</p></li>
+<li><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure. Pass pressure=None to use the NVT ensemble.</p></li>
+<li><p><strong>restart_interval</strong> (<em>int</em>) – The frequency at which restart configurations and trajectory
+frames are saved. (In integration steps.)</p></li>
+<li><p><strong>colvar_file</strong> (<em>str</em>) – The path to a COLVAR file from a previous simulation. The
+information in the file must be consistent with the
+‘collective_variable’ argument.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.__init__" title="BioSimSpace.Protocol.Steering.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(collective_variable, schedule, …)</p></td>
+<td><p>Constructor.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getCollectiveVariable" title="BioSimSpace.Protocol.Steering.getCollectiveVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCollectiveVariable</span></code></a>()</p></td>
+<td><p>Return the collective variable (or variables).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getColvarFile" title="BioSimSpace.Protocol.Steering.getColvarFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getColvarFile</span></code></a>()</p></td>
+<td><p>Return the path to the COLVAR file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getPressure" title="BioSimSpace.Protocol.Steering.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<td><p>Return the pressure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getReportInterval" title="BioSimSpace.Protocol.Steering.getReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReportInterval</span></code></a>()</p></td>
+<td><p>Return the interval between reporting statistics.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getRestartInterval" title="BioSimSpace.Protocol.Steering.getRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestartInterval</span></code></a>()</p></td>
+<td><p>Return the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getRestraints" title="BioSimSpace.Protocol.Steering.getRestraints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraints</span></code></a>()</p></td>
+<td><p>Return the restraint on each collective variable for each stage in the schedule.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getRunTime" title="BioSimSpace.Protocol.Steering.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<td><p>Return the running time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getSchedule" title="BioSimSpace.Protocol.Steering.getSchedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getSchedule</span></code></a>()</p></td>
+<td><p>Return steering schedule.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getTemperature" title="BioSimSpace.Protocol.Steering.getTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTemperature</span></code></a>()</p></td>
+<td><p>Return temperature.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getTimeStep" title="BioSimSpace.Protocol.Steering.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<td><p>Return the time step.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.getVerse" title="BioSimSpace.Protocol.Steering.getVerse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getVerse</span></code></a>()</p></td>
+<td><p>Returns whether the restraint is acting for values of the collective variable “larger” or “smaller” than the restraint, or acting on “both” sides (default).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setCollectiveVariable" title="BioSimSpace.Protocol.Steering.setCollectiveVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setCollectiveVariable</span></code></a>(collective_variable)</p></td>
+<td><p>Set the collective variable (or variables).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setColvarFile" title="BioSimSpace.Protocol.Steering.setColvarFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setColvarFile</span></code></a>(colvar_file)</p></td>
+<td><p>Set the location of an existing COLVAR file.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setPressure" title="BioSimSpace.Protocol.Steering.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
+<td><p>Set the pressure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setReportInterval" title="BioSimSpace.Protocol.Steering.setReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setReportInterval</span></code></a>(report_interval)</p></td>
+<td><p>Set the interval at which statistics are reported.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setRestartInterval" title="BioSimSpace.Protocol.Steering.setRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestartInterval</span></code></a>(restart_interval)</p></td>
+<td><p>Set the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setRestraints" title="BioSimSpace.Protocol.Steering.setRestraints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRestraints</span></code></a>(restraints)</p></td>
+<td><p>Set the restraints for the steering schedule.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setRunTime" title="BioSimSpace.Protocol.Steering.setRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setRunTime</span></code></a>(runtime)</p></td>
+<td><p>Set the running time.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setSchedule" title="BioSimSpace.Protocol.Steering.setSchedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setSchedule</span></code></a>(schedule)</p></td>
+<td><p>Set the steering schedule.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setTemperature" title="BioSimSpace.Protocol.Steering.setTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTemperature</span></code></a>(temperature)</p></td>
+<td><p>Set the temperature.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setTimeStep" title="BioSimSpace.Protocol.Steering.setTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setTimeStep</span></code></a>(timestep)</p></td>
+<td><p>Set the time step.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Steering.setVerse" title="BioSimSpace.Protocol.Steering.setVerse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setVerse</span></code></a>(verse)</p></td>
+<td><p>Set whether the restraint is acting for values of the collective variable “larger” or “smaller” than the restraint, or acting on “both” sides (default).</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getCollectiveVariable">
+<code class="sig-name descname">getCollectiveVariable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getCollectiveVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the collective variable (or variables).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>collective_variable</strong> – The collective variable (or variables) for the simulation.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getColvarFile">
+<code class="sig-name descname">getColvarFile</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getColvarFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the COLVAR file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>colvar_file</strong> – The path to the COLVAR file.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getPressure">
+<code class="sig-name descname">getPressure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getPressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the pressure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>pressure</strong> – The pressure.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getReportInterval">
+<code class="sig-name descname">getReportInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between reporting statistics. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> – The number of integration steps between reporting statistics.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getRestartInterval">
+<code class="sig-name descname">getRestartInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getRestraints">
+<code class="sig-name descname">getRestraints</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getRestraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the restraint on each collective variable for each stage in
+the schedule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>restraints</strong> – The position of the restraint on each collective variable for
+each stage of the schedule.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[:class`CollectiveVariable &lt;BioSimSpace.Metadynamics.CollectiveVariable&gt;`]                         [(<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>)]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getRunTime">
+<code class="sig-name descname">getRunTime</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getRunTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the running time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>runtime</strong> – The simulation run time.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getSchedule">
+<code class="sig-name descname">getSchedule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return steering schedule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>schedule</strong> – The schedule for the steering, i.e. the integration time steps
+at which restraints are applied/adjusted.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getTemperature">
+<code class="sig-name descname">getTemperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return temperature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>temperature</strong> – The simulation temperature.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getTimeStep">
+<code class="sig-name descname">getTimeStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getTimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>timestep</strong> – The integration time step.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.getVerse">
+<code class="sig-name descname">getVerse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getVerse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns whether the restraint is acting for values of the collective
+variable “larger” or “smaller” than the restraint, or acting on “both”
+sides (default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>verse</strong> – Whether the restraint is acting for values of the collective
+variable “larger” or “smaller” than the restraint, or acting
+on “both” sides (default).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setCollectiveVariable">
+<code class="sig-name descname">setCollectiveVariable</code><span class="sig-paren">(</span><em class="sig-param">collective_variable</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setCollectiveVariable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the collective variable (or variables).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                                 [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) for the simulation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setColvarFile">
+<code class="sig-name descname">setColvarFile</code><span class="sig-paren">(</span><em class="sig-param">colvar_file</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setColvarFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the location of an existing COLVAR file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>colvar_file</strong> (<em>str</em>) – The path to an existing COLVAR file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setPressure">
+<code class="sig-name descname">setPressure</code><span class="sig-paren">(</span><em class="sig-param">pressure</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setPressure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the pressure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pressure</strong> (<a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a>) – The pressure.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setReportInterval">
+<code class="sig-name descname">setReportInterval</code><span class="sig-paren">(</span><em class="sig-param">report_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setReportInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval at which statistics are reported. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>report_interval</strong> (<em>int</em>) – The number of integration steps between reporting statistics.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setRestartInterval">
+<code class="sig-name descname">setRestartInterval</code><span class="sig-paren">(</span><em class="sig-param">restart_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setRestartInterval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the interval between saving restart confiugrations, and/or
+trajectory frames. (In integration steps.)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>restart_interval</strong> (<em>int</em>) – The number of integration steps between saving restart
+configurations and/or trajectory frames.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setRestraints">
+<code class="sig-name descname">setRestraints</code><span class="sig-paren">(</span><em class="sig-param">restraints</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setRestraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the restraints for the steering schedule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>restraint</strong> ([:class`Restraint &lt;BioSimSpace.Metadynamics.Restraint&gt;`]                        [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
+each stage of the schedule.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setRunTime">
+<code class="sig-name descname">setRunTime</code><span class="sig-paren">(</span><em class="sig-param">runtime</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setRunTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the running time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>runtime</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The simulation run time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setSchedule">
+<code class="sig-name descname">setSchedule</code><span class="sig-paren">(</span><em class="sig-param">schedule</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setSchedule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the steering schedule.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>schedule</strong> ([<code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code>]) – The time schedule for the steering.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setTemperature">
+<code class="sig-name descname">setTemperature</code><span class="sig-paren">(</span><em class="sig-param">temperature</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the temperature.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>temperature</strong> (<a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a>) – The simulation temperature.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setTimeStep">
+<code class="sig-name descname">setTimeStep</code><span class="sig-paren">(</span><em class="sig-param">timestep</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setTimeStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the time step.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>timestep</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>) – The integration time step.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Steering.setVerse">
+<code class="sig-name descname">setVerse</code><span class="sig-paren">(</span><em class="sig-param">verse</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setVerse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set whether the restraint is acting for values of the collective
+variable “larger” or “smaller” than the restraint, or acting on “both”
+sides (default).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verse</strong> (<em>str</em><em>, </em><em>[</em><em>str</em><em>]</em>) – Whether the restraint is acting for values of the collective
+variable “larger” or “smaller” than the restraint, or acting
+on “both” sides (default).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../index_Solvent.html" class="btn btn-neutral float-right" title="BioSimSpace.Solvent" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Protocol.Production.html" class="btn btn-neutral float-left" title="BioSimSpace.Protocol.Production" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2017-2019 Michel Lab.
+      <span class="lastupdated">
+        Last updated on Apr 19, 2021.
+      </span>
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
