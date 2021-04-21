@@ -18,11 +18,11 @@ BioSimSpace.Protocol.Equilibration
       ~Equilibration.getPressure
       ~Equilibration.getReportInterval
       ~Equilibration.getRestartInterval
+      ~Equilibration.getRestraint
       ~Equilibration.getRunTime
       ~Equilibration.getStartTemperature
       ~Equilibration.getTimeStep
       ~Equilibration.isConstantTemp
-      ~Equilibration.isRestrained
       ~Equilibration.setEndTemperature
       ~Equilibration.setPressure
       ~Equilibration.setReportInterval
