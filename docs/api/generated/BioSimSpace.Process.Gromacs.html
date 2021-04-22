@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2020.1.0+342.g8e81314.dirty documentation</title>
+  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2020.1.0+344.gd47b0a7.dirty documentation</title>
   
 
   
@@ -249,7 +249,9 @@
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
-<li><p><strong>ignore_warnings</strong> (<em>bool</em>) – Whether to ignore warnings when generating the binary run file.</p></li>
+<li><p><strong>ignore_warnings</strong> (<em>bool</em>) – Whether to ignore warnings when generating the binary run file
+with ‘gmx grompp’. By default, these warnings are elevated to
+errors and will halt the program.</p></li>
 <li><p><strong>show_errors</strong> (<em>bool</em>) – Whether to show warning/error messages when generating the binary
 run file.</p></li>
 </ul>
