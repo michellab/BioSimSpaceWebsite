@@ -24,6 +24,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.getMolecule
       ~System.getMolecules
       ~System.getPerturbableMolecules
+      ~System.getRestraintAtoms
       ~System.getWaterMolecules
       ~System.nAtoms
       ~System.nChains
