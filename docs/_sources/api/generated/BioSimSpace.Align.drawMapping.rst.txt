@@ -1,0 +1,6 @@
+BioSimSpace.Align.drawMapping
+=============================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: drawMapping

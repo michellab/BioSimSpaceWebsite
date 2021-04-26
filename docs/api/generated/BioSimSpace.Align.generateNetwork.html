@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+355.g285536e.dirty documentation</title>
+  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+359.gfebc064.dirty documentation</title>
   
 
   
@@ -234,7 +234,12 @@
 <li><p><strong>names</strong> (<em>[</em><em>str</em><em>]</em>) – A list of names for the molecules. If None, then the index of each
 molecule will be used.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the LOMAP process.</p></li>
-<li><p><strong>plot_network</strong> (<em>bool</em>) – Whether to plot the network when running from within a notebook.</p></li>
+<li><p><strong>plot_network</strong> (<em>bool</em>) – Whether to plot the network when running from within a notebook.
+If using a ‘work_dir’, then a PNG image will be located in
+‘work_dir/images/network.png’.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
+defined values. This allows the user to refer to properties
+with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -269,7 +274,7 @@ accurate.</p></li>
     <p>
         &#169; Copyright 2017-2019 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 23, 2021.
+        Last updated on Apr 26, 2021.
       </span>
 
     </p>
