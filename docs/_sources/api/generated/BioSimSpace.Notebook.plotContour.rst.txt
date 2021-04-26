@@ -1,0 +1,6 @@
+BioSimSpace.Notebook.plotContour
+================================
+
+.. currentmodule:: BioSimSpace.Notebook
+
+.. autofunction:: plotContour
