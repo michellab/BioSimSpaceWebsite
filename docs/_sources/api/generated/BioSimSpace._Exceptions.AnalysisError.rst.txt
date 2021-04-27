@@ -1,0 +1,6 @@
+BioSimSpace.\_Exceptions.AnalysisError
+======================================
+
+.. currentmodule:: BioSimSpace._Exceptions
+
+.. autoexception:: AnalysisError

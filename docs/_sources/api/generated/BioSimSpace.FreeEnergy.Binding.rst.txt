@@ -15,6 +15,7 @@ BioSimSpace.FreeEnergy.Binding
    
       ~Binding.__init__
       ~Binding.analyse
+      ~Binding.getData
       ~Binding.run
    
    

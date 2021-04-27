@@ -1,0 +1,6 @@
+BioSimSpace.FreeEnergy.analyse
+==============================
+
+.. currentmodule:: BioSimSpace.FreeEnergy
+
+.. autofunction:: analyse

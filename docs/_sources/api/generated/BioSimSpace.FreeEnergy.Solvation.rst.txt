@@ -15,6 +15,7 @@ BioSimSpace.FreeEnergy.Solvation
    
       ~Solvation.__init__
       ~Solvation.analyse
+      ~Solvation.getData
       ~Solvation.run
    
    

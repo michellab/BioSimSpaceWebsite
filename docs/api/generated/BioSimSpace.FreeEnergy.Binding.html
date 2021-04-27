@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+368.g7a107fc.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+375.g5ad0167.dirty documentation</title>
   
 
   
@@ -112,6 +112,7 @@
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.FreeEnergy.Solvation.html">BioSimSpace.FreeEnergy.Solvation</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../index_FreeEnergy.html#functions">Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
@@ -274,7 +275,10 @@ when a different molecular dynamics engine is chosen.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.analyse" title="BioSimSpace.FreeEnergy.Binding.analyse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code></a>()</p></td>
 <td><p>Analyse the binding free energy data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.run" title="BioSimSpace.FreeEnergy.Binding.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.getData" title="BioSimSpace.FreeEnergy.Binding.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link])</p></td>
+<td><p>Return a link to a zip file containing the data files required for post-simulation analysis.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.run" title="BioSimSpace.FreeEnergy.Binding.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([serial])</p></td>
 <td><p>Run the simulation.</p></td>
 </tr>
 </tbody>
@@ -289,10 +293,16 @@ when a different molecular dynamics engine is chosen.</p></li>
 <li><p><strong>pmf_free</strong> ([(float, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)]) – The potential of mean force (PMF) for the free leg of the
 simulation. The data is a list of tuples, where each tuple
 contains the lambda value, the PMF, and the standard error.</p></li>
-<li><p><strong>pmf_vacuum</strong> ([(float, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)]) – The potential of mean force (PMF) for the vacuum leg of the
+<li><p><strong>pmf_bound</strong> ([(float, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)]) – The potential of mean force (PMF) for the bound leg of the
 simulation. The data is a list of tuples, where each tuple
 contains the lambda value, the PMF, and the standard error.</p></li>
 <li><p><strong>free_energy</strong> ((<a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>, <a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a>)) – The binding free energy difference and its associated error.</p></li>
+<li><p><strong>overlap_free</strong> (<em>[ [ float, float, … ] ]</em>) – The overlap matrix. This gives the overlap between each window
+of the free leg. This parameter is only computed for the SOMD
+engine and will be None when GROMACS is used.</p></li>
+<li><p><strong>overlap_bound</strong> (<em>[ [ float, float, … ] ]</em>) – The overlap matrix. This gives the overlap between each window
+of the bound leg. This parameter is only computed for the SOMD
+engine and will be None when GROMACS is used.</p></li>
 </ul>
 </p>
 </dd>
@@ -300,9 +310,36 @@ contains the lambda value, the PMF, and the standard error.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.FreeEnergy.Binding.getData">
+<code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">name='data'</em>, <em class="sig-param">file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.getData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a link to a zip file containing the data files required for
+post-simulation analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the zip file.</p></li>
+<li><p><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>ouput</strong> – A path, or file link, to an archive of the process input.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str, IPython.display.FileLink</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Binding.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">serial=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the simulation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial</strong> (<em>bool</em>) – Whether to run the individual processes for the lambda windows
+in serial.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
