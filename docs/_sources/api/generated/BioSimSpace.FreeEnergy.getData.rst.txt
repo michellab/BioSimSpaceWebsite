@@ -1,0 +1,6 @@
+BioSimSpace.FreeEnergy.getData
+==============================
+
+.. currentmodule:: BioSimSpace.FreeEnergy
+
+.. autofunction:: getData

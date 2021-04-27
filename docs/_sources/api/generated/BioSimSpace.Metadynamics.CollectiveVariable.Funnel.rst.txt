@@ -17,6 +17,7 @@ BioSimSpace.Metadynamics.CollectiveVariable.Funnel
       ~Funnel.getAtoms0
       ~Funnel.getAtoms1
       ~Funnel.getBuffer
+      ~Funnel.getCorrection
       ~Funnel.getGrid
       ~Funnel.getHillWidth
       ~Funnel.getInflection

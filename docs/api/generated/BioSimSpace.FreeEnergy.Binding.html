@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+375.g5ad0167.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.Binding &mdash; BioSimSpace 2020.1.0+383.ge875bae.dirty documentation</title>
   
 
   
@@ -275,7 +275,7 @@ when a different molecular dynamics engine is chosen.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.analyse" title="BioSimSpace.FreeEnergy.Binding.analyse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code></a>()</p></td>
 <td><p>Analyse the binding free energy data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.getData" title="BioSimSpace.FreeEnergy.Binding.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.getData" title="BioSimSpace.FreeEnergy.Binding.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link, work_dir])</p></td>
 <td><p>Return a link to a zip file containing the data files required for post-simulation analysis.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.Binding.run" title="BioSimSpace.FreeEnergy.Binding.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>([serial])</p></td>
@@ -311,7 +311,7 @@ engine and will be None when GROMACS is used.</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace.FreeEnergy.Binding.getData">
-<code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">name='data'</em>, <em class="sig-param">file_link=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.getData" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="sig-name descname">getData</code><span class="sig-paren">(</span><em class="sig-param">name='data'</em>, <em class="sig-param">file_link=False</em>, <em class="sig-param">work_dir=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.Binding.getData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a link to a zip file containing the data files required for
 post-simulation analysis.</p>
 <dl class="field-list simple">
@@ -319,6 +319,7 @@ post-simulation analysis.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – The name of the zip file.</p></li>
 <li><p><strong>file_link</strong> (<em>bool</em>) – Whether to return a FileLink when working in Jupyter.</p></li>
+<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
