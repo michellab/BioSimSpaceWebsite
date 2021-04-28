@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Metadynamics.run &mdash; BioSimSpace 2020.1.0+386.g2b38c54.dirty documentation</title>
+  <title>BioSimSpace.Metadynamics.run &mdash; BioSimSpace 2020.1.0+389.g4017a46.dirty documentation</title>
   
 
   
@@ -44,7 +44,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="BioSimSpace.Metadynamics.Bound" href="BioSimSpace.Metadynamics.Bound.html" />
-    <link rel="prev" title="BioSimSpace.Metadynamics" href="../index_Metadynamics.html" /> 
+    <link rel="prev" title="BioSimSpace.Metadynamics.engines" href="BioSimSpace.Metadynamics.engines.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -111,6 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_IO.html">BioSimSpace.IO</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index_Metadynamics.html">BioSimSpace.Metadynamics</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_Metadynamics.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Metadynamics.engines.html">BioSimSpace.Metadynamics.engines</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Metadynamics.run</a></li>
 </ul>
 </li>
@@ -227,13 +228,14 @@
 <h1>BioSimSpace.Metadynamics.run<a class="headerlink" href="#biosimspace-metadynamics-run" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Metadynamics.run">
-<code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">name='metamd'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">gpu_support=False</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">name='metamd'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Auto-configure and run a metadynamics process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – The molecular system.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.Metadynamics.html#BioSimSpace.Protocol.Metadynamics" title="BioSimSpace.Protocol.Metadynamics"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol</span></code></a>) – The metadynamics protocol.</p></li>
+<li><p><strong>gpu_support</strong> (<em>bool</em>) – Whether to choose a package with GPU support.</p></li>
 <li><p><strong>auto_start</strong> (<em>bool</em>) – Whether to start the process automatically.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the process.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
@@ -267,7 +269,7 @@ when a different molecular dynamics engine is chosen.</p></li>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="BioSimSpace.Metadynamics.Bound.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.Bound" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../index_Metadynamics.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BioSimSpace.Metadynamics.engines.html" class="btn btn-neutral float-left" title="BioSimSpace.Metadynamics.engines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

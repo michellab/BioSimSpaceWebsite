@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+386.g2b38c54.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+389.g4017a46.dirty documentation</title>
   
 
   
@@ -114,6 +114,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.analyse.html">BioSimSpace.FreeEnergy.analyse</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.engines.html">BioSimSpace.FreeEnergy.engines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html">BioSimSpace.FreeEnergy.getData</a></li>
 </ul>
 </li>
@@ -257,11 +258,29 @@ analyse different free energy simulations.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.analyse.html#BioSimSpace.FreeEnergy.analyse" title="BioSimSpace.FreeEnergy.analyse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code></a>(work_dir)</p></td>
 <td><p>Analyse existing free-energy data from a simulation working directory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html#BioSimSpace.FreeEnergy.getData" title="BioSimSpace.FreeEnergy.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link, work_dir])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.engines" title="BioSimSpace.FreeEnergy.engines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">engines</span></code></a>()</p></td>
+<td><p>List the supported molecular dynamics engines for running free-energy perturbation simulations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html#BioSimSpace.FreeEnergy.getData" title="BioSimSpace.FreeEnergy.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link, work_dir])</p></td>
 <td><p>Return a link to a zip file containing the data files required for post-simulation analysis.</p></td>
 </tr>
 </tbody>
 </table>
+<dl class="function">
+<dt id="BioSimSpace.FreeEnergy.engines">
+<code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">engines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.engines" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the supported molecular dynamics engines for running free-energy
+perturbation simulations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>engines</strong> – The list of supported engines.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <div class="toctree-wrapper compound">
 </div>

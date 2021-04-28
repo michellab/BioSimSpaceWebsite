@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Metadynamics &mdash; BioSimSpace 2020.1.0+386.g2b38c54.dirty documentation</title>
+  <title>BioSimSpace.Metadynamics &mdash; BioSimSpace 2020.1.0+389.g4017a46.dirty documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.Metadynamics.run" href="generated/BioSimSpace.Metadynamics.run.html" />
+    <link rel="next" title="BioSimSpace.Metadynamics.engines" href="generated/BioSimSpace.Metadynamics.engines.html" />
     <link rel="prev" title="BioSimSpace.IO.saveMolecules" href="generated/BioSimSpace.IO.saveMolecules.html" /> 
 </head>
 
@@ -111,6 +111,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index_IO.html">BioSimSpace.IO</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Metadynamics</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Metadynamics.engines.html">BioSimSpace.Metadynamics.engines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Metadynamics.run.html">BioSimSpace.Metadynamics.run</a></li>
 </ul>
 </li>
@@ -255,7 +256,10 @@ At present we only support metadynamics simulations using
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Metadynamics.run.html#BioSimSpace.Metadynamics.run" title="BioSimSpace.Metadynamics.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(system, protocol[, auto_start, name, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Metadynamics.engines" title="BioSimSpace.Metadynamics.engines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">engines</span></code></a>()</p></td>
+<td><p>List the supported metadynamics engines.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Metadynamics.run.html#BioSimSpace.Metadynamics.run" title="BioSimSpace.Metadynamics.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(system, protocol[, gpu_support, …])</p></td>
 <td><p>Auto-configure and run a metadynamics process.</p></td>
 </tr>
 </tbody>
@@ -280,6 +284,20 @@ At present we only support metadynamics simulations using
 </tr>
 </tbody>
 </table>
+<dl class="function">
+<dt id="BioSimSpace.Metadynamics.engines">
+<code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">engines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.engines" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the supported metadynamics engines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>engines</strong> – The list of supported engines.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="packages">
 <h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h2>
@@ -297,7 +315,7 @@ At present we only support metadynamics simulations using
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="generated/BioSimSpace.Metadynamics.run.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.run" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="generated/BioSimSpace.Metadynamics.engines.html" class="btn btn-neutral float-right" title="BioSimSpace.Metadynamics.engines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="generated/BioSimSpace.IO.saveMolecules.html" class="btn btn-neutral float-left" title="BioSimSpace.IO.saveMolecules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
