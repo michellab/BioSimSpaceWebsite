@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+390.gfb7a93e.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+391.gf5a1d03.dirty documentation</title>
   
 
   
@@ -228,11 +228,15 @@
 <h1>BioSimSpace.FreeEnergy.analyse<a class="headerlink" href="#biosimspace-freeenergy-analyse" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.FreeEnergy.analyse">
-<code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">analyse</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.analyse" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">analyse</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em>, <em class="sig-param">simulation_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.analyse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyse existing free-energy data from a simulation working directory.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
+<li><p><strong>simulation_type</strong> (<em>str</em>) – The type of free-energy perturbation simulation_type. Options are:
+“solvation”, or “binding”.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
