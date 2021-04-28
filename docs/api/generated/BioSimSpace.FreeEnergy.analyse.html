@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+391.gf5a1d03.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+393.g1033cd4.dirty documentation</title>
   
 
   
@@ -235,7 +235,10 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the simulation.</p></li>
 <li><p><strong>simulation_type</strong> (<em>str</em>) – The type of free-energy perturbation simulation_type. Options are:
-“solvation”, or “binding”.</p></li>
+“solvation”, or “binding”. This allows use of a single “work_dir”
+for combined “solvation” and “binding” free-energy simulations.
+If None, then BioSimSpace will attempt to figure out the simulation
+type from the directory structure within “work_dir”.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
