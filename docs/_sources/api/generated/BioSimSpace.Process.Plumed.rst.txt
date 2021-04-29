@@ -1,0 +1,26 @@
+BioSimSpace.Process.Plumed
+==========================
+
+.. currentmodule:: BioSimSpace.Process
+
+.. autoclass:: Plumed
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Plumed.__init__
+      ~Plumed.createConfig
+      ~Plumed.getCollectiveVariable
+      ~Plumed.getFreeEnergy
+      ~Plumed.getTime
+   
+   
+
+   
+   
+   
