@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+393.g1033cd4.dirty documentation</title>
+  <title>BioSimSpace.FreeEnergy.analyse &mdash; BioSimSpace 2020.1.0+396.g2f79dc2.dirty documentation</title>
   
 
   
@@ -230,6 +230,10 @@
 <dt id="BioSimSpace.FreeEnergy.analyse">
 <code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">analyse</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em>, <em class="sig-param">simulation_type=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.analyse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Analyse existing free-energy data from a simulation working directory.</p>
+<p>For the return values, leg0 refers to the simulation leg with the
+larger number of molecules, i.e. the “bound” leg for a “binding”
+free-energy simulation, or the “free” leg for a “solvation”
+free-energy simulation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -278,9 +282,9 @@ engine and will be None when GROMACS is used.</p></li>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2017-2019 Michel Lab.
+        &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 28, 2021.
+        Last updated on Apr 29, 2021.
       </span>
 
     </p>
