@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+405.g4b03321.dirty documentation</title>
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+407.g9f8e504.dirty documentation</title>
   
 
   
@@ -317,7 +317,7 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.search" title="BioSimSpace._SireWrappers.System.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
 <td><p>Search the system for atoms, residues, and molecules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.setBox" title="BioSimSpace._SireWrappers.System.setBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBox</span></code></a>(size[, property_map])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.setBox" title="BioSimSpace._SireWrappers.System.setBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBox</span></code></a>(box[, angles, property_map])</p></td>
 <td><p>Set the size of the periodic simulation box.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.translate" title="BioSimSpace._SireWrappers.System.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
@@ -431,10 +431,11 @@ values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>box_size</strong> – The size of the box in each dimension.</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>[<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]</p>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>box_size</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The box vector magnitudes in each dimension.</p></li>
+<li><p><strong>angles</strong> ([<a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a>]) – The box vector angles: yz, xz, and xy.</p></li>
+</ul>
+</p>
 </dd>
 </dl>
 </dd></dl>
@@ -689,12 +690,13 @@ containing a single residue will be returned as a residue.</p>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.setBox">
-<code class="sig-name descname">setBox</code><span class="sig-paren">(</span><em class="sig-param">size</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.setBox" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setBox</code><span class="sig-paren">(</span><em class="sig-param">box, angles=[90.0000 degrees, 90.0000 degrees, 90.0000 degrees], property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.setBox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the size of the periodic simulation box.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>size</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The size of the box in each dimension.</p></li>
+<li><p><strong>box</strong> ([<a class="reference internal" href="BioSimSpace.Types.Length.html#BioSimSpace.Types.Length" title="BioSimSpace.Types.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">Length</span></code></a>]) – The box vector magnitudes in each dimension.</p></li>
+<li><p><strong>angles</strong> ([<a class="reference internal" href="BioSimSpace.Types.Angle.html#BioSimSpace.Types.Angle" title="BioSimSpace.Types.Angle"><code class="xref py py-class docutils literal notranslate"><span class="pre">Angle</span></code></a>]) – The box vector angles: yz, xz, and xy.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -764,7 +766,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Apr 29, 2021.
+        Last updated on Apr 30, 2021.
       </span>
 
     </p>
