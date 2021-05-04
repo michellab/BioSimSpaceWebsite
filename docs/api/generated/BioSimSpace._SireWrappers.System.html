@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+414.g3ea26f5.dirty documentation</title>
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+415.g04169f6.dirty documentation</title>
   
 
   
@@ -509,7 +509,7 @@ list containing objects of these types.</p>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.getRestraintAtoms">
-<code class="sig-name descname">getRestraintAtoms</code><span class="sig-paren">(</span><em class="sig-param">restraint</em>, <em class="sig-param">mol_index=None</em>, <em class="sig-param">is_absolute=True</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getRestraintAtoms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getRestraintAtoms</code><span class="sig-paren">(</span><em class="sig-param">restraint</em>, <em class="sig-param">mol_index=None</em>, <em class="sig-param">is_absolute=True</em>, <em class="sig-param">allow_zero_matches=False</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getRestraintAtoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the indices of atoms involved in a restraint.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -520,6 +520,10 @@ entire system is searched.</p></li>
 <li><p><strong>is_absolute</strong> (<em>bool</em>) – Whether the indices are absolute, i.e. indexed within the
 entire system. If False, then indices are relative to the
 molecule in which the atom is found.</p></li>
+<li><p><strong>allow_zero_matches</strong> (<em>bool</em>) – Whether to raise an exception when no atoms match the restraint.
+Setting to false is useful if you need to determine restraints
+on a per-molecule basis, i.e. so molecules won’t contain atoms
+matching the restraint, but the entire system will.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their</p></li>
 </ul>
