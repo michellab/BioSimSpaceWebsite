@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process &mdash; BioSimSpace 2020.1.0+413.gf8c9204.dirty documentation</title>
+  <title>BioSimSpace.Process &mdash; BioSimSpace 2020.1.0+414.g3ea26f5.dirty documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.Process.packages" href="generated/BioSimSpace.Process.packages.html" />
+    <link rel="next" title="BioSimSpace.Process.engines" href="generated/BioSimSpace.Process.engines.html" />
     <link rel="prev" title="BioSimSpace.Parameters.formalCharge" href="generated/BioSimSpace.Parameters.formalCharge.html" /> 
 </head>
 
@@ -116,7 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Parameters.html">BioSimSpace.Parameters</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.Process</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.packages.html">BioSimSpace.Process.packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.engines.html">BioSimSpace.Process.engines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.Process.createProcess.html">BioSimSpace.Process.createProcess</a></li>
 </ul>
 </li>
@@ -255,10 +255,10 @@ and to get the latest molecular system or trajectory from the running process.</
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Process.packages.html#BioSimSpace.Process.packages" title="BioSimSpace.Process.packages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">packages</span></code></a>()</p></td>
-<td><p>Return a list of the supported Molecular Dynamics packages.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Process.engines.html#BioSimSpace.Process.engines" title="BioSimSpace.Process.engines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">engines</span></code></a>()</p></td>
+<td><p>Return a list of the supported Molecular Dynamics engines.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Process.createProcess.html#BioSimSpace.Process.createProcess" title="BioSimSpace.Process.createProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createProcess</span></code></a>(system, protocol, package)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Process.createProcess.html#BioSimSpace.Process.createProcess" title="BioSimSpace.Process.createProcess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createProcess</span></code></a>(system, protocol, engine)</p></td>
 <td><p>Create a simulation process.</p></td>
 </tr>
 </tbody>
@@ -307,10 +307,10 @@ and to get the latest molecular system or trajectory from the running process.</
 </tbody>
 </table>
 <p class="rubric">Examples</p>
-<p>Print the list of supported molecular dynamics packages.</p>
+<p>Print the list of supported molecular dynamics engines.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="n">packages</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">BSS</span><span class="o">.</span><span class="n">Process</span><span class="o">.</span><span class="n">engines</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>Create a process to apply a minimisation protocol to a molecular system
@@ -348,7 +348,7 @@ get the minimised molecular system.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="generated/BioSimSpace.Process.packages.html" class="btn btn-neutral float-right" title="BioSimSpace.Process.packages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="generated/BioSimSpace.Process.engines.html" class="btn btn-neutral float-right" title="BioSimSpace.Process.engines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="generated/BioSimSpace.Parameters.formalCharge.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.formalCharge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
@@ -358,7 +358,7 @@ get the minimised molecular system.</p>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on May 03, 2021.
+        Last updated on May 04, 2021.
       </span>
 
     </p>
