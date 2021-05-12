@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+440.gb153a50.dirty documentation</title>
+  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+443.gf7addea.dirty documentation</title>
   
 
   
@@ -237,12 +237,15 @@ molecule will be used.</p></li>
 <li><p><strong>plot_network</strong> (<em>bool</em>) – Whether to plot the network when running from within a notebook.
 If using a ‘work_dir’, then a PNG image will be located in
 ‘work_dir/images/network.png’.</p></li>
-<li><p><strong>scores_file</strong> (<em>str</em>) – Path to a CSV file in the form:
-lig1,lig2,score
-..
-<a href="#id1"><span class="problematic" id="id2">lig_</span></a> <a href="#id3"><span class="problematic" id="id4">lig_</span></a>,score
-, where score is a float that is fed into LOMAP for edge scoring
-(instead of the default LOMAP score based on Maximum Common Substructure (MCS)).</p></li>
+<li><p><strong>scores_file</strong> (<em>str</em>) – <dl class="simple">
+<dt>Path to a CSV file in the form:</dt><dd><p>lig1,lig2,score
+…
+<a href="#id1"><span class="problematic" id="id2">lig_</span></a> <a href="#id3"><span class="problematic" id="id4">lig_</span></a>,score</p>
+</dd>
+</dl>
+<p>where score is a float that is fed into LOMAP for edge scoring
+(instead of the default LOMAP score based on Maximum Common Substructure (MCS)).</p>
+</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
 with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
