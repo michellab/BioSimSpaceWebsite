@@ -16,11 +16,8 @@ BioSimSpace.Protocol.Metadynamics
       ~Metadynamics.__init__
       ~Metadynamics.getBiasFactor
       ~Metadynamics.getCollectiveVariable
-      ~Metadynamics.getColvarFile
-      ~Metadynamics.getGridFile
       ~Metadynamics.getHillFrequency
       ~Metadynamics.getHillHeight
-      ~Metadynamics.getHillsFile
       ~Metadynamics.getPressure
       ~Metadynamics.getReportInterval
       ~Metadynamics.getRestartInterval
@@ -29,11 +26,8 @@ BioSimSpace.Protocol.Metadynamics
       ~Metadynamics.getTimeStep
       ~Metadynamics.setBiasFactor
       ~Metadynamics.setCollectiveVariable
-      ~Metadynamics.setColvarFile
-      ~Metadynamics.setGridFile
       ~Metadynamics.setHillFrequency
       ~Metadynamics.setHillHeight
-      ~Metadynamics.setHillsFile
       ~Metadynamics.setPressure
       ~Metadynamics.setReportInterval
       ~Metadynamics.setRestartInterval

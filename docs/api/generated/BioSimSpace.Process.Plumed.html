@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.Plumed &mdash; BioSimSpace 2020.1.0+443.gf7addea.dirty documentation</title>
+  <title>BioSimSpace.Process.Plumed &mdash; BioSimSpace 2020.1.0+448.gb32c180.dirty documentation</title>
   
 
   
@@ -232,21 +232,16 @@
 <h1>BioSimSpace.Process.Plumed<a class="headerlink" href="#biosimspace-process-plumed" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Process.Plumed">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Plumed</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em>, <em class="sig-param">is_analysis=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Plumed</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for interfacing with PLUMED.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Plumed.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em>, <em class="sig-param">is_analysis=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>work_dir</strong> (<em>str</em>) – The working directory of the process that is interfacing
-with PLUMED.</p></li>
-<li><p><strong>is_analysis</strong> (<em>bool</em>) – Whether this process is being created to anaylse existing
-data. If not, then output files will be wiped when creating
-the configuration file.</p></li>
-</ul>
+<dd class="field-odd"><p><strong>work_dir</strong> (<em>str</em>) – The working directory of the process that is interfacing
+with PLUMED.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -258,10 +253,10 @@ the configuration file.</p></li>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Plumed.__init__" title="BioSimSpace.Process.Plumed.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(work_dir[, is_analysis])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Plumed.__init__" title="BioSimSpace.Process.Plumed.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(work_dir)</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Plumed.createConfig" title="BioSimSpace.Process.Plumed.createConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createConfig</span></code></a>(system, protocol[, is_restart, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Plumed.createConfig" title="BioSimSpace.Process.Plumed.createConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">createConfig</span></code></a>(system, protocol[, property_map])</p></td>
 <td><p>Create a PLUMED configuration file.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Plumed.getCollectiveVariable" title="BioSimSpace.Process.Plumed.getCollectiveVariable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCollectiveVariable</span></code></a>(index[, time_series])</p></td>
@@ -277,14 +272,13 @@ the configuration file.</p></li>
 </table>
 <dl class="method">
 <dt id="BioSimSpace.Process.Plumed.createConfig">
-<code class="sig-name descname">createConfig</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">is_restart=False</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed.createConfig" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">createConfig</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Plumed.createConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a PLUMED configuration file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – A BioSimSpace system object.</p></li>
 <li><p><strong>protocol</strong> (<a class="reference internal" href="BioSimSpace.Protocol.Metadynamics.html#BioSimSpace.Protocol.Metadynamics" title="BioSimSpace.Protocol.Metadynamics"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.Metadynamics</span></code></a>,                       <a class="reference internal" href="BioSimSpace.Protocol.Steering.html#BioSimSpace.Protocol.Steering" title="BioSimSpace.Protocol.Steering"><code class="xref py py-class docutils literal notranslate"><span class="pre">Protocol.Steering</span></code></a>,                The metadynamics or steered molecular dynamics protocol.) – </p></li>
-<li><p><strong>is_restart</strong> (<em>bool</em>) – Whether the simulation is a restart.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -385,7 +379,7 @@ check for convergence.</p></li>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on May 12, 2021.
+        Last updated on May 17, 2021.
       </span>
 
     </p>
