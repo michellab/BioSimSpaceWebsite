@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+454.g9275798.dirty documentation</title>
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+457.gcbaac55.dirty documentation</title>
   
 
   
@@ -314,7 +314,7 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.removeWaterMolecules" title="BioSimSpace._SireWrappers.System.removeWaterMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeWaterMolecules</span></code></a>()</p></td>
 <td><p>Remove all of the water molecules from the system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.search" title="BioSimSpace._SireWrappers.System.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.search" title="BioSimSpace._SireWrappers.System.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query[, property_map])</p></td>
 <td><p>Search the system for atoms, residues, and molecules.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.setBox" title="BioSimSpace._SireWrappers.System.setBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBox</span></code></a>(box[, angles, property_map])</p></td>
@@ -654,13 +654,18 @@ values. This allows the user to refer to properties with their</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.search">
-<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.search" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param">query</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search the system for atoms, residues, and molecules. Search results
 will be reduced to their minimal representation, i.e. a molecule
 containing a single residue will be returned as a residue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>query</strong> (<em>str</em>) – The search query.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query</strong> (<em>str</em>) – The search query.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>results</strong> – A list of objects matching the search query.</p>
@@ -770,7 +775,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on May 18, 2021.
+        Last updated on May 20, 2021.
       </span>
 
     </p>
