@@ -16,6 +16,7 @@ BioSimSpace.Protocol.FreeEnergy
       ~FreeEnergy.__init__
       ~FreeEnergy.getLambda
       ~FreeEnergy.getLambdaValues
+      ~FreeEnergy.getPerturbationType
       ~FreeEnergy.getPressure
       ~FreeEnergy.getReportInterval
       ~FreeEnergy.getRestartInterval
@@ -23,6 +24,7 @@ BioSimSpace.Protocol.FreeEnergy
       ~FreeEnergy.getTemperature
       ~FreeEnergy.getTimeStep
       ~FreeEnergy.setLambdaValues
+      ~FreeEnergy.setPerturbationType
       ~FreeEnergy.setPressure
       ~FreeEnergy.setReportInterval
       ~FreeEnergy.setRestartInterval
