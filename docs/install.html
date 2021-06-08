@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Installation &mdash; BioSimSpace 2020.1.0+479 documentation</title>
+  <title>Installation &mdash; BioSimSpace 2020.1.0+481 documentation</title>
   
 
   
@@ -230,19 +230,13 @@ need to add them when updating, e.g., for the development package:</p>
 </div>
 <p>If you find that Conda is particularly slow to install or upgrade BioSimSpace,
 then we advise using <a class="reference external" href="https://github.com/TheSnakePit/mamba">mamba</a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge mamba
 </pre></div>
 </div>
-<blockquote>
-<div><p>conda install -c conda-forge mamba</p>
-</div></blockquote>
 <p>You can then replace all <code class="docutils literal notranslate"><span class="pre">conda</span></code> commands with <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, e.g.:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">::</span> <span class="n">bash</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba create -n biosimspace -c conda-forge -c omnia -c michellab biosimspace
 </pre></div>
 </div>
-<blockquote>
-<div><p>mamba create -n biosimspace -c conda-forge -c omnia -c michellab biosimspace</p>
-</div></blockquote>
 </section>
 <section id="binary-install">
 <h2>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this headline">¶</a></h2>
