@@ -17,6 +17,7 @@ BioSimSpace.FreeEnergy.Binding
       ~Binding.analyse
       ~Binding.getData
       ~Binding.run
+      ~Binding.wait
       ~Binding.workDir
    
    
