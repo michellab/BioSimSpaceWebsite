@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+500 documentation</title>
+  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+501 documentation</title>
   
 
   
@@ -225,7 +225,7 @@
 <h1>BioSimSpace.Align.generateNetwork<a class="headerlink" href="#biosimspace-align-generatenetwork" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Align.generateNetwork">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">generateNetwork</code><span class="sig-paren">(</span><em class="sig-param">molecules</em>, <em class="sig-param">names=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">plot_network=False</em>, <em class="sig-param">scores_file=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.generateNetwork" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">generateNetwork</code><span class="sig-paren">(</span><em class="sig-param">molecules</em>, <em class="sig-param">names=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">plot_network=False</em>, <em class="sig-param">links_file=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.generateNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a perturbation network using Lead Optimisation Mappper (LOMAP).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -237,14 +237,23 @@ molecule will be used.</p></li>
 <li><p><strong>plot_network</strong> (<em>bool</em>) – Whether to plot the network when running from within a notebook.
 If using a ‘work_dir’, then a PNG image will be located in
 ‘work_dir/images/network.png’.</p></li>
-<li><p><strong>scores_file</strong> (<em>str</em>) – <dl class="simple">
-<dt>Path to a CSV file in the form:</dt><dd><p>lig1,lig2,score
-…
-<a href="#id1"><span class="problematic" id="id2">lig_</span></a> <a href="#id3"><span class="problematic" id="id4">lig_</span></a>,score</p>
-</dd>
-</dl>
-<p>where score is a float that is fed into LOMAP for edge scoring
-(instead of the default LOMAP score based on Maximum Common Substructure (MCS)).</p>
+<li><p><strong>links_file</strong> (<em>str</em>) – <p>Path to a file providing links to seed the LOMAP graph with. Each
+record in the file must contain a minimum of two entries, i.e. the
+names of the ligands of interest, e.g.</p>
+<blockquote>
+<div><p>ligA ligB</p>
+</div></blockquote>
+<p>The third column can include a pre-computed score for the ligand
+pair, e.g.</p>
+<blockquote>
+<div><p>ligA ligB score</p>
+</div></blockquote>
+<p>A value of &lt; -1 means ‘recompute’, but force the link to be included.
+A negative value (&gt;= -1) means use the absolute value as the score,
+but force the link to be included. A positive means use this value
+as the score, but treat the link as normal in the LOMAP graph
+calculation. Finally, if the fourth column contains the string
+‘force’, then the link is included, irrespective of its score.</p>
 </p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
@@ -283,7 +292,7 @@ accurate.</p></li>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jul 06, 2021.
+        Last updated on Jul 12, 2021.
       </span>
 
     </p>
