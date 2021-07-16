@@ -1,0 +1,30 @@
+BioSimSpace.FreeEnergy.Relative
+===============================
+
+.. currentmodule:: BioSimSpace.FreeEnergy
+
+.. autoclass:: Relative
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Relative.__init__
+      ~Relative.analyse
+      ~Relative.difference
+      ~Relative.getData
+      ~Relative.kill
+      ~Relative.killAll
+      ~Relative.run
+      ~Relative.wait
+      ~Relative.workDir
+   
+   
+
+   
+   
+   

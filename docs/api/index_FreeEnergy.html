@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+508 documentation</title>
+  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+523 documentation</title>
   
 
   
@@ -43,7 +43,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="BioSimSpace.FreeEnergy.Binding" href="generated/BioSimSpace.FreeEnergy.Binding.html" />
+    <link rel="next" title="BioSimSpace.FreeEnergy.Relative" href="generated/BioSimSpace.FreeEnergy.Relative.html" />
     <link rel="prev" title="BioSimSpace.Box.truncatedOctahedron" href="generated/BioSimSpace.Box.truncatedOctahedron.html" /> 
 </head>
 
@@ -108,12 +108,10 @@
 <li class="toctree-l2"><a class="reference internal" href="index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">BioSimSpace.FreeEnergy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#classes">Classes</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Binding.html">BioSimSpace.FreeEnergy.Binding</a></li>
-<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Solvation.html">BioSimSpace.FreeEnergy.Solvation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Relative.html">BioSimSpace.FreeEnergy.Relative</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.analyse.html">BioSimSpace.FreeEnergy.analyse</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.engines.html">BioSimSpace.FreeEnergy.engines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html">BioSimSpace.FreeEnergy.getData</a></li>
 </ul>
@@ -228,8 +226,111 @@
             
   <section id="biosimspace-freeenergy">
 <span id="ref-freeenergy"></span><h1>BioSimSpace.FreeEnergy<a class="headerlink" href="#biosimspace-freeenergy" title="Permalink to this headline">¶</a></h1>
-<p>The <em>FreeEnergy</em> package contains tools automatically configure, run, and
-analyse different free energy simulations.</p>
+<p>The <em>FreeEnergy</em> package contains tools to configure, run, and analyse
+<em>relative</em> free energy simulations.</p>
+<p>Free-energy perturbation simulations require a
+<a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a> containing a <em>merged</em>
+molecule that can be <em>perturbed</em> between two molecular end states by use
+of an <em>alchemical potential</em>. To create merged molecules, please use the
+<a class="reference internal" href="index_Align.html#ref-align"><span class="std std-ref">BioSimSpace.Align</span></a> package.</p>
+<p>Relative free-energy calculations require the simulation of two perturbations,
+typically referred to as <em>legs</em>. A potential of mean force (PMF) is computed
+for each leg, which can then be used to computed the relative free-energy
+difference. For generality and flexibility, BioSimSpace decouples the two legs,
+allowing the use of difference molecular simulation engines,
+<a class="reference internal" href="generated/BioSimSpace.Protocol.FreeEnergy.html#BioSimSpace.Protocol.FreeEnergy" title="BioSimSpace.Protocol.FreeEnergy"><code class="xref py py-class docutils literal notranslate"><span class="pre">protocols</span></code></a>, and for legs to be
+re-used in different calculations.</p>
+<p>Simulations are typically used to compute solvation (currently hydration only)
+or binding free-energies. In the examples that follow, <code class="docutils literal notranslate"><span class="pre">merged</span></code> refers to a
+perturbable molecule created by merging two ligands, <code class="docutils literal notranslate"><span class="pre">ligA</span></code> and <code class="docutils literal notranslate"><span class="pre">ligB</span></code>,
+<code class="docutils literal notranslate"><span class="pre">merged_sol</span></code> refers to the same perturbable molecule in solvent,
+<code class="docutils literal notranslate"><span class="pre">complex_sol</span></code> is a solvated protein-ligand complex containing the same
+perturbable molecule. We assume that each molecule/system has been
+appropriately minimised and equlibrated.</p>
+<p>To setup, run, and analyse a binding free-energy calculation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+
+<span class="o">...</span>
+
+<span class="c1"># Create two a protocol for the two legs of a binding free-energy simulation.</span>
+<span class="c1"># Use more lambda windows for the &quot;bound&quot; leg.</span>
+<span class="n">protocol_bound</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="p">(</span><span class="n">num_lam</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">protocol_free</span>  <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Protocol</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="p">(</span><span class="n">num_lam</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="c1"># Setup the perturbations for each leg, using the SOMD engine. This will</span>
+<span class="c1"># create all of the input files and simulation processes that are required.</span>
+<span class="n">perturbation_bound</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">complex_sol</span><span class="p">,</span>
+                                             <span class="n">protocol_bound</span><span class="p">,</span>
+                                             <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                             <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/bound&quot;</span><span class="p">)</span>
+<span class="n">perturbation_free</span>  <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged_sol</span><span class="p">,</span>
+                                             <span class="n">protocol_bound</span><span class="p">,</span>
+                                             <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                             <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/free&quot;</span><span class="p">)</span>
+
+<span class="c1"># Run all simulations for each leg. Note that the lambda windows are run</span>
+<span class="c1"># sequentially, so this is a sub-optimal way of executing the simulation</span>
+<span class="c1"># if you have access to HPC resources.</span>
+
+<span class="c1"># Bound leg.</span>
+<span class="n">perturbation_bound</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">perturbation_bound</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="c1"># Free leg.</span>
+<span class="n">perturbation_fee</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">perturbation_fee</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="c1"># Analyse the simulation data from each leg, returning the PMF and overlap</span>
+<span class="c1"># matrix.</span>
+<span class="n">pmf_bound</span><span class="p">,</span> <span class="n">overlap_bound</span> <span class="o">=</span> <span class="n">pmf_bound</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+<span class="n">pmf_free</span><span class="p">,</span>  <span class="n">overlap_free</span>  <span class="o">=</span> <span class="n">pmf_free</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+
+<span class="c1"># Compute the relative free-energy difference.</span>
+<span class="n">free_nrg_binding</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">pmf_bound</span><span class="p">,</span> <span class="n">pmf_free</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Similarly, for a solvation free-energy calculation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Here we are assuming that we are using the same ligands, so will re-use</span>
+<span class="c1"># the free leg from the previous example.</span>
+
+<span class="c1"># Setup the perturbation for the vacuum leg using a default protocol.</span>
+<span class="n">perturbation_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
+                                              <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                              <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">)</span>
+
+<span class="c1"># Run the simulations for the perturbation.</span>
+<span class="n">perturbation_vacuum</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">perturbation_vacuum</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+
+<span class="c1"># Analyse the simulation data.</span>
+<span class="n">pmf_vacuum</span><span class="p">,</span> <span class="n">overlap_vacuum</span> <span class="o">=</span> <span class="n">pmf_vacuum</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+
+<span class="c1"># Compute the relative free-energy difference.</span>
+<span class="n">free_nrg_solvation</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">pmf_free</span><span class="p">,</span> <span class="n">pmf_vacuum</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Since it is usually preferable to run simulations intensive simulation such as
+these on external HPC resources, the <code class="docutils literal notranslate"><span class="pre">BioSimSpace.FreeEnergy</span></code> package also
+provides support for only creating the input files that are needed by passing
+the <code class="docutils literal notranslate"><span class="pre">setup_only=True</span></code> argument. This saves the overhead of creating
+<a class="reference internal" href="index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a> objects. The input files can then be
+copied to a remote server, with the indivual simulations curated in a job
+submission script. (We don’t yet provide support for configuring and writing
+submission scripts for you.)</p>
+<p>To just setup the vacuum leg input files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup the input for the vacuum leg. No processes are created so the .run()</span>
+<span class="c1"># method won&#39;t do anything.</span>
+<span class="n">perturbation_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
+                                              <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                              <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">,</span>
+                                              <span class="n">setup_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is also possible to analyse existing simulation output directly by passing
+the path to a working directory to <a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Relative.html#BioSimSpace.FreeEnergy.Relative.analyse" title="BioSimSpace.FreeEnergy.Relative.analyse"><code class="xref py py-class docutils literal notranslate"><span class="pre">FreeEnergy.Relative.analyse</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pmf_vacuum</span><span class="p">,</span> <span class="n">overlap_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="o">.</span><span class="n">analyse</span><span class="p">(</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <span class="target" id="module-BioSimSpace.FreeEnergy"></span><section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 <table class="longtable docutils align-default">
@@ -238,11 +339,8 @@ analyse different free energy simulations.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Binding.html#BioSimSpace.FreeEnergy.Binding" title="BioSimSpace.FreeEnergy.Binding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Binding</span></code></a>(system_bound[, system_free, …])</p></td>
-<td><p>A class for configuring and running binding free energy simulations.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Solvation.html#BioSimSpace.FreeEnergy.Solvation" title="BioSimSpace.FreeEnergy.Solvation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Solvation</span></code></a>(system[, protocol, vacuum_leg, …])</p></td>
-<td><p>A class for configuring and running solvation free energy simulations.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.Relative.html#BioSimSpace.FreeEnergy.Relative" title="BioSimSpace.FreeEnergy.Relative"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Relative</span></code></a>(system[, protocol, work_dir, …])</p></td>
+<td><p>Class for configuring and running relative free-energy perturbation simulations.</p></td>
 </tr>
 </tbody>
 </table>
@@ -255,32 +353,14 @@ analyse different free energy simulations.</p>
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.analyse.html#BioSimSpace.FreeEnergy.analyse" title="BioSimSpace.FreeEnergy.analyse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse</span></code></a>(work_dir[, simulation_type])</p></td>
-<td><p>Analyse existing free-energy data from a simulation working directory.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.FreeEnergy.engines" title="BioSimSpace.FreeEnergy.engines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">engines</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.engines.html#BioSimSpace.FreeEnergy.engines" title="BioSimSpace.FreeEnergy.engines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">engines</span></code></a>()</p></td>
 <td><p>List the supported molecular dynamics engines for running free-energy perturbation simulations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html#BioSimSpace.FreeEnergy.getData" title="BioSimSpace.FreeEnergy.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link, work_dir])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.FreeEnergy.getData.html#BioSimSpace.FreeEnergy.getData" title="BioSimSpace.FreeEnergy.getData"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getData</span></code></a>([name, file_link, work_dir])</p></td>
 <td><p>Return a link to a zip file containing the data files required for post-simulation analysis.</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="function">
-<dt id="BioSimSpace.FreeEnergy.engines">
-<code class="sig-prename descclassname">BioSimSpace.FreeEnergy.</code><code class="sig-name descname">engines</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.FreeEnergy.engines" title="Permalink to this definition">¶</a></dt>
-<dd><p>List the supported molecular dynamics engines for running free-energy
-perturbation simulations.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>engines</strong> – The list of supported engines.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[str]</p>
-</dd>
-</dl>
-</dd></dl>
-
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -292,7 +372,7 @@ perturbation simulations.</p>
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="generated/BioSimSpace.FreeEnergy.Binding.html" class="btn btn-neutral float-right" title="BioSimSpace.FreeEnergy.Binding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="generated/BioSimSpace.FreeEnergy.Relative.html" class="btn btn-neutral float-right" title="BioSimSpace.FreeEnergy.Relative" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
         <a href="generated/BioSimSpace.Box.truncatedOctahedron.html" class="btn btn-neutral float-left" title="BioSimSpace.Box.truncatedOctahedron" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
@@ -302,7 +382,7 @@ perturbation simulations.</p>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jul 13, 2021.
+        Last updated on Jul 16, 2021.
       </span>
 
     </p>
