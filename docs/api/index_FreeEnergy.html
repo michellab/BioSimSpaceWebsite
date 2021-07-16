@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+523 documentation</title>
+  <title>BioSimSpace.FreeEnergy &mdash; BioSimSpace 2020.1.0+526 documentation</title>
   
 
   
@@ -243,7 +243,7 @@ re-used in different calculations.</p>
 <p>Simulations are typically used to compute solvation (currently hydration only)
 or binding free-energies. In the examples that follow, <code class="docutils literal notranslate"><span class="pre">merged</span></code> refers to a
 perturbable molecule created by merging two ligands, <code class="docutils literal notranslate"><span class="pre">ligA</span></code> and <code class="docutils literal notranslate"><span class="pre">ligB</span></code>,
-<code class="docutils literal notranslate"><span class="pre">merged_sol</span></code> refers to the same perturbable molecule in solvent,
+<code class="docutils literal notranslate"><span class="pre">merged_sol</span></code> refers to the same perturbable molecule in solvent, and
 <code class="docutils literal notranslate"><span class="pre">complex_sol</span></code> is a solvated protein-ligand complex containing the same
 perturbable molecule. We assume that each molecule/system has been
 appropriately minimised and equlibrated.</p>
@@ -259,31 +259,31 @@ appropriately minimised and equlibrated.</p>
 
 <span class="c1"># Setup the perturbations for each leg, using the SOMD engine. This will</span>
 <span class="c1"># create all of the input files and simulation processes that are required.</span>
-<span class="n">perturbation_bound</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">complex_sol</span><span class="p">,</span>
-                                             <span class="n">protocol_bound</span><span class="p">,</span>
-                                             <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
-                                             <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/bound&quot;</span><span class="p">)</span>
-<span class="n">perturbation_free</span>  <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged_sol</span><span class="p">,</span>
-                                             <span class="n">protocol_bound</span><span class="p">,</span>
-                                             <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
-                                             <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/free&quot;</span><span class="p">)</span>
+<span class="n">fep_bound</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">complex_sol</span><span class="p">,</span>
+                                    <span class="n">protocol_bound</span><span class="p">,</span>
+                                    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                    <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/bound&quot;</span><span class="p">)</span>
+<span class="n">fep_free</span>  <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged_sol</span><span class="p">,</span>
+                                    <span class="n">protocol_bound</span><span class="p">,</span>
+                                    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                    <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/free&quot;</span><span class="p">)</span>
 
 <span class="c1"># Run all simulations for each leg. Note that the lambda windows are run</span>
 <span class="c1"># sequentially, so this is a sub-optimal way of executing the simulation</span>
 <span class="c1"># if you have access to HPC resources.</span>
 
 <span class="c1"># Bound leg.</span>
-<span class="n">perturbation_bound</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">perturbation_bound</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="n">fep_bound</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">fep_bound</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
 <span class="c1"># Free leg.</span>
-<span class="n">perturbation_fee</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">perturbation_fee</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="n">fep_free</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">fep_free</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
 <span class="c1"># Analyse the simulation data from each leg, returning the PMF and overlap</span>
 <span class="c1"># matrix.</span>
-<span class="n">pmf_bound</span><span class="p">,</span> <span class="n">overlap_bound</span> <span class="o">=</span> <span class="n">pmf_bound</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
-<span class="n">pmf_free</span><span class="p">,</span>  <span class="n">overlap_free</span>  <span class="o">=</span> <span class="n">pmf_free</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+<span class="n">pmf_bound</span><span class="p">,</span> <span class="n">overlap_bound</span> <span class="o">=</span> <span class="n">fep_bound</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+<span class="n">pmf_free</span><span class="p">,</span>  <span class="n">overlap_free</span>  <span class="o">=</span> <span class="n">fep_free</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
 
 <span class="c1"># Compute the relative free-energy difference.</span>
 <span class="n">free_nrg_binding</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">pmf_bound</span><span class="p">,</span> <span class="n">pmf_free</span><span class="p">)</span>
@@ -294,16 +294,16 @@ appropriately minimised and equlibrated.</p>
 <span class="c1"># the free leg from the previous example.</span>
 
 <span class="c1"># Setup the perturbation for the vacuum leg using a default protocol.</span>
-<span class="n">perturbation_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
-                                              <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
-                                              <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">)</span>
+<span class="n">fep_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
+                                     <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                     <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">)</span>
 
 <span class="c1"># Run the simulations for the perturbation.</span>
-<span class="n">perturbation_vacuum</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="n">perturbation_vacuum</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+<span class="n">fep_vacuum</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">fep_vacuum</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
 
 <span class="c1"># Analyse the simulation data.</span>
-<span class="n">pmf_vacuum</span><span class="p">,</span> <span class="n">overlap_vacuum</span> <span class="o">=</span> <span class="n">pmf_vacuum</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
+<span class="n">pmf_vacuum</span><span class="p">,</span> <span class="n">overlap_vacuum</span> <span class="o">=</span> <span class="n">fep_vacuum</span><span class="o">.</span><span class="n">analyse</span><span class="p">()</span>
 
 <span class="c1"># Compute the relative free-energy difference.</span>
 <span class="n">free_nrg_solvation</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">pmf_free</span><span class="p">,</span> <span class="n">pmf_vacuum</span><span class="p">)</span>
@@ -320,10 +320,10 @@ submission scripts for you.)</p>
 <p>To just setup the vacuum leg input files:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup the input for the vacuum leg. No processes are created so the .run()</span>
 <span class="c1"># method won&#39;t do anything.</span>
-<span class="n">perturbation_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
-                                              <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
-                                              <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">,</span>
-                                              <span class="n">setup_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fep_vacuum</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">FreeEnergy</span><span class="o">.</span><span class="n">Relative</span><span class="p">(</span><span class="n">merged</span><span class="o">.</span><span class="n">toSystem</span><span class="p">(),</span>
+                                     <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;somd&quot;</span><span class="p">,</span>
+                                     <span class="n">work_dir</span><span class="o">=</span><span class="s2">&quot;ligA_ligB/vacuum&quot;</span><span class="p">,</span>
+                                     <span class="n">setup_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It is also possible to analyse existing simulation output directly by passing
