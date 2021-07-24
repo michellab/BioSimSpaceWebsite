@@ -22,7 +22,7 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.getResidues
       ~Molecule.isAmberWater
       ~Molecule.isGromacsWater
-      ~Molecule.isMerged
+      ~Molecule.isPerturbable
       ~Molecule.isWater
       ~Molecule.makeCompatibleWith
       ~Molecule.molecule0

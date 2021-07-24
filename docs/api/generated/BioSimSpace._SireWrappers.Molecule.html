@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace._SireWrappers.Molecule &mdash; BioSimSpace 2020.1.0+539 documentation</title>
+  <title>BioSimSpace._SireWrappers.Molecule &mdash; BioSimSpace 2020.1.0+540 documentation</title>
   
 
   
@@ -277,8 +277,8 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isGromacsWater" title="BioSimSpace._SireWrappers.Molecule.isGromacsWater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isGromacsWater</span></code></a>()</p></td>
 <td><p>Whether this is a GROMACS format water molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isMerged" title="BioSimSpace._SireWrappers.Molecule.isMerged"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMerged</span></code></a>()</p></td>
-<td><p>Whether this molecule has been merged with another.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isPerturbable" title="BioSimSpace._SireWrappers.Molecule.isPerturbable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isPerturbable</span></code></a>()</p></td>
+<td><p>Whether this molecule is perturbable, i.e.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecule.isWater" title="BioSimSpace._SireWrappers.Molecule.isWater"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isWater</span></code></a>()</p></td>
 <td><p>Whether this is a water molecule.</p></td>
@@ -450,12 +450,13 @@ each dimension.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace._SireWrappers.Molecule.isMerged">
-<code class="sig-name descname">isMerged</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Molecule.isMerged" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether this molecule has been merged with another.</p>
+<dt id="BioSimSpace._SireWrappers.Molecule.isPerturbable">
+<code class="sig-name descname">isPerturbable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Molecule.isPerturbable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this molecule is perturbable, i.e. it can be used in a
+free-energy perturbation simulation.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>is_merged</strong> – Whether the molecule has been merged.</p>
+<dd class="field-odd"><p><strong>is_perturbable</strong> – Whether the molecule is perturbable.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>bool</p>
@@ -670,7 +671,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Jul 23, 2021.
+        Last updated on Jul 24, 2021.
       </span>
 
     </p>
