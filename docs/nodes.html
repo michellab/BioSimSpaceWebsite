@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Nodes &mdash; BioSimSpace 2020.1.0+540 documentation</title>
+  <title>Nodes &mdash; BioSimSpace 2020.1.0+541 documentation</title>
   
 
   
@@ -271,7 +271,7 @@ elements included in the node, e.g. visualisations and plots, are simply
 ignored when the script is run in a non-interactive mode. To facilitate this
 dual-use the <code class="docutils literal notranslate"><span class="pre">node.addInput</span></code> method generates a custom
 <a class="reference external" href="https://ipywidgets.readthedocs.io/en/latest/">ipywidgets</a> based graphical
-user interface for interative use in Jupyter, or a custom
+user interface for interactive use in Jupyter, or a custom
 <a class="reference external" href="https://docs.python.org/3/library/argparse.html">argparse</a> parser for
 handling command-line arguments. The following figure shows the example node
 above running within a Jupyter notebook (top) and from the command-line (bottom).</p>
@@ -344,7 +344,7 @@ functionality. This requirement is automatically enforced so that files will
 be renamed when a mismatch is found.</p>
 <p>Any unit based input requirement, e.g.
 <a class="reference internal" href="api/generated/BioSimSpace.Gateway.Length.html#BioSimSpace.Gateway.Length" title="BioSimSpace.Gateway.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.Length</span></code></a>, should be
-specifing as a CWL <code class="docutils literal notranslate"><span class="pre">string</span></code> type to allow for greatest flexibility, e.g.:</p>
+specifying as a CWL <code class="docutils literal notranslate"><span class="pre">string</span></code> type to allow for greatest flexibility, e.g.:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span>
   <span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span>
 </pre></div>
