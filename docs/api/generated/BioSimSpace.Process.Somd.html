@@ -8,7 +8,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>BioSimSpace.Process.Somd &mdash; BioSimSpace 2020.1.0+561 documentation</title>
+  <title>BioSimSpace.Process.Somd &mdash; BioSimSpace 2020.1.0+563 documentation</title>
   
 
   
@@ -247,7 +247,10 @@
 <li><p><strong>name</strong> (<em>str</em>) – The name of the process.</p></li>
 <li><p><strong>platform</strong> (<em>str</em>) – The platform for the simulation: “CPU”, “CUDA”, or “OPENCL”.</p></li>
 <li><p><strong>work_dir</strong> – The working directory for the process.</p></li>
-<li><p><strong>seed</strong> (<em>int</em>) – A random number seed.</p></li>
+<li><p><strong>seed</strong> (<em>int</em>) – A random number seed. Note that SOMD only uses a seed for
+FreeEnergy protocols. The seed should only be used for debugging
+purposes since SOMD uses the same seed for each Monte Carlo
+cycle.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -1062,7 +1065,7 @@ file.</p>
     <p>
         &#169; Copyright 2017-2021 Michel Lab.
       <span class="lastupdated">
-        Last updated on Aug 16, 2021.
+        Last updated on Aug 23, 2021.
       </span>
 
     </p>
