@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.IO.savePerturbableSystem &mdash; BioSimSpace 2020.1.0+583 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.IO.savePerturbableSystem &mdash; BioSimSpace 2020.1.0+585 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -135,8 +135,8 @@
 <code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">savePerturbableSystem</code><span class="sig-paren">(</span><em class="sig-param">filebase</em>, <em class="sig-param">system</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.savePerturbableSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save a system containing a perturbable molecule. This will be written in
 AMBER format, with a topology file for each end state of the perturbation,
-i.e. ‘filebase0.prm7’ and ‘filebase1.prm7’. Coordinates for the lambda=0
-end state are written to ‘filebase.rst7’.</p>
+i.e. ‘filebase0.prm7’ and ‘filebase1.prm7’. Coordinates for the end
+states are written to ‘filebase0.rst7’ and ‘filebase1.rst7’.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -164,7 +164,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 15, 2021.
+      <span class="lastupdated">Last updated on Sep 17, 2021.
       </span></p>
   </div>
 

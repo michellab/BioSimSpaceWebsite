@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.IO.readPerturbableSystem &mdash; BioSimSpace 2020.1.0+583 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.IO.readPerturbableSystem &mdash; BioSimSpace 2020.1.0+585 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -132,14 +132,15 @@
 <h1>BioSimSpace.IO.readPerturbableSystem<a class="headerlink" href="#biosimspace-io-readperturbablesystem" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.IO.readPerturbableSystem">
-<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readPerturbableSystem</code><span class="sig-paren">(</span><em class="sig-param">coords</em>, <em class="sig-param">top0</em>, <em class="sig-param">top1</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readPerturbableSystem" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readPerturbableSystem</code><span class="sig-paren">(</span><em class="sig-param">top0</em>, <em class="sig-param">coords0</em>, <em class="sig-param">top1</em>, <em class="sig-param">coords1</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readPerturbableSystem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a perturbable system from file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>coords</strong> (<em>str</em>) – The path to the coordinate file.</p></li>
 <li><p><strong>top0</strong> (<em>str</em>) – The path to the topology file for the lambda=0 end state.</p></li>
+<li><p><strong>coords0</strong> (<em>str</em>) – The path to the coordinate file for the lambda=0 end state.</p></li>
 <li><p><strong>top1</strong> (<em>str</em>) – The path to the topology file for the lambda=1 end state.</p></li>
+<li><p><strong>coords1</strong> (<em>str</em>) – The path to the coordinate file for the lambda=1 end state.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -168,7 +169,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 15, 2021.
+      <span class="lastupdated">Last updated on Sep 17, 2021.
       </span></p>
   </div>
 
