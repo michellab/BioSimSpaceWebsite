@@ -17,6 +17,7 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.charge
       ~Molecule.coordinates
       ~Molecule.copy
+      ~Molecule.extract
       ~Molecule.getAtoms
       ~Molecule.getAxisAlignedBoundingBox
       ~Molecule.getResidues
