@@ -22,6 +22,7 @@ BioSimSpace.\_SireWrappers.Atom
       ~Atom.index
       ~Atom.moleculeNumber
       ~Atom.name
+      ~Atom.save
       ~Atom.toMolecule
       ~Atom.translate
    

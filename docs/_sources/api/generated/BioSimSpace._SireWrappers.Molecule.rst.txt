@@ -32,6 +32,7 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.nChains
       ~Molecule.nResidues
       ~Molecule.number
+      ~Molecule.save
       ~Molecule.search
       ~Molecule.toSystem
       ~Molecule.translate

@@ -19,6 +19,7 @@ BioSimSpace.\_SireWrappers.Molecules
       ~Molecules.getAxisAlignedBoundingBox
       ~Molecules.getMolecule
       ~Molecules.nMolecules
+      ~Molecules.save
       ~Molecules.search
       ~Molecules.toSystem
       ~Molecules.translate

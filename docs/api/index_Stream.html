@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BioSimSpace.Stream &mdash; BioSimSpace 2020.1.0+612 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #161e3c" >
+            <a href="../index.html" class="icon icon-home"> BioSimSpace<img src="../_static/bss-logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2020.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../compatibility.html">Compatibility</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Documentation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development.html">Developer’s guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nodes.html">Nodes</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../notebook.html">Notebook server</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../protocols.html">Protocols</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../media.html">Media</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../legal.html">Legal notices</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #161e3c" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BioSimSpace</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>BioSimSpace.Stream</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/index_Stream.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="biosimspace-stream">
+<span id="ref-stream"></span><h1>BioSimSpace.Stream<a class="headerlink" href="#biosimspace-stream" title="Permalink to this headline">¶</a></h1>
+<p>The <em>Stream</em> package contains tools for streaming wrapped Sire objects, i.e.
+objects from <a class="reference internal" href="index_SireWrappers.html#ref-sirewrappers"><span class="std std-ref">BioSimSpace._SireWrappers</span></a>.</p>
+<span class="target" id="module-BioSimSpace.Stream"></span><section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/BioSimSpace.Stream.save.html#BioSimSpace.Stream.save" title="BioSimSpace.Stream.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(sire_object, filebase)</p></td>
+<td><p>Stream a wrapped Sire object to file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/BioSimSpace.Stream.load.html#BioSimSpace.Stream.load" title="BioSimSpace.Stream.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(file)</p></td>
+<td><p>Stream a wrapped Sire object from file.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Stream a <a class="reference internal" href="generated/BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a> object to and from
+file.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">BioSimSpace</span> <span class="k">as</span> <span class="nn">BSS</span>
+
+<span class="c1"># Load a molecule system.</span>
+<span class="n">system0</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">IO</span><span class="o">.</span><span class="n">readMolecules</span><span class="p">([</span><span class="s2">&quot;ala.rst7&quot;</span><span class="p">,</span> <span class="s2">&quot;ala.prm7&quot;</span><span class="p">])</span>
+
+<span class="c1"># Stream to file.</span>
+<span class="n">BSS</span><span class="o">.</span><span class="n">Stream</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">system0</span><span class="p">,</span> <span class="s2">&quot;system&quot;</span><span class="p">)</span>
+
+<span class="c1"># Alternatively, stream the system object directly.</span>
+<span class="n">system0</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;system&quot;</span><span class="p">)</span>
+
+<span class="c1"># Stream from file.</span>
+<span class="n">system1</span> <span class="o">=</span> <span class="n">BSS</span><span class="o">.</span><span class="n">Stream</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;system.s3&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2017-2021 Michel Lab.
+      <span class="lastupdated">Last updated on Oct 30, 2021.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

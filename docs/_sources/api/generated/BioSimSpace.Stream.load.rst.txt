@@ -1,0 +1,6 @@
+BioSimSpace.Stream.load
+=======================
+
+.. currentmodule:: BioSimSpace.Stream
+
+.. autofunction:: load

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.Molecules &mdash; BioSimSpace 2020.1.0+606 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.Molecules &mdash; BioSimSpace 2020.1.0+612 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -170,13 +170,16 @@ or a list of BioSimSpace Molecule objects.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.nMolecules" title="BioSimSpace._SireWrappers.Molecules.nMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nMolecules</span></code></a>()</p></td>
 <td><p>Return the number of molecules in the system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.search" title="BioSimSpace._SireWrappers.Molecules.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.save" title="BioSimSpace._SireWrappers.Molecules.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filebase)</p></td>
+<td><p>Stream a wrapped Sire object to file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.search" title="BioSimSpace._SireWrappers.Molecules.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query)</p></td>
 <td><p>Search the molecules for atoms and residues.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.toSystem" title="BioSimSpace._SireWrappers.Molecules.toSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toSystem</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.toSystem" title="BioSimSpace._SireWrappers.Molecules.toSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toSystem</span></code></a>()</p></td>
 <td><p>Convert to a System object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.translate" title="BioSimSpace._SireWrappers.Molecules.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Molecules.translate" title="BioSimSpace._SireWrappers.Molecules.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate each molecule in the container.</p></td>
 </tr>
 </tbody>
@@ -272,6 +275,20 @@ each dimension.</p></li>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace._SireWrappers.Molecules.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filebase</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Molecules.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stream a wrapped Sire object to file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sire_object</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code>) – A wrapped Sire object.</p></li>
+<li><p><strong>filebase</strong> (<em>str</em>) – The base name of the binary output file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace._SireWrappers.Molecules.search">
 <code class="sig-name descname">search</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Molecules.search" title="Permalink to this definition">¶</a></dt>
 <dd><p>Search the molecules for atoms and residues. Search results will be
@@ -349,7 +366,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Oct 29, 2021.
+      <span class="lastupdated">Last updated on Oct 30, 2021.
       </span></p>
   </div>
 
