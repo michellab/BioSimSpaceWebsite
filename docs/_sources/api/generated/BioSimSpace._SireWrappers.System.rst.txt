@@ -34,6 +34,7 @@ BioSimSpace.\_SireWrappers.System
       ~System.nWaterMolecules
       ~System.removeMolecules
       ~System.removeWaterMolecules
+      ~System.repartitionHydrogenMass
       ~System.save
       ~System.search
       ~System.setBox
