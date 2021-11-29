@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Parameters.gaff2 &mdash; BioSimSpace 2020.1.0+657 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Parameters.gaff2 &mdash; BioSimSpace 2020.1.0+658 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -152,7 +152,7 @@
 <h1>BioSimSpace.Parameters.gaff2<a class="headerlink" href="#biosimspace-parameters-gaff2" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Parameters.gaff2">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">gaff2</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">net_charge=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.gaff2" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">gaff2</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">net_charge=None</em>, <em class="sig-param">charge_method='BCC'</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.gaff2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameterise using the gaff force field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -160,6 +160,8 @@
 <li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>, str) – The molecule to parameterise, either as a Molecule object or SMILES
 string.</p></li>
 <li><p><strong>net_charge</strong> (int, <a class="reference internal" href="BioSimSpace.Types.Charge.html#BioSimSpace.Types.Charge" title="BioSimSpace.Types.Charge"><code class="xref py py-class docutils literal notranslate"><span class="pre">Charge</span></code></a>) – The net charge on the molecule.</p></li>
+<li><p><strong>charge_method</strong> (<em>str</em>) – The method to use when calculating atomic charges:
+“RESP”, “CM2”, “MUL”, “BCC”, “ESP”, “GAS”</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
@@ -189,7 +191,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Nov 22, 2021.
+      <span class="lastupdated">Last updated on Nov 29, 2021.
       </span></p>
   </div>
 
