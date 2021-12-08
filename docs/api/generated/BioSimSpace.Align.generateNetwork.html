@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+664 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Align.generateNetwork &mdash; BioSimSpace 2020.1.0+672 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -132,7 +132,7 @@
 <h1>BioSimSpace.Align.generateNetwork<a class="headerlink" href="#biosimspace-align-generatenetwork" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Align.generateNetwork">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">generateNetwork</code><span class="sig-paren">(</span><em class="sig-param">molecules</em>, <em class="sig-param">names=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">plot_network=False</em>, <em class="sig-param">links_file=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.generateNetwork" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">generateNetwork</code><span class="sig-paren">(</span><em class="sig-param">molecules</em>, <em class="sig-param">names=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">plot_network=False</em>, <em class="sig-param">links_file=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">n_edges_forced=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.generateNetwork" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate a perturbation network using Lead Optimisation Mappper (LOMAP).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -167,6 +167,16 @@ calculation. Finally, if the fourth column contains the string
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
 defined values. This allows the user to refer to properties
 with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>n_edges_forced</strong> (<em>int</em>) – An integer that forces the number of edges that should be used in
+the perturbation network. Must be in the range
+[1 .. (len(molecules)**2-len(molecules))/2].
+In cases where n_edges_forced &gt; the number of edges suggested by
+LOMAP, BioSimSpace will add the top scoring n edges parsed from the
+LOMAP output file and add them to the network. Conversely if
+n_edges_forced &lt; the number of edges suggested by LOMAP, BioSimSpace
+will remove the bottom n edges parsed from the LOMAP output file.
+This last option is discouraged as it can cause network cycle
+breakage and disconnecting of ligands/clusters from the network.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
