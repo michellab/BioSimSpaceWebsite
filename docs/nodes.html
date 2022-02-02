@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nodes &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Nodes &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -187,9 +187,9 @@ and visualisations.</p>
 a means of chaining together nodes by passing the output of one node as the
 input to another. For example, given the following YAML configuration file,
 <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">amber/ala.crd</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">amber/ala.top</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.crd</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.top</span><span class="w"></span>
 </pre></div>
 </div>
 <p>it would be possible to run a minimisation followed by an equilibration as follows:</p>
@@ -227,12 +227,12 @@ For example, using the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <p>Here <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> is a YAML configuration file, e.g.:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span> <span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span> <span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.top</span><span class="p p-Indicator">}</span>
-  <span class="p p-Indicator">-</span> <span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span> <span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span> <span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.crd</span><span class="p p-Indicator">}</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.top</span><span class="p p-Indicator">}</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.crd</span><span class="p p-Indicator">}</span><span class="w"></span>
 
-<span class="nt">steps</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1000</span><span class="w"></span>
 </pre></div>
 </div>
 <p>At present, using BioSimSpace within CWL is limited to the use of
@@ -248,8 +248,8 @@ be renamed when a mismatch is found.</p>
 <p>Any unit based input requirement, e.g.
 <a class="reference internal" href="api/generated/BioSimSpace.Gateway.Length.html#BioSimSpace.Gateway.Length" title="BioSimSpace.Gateway.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.Length</span></code></a>, should be
 specifying as a CWL <code class="docutils literal notranslate"><span class="pre">string</span></code> type to allow for greatest flexibility, e.g.:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -326,7 +326,7 @@ modification.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

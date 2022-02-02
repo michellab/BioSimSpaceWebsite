@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.Atom &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.Atom &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="../../index.html" class="icon icon-home"> BioSimSpace<img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -61,7 +61,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Stream.html">BioSimSpace.Stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
@@ -179,13 +178,10 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.name" title="BioSimSpace._SireWrappers.Atom.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a>()</p></td>
 <td><p>Return the name of the atom.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.save" title="BioSimSpace._SireWrappers.Atom.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filebase)</p></td>
-<td><p>Stream a wrapped Sire object to file.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.toMolecule" title="BioSimSpace._SireWrappers.Atom.toMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toMolecule</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.toMolecule" title="BioSimSpace._SireWrappers.Atom.toMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toMolecule</span></code></a>()</p></td>
 <td><p>Convert a single Atom to a Molecule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.translate" title="BioSimSpace._SireWrappers.Atom.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.Atom.translate" title="BioSimSpace._SireWrappers.Atom.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate the object.</p></td>
 </tr>
 </tbody>
@@ -330,20 +326,6 @@ each dimension.</p></li>
 </dd></dl>
 
 <dl class="method">
-<dt id="BioSimSpace._SireWrappers.Atom.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filebase</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Atom.save" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stream a wrapped Sire object to file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sire_object</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code>) – A wrapped Sire object.</p></li>
-<li><p><strong>filebase</strong> (<em>str</em>) – The base name of the binary output file.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
 <dt id="BioSimSpace._SireWrappers.Atom.toMolecule">
 <code class="sig-name descname">toMolecule</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.Atom.toMolecule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a single Atom to a Molecule.</p>
@@ -389,7 +371,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

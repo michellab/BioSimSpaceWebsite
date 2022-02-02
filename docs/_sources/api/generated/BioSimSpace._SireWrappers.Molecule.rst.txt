@@ -33,7 +33,6 @@ BioSimSpace.\_SireWrappers.Molecule
       ~Molecule.nResidues
       ~Molecule.number
       ~Molecule.repartitionHydrogenMass
-      ~Molecule.save
       ~Molecule.search
       ~Molecule.toSystem
       ~Molecule.translate

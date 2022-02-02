@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="../../index.html" class="icon icon-home"> BioSimSpace<img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -61,7 +61,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Stream.html">BioSimSpace.Stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
@@ -189,7 +188,7 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getRestraintAtoms" title="BioSimSpace._SireWrappers.System.getRestraintAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintAtoms</span></code></a>(restraint[, mol_index, …])</p></td>
 <td><p>Get the indices of atoms involved in a restraint.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getWaterMolecules" title="BioSimSpace._SireWrappers.System.getWaterMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWaterMolecules</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getWaterMolecules" title="BioSimSpace._SireWrappers.System.getWaterMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getWaterMolecules</span></code></a>([property_map])</p></td>
 <td><p>Return a list containing all of the water molecules in the system.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.nAtoms" title="BioSimSpace._SireWrappers.System.nAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nAtoms</span></code></a>()</p></td>
@@ -216,25 +215,22 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.removeWaterMolecules" title="BioSimSpace._SireWrappers.System.removeWaterMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">removeWaterMolecules</span></code></a>()</p></td>
 <td><p>Remove all of the water molecules from the system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="BioSimSpace._SireWrappers.System.repartitionHydrogenMass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repartitionHydrogenMass</span></code></a>([factor, …])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="BioSimSpace._SireWrappers.System.repartitionHydrogenMass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repartitionHydrogenMass</span></code></a>([factor, water, …])</p></td>
 <td><p>Redistrubute mass of heavy atoms connected to bonded hydrogens into the hydrogen atoms.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.save" title="BioSimSpace._SireWrappers.System.save"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save</span></code></a>(filebase)</p></td>
-<td><p>Stream a wrapped Sire object to file.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.search" title="BioSimSpace._SireWrappers.System.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query[, property_map])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.search" title="BioSimSpace._SireWrappers.System.search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">search</span></code></a>(query[, property_map])</p></td>
 <td><p>Search the system for atoms, residues, and molecules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.setBox" title="BioSimSpace._SireWrappers.System.setBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBox</span></code></a>(box[, angles, property_map])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.setBox" title="BioSimSpace._SireWrappers.System.setBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setBox</span></code></a>(box[, angles, property_map])</p></td>
 <td><p>Set the size of the periodic simulation box.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.translate" title="BioSimSpace._SireWrappers.System.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.translate" title="BioSimSpace._SireWrappers.System.translate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">translate</span></code></a>(vector[, property_map])</p></td>
 <td><p>Translate the system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecule" title="BioSimSpace._SireWrappers.System.updateMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecule</span></code></a>(index, molecule)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecule" title="BioSimSpace._SireWrappers.System.updateMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecule</span></code></a>(index, molecule)</p></td>
 <td><p>Updated the molecule at the given index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecules" title="BioSimSpace._SireWrappers.System.updateMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecules</span></code></a>(molecules)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.updateMolecules" title="BioSimSpace._SireWrappers.System.updateMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">updateMolecules</span></code></a>(molecules)</p></td>
 <td><p>Update a molecule, or list of molecules in the system.</p></td>
 </tr>
 </tbody>
@@ -447,14 +443,19 @@ values. This allows the user to refer to properties with their</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.getWaterMolecules">
-<code class="sig-name descname">getWaterMolecules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getWaterMolecules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getWaterMolecules</code><span class="sig-paren">(</span><em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getWaterMolecules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list containing all of the water molecules in the system.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>molecules</strong> – A container of water molecule objects.</p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p>
 </dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecules.html#BioSimSpace._SireWrappers.Molecules" title="BioSimSpace._SireWrappers.Molecules"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecules</span></code></a></p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>molecules</strong> – A container of water molecule objects.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Molecules.html#BioSimSpace._SireWrappers.Molecules" title="BioSimSpace._SireWrappers.Molecules"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecules</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -562,7 +563,7 @@ values. This allows the user to refer to properties with their</p></li>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.repartitionHydrogenMass">
-<code class="sig-name descname">repartitionHydrogenMass</code><span class="sig-paren">(</span><em class="sig-param">factor=4</em>, <em class="sig-param">ignore_water=False</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">repartitionHydrogenMass</code><span class="sig-paren">(</span><em class="sig-param">factor=4</em>, <em class="sig-param">water='no'</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Redistrubute mass of heavy atoms connected to bonded hydrogens into
 the hydrogen atoms. This allows the use of larger simulation
 integration time steps without encountering instabilities related
@@ -572,24 +573,12 @@ to high-frequency hydrogen motion.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>factor</strong> (<em>float</em>) – The repartioning scale factor. Hydrogen masses are scaled by this
 amount.</p></li>
-<li><p><strong>ignore_water</strong> (<em>bool</em>) – Whether to ignore water molecules.</p></li>
+<li><p><strong>water</strong> (<em>str</em>) – Whether to repartition masses for water molecules. Options are
+“yes”, “no”, and “exclusive”, which can be used to repartition
+masses for water molecules only.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace._SireWrappers.System.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">filebase</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.save" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stream a wrapped Sire object to file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sire_object</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code>) – A wrapped Sire object.</p></li>
-<li><p><strong>filebase</strong> (<em>str</em>) – The base name of the binary output file.</p></li>
 </ul>
 </dd>
 </dl>
@@ -714,7 +703,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

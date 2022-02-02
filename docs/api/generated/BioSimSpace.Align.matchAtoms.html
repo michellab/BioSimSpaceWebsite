@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Align.matchAtoms &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="../../index.html" class="icon icon-home"> BioSimSpace<img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -72,7 +72,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Stream.html">BioSimSpace.Stream</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
@@ -132,7 +131,7 @@
 <h1>BioSimSpace.Align.matchAtoms<a class="headerlink" href="#biosimspace-align-matchatoms" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Align.matchAtoms">
-<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">matchAtoms</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">scoring_function='rmsd_align'</em>, <em class="sig-param">matches=1</em>, <em class="sig-param">return_scores=False</em>, <em class="sig-param">prematch={}</em>, <em class="sig-param">timeout=5.0000 secs</em>, <em class="sig-param">sanitize=False</em>, <em class="sig-param">complete_rings_only=True</em>, <em class="sig-param">max_scoring_matches=1000</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">matchAtoms</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">scoring_function='rmsd_align'</em>, <em class="sig-param">matches=1</em>, <em class="sig-param">return_scores=False</em>, <em class="sig-param">prematch={}</em>, <em class="sig-param">timeout=5.0000 secs</em>, <em class="sig-param">complete_rings_only=True</em>, <em class="sig-param">max_scoring_matches=1000</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.matchAtoms" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find mappings between atom indices in molecule0 to those in molecule1.
 Molecules are aligned using a Maximum Common Substructure (MCS) search.
 When requesting more than one match, the mappings will be sorted using
@@ -174,9 +173,6 @@ before computing the above RMSD score. (Requires the
 <li><p><strong>return_scores</strong> (<em>bool</em>) – Whether to return a list containing the scores for each mapping.</p></li>
 <li><p><strong>prematch</strong> (<em>dict</em>) – A dictionary of atom mappings that must be included in the match.</p></li>
 <li><p><strong>timeout</strong> (<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><em>BioSimSpace.Types.Time</em></a>) – The timeout for the maximum common substructure search.</p></li>
-<li><p><strong>sanitize</strong> (<em>bool</em>) – Whether to sanitize the molecular input before performing the MCS
-search. This option is only relevant to MCS performed using RDKit
-and will be ignored when falling back on Sire.</p></li>
 <li><p><strong>complete_rings_only</strong> (<em>bool</em>) – Whether to only match complete rings during the MCS search. This
 option is only relevant to MCS performed using RDKit and will be
 ignored when falling back on Sire.</p></li>
@@ -247,7 +243,7 @@ atom indices in molecule0 to those in molecule1).</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

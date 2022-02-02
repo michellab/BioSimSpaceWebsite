@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Changelog &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#jan-26-2022">2022.1.0 - Jan 26 2022</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#july-28-2020">2020.1.0 - July 28 2020</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nov-22-2019">2019.3.0 - Nov 22 2019</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sep-11-2019">2019.2.0 - Sep 11 2019</a></li>
@@ -103,6 +104,24 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<section id="jan-26-2022">
+<h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2020.1.0...2022.1.0">2022.1.0</a> - Jan 26 2022<a class="headerlink" href="#jan-26-2022" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Added basic support for cleaning PDB files with <a class="reference external" href="https://github.com/Amber-MD/pdb4amber">pdb4amber</a> prior to read.</p></li>
+<li><p>Added basic support for exporting BioSimSpace Nodes as Common Workflow Language wrappers.</p></li>
+<li><p>Added support for parameterising molecules using OpenForceField.</p></li>
+<li><p>Added support for using SMILES strings for input to parameterisation functions.</p></li>
+<li><p>Added support for funnel metadynamics simulations (<a class="reference external" href="https://github.com/dlukauskis">&#64;dlukauskis</a>).</p></li>
+<li><p>Added support for steered molecular dynamics simulations (<a class="reference external" href="https://github.com/AdeleLip">&#64;AdeleLip</a>).</p></li>
+<li><p>Added support for generating perturbation networks using LOMAP (<a class="reference external" href="https://github.com/JenkeScheen">&#64;JenkeScheen</a>).</p></li>
+<li><p>Fixed bug affecting certain improper/dihedral terms in SOMD perturbation file writer.</p></li>
+<li><p>Numerous performance improvements, particularly involving the manipulation and
+combination of molecular systems.</p></li>
+<li><p>Native Python pickling support for wrapped Sire types (<a class="reference external" href="https://github.com/chryswoods">&#64;chryswoods</a>).</p></li>
+<li><p>Numerous free-energy perturbation pipeline fixes and improvements. Thanks to <a class="reference external" href="https://github.com/kexul">&#64;kexul</a> and <a class="reference external" href="https://github.com/msuruzhon">&#64;msuruzhon</a> for their help testing and debugging.</p></li>
+<li><p>Switch continuous integration to GitHub actions using conda-forge compliant build and upload to Anaconda cloud.</p></li>
+</ul>
+</section>
 <section id="july-28-2020">
 <h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2019.3.0...2020.1.0">2020.1.0</a> - July 28 2020<a class="headerlink" href="#july-28-2020" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -182,7 +201,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

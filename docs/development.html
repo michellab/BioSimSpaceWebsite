@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer’s guide &mdash; BioSimSpace 2020.1.0+686 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Developer’s guide &mdash; BioSimSpace 2022.1.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2020.1.0
+                2022.1.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -439,11 +439,11 @@ committing. When happy, commit your changes, e.g.</p>
 </div>
 <p>Remember that it is better to make small changes and commit frequently.</p>
 <p>If your edits don’t change the BioSimSpace source code, or documentation,
-e.g. fixing typos, then please add <code class="docutils literal notranslate"><span class="pre">***NO_CI***</span></code> to your commit message.
-This will avoid unnecessarily running the
-<a class="reference external" href="https://dev.azure.com/michellab/BioSimSpace/_build">Azure pipelines</a>, e.g.
+e.g. fixing typos, then please add <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">skip</span></code> to your commit message.
+This will avoid unnecessarily triggering
+<a class="reference external" href="https://github.com/michellab/BioSimSpace/actions?query=workflow%3ABuild">GitHub actions</a>, e.g.
 building a new BioSimSpace binary, updating the website, etc. To this end, we
-have provided a git hook that will append <code class="docutils literal notranslate"><span class="pre">***NO_CI***</span></code> if the commit only
+have provided a git hook that will append <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">skip</span></code> if the commit only
 modifies files in a blacklist that is specified in the file <code class="docutils literal notranslate"><span class="pre">.ciignore</span></code>
 (analogous to the <code class="docutils literal notranslate"><span class="pre">.gitignore</span></code> used to ignore untracked files). To enable
 the hook, simply copy it into the <code class="docutils literal notranslate"><span class="pre">.git/hooks</span></code> directory:</p>
@@ -479,7 +479,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 03, 2022.
+      <span class="lastupdated">Last updated on Feb 02, 2022.
       </span></p>
   </div>
 

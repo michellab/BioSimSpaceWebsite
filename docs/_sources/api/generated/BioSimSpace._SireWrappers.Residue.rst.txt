@@ -23,7 +23,6 @@ BioSimSpace.\_SireWrappers.Residue
       ~Residue.moleculeNumber
       ~Residue.nAtoms
       ~Residue.name
-      ~Residue.save
       ~Residue.search
       ~Residue.toMolecule
       ~Residue.translate
