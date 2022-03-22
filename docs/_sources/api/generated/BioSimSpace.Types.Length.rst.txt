@@ -16,12 +16,12 @@ BioSimSpace.Types.Length
       ~Length.__init__
       ~Length.angstroms
       ~Length.centimeters
-      ~Length.magnitude
       ~Length.meters
       ~Length.millimeters
       ~Length.nanometers
       ~Length.picometers
       ~Length.unit
+      ~Length.value
    
    
 

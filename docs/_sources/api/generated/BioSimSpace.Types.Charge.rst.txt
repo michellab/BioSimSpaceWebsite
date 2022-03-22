@@ -16,8 +16,8 @@ BioSimSpace.Types.Charge
       ~Charge.__init__
       ~Charge.coulomb
       ~Charge.electron_charge
-      ~Charge.magnitude
       ~Charge.unit
+      ~Charge.value
    
    
 

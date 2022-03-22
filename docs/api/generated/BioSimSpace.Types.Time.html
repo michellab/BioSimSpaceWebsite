@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Types.Time &mdash; BioSimSpace 2022.1.0+10 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Types.Time &mdash; BioSimSpace 2022.1.0+11 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -142,12 +142,12 @@
 <dt id="BioSimSpace.Types.Time.__init__">
 <code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Time.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
-<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can be a magnitude and unit, or a string representation
+<p><code class="docutils literal notranslate"><span class="pre">*args</span></code> can be a value and unit, or a string representation
 of the time, e.g. “0.2 fs”.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>magnitude</strong> (<em>float</em>) – The magnitude.</p></li>
+<li><p><strong>value</strong> (<em>float</em>) – The value.</p></li>
 <li><p><strong>unit</strong> (<em>str</em>) – The unit.</p></li>
 <li><p><strong>string</strong> (<em>str</em>) – A string representation of the time.</p></li>
 </ul>
@@ -191,26 +191,26 @@ would be valid arguments: “17.3 fs”, “17.3 femtoseconds”, “1.73e1 fs�
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.hours" title="BioSimSpace.Types.Time.hours"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hours</span></code></a>()</p></td>
 <td><p>Return the time in hours.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.magnitude" title="BioSimSpace.Types.Time.magnitude"><code class="xref py py-obj docutils literal notranslate"><span class="pre">magnitude</span></code></a>()</p></td>
-<td><p>Return the magnitude.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.milliseconds" title="BioSimSpace.Types.Time.milliseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">milliseconds</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.milliseconds" title="BioSimSpace.Types.Time.milliseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">milliseconds</span></code></a>()</p></td>
 <td><p>Return the time in milliseconds.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.minutes" title="BioSimSpace.Types.Time.minutes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minutes</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.minutes" title="BioSimSpace.Types.Time.minutes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">minutes</span></code></a>()</p></td>
 <td><p>Return the time in minutes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.nanoseconds" title="BioSimSpace.Types.Time.nanoseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanoseconds</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.nanoseconds" title="BioSimSpace.Types.Time.nanoseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanoseconds</span></code></a>()</p></td>
 <td><p>Return the time in nanoseconds.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.picoseconds" title="BioSimSpace.Types.Time.picoseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">picoseconds</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.picoseconds" title="BioSimSpace.Types.Time.picoseconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">picoseconds</span></code></a>()</p></td>
 <td><p>Return the time in picoseconds.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.seconds" title="BioSimSpace.Types.Time.seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seconds</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.seconds" title="BioSimSpace.Types.Time.seconds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">seconds</span></code></a>()</p></td>
 <td><p>Return the time in seconds.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.unit" title="BioSimSpace.Types.Time.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.unit" title="BioSimSpace.Types.Time.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
 <td><p>Return the unit.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Time.value" title="BioSimSpace.Types.Time.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a>()</p></td>
+<td><p>Return the value.</p></td>
 </tr>
 </tbody>
 </table>
@@ -252,20 +252,6 @@ would be valid arguments: “17.3 fs”, “17.3 femtoseconds”, “1.73e1 fs�
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="BioSimSpace.Types.Time.magnitude">
-<code class="sig-name descname">magnitude</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Time.magnitude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the magnitude.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><strong>magnitude</strong> – The magnitude of the type.</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>float</p>
 </dd>
 </dl>
 </dd></dl>
@@ -350,6 +336,20 @@ would be valid arguments: “17.3 fs”, “17.3 femtoseconds”, “1.73e1 fs�
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Time.value">
+<code class="sig-name descname">value</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Time.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>value</strong> – The value of the type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>float</p>
 </dd>
 </dl>
 </dd></dl>

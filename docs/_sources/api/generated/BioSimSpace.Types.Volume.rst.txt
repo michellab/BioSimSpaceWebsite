@@ -15,11 +15,11 @@ BioSimSpace.Types.Volume
    
       ~Volume.__init__
       ~Volume.angstroms3
-      ~Volume.magnitude
       ~Volume.meters3
       ~Volume.nanometers3
       ~Volume.picometers3
       ~Volume.unit
+      ~Volume.value
    
    
 

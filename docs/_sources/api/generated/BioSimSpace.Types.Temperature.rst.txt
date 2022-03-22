@@ -17,8 +17,8 @@ BioSimSpace.Types.Temperature
       ~Temperature.celsius
       ~Temperature.fahrenheit
       ~Temperature.kelvin
-      ~Temperature.magnitude
       ~Temperature.unit
+      ~Temperature.value
    
    
 

@@ -15,9 +15,9 @@ BioSimSpace.Types.Angle
    
       ~Angle.__init__
       ~Angle.degrees
-      ~Angle.magnitude
       ~Angle.radians
       ~Angle.unit
+      ~Angle.value
    
    
 

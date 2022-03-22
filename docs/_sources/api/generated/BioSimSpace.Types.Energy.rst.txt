@@ -17,8 +17,8 @@ BioSimSpace.Types.Energy
       ~Energy.kcal_per_mol
       ~Energy.kj_per_mol
       ~Energy.kt
-      ~Energy.magnitude
       ~Energy.unit
+      ~Energy.value
    
    
 

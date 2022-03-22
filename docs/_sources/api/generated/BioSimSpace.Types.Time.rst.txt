@@ -17,13 +17,13 @@ BioSimSpace.Types.Time
       ~Time.days
       ~Time.femtoseconds
       ~Time.hours
-      ~Time.magnitude
       ~Time.milliseconds
       ~Time.minutes
       ~Time.nanoseconds
       ~Time.picoseconds
       ~Time.seconds
       ~Time.unit
+      ~Time.value
    
    
 

@@ -16,8 +16,8 @@ BioSimSpace.Types.Pressure
       ~Pressure.__init__
       ~Pressure.atm
       ~Pressure.bar
-      ~Pressure.magnitude
       ~Pressure.unit
+      ~Pressure.value
    
    
 

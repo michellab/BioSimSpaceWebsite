@@ -15,11 +15,11 @@ BioSimSpace.Types.Area
    
       ~Area.__init__
       ~Area.angstroms2
-      ~Area.magnitude
       ~Area.meters2
       ~Area.nanometers2
       ~Area.picometers2
       ~Area.unit
+      ~Area.value
    
    
 
