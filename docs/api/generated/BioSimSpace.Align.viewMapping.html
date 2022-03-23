@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._Utils.cd &mdash; BioSimSpace 2022.1.0+29 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Align.viewMapping &mdash; BioSimSpace 2022.1.0+29 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Developer’s guide" href="../../development.html" />
-    <link rel="prev" title="BioSimSpace._Utils" href="../index_Utils.html" /> 
+    <link rel="next" title="BioSimSpace.Box" href="../index_Box.html" />
+    <link rel="prev" title="BioSimSpace.Align.merge" href="BioSimSpace.Align.merge.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,7 +48,18 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Align.html">BioSimSpace.Align</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Align.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Align.generateNetwork.html">BioSimSpace.Align.generateNetwork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Align.matchAtoms.html">BioSimSpace.Align.matchAtoms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Align.rmsdAlign.html">BioSimSpace.Align.rmsdAlign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Align.flexAlign.html">BioSimSpace.Align.flexAlign</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Align.merge.html">BioSimSpace.Align.merge</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Align.viewMapping</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Box.html">BioSimSpace.Box</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_FreeEnergy.html">BioSimSpace.FreeEnergy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Gateway.html">BioSimSpace.Gateway</a></li>
@@ -66,13 +77,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_Utils.html#context-managers">Context managers</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace._Utils.cd</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
 </ul>
 </li>
 </ul>
@@ -111,10 +116,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">Documentation</a> &raquo;</li>
-          <li><a href="../index_Utils.html">BioSimSpace._Utils</a> &raquo;</li>
-      <li>BioSimSpace._Utils.cd</li>
+          <li><a href="../index_Align.html">BioSimSpace.Align</a> &raquo;</li>
+      <li>BioSimSpace.Align.viewMapping</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/api/generated/BioSimSpace._Utils.cd.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Align.viewMapping.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -122,15 +127,39 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="biosimspace-utils-cd">
-<h1>BioSimSpace._Utils.cd<a class="headerlink" href="#biosimspace-utils-cd" title="Permalink to this headline">¶</a></h1>
+  <section id="biosimspace-align-viewmapping">
+<h1>BioSimSpace.Align.viewMapping<a class="headerlink" href="#biosimspace-align-viewmapping" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="BioSimSpace._Utils.cd">
-<code class="sig-prename descclassname">BioSimSpace._Utils.</code><code class="sig-name descname">cd</code><span class="sig-paren">(</span><em class="sig-param">work_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._Utils.cd" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute the context in the directory “work_dir”</p>
+<dt id="BioSimSpace.Align.viewMapping">
+<code class="sig-prename descclassname">BioSimSpace.Align.</code><code class="sig-name descname">viewMapping</code><span class="sig-paren">(</span><em class="sig-param">molecule0</em>, <em class="sig-param">molecule1</em>, <em class="sig-param">mapping=None</em>, <em class="sig-param">property_map0={}</em>, <em class="sig-param">property_map1={}</em>, <em class="sig-param">style=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Align.viewMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Visualise the mapping between molecule0 and molecule1. This draws a 3D
+depiction of molecule0 with the mapped atoms highlighted in green.
+Labels specify the indices of the atoms, along with the indices of
+the atoms in molecule1 to which they map. Creating a second view
+by passing the molecules in reverse order along with a reversed
+mapping allows for cross-referencing of mapped atoms between
+the two molecules.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the context.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>molecule0</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The molecule of interest. This is the molecule that will be
+drawn.</p></li>
+<li><p><strong>molecule1</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The reference molecule against which the mapping is made.</p></li>
+<li><p><strong>mapping</strong> (<em>dict</em>) – A dictionary mapping atoms in molecule0 to those in molecule1.</p></li>
+<li><p><strong>property_map0</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule0 to their user
+defined values. This allows the user to refer to properties
+with their own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>property_map1</strong> (<em>dict</em>) – A dictionary that maps “properties” in molecule1 to their user
+defined values.</p></li>
+<li><p><strong>style</strong> (<em>dict</em>) – Drawing style. See <a class="reference external" href="https://3dmol.csb.pitt.edu/doc/$3Dmol.GLViewer.html">https://3dmol.csb.pitt.edu/doc/$3Dmol.GLViewer.html</a>
+for some examples.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>view</strong> – An view of molecule0 with the mapping atoms highlighted.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>py3Dmol.view</p>
 </dd>
 </dl>
 </dd></dl>
@@ -141,8 +170,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index_Utils.html" class="btn btn-neutral float-left" title="BioSimSpace._Utils" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../development.html" class="btn btn-neutral float-right" title="Developer’s guide" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Align.merge.html" class="btn btn-neutral float-left" title="BioSimSpace.Align.merge" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index_Box.html" class="btn btn-neutral float-right" title="BioSimSpace.Box" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

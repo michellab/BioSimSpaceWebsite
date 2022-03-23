@@ -1,0 +1,6 @@
+BioSimSpace.Align.viewMapping
+=============================
+
+.. currentmodule:: BioSimSpace.Align
+
+.. autofunction:: viewMapping
