@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; BioSimSpace 2022.1.0+32 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Changelog &mdash; BioSimSpace 2022.2.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2022.1.0
+                2022.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#mar-24-2022">2022.2.0 - Mar 24 2022</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jan-26-2022">2022.1.0 - Jan 26 2022</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#july-28-2020">2020.1.0 - July 28 2020</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nov-22-2019">2019.3.0 - Nov 22 2019</a></li>
@@ -104,6 +105,20 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<section id="mar-24-2022">
+<h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2022.1.0...2022.1.0">2022.2.0</a> - Mar 24 2022<a class="headerlink" href="#mar-24-2022" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use fast C++ wrappers for updating coordinates and velocities during SOMD simulations.</p></li>
+<li><p>Fix import issues caused by change in module layout for conda-forge OpenMM package.</p></li>
+<li><p>Don’t check for structural ions when parameterising with GAFF/GAFF2.</p></li>
+<li><p>Fix errors in funnel correction calculation.</p></li>
+<li><p>Switch to using conda-forge lomap2 package, removing need to vendor lomap code.</p></li>
+<li><p>Use py3Dmol to visualise maximum common substructure mappings.</p></li>
+<li><p>Rename <code class="docutils literal notranslate"><span class="pre">.magnitude()</span></code> method on <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Type</span></code> objects to <code class="docutils literal notranslate"><span class="pre">.value()</span></code> to avoid confusion.</p></li>
+<li><p>Handle trjconv frame extraction failures within <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Process.Gromacs.getSystem()</span></code>.</p></li>
+<li><p>Catch and handle possible GSL error during singular valued decomposition routine used for molecular alignment.</p></li>
+</ul>
+</section>
 <section id="jan-26-2022">
 <h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2020.1.0...2022.1.0">2022.1.0</a> - Jan 26 2022<a class="headerlink" href="#jan-26-2022" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -176,8 +191,8 @@ combination of molecular systems.</p></li>
 <li><p>Fixed conda NetCDF issue on macOS. Yay for managing <a class="reference external" href="https://xkcd.com/1987">python environments</a>!</p></li>
 <li><p>Install conda <a class="reference external" href="https://anaconda.org/AmberMD/ambertools">ambertools</a> during <a class="reference external" href="python/setup.py">setup</a>.</p></li>
 <li><p>Search for bundled version of <code class="docutils literal notranslate"><span class="pre">sander</span></code> when running <a class="reference external" href="http://ambermd.org">AMBER</a> simulation processes.</p></li>
-<li><p>Pass executable found by <a class="reference external" href="python/BioSimSpace/MD">BioSimSpace.MD</a> to <a class="reference external" href="python/BioSimSpace/Process">BioSimSpace.Process</a> constructor.</p></li>
-<li><p>Fixed error in RMSD calculation within <a class="reference external" href="python/BioSimSpace/Trajectory">BioSimSpace.Trajectory</a> class.</p></li>
+<li><p>Pass executable found by <code class="docutils literal notranslate"><span class="pre">BioSimSpace.MD</span></code> to <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Process</span></code> constructor.</p></li>
+<li><p>Fixed error in RMSD calculation within <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Trajectory</span></code> class.</p></li>
 <li><p>Improved example scripts and notebooks.</p></li>
 </ul>
 </section>
