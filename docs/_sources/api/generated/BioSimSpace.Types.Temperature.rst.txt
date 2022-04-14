@@ -14,9 +14,17 @@ BioSimSpace.Types.Temperature
    .. autosummary::
    
       ~Temperature.__init__
+      ~Temperature.angle
       ~Temperature.celsius
+      ~Temperature.charge
+      ~Temperature.dimensions
       ~Temperature.fahrenheit
       ~Temperature.kelvin
+      ~Temperature.length
+      ~Temperature.mass
+      ~Temperature.quantity
+      ~Temperature.temperature
+      ~Temperature.time
       ~Temperature.unit
       ~Temperature.value
    

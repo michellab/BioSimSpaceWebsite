@@ -14,8 +14,16 @@ BioSimSpace.Types.Charge
    .. autosummary::
    
       ~Charge.__init__
+      ~Charge.angle
+      ~Charge.charge
       ~Charge.coulomb
+      ~Charge.dimensions
       ~Charge.electron_charge
+      ~Charge.length
+      ~Charge.mass
+      ~Charge.quantity
+      ~Charge.temperature
+      ~Charge.time
       ~Charge.unit
       ~Charge.value
    

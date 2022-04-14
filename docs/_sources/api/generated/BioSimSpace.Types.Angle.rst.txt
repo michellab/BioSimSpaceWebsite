@@ -14,8 +14,16 @@ BioSimSpace.Types.Angle
    .. autosummary::
    
       ~Angle.__init__
+      ~Angle.angle
+      ~Angle.charge
       ~Angle.degrees
+      ~Angle.dimensions
+      ~Angle.length
+      ~Angle.mass
+      ~Angle.quantity
       ~Angle.radians
+      ~Angle.temperature
+      ~Angle.time
       ~Angle.unit
       ~Angle.value
    

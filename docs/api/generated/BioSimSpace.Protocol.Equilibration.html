@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Protocol.Equilibration &mdash; BioSimSpace 2022.2.1+2 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Protocol.Equilibration &mdash; BioSimSpace 2022.2.1+31 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -133,11 +133,11 @@
 <h1>BioSimSpace.Protocol.Equilibration<a class="headerlink" href="#biosimspace-protocol-equilibration" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Protocol.Equilibration">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Equilibration</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=0.2000 ns</em>, <em class="sig-param">temperature_start=300.0000 K</em>, <em class="sig-param">temperature_end=300.0000 K</em>, <em class="sig-param">temperature=None</em>, <em class="sig-param">pressure=None</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=500</em>, <em class="sig-param">restraint=None</em>, <em class="sig-param">restrain_backbone=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Protocol.</code><code class="sig-name descname">Equilibration</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=0.2000 ns</em>, <em class="sig-param">temperature_start=300.0000 K</em>, <em class="sig-param">temperature_end=300.0000 K</em>, <em class="sig-param">temperature=None</em>, <em class="sig-param">pressure=None</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=500</em>, <em class="sig-param">restraint=None</em>, <em class="sig-param">force_constant=10.0000 M Q-1 T-2</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for storing equilibration protocols.</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Equilibration.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=0.2000 ns</em>, <em class="sig-param">temperature_start=300.0000 K</em>, <em class="sig-param">temperature_end=300.0000 K</em>, <em class="sig-param">temperature=None</em>, <em class="sig-param">pressure=None</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=500</em>, <em class="sig-param">restraint=None</em>, <em class="sig-param">restrain_backbone=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">timestep=2.0000 fs</em>, <em class="sig-param">runtime=0.2000 ns</em>, <em class="sig-param">temperature_start=300.0000 K</em>, <em class="sig-param">temperature_end=300.0000 K</em>, <em class="sig-param">temperature=None</em>, <em class="sig-param">pressure=None</em>, <em class="sig-param">report_interval=100</em>, <em class="sig-param">restart_interval=500</em>, <em class="sig-param">restraint=None</em>, <em class="sig-param">force_constant=10.0000 M Q-1 T-2</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -172,8 +172,9 @@ ions.</p>
 <p>Alternatively, the user can pass a list of atom indices for
 more fine-grained control. If None, then no restraints are used.</p>
 </p></li>
-<li><p><strong>restrain_backbone</strong> (<em>bool</em>) – Restraint atoms in the protein backbone. This option is now
-deprecated. Please use restraint = “backbone” instead.</p></li>
+<li><p><strong>force_constant</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">GeneralUnit</span></code>, float) – The force constant for the restraint potential. If a ‘float’ is
+passed, then default units of ‘kcal_per_mol / angstrom**2’ will
+be used.</p></li>
 </ul>
 </dd>
 </dl>
@@ -192,35 +193,41 @@ deprecated. Please use restraint = “backbone” instead.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getEndTemperature" title="BioSimSpace.Protocol.Equilibration.getEndTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getEndTemperature</span></code></a>()</p></td>
 <td><p>Return the final temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getPressure" title="BioSimSpace.Protocol.Equilibration.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getForceConstant" title="BioSimSpace.Protocol.Equilibration.getForceConstant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getForceConstant</span></code></a>()</p></td>
+<td><p>Return the force constant for the restraint.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getPressure" title="BioSimSpace.Protocol.Equilibration.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>()</p></td>
 <td><p>Return the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getReportInterval" title="BioSimSpace.Protocol.Equilibration.getReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReportInterval</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getReportInterval" title="BioSimSpace.Protocol.Equilibration.getReportInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getReportInterval</span></code></a>()</p></td>
 <td><p>Return the interval between reporting statistics.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRestartInterval" title="BioSimSpace.Protocol.Equilibration.getRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestartInterval</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRestartInterval" title="BioSimSpace.Protocol.Equilibration.getRestartInterval"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestartInterval</span></code></a>()</p></td>
 <td><p>Return the interval between saving restart confiugrations, and/or trajectory frames.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRestraint" title="BioSimSpace.Protocol.Equilibration.getRestraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraint</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRestraint" title="BioSimSpace.Protocol.Equilibration.getRestraint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraint</span></code></a>()</p></td>
 <td><p>Return the type of restraint..</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRunTime" title="BioSimSpace.Protocol.Equilibration.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getRunTime" title="BioSimSpace.Protocol.Equilibration.getRunTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRunTime</span></code></a>()</p></td>
 <td><p>Return the running time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getStartTemperature" title="BioSimSpace.Protocol.Equilibration.getStartTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStartTemperature</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getStartTemperature" title="BioSimSpace.Protocol.Equilibration.getStartTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getStartTemperature</span></code></a>()</p></td>
 <td><p>Return the starting temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getTimeStep" title="BioSimSpace.Protocol.Equilibration.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.getTimeStep" title="BioSimSpace.Protocol.Equilibration.getTimeStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getTimeStep</span></code></a>()</p></td>
 <td><p>Return the time step.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.isConstantTemp" title="BioSimSpace.Protocol.Equilibration.isConstantTemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConstantTemp</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.isConstantTemp" title="BioSimSpace.Protocol.Equilibration.isConstantTemp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isConstantTemp</span></code></a>()</p></td>
 <td><p>Return whether the protocol has a constant temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.restraints" title="BioSimSpace.Protocol.Equilibration.restraints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restraints</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.restraints" title="BioSimSpace.Protocol.Equilibration.restraints"><code class="xref py py-obj docutils literal notranslate"><span class="pre">restraints</span></code></a>()</p></td>
 <td><p>Return a list of the supported restraint keywords.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.setEndTemperature" title="BioSimSpace.Protocol.Equilibration.setEndTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setEndTemperature</span></code></a>(temperature)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.setEndTemperature" title="BioSimSpace.Protocol.Equilibration.setEndTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setEndTemperature</span></code></a>(temperature)</p></td>
 <td><p>Set the final temperature.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.setForceConstant" title="BioSimSpace.Protocol.Equilibration.setForceConstant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setForceConstant</span></code></a>(force_constant)</p></td>
+<td><p>Set the type force constant for the restraint.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Protocol.Equilibration.setPressure" title="BioSimSpace.Protocol.Equilibration.setPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setPressure</span></code></a>(pressure)</p></td>
 <td><p>Set the pressure.</p></td>
@@ -255,6 +262,21 @@ deprecated. Please use restraint = “backbone” instead.</p></li>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="BioSimSpace.Types.Temperature.html#BioSimSpace.Types.Temperature" title="BioSimSpace.Types.Temperature"><code class="xref py py-class docutils literal notranslate"><span class="pre">Temperature</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Protocol.Equilibration.getForceConstant">
+<code class="sig-name descname">getForceConstant</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration.getForceConstant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the force constant for the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The force constant for the restraint, in units of
+kcal_per_mol/angstrom**2.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>force_constant <code class="xref py py-class docutils literal notranslate"><span class="pre">GeneralUnit</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -399,6 +421,17 @@ configurations and/or trajectory frames.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Protocol.Equilibration.setForceConstant">
+<code class="sig-name descname">setForceConstant</code><span class="sig-paren">(</span><em class="sig-param">force_constant</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration.setForceConstant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the type force constant for the restraint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>force_constant</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">GeneralUnit</span></code>, float) – </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Protocol.Equilibration.setPressure">
 <code class="sig-name descname">setPressure</code><span class="sig-paren">(</span><em class="sig-param">pressure</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Equilibration.setPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the pressure.</p>
@@ -511,7 +544,7 @@ more fine-grained control.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Apr 01, 2022.
+      <span class="lastupdated">Last updated on Apr 14, 2022.
       </span></p>
   </div>
 

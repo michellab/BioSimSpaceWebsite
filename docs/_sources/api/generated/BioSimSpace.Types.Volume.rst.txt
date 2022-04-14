@@ -14,10 +14,18 @@ BioSimSpace.Types.Volume
    .. autosummary::
    
       ~Volume.__init__
+      ~Volume.angle
       ~Volume.angstroms3
+      ~Volume.charge
+      ~Volume.dimensions
+      ~Volume.length
+      ~Volume.mass
       ~Volume.meters3
       ~Volume.nanometers3
       ~Volume.picometers3
+      ~Volume.quantity
+      ~Volume.temperature
+      ~Volume.time
       ~Volume.unit
       ~Volume.value
    

@@ -14,8 +14,16 @@ BioSimSpace.Types.Pressure
    .. autosummary::
    
       ~Pressure.__init__
+      ~Pressure.angle
       ~Pressure.atm
       ~Pressure.bar
+      ~Pressure.charge
+      ~Pressure.dimensions
+      ~Pressure.length
+      ~Pressure.mass
+      ~Pressure.quantity
+      ~Pressure.temperature
+      ~Pressure.time
       ~Pressure.unit
       ~Pressure.value
    

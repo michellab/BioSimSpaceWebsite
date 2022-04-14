@@ -15,6 +15,7 @@ BioSimSpace.Protocol.Equilibration
    
       ~Equilibration.__init__
       ~Equilibration.getEndTemperature
+      ~Equilibration.getForceConstant
       ~Equilibration.getPressure
       ~Equilibration.getReportInterval
       ~Equilibration.getRestartInterval
@@ -25,6 +26,7 @@ BioSimSpace.Protocol.Equilibration
       ~Equilibration.isConstantTemp
       ~Equilibration.restraints
       ~Equilibration.setEndTemperature
+      ~Equilibration.setForceConstant
       ~Equilibration.setPressure
       ~Equilibration.setReportInterval
       ~Equilibration.setRestartInterval

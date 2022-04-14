@@ -14,9 +14,17 @@ BioSimSpace.Types.Energy
    .. autosummary::
    
       ~Energy.__init__
+      ~Energy.angle
+      ~Energy.charge
+      ~Energy.dimensions
       ~Energy.kcal_per_mol
       ~Energy.kj_per_mol
       ~Energy.kt
+      ~Energy.length
+      ~Energy.mass
+      ~Energy.quantity
+      ~Energy.temperature
+      ~Energy.time
       ~Energy.unit
       ~Energy.value
    

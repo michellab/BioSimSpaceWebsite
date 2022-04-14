@@ -14,14 +14,22 @@ BioSimSpace.Types.Time
    .. autosummary::
    
       ~Time.__init__
+      ~Time.angle
+      ~Time.charge
       ~Time.days
+      ~Time.dimensions
       ~Time.femtoseconds
       ~Time.hours
+      ~Time.length
+      ~Time.mass
       ~Time.milliseconds
       ~Time.minutes
       ~Time.nanoseconds
       ~Time.picoseconds
+      ~Time.quantity
       ~Time.seconds
+      ~Time.temperature
+      ~Time.time
       ~Time.unit
       ~Time.value
    

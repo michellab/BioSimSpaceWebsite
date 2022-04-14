@@ -14,12 +14,20 @@ BioSimSpace.Types.Length
    .. autosummary::
    
       ~Length.__init__
+      ~Length.angle
       ~Length.angstroms
       ~Length.centimeters
+      ~Length.charge
+      ~Length.dimensions
+      ~Length.length
+      ~Length.mass
       ~Length.meters
       ~Length.millimeters
       ~Length.nanometers
       ~Length.picometers
+      ~Length.quantity
+      ~Length.temperature
+      ~Length.time
       ~Length.unit
       ~Length.value
    

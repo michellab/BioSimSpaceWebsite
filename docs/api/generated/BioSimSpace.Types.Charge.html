@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Types.Charge &mdash; BioSimSpace 2022.2.1+2 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Types.Charge &mdash; BioSimSpace 2022.2.1+31 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -183,11 +183,35 @@ would be valid arguments: “27.8 e”, “27.8 electron charge”,
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.__init__" title="BioSimSpace.Types.Charge.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args)</p></td>
 <td><p>Constructor.</p></td>
 </tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.angle" title="BioSimSpace.Types.Charge.angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angle</span></code></a>()</p></td>
+<td><p>Return the power in the ‘angle’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.charge" title="BioSimSpace.Types.Charge.charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">charge</span></code></a>()</p></td>
+<td><p>Return the power in the ‘charge’ dimension.</p></td>
+</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.coulomb" title="BioSimSpace.Types.Charge.coulomb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coulomb</span></code></a>()</p></td>
 <td><p>Return the charge in Coulomb.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.electron_charge" title="BioSimSpace.Types.Charge.electron_charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">electron_charge</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.dimensions" title="BioSimSpace.Types.Charge.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a>()</p></td>
+<td><p>Return the dimensions of this type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.electron_charge" title="BioSimSpace.Types.Charge.electron_charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">electron_charge</span></code></a>()</p></td>
 <td><p>Return the charge in electron charge.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.length" title="BioSimSpace.Types.Charge.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a>()</p></td>
+<td><p>Return the power in the ‘length’ dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.mass" title="BioSimSpace.Types.Charge.mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mass</span></code></a>()</p></td>
+<td><p>Return the power in the ‘mass’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.quantity" title="BioSimSpace.Types.Charge.quantity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantity</span></code></a>()</p></td>
+<td><p>Return the power in the ‘quantity’ dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.temperature" title="BioSimSpace.Types.Charge.temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temperature</span></code></a>()</p></td>
+<td><p>Return the power in the ‘temperature’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.time" title="BioSimSpace.Types.Charge.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a>()</p></td>
+<td><p>Return the power in the ‘time’ dimension.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Charge.unit" title="BioSimSpace.Types.Charge.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
 <td><p>Return the unit.</p></td>
@@ -197,6 +221,34 @@ would be valid arguments: “27.8 e”, “27.8 electron charge”,
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.angle">
+<em class="property">classmethod </em><code class="sig-name descname">angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘angle’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The power in the ‘angle’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.charge">
+<em class="property">classmethod </em><code class="sig-name descname">charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘charge’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>charge</strong> – The power in the ‘charge’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="method">
 <dt id="BioSimSpace.Types.Charge.coulomb">
 <code class="sig-name descname">coulomb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.coulomb" title="Permalink to this definition">¶</a></dt>
@@ -212,6 +264,18 @@ would be valid arguments: “27.8 e”, “27.8 electron charge”,
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Types.Charge.dimensions">
+<em class="property">classmethod </em><code class="sig-name descname">dimensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dimensions of this type. This is a tuple
+containing the power in each dimension.</p>
+<dl class="simple">
+<dt>Returns<span class="classifier">(int, int, int, int, int, int)</span></dt><dd><p>The power in each dimension: ‘angle’, ‘charge’, ‘length’,
+‘mass’, ‘quantity’, ‘temperature’, and ‘time’.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Types.Charge.electron_charge">
 <code class="sig-name descname">electron_charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.electron_charge" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the charge in electron charge.</p>
@@ -221,6 +285,76 @@ would be valid arguments: “27.8 e”, “27.8 electron charge”,
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Charge" title="BioSimSpace.Types.Charge"><code class="xref py py-class docutils literal notranslate"><span class="pre">Charge</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.length">
+<em class="property">classmethod </em><code class="sig-name descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘length’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>length</strong> – The power in the ‘length’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.mass">
+<em class="property">classmethod </em><code class="sig-name descname">mass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘mass’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mass</strong> – The power in the ‘mass’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.quantity">
+<em class="property">classmethod </em><code class="sig-name descname">quantity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘quantity’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>quantity</strong> – The power in the ‘quantity’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.temperature">
+<em class="property">classmethod </em><code class="sig-name descname">temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘temperature’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>temperature</strong> – The power in the ‘temperature’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Charge.time">
+<em class="property">classmethod </em><code class="sig-name descname">time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Charge.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘time’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>time</strong> – The power the ‘time’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -269,7 +403,7 @@ would be valid arguments: “27.8 e”, “27.8 electron charge”,
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Apr 01, 2022.
+      <span class="lastupdated">Last updated on Apr 14, 2022.
       </span></p>
   </div>
 

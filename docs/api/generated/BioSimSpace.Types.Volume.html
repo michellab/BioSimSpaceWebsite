@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Types.Volume &mdash; BioSimSpace 2022.2.1+2 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Types.Volume &mdash; BioSimSpace 2022.2.1+31 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -183,17 +183,41 @@ would be valid arguments: “100 nm^3”, “100 cube nanometers”,
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.__init__" title="BioSimSpace.Types.Volume.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(*args)</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.angstroms3" title="BioSimSpace.Types.Volume.angstroms3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angstroms3</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.angle" title="BioSimSpace.Types.Volume.angle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angle</span></code></a>()</p></td>
+<td><p>Return the power in the ‘angle’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.angstroms3" title="BioSimSpace.Types.Volume.angstroms3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">angstroms3</span></code></a>()</p></td>
 <td><p>Return the volume in cubic Angstrom.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.meters3" title="BioSimSpace.Types.Volume.meters3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meters3</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.charge" title="BioSimSpace.Types.Volume.charge"><code class="xref py py-obj docutils literal notranslate"><span class="pre">charge</span></code></a>()</p></td>
+<td><p>Return the power in the ‘charge’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.dimensions" title="BioSimSpace.Types.Volume.dimensions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dimensions</span></code></a>()</p></td>
+<td><p>Return the dimensions of this type.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.length" title="BioSimSpace.Types.Volume.length"><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></a>()</p></td>
+<td><p>Return the power in the ‘length’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.mass" title="BioSimSpace.Types.Volume.mass"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mass</span></code></a>()</p></td>
+<td><p>Return the power in the ‘mass’ dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.meters3" title="BioSimSpace.Types.Volume.meters3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">meters3</span></code></a>()</p></td>
 <td><p>Return the volume in cubic meters.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.nanometers3" title="BioSimSpace.Types.Volume.nanometers3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanometers3</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.nanometers3" title="BioSimSpace.Types.Volume.nanometers3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nanometers3</span></code></a>()</p></td>
 <td><p>Return the volume in cubic nanometers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.picometers3" title="BioSimSpace.Types.Volume.picometers3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">picometers3</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.picometers3" title="BioSimSpace.Types.Volume.picometers3"><code class="xref py py-obj docutils literal notranslate"><span class="pre">picometers3</span></code></a>()</p></td>
 <td><p>Return the volume in cubic picometers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.quantity" title="BioSimSpace.Types.Volume.quantity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantity</span></code></a>()</p></td>
+<td><p>Return the power in the ‘quantity’ dimension.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.temperature" title="BioSimSpace.Types.Volume.temperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">temperature</span></code></a>()</p></td>
+<td><p>Return the power in the ‘temperature’ dimension.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.time" title="BioSimSpace.Types.Volume.time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">time</span></code></a>()</p></td>
+<td><p>Return the power in the ‘time’ dimension.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Types.Volume.unit" title="BioSimSpace.Types.Volume.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>()</p></td>
 <td><p>Return the unit.</p></td>
@@ -204,6 +228,20 @@ would be valid arguments: “100 nm^3”, “100 cube nanometers”,
 </tbody>
 </table>
 <dl class="method">
+<dt id="BioSimSpace.Types.Volume.angle">
+<em class="property">classmethod </em><code class="sig-name descname">angle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘angle’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>angle</strong> – The power in the ‘angle’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Types.Volume.angstroms3">
 <code class="sig-name descname">angstroms3</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.angstroms3" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the volume in cubic Angstrom.</p>
@@ -213,6 +251,60 @@ would be valid arguments: “100 nm^3”, “100 cube nanometers”,
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.charge">
+<em class="property">classmethod </em><code class="sig-name descname">charge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.charge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘charge’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>charge</strong> – The power in the ‘charge’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.dimensions">
+<em class="property">classmethod </em><code class="sig-name descname">dimensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.dimensions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the dimensions of this type. This is a tuple
+containing the power in each dimension.</p>
+<dl class="simple">
+<dt>Returns<span class="classifier">(int, int, int, int, int, int)</span></dt><dd><p>The power in each dimension: ‘angle’, ‘charge’, ‘length’,
+‘mass’, ‘quantity’, ‘temperature’, and ‘time’.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.length">
+<em class="property">classmethod </em><code class="sig-name descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘length’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>length</strong> – The power in the ‘length’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.mass">
+<em class="property">classmethod </em><code class="sig-name descname">mass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘mass’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>mass</strong> – The power in the ‘mass’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -255,6 +347,48 @@ would be valid arguments: “100 nm^3”, “100 cube nanometers”,
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p><a class="reference internal" href="#BioSimSpace.Types.Volume" title="BioSimSpace.Types.Volume"><code class="xref py py-class docutils literal notranslate"><span class="pre">Volume</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.quantity">
+<em class="property">classmethod </em><code class="sig-name descname">quantity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.quantity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘quantity’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>quantity</strong> – The power in the ‘quantity’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.temperature">
+<em class="property">classmethod </em><code class="sig-name descname">temperature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.temperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘temperature’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>temperature</strong> – The power in the ‘temperature’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Types.Volume.time">
+<em class="property">classmethod </em><code class="sig-name descname">time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Types.Volume.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the power in the ‘time’ dimension.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>time</strong> – The power the ‘time’ dimension.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
@@ -303,7 +437,7 @@ would be valid arguments: “100 nm^3”, “100 cube nanometers”,
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Apr 01, 2022.
+      <span class="lastupdated">Last updated on Apr 14, 2022.
       </span></p>
   </div>
 
