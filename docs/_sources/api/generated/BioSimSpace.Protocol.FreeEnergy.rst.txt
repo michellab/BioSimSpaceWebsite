@@ -15,6 +15,7 @@ BioSimSpace.Protocol.FreeEnergy
    
       ~FreeEnergy.__init__
       ~FreeEnergy.getLambda
+      ~FreeEnergy.getLambdaIndex
       ~FreeEnergy.getLambdaValues
       ~FreeEnergy.getPerturbationType
       ~FreeEnergy.getPressure
