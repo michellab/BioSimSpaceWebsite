@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compatibility &mdash; BioSimSpace 2022.2.1+89 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Compatibility &mdash; BioSimSpace 2022.2.1+106 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -100,19 +100,28 @@
              
   <section id="compatibility">
 <span id="ref-compatibility"></span><h1>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h1>
-<p>BioSimSpace has been tested against the following versions of its
-external dependencies:</p>
+<p>BioSimSpace has been tested against the versions of its
+external dependencies listed below. Please let us know if
+you encounter problems by raising an issue on our
+<a class="reference external" href="https://github.com/michellab/BioSimSpace/issues">GitHub</a>
+page. (It may also work with more recent versions and we
+will update these lists as they are validated.)</p>
 <section id="amber">
 <h2><a class="reference external" href="http://ambermd.org">AMBER</a><a class="headerlink" href="#amber" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>AmberTools20 (Except CMAP support, e.g. ff19SB.)</p></li>
+<li><p>AmberTools22</p></li>
+<li><p>AmberTools21</p></li>
+<li><p>AmberTools20</p></li>
 <li><p>AmberTools19</p></li>
 <li><p>AmberTools18</p></li>
 </ul>
+<p>Note that AmberTools &gt;= 20 is required for Open Force Field support.
+We currently have support for force fields with CMAP terms, e.g. ff19SB.</p>
 </section>
 <section id="gromacs">
 <h2><a class="reference external" href="http://www.gromacs.org">GROMACS</a><a class="headerlink" href="#gromacs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>2021 series</p></li>
 <li><p>2020 series</p></li>
 <li><p>2019 series</p></li>
 <li><p>2018 series</p></li>
@@ -140,7 +149,7 @@ external dependencies:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jun 22, 2022.
+      <span class="lastupdated">Last updated on Jun 30, 2022.
       </span></p>
   </div>
 

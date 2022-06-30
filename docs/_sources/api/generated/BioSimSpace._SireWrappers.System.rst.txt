@@ -18,12 +18,14 @@ BioSimSpace.\_SireWrappers.System
       ~System.charge
       ~System.copy
       ~System.fileFormat
+      ~System.getAtom
       ~System.getAxisAlignedBoundingBox
       ~System.getBox
       ~System.getIndex
       ~System.getMolecule
       ~System.getMolecules
       ~System.getPerturbableMolecules
+      ~System.getResidue
       ~System.getRestraintAtoms
       ~System.getWaterMolecules
       ~System.nAtoms

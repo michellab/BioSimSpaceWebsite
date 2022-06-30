@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2022.2.1+89 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2022.2.1+106 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -168,23 +168,29 @@ a BioSimSpace Molecules object, or a list of BioSimSpace molecule objects.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.fileFormat" title="BioSimSpace._SireWrappers.System.fileFormat"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fileFormat</span></code></a>([property_map])</p></td>
 <td><p>Return the file formats associated with the system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox" title="BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAxisAlignedBoundingBox</span></code></a>([property_map])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getAtom" title="BioSimSpace._SireWrappers.System.getAtom"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAtom</span></code></a>(index)</p></td>
+<td><p>Return the atom specified by the absolute index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox" title="BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getAxisAlignedBoundingBox</span></code></a>([property_map])</p></td>
 <td><p>Get the axis-aligned bounding box enclosing the object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getBox" title="BioSimSpace._SireWrappers.System.getBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBox</span></code></a>([property_map])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getBox" title="BioSimSpace._SireWrappers.System.getBox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getBox</span></code></a>([property_map])</p></td>
 <td><p>Get the size of the periodic simulation box.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getIndex" title="BioSimSpace._SireWrappers.System.getIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getIndex</span></code></a>(item)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getIndex" title="BioSimSpace._SireWrappers.System.getIndex"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getIndex</span></code></a>(item)</p></td>
 <td><p>Convert indices of atoms and residues to their absolute values in this system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getMolecule" title="BioSimSpace._SireWrappers.System.getMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMolecule</span></code></a>(index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getMolecule" title="BioSimSpace._SireWrappers.System.getMolecule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMolecule</span></code></a>(index)</p></td>
 <td><p>Return the molecule at the given index.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getMolecules" title="BioSimSpace._SireWrappers.System.getMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMolecules</span></code></a>([group])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getMolecules" title="BioSimSpace._SireWrappers.System.getMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMolecules</span></code></a>([group])</p></td>
 <td><p>Return a list containing all of the molecules in the specified group.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getPerturbableMolecules" title="BioSimSpace._SireWrappers.System.getPerturbableMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPerturbableMolecules</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getPerturbableMolecules" title="BioSimSpace._SireWrappers.System.getPerturbableMolecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPerturbableMolecules</span></code></a>()</p></td>
 <td><p>Return a list containing all of the perturbable molecules in the system.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getResidue" title="BioSimSpace._SireWrappers.System.getResidue"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResidue</span></code></a>(index)</p></td>
+<td><p>Return the residue specified by the absolute index.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.System.getRestraintAtoms" title="BioSimSpace._SireWrappers.System.getRestraintAtoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRestraintAtoms</span></code></a>(restraint[, mol_index, …])</p></td>
 <td><p>Get the indices of atoms involved in a restraint.</p></td>
@@ -304,6 +310,23 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace._SireWrappers.System.getAtom">
+<code class="sig-name descname">getAtom</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getAtom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atom specified by the absolute index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The absolute index of the atom in the system.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atom</strong> – The atom at the specified index.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox">
 <code class="sig-name descname">getAxisAlignedBoundingBox</code><span class="sig-paren">(</span><em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getAxisAlignedBoundingBox" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the axis-aligned bounding box enclosing the object.</p>
@@ -408,6 +431,23 @@ list containing objects of these types.</p>
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>[<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.System.getResidue">
+<code class="sig-name descname">getResidue</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.getResidue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the residue specified by the absolute index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The absolute index of the residue in the system.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>atom</strong> – The residue at the specified index.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html#BioSimSpace._SireWrappers.Residue" title="BioSimSpace._SireWrappers.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -704,7 +744,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jun 22, 2022.
+      <span class="lastupdated">Last updated on Jun 30, 2022.
       </span></p>
   </div>
 
