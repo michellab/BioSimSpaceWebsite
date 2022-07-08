@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2022.2.1+115 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.System &mdash; BioSimSpace 2022.2.1+118 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -604,7 +604,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p>
 
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.System.repartitionHydrogenMass">
-<code class="sig-name descname">repartitionHydrogenMass</code><span class="sig-paren">(</span><em class="sig-param">factor=4</em>, <em class="sig-param">water='no'</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">repartitionHydrogenMass</code><span class="sig-paren">(</span><em class="sig-param">factor=4</em>, <em class="sig-param">water='no'</em>, <em class="sig-param">use_coordinates=False</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.System.repartitionHydrogenMass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Redistrubute mass of heavy atoms connected to bonded hydrogens into
 the hydrogen atoms. This allows the use of larger simulation
 integration time steps without encountering instabilities related
@@ -617,6 +617,10 @@ amount.</p></li>
 <li><p><strong>water</strong> (<em>str</em>) – Whether to repartition masses for water molecules. Options are
 “yes”, “no”, and “exclusive”, which can be used to repartition
 masses for water molecules only.</p></li>
+<li><p><strong>use_coordinates</strong> (<em>bool</em>) – Whether to use the current molecular coordinates to work out
+the connectivity before repartitioning. If False, the information
+from the molecular topology, e.g. force field, will be used, if
+present.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
@@ -744,7 +748,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jul 04, 2022.
+      <span class="lastupdated">Last updated on Jul 08, 2022.
       </span></p>
   </div>
 
