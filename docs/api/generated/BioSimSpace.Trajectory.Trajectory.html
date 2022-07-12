@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2022.2.1+118 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Trajectory.Trajectory &mdash; BioSimSpace 2022.2.1+145 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -127,11 +127,11 @@
 <h1>BioSimSpace.Trajectory.Trajectory<a class="headerlink" href="#biosimspace-trajectory-trajectory" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Trajectory.Trajectory">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Trajectory.</code><code class="sig-name descname">Trajectory</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Trajectory.</code><code class="sig-name descname">Trajectory</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em>, <em class="sig-param">system=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for reading a manipulating biomolecular trajectories.</p>
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">process=None</em>, <em class="sig-param">trajectory=None</em>, <em class="sig-param">topology=None</em>, <em class="sig-param">system=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -139,6 +139,14 @@
 <li><p><strong>process</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>) – A BioSimSpace process object.</p></li>
 <li><p><strong>trajectory</strong> (<em>str</em>) – A trajectory file.</p></li>
 <li><p><strong>topology</strong> (<em>str</em>) – A topology file.</p></li>
+<li><p><strong>system</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.System.html#BioSimSpace._SireWrappers.System" title="BioSimSpace._SireWrappers.System"><code class="xref py py-class docutils literal notranslate"><span class="pre">System</span></code></a>) – A BioSimSpace System object. If passed, then trajectory coordinates
+and velocities will be copied into this system and returned. This is
+useful if you wish to preserve all molecular properties, which might
+be lost during reading of the topology format required by the
+trajectory backend.</p></li>
+<li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
+values. This allows the user to refer to properties with their
+own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 </ul>
 </dd>
 </dl>
@@ -151,7 +159,7 @@
 <col style="width: 90%" />
 </colgroup>
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="BioSimSpace.Trajectory.Trajectory.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([process, trajectory, topology])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.__init__" title="BioSimSpace.Trajectory.Trajectory.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([process, trajectory, topology, …])</p></td>
 <td><p>Constructor.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Trajectory.Trajectory.getFrames" title="BioSimSpace.Trajectory.Trajectory.getFrames"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrames</span></code></a>([indices])</p></td>
@@ -187,11 +195,14 @@
 
 <dl class="method">
 <dt id="BioSimSpace.Trajectory.Trajectory.getTrajectory">
-<code class="sig-name descname">getTrajectory</code><span class="sig-paren">(</span><em class="sig-param">format='mdtraj'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getTrajectory</code><span class="sig-paren">(</span><em class="sig-param">format='auto'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Trajectory.Trajectory.getTrajectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current trajectory object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>format</strong> (<em>str</em>) – Whether to return an ‘MDTraj’ or ‘MDAnalysis’ object.</p>
+<dd class="field-odd"><p><strong>format</strong> (<em>str</em>) – Whether to return an ‘MDTraj’ or ‘MDAnalysis’ object.
+Use “auto” if you are happy with either format, i.e. it
+will try each backend in sequence and return an object
+from the first one that works.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><strong>trajectory</strong> – The trajectory in MDTraj or MDAnalysis format.</p>
@@ -252,7 +263,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jul 08, 2022.
+      <span class="lastupdated">Last updated on Jul 12, 2022.
       </span></p>
   </div>
 

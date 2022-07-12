@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2022.2.1+118 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2022.2.1+145 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -134,11 +134,11 @@
 <h1>BioSimSpace.Process.Gromacs<a class="headerlink" href="#biosimspace-process-gromacs" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="BioSimSpace.Process.Gromacs">
-<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Gromacs</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='gromacs'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">BioSimSpace.Process.</code><code class="sig-name descname">Gromacs</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='gromacs'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em>, <em class="sig-param">checkpoint_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs" title="Permalink to this definition">¶</a></dt>
 <dd><p>A class for running simulations using GROMACS.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Gromacs.__init__">
-<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='gromacs'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">exe=None</em>, <em class="sig-param">name='gromacs'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em>, <em class="sig-param">checkpoint_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -155,8 +155,15 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <li><p><strong>ignore_warnings</strong> (<em>bool</em>) – Whether to ignore warnings when generating the binary run file
 with ‘gmx grompp’. By default, these warnings are elevated to
 errors and will halt the program.</p></li>
-<li><p><strong>show_errors</strong> (<em>bool</em>) – Whether to show warning/error messages when generating the binary
-run file.</p></li>
+<li><p><strong>show_errors</strong> (<em>bool</em>) – <p>Whether to show warning/error messages when generating the binary
+run file.</p>
+<blockquote>
+<div><dl class="simple">
+<dt>checkpoint_file<span class="classifier">str</span></dt><dd><p>The path to a checkpoint file from a previous run.</p>
+</dd>
+</dl>
+</div></blockquote>
+</p></li>
 </ul>
 </dd>
 </dl>
@@ -1873,7 +1880,7 @@ file.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jul 08, 2022.
+      <span class="lastupdated">Last updated on Jul 12, 2022.
       </span></p>
   </div>
 
