@@ -1,0 +1,37 @@
+BioSimSpace.\_SireWrappers.Bond
+===============================
+
+.. currentmodule:: BioSimSpace._SireWrappers
+
+.. autoclass:: Bond
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Bond.__init__
+      ~Bond.atom0
+      ~Bond.atom1
+      ~Bond.charge
+      ~Bond.coordinates
+      ~Bond.copy
+      ~Bond.energy
+      ~Bond.getAtoms
+      ~Bond.getAxisAlignedBoundingBox
+      ~Bond.length
+      ~Bond.moleculeNumber
+      ~Bond.nAtoms
+      ~Bond.name
+      ~Bond.search
+      ~Bond.toMolecule
+      ~Bond.translate
+   
+   
+
+   
+   
+   

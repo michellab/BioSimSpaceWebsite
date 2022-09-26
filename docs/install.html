@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; BioSimSpace 2022.2.1+162 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Installation &mdash; BioSimSpace 2023.0.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2022.2.1
+                2023.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -153,28 +153,20 @@ wish to download any of these.</p>
 <h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h2>
 <p>The following documents a full installation of BioSimSpace from source. Before
 starting, you’ll need a working <a class="reference external" href="https://git-scm.com">Git</a> installation.</p>
-<ol class="arabic simple">
-<li><p>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
-molecular simulation framework. To download and install Sire:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/Sire
-<span class="nb">cd</span> Sire
-./compile_sire.sh
-</pre></div>
-</div>
-<p>Assuming the default installation path, this will install Sire into <code class="docutils literal notranslate"><span class="pre">$HOME/sire.app</span></code>.</p>
-<p>(Note that the installation is slow and can take in excess of an hour.)</p>
-<ol class="arabic simple" start="2">
-<li><p>Next you will need to download BioSimSpace and install it into your Sire
-application. (The following assumes the default Sire installation path.)</p></li>
-</ol>
+<p>BioSimSpace is built on top of the <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
+molecular simulation framework. To download and install Sire, follow the
+instructions <a class="reference external" href="https://github.com/michellab/Sire#installation">here</a>, making
+sure that BioSimSpace’s dependencies are installed into the Sire conda
+environment at the point at which Sire is installed.</p>
+<p>Next you will need to download BioSimSpace and install it into your Sire
+Conda environment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/BioSimSpace
 <span class="nb">cd</span> BioSimSpace/python
-<span class="nv">$HOME</span>/sire.app/bin/python setup.py install
+python setup.py install
 </pre></div>
 </div>
 <p>Once finished, you can test the installation by running:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$HOME</span>/sire.app/bin/ipython
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python
 </pre></div>
 </div>
 <p>Then try importing the BioSimSpace package:</p>
@@ -184,16 +176,16 @@ application. (The following assumes the default Sire installation path.)</p></li
 <p>When developing you may not wish to continually re-install BioSimSpace and its
 associated dependencies. To avoid this, you can either make use of <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>,
 e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python <span class="nv">$HOME</span>/sire.app/bin/python script.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python python script.py
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">develop</span></code> argument when running the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> script, i.e.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/sire.app/bin/python setup.py develop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py develop
 </pre></div>
 </div>
 <p>You can also skip installation of external dependencies by setting the
 environment variable <code class="docutils literal notranslate"><span class="pre">BSS_SKIP_DEPENDENCIES</span></code>, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True <span class="nv">$HOME</span>/sire.app/bin/python setup.py install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True python setup.py install
 </pre></div>
 </div>
 </section>
@@ -249,7 +241,7 @@ against.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 22, 2022.
+      <span class="lastupdated">Last updated on Sep 26, 2022.
       </span></p>
   </div>
 

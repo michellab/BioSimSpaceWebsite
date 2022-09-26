@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Developer’s guide &mdash; BioSimSpace 2022.2.1+162 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Developer’s guide &mdash; BioSimSpace 2023.0.0+0 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="index.html" class="icon icon-home"> BioSimSpace<img src="_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2022.2.1
+                2023.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -250,11 +250,11 @@ should be used to explicitly modify member data.</p>
 <p>While working on your feature branch you won’t want to continually re-install
 in order to make the changes active. To avoid this, you can either make use
 of <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python <span class="nv">$HOME</span>/sire.app/bin/python script.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python python script.py
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">develop</span></code> argument when running the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> script, i.e.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/sire.app/bin/python setup.py develop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py develop
 </pre></div>
 </div>
 </section>
@@ -420,11 +420,11 @@ for details. The documentation is automatically built using
 will then update this website.</p>
 <p>To build the documentation locally you will first need to install some
 additional packages.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">$HOME</span>/sire.app/bin/pip install sphinx sphinx_issues sphinx_rtd_theme
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install sphinx sphinx_issues sphinx_rtd_theme
 </pre></div>
 </div>
 <p>Then move to the <code class="docutils literal notranslate"><span class="pre">doc</span></code> directory and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">SPHINXBUILD</span><span class="o">=</span><span class="nv">$HOME</span>/sire.app/bin/sphinx-build make html
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sphinx-build make html
 </pre></div>
 </div>
 <p>When finished, point your browser to <code class="docutils literal notranslate"><span class="pre">build/html/index.html</span></code>.</p>
@@ -479,7 +479,7 @@ the documentation <a class="reference external" href="https://help.github.com/ar
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 22, 2022.
+      <span class="lastupdated">Last updated on Sep 26, 2022.
       </span></p>
   </div>
 

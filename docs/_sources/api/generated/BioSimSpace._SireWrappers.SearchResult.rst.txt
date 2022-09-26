@@ -14,9 +14,15 @@ BioSimSpace.\_SireWrappers.SearchResult
    .. autosummary::
    
       ~SearchResult.__init__
+      ~SearchResult.atoms
+      ~SearchResult.bonds
+      ~SearchResult.chains
       ~SearchResult.copy
       ~SearchResult.getResult
+      ~SearchResult.molecules
       ~SearchResult.nResults
+      ~SearchResult.residues
+      ~SearchResult.segments
    
    
 

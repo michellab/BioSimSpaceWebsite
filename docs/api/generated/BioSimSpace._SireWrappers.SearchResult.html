@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace._SireWrappers.SearchResult &mdash; BioSimSpace 2022.2.1+162 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace._SireWrappers.SearchResult &mdash; BioSimSpace 2023.0.0+0 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -30,7 +30,7 @@
             <a href="../../index.html" class="icon icon-home"> BioSimSpace<img src="../../_static/bss-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
-                2022.2.1
+                2023.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -69,6 +69,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_SireWrappers.html#classes">Classes</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html">BioSimSpace._SireWrappers.Atom</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Bond.html">BioSimSpace._SireWrappers.Bond</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html">BioSimSpace._SireWrappers.Molecule</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Molecules.html">BioSimSpace._SireWrappers.Molecules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html">BioSimSpace._SireWrappers.Residue</a></li>
@@ -140,7 +141,7 @@
 <dd><p>Constructor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>select_result</strong> (<em>Sire.Mol.SelectResult</em>) – The Sire select result object.</p>
+<dd class="field-odd"><p><strong>select_result</strong> (<em>Output of a Sire search</em>) – The Sire result object.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -155,17 +156,79 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.__init__" title="BioSimSpace._SireWrappers.SearchResult.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(select_result)</p></td>
 <td><p>Constructor.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.copy" title="BioSimSpace._SireWrappers.SearchResult.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.atoms" title="BioSimSpace._SireWrappers.SearchResult.atoms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">atoms</span></code></a>()</p></td>
+<td><p>Return all of the atoms that contain the results of this search.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.bonds" title="BioSimSpace._SireWrappers.SearchResult.bonds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bonds</span></code></a>()</p></td>
+<td><p>Return all of the bonds in this result</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.chains" title="BioSimSpace._SireWrappers.SearchResult.chains"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chains</span></code></a>()</p></td>
+<td><p>Return all of the chains that contain the results of this search.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.copy" title="BioSimSpace._SireWrappers.SearchResult.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
 <td><p>Create a copy of this object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.getResult" title="BioSimSpace._SireWrappers.SearchResult.getResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResult</span></code></a>(index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.getResult" title="BioSimSpace._SireWrappers.SearchResult.getResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getResult</span></code></a>(index)</p></td>
 <td><p>Return the result at the given index.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.molecules" title="BioSimSpace._SireWrappers.SearchResult.molecules"><code class="xref py py-obj docutils literal notranslate"><span class="pre">molecules</span></code></a>()</p></td>
+<td><p>Return all of the molecules that contain the results of this search.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.nResults" title="BioSimSpace._SireWrappers.SearchResult.nResults"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nResults</span></code></a>()</p></td>
 <td><p>Return the number of results.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.residues" title="BioSimSpace._SireWrappers.SearchResult.residues"><code class="xref py py-obj docutils literal notranslate"><span class="pre">residues</span></code></a>()</p></td>
+<td><p>Return all of the residues that contain the results of this search.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult.segments" title="BioSimSpace._SireWrappers.SearchResult.segments"><code class="xref py py-obj docutils literal notranslate"><span class="pre">segments</span></code></a>()</p></td>
+<td><p>Return all of the segments that contain the results of this search.</p></td>
+</tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.atoms">
+<code class="sig-name descname">atoms</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the atoms that contain the results of this
+search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its atoms.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.bonds">
+<code class="sig-name descname">bonds</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.bonds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the bonds in this result</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its bonds.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.chains">
+<code class="sig-name descname">chains</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.chains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the chains that contain the results of this
+search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its chains.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="method">
 <dt id="BioSimSpace._SireWrappers.SearchResult.copy">
 <code class="sig-name descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.copy" title="Permalink to this definition">¶</a></dt>
@@ -191,9 +254,24 @@
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p><ul class="simple">
 <li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>) – The requested molecule.</p></li>
-<li><p><strong>result</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html#BioSimSpace._SireWrappers.Residue" title="BioSimSpace._SireWrappers.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>)</p></li>
+<li><p><strong>result</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Atom.html#BioSimSpace._SireWrappers.Atom" title="BioSimSpace._SireWrappers.Atom"><code class="xref py py-class docutils literal notranslate"><span class="pre">Atom</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Residue.html#BioSimSpace._SireWrappers.Residue" title="BioSimSpace._SireWrappers.Residue"><code class="xref py py-class docutils literal notranslate"><span class="pre">Residue</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>,                     <a class="reference internal" href="BioSimSpace._SireWrappers.Bond.html#BioSimSpace._SireWrappers.Bond" title="BioSimSpace._SireWrappers.Bond"><code class="xref py py-class docutils literal notranslate"><span class="pre">Bond</span></code></a>)</p></li>
 </ul>
 </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.molecules">
+<code class="sig-name descname">molecules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.molecules" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the molecules that contain the results of this
+search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its molecules.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -208,6 +286,36 @@
 </dd>
 <dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.residues">
+<code class="sig-name descname">residues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.residues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the residues that contain the results of this
+search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its residues.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace._SireWrappers.SearchResult.segments">
+<code class="sig-name descname">segments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace._SireWrappers.SearchResult.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all of the segments that contain the results of this
+search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>search_result</strong> – A copy of the object viewed via its segments.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#BioSimSpace._SireWrappers.SearchResult" title="BioSimSpace._SireWrappers.SearchResult"><code class="xref py py-class docutils literal notranslate"><span class="pre">SearchResult</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -228,7 +336,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 22, 2022.
+      <span class="lastupdated">Last updated on Sep 26, 2022.
       </span></p>
   </div>
 
