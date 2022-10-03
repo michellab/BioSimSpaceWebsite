@@ -52,6 +52,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="development.html">Developer’s guide</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sep-28-2022-pre-release">2022.3.0 - Sep 28 2022 (Pre-release)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mar-30-2022">2022.2.1 - Mar 30 2022</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mar-24-2022">2022.2.0 - Mar 24 2022</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#jan-26-2022">2022.1.0 - Jan 26 2022</a></li>
@@ -106,6 +107,20 @@
              
   <section id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<section id="sep-28-2022-pre-release">
+<h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2022.2.1...2022.3.0">2022.3.0</a> - Sep 28 2022 (Pre-release)<a class="headerlink" href="#sep-28-2022-pre-release" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Improved NAMD restraint implementation for consistency with other engines.</p></li>
+<li><p>Make sure we wait for <code class="docutils literal notranslate"><span class="pre">trjconv</span></code> to finish when calling as a sub-process.</p></li>
+<li><p>Added wrapper for <code class="docutils literal notranslate"><span class="pre">Sire.Units.GeneralUnit</span></code>.</p></li>
+<li><p>Improved interoperability of <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Trajectory</span></code> sub-package.</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">BioSimSpace.Sandpit</span></code> for experimental features from external collaborators.</p></li>
+<li><p>Added functionality to check for molecules in a <code class="docutils literal notranslate"><span class="pre">BioSimSpace.System</span></code>.</p></li>
+<li><p>Added functionality to extract atoms and residues by absolute index.</p></li>
+<li><p>Allow continuation for GROMACS equilibration simulations. (<a class="reference external" href="https://github.com/kexul">&#64;kexul</a>)</p></li>
+<li><p>Update BioSimSpace to work with the new Sire 2023.0.0 Python API.</p></li>
+</ul>
+</section>
 <section id="mar-30-2022">
 <h2><a class="reference external" href="https://github.com/michellab/BioSimSpace/compare/2022.2.0...2022.2.1">2022.2.1</a> - Mar 30 2022<a class="headerlink" href="#mar-30-2022" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -224,7 +239,7 @@ combination of molecular systems.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Sep 28, 2022.
+      <span class="lastupdated">Last updated on Oct 03, 2022.
       </span></p>
   </div>
 
