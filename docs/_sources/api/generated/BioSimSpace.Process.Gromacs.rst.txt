@@ -47,6 +47,7 @@ BioSimSpace.Process.Gromacs
       ~Gromacs.getCurrentPotentialEnergy
       ~Gromacs.getCurrentPressure
       ~Gromacs.getCurrentPressureDC
+      ~Gromacs.getCurrentProperEnergy
       ~Gromacs.getCurrentRecord
       ~Gromacs.getCurrentRecords
       ~Gromacs.getCurrentRestraintEnergy
@@ -69,6 +70,7 @@ BioSimSpace.Process.Gromacs
       ~Gromacs.getPotentialEnergy
       ~Gromacs.getPressure
       ~Gromacs.getPressureDC
+      ~Gromacs.getProperEnergy
       ~Gromacs.getRecord
       ~Gromacs.getRecords
       ~Gromacs.getRestraintEnergy

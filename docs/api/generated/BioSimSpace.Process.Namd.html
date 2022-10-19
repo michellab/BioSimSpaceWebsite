@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2023.0.0+10 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Process.Namd &mdash; BioSimSpace 2023.0.0+12 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -219,7 +219,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <td><p>Get the current boundary energy.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentDihedralEnergy" title="BioSimSpace.Process.Namd.getCurrentDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code></a>([time_series])</p></td>
-<td><p>Get the current dihedral energy.</p></td>
+<td><p>Get the current total dihedral energy (proper + improper).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentElectrostaticEnergy" title="BioSimSpace.Process.Namd.getCurrentElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current electrostatic energy.</p></td>
@@ -248,86 +248,92 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentPressureAverage" title="BioSimSpace.Process.Namd.getCurrentPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressureAverage</span></code></a>([time_series])</p></td>
 <td><p>Get the current average pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentRecord" title="BioSimSpace.Process.Namd.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[, time_series, unit])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentProperEnergy" title="BioSimSpace.Process.Namd.getCurrentProperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentProperEnergy</span></code></a>([time_series])</p></td>
+<td><p>Get the current proper dihedral energy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentRecord" title="BioSimSpace.Process.Namd.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[, time_series, unit])</p></td>
 <td><p>Get a current record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentRecords" title="BioSimSpace.Process.Namd.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentRecords" title="BioSimSpace.Process.Namd.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</p></td>
 <td><p>Return the current dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentStep" title="BioSimSpace.Process.Namd.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentStep" title="BioSimSpace.Process.Namd.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</p></td>
 <td><p>Get the current number of integration steps.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentSystem" title="BioSimSpace.Process.Namd.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentSystem" title="BioSimSpace.Process.Namd.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTemperature" title="BioSimSpace.Process.Namd.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTemperature" title="BioSimSpace.Process.Namd.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</p></td>
 <td><p>Get the temperature.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTemperatureAverage" title="BioSimSpace.Process.Namd.getCurrentTemperatureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperatureAverage</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTemperatureAverage" title="BioSimSpace.Process.Namd.getCurrentTemperatureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperatureAverage</span></code></a>([time_series])</p></td>
 <td><p>Get the current average temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTime" title="BioSimSpace.Process.Namd.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTime" title="BioSimSpace.Process.Namd.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
 <td><p>Get the current simulation time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotal2Energy" title="BioSimSpace.Process.Namd.getCurrentTotal2Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotal2Energy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotal2Energy" title="BioSimSpace.Process.Namd.getCurrentTotal2Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotal2Energy</span></code></a>([time_series])</p></td>
 <td><p>Get the current total energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotal3Energy" title="BioSimSpace.Process.Namd.getCurrentTotal3Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotal3Energy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotal3Energy" title="BioSimSpace.Process.Namd.getCurrentTotal3Energy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotal3Energy</span></code></a>([time_series])</p></td>
 <td><p>Get the total energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotalEnergy" title="BioSimSpace.Process.Namd.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentTotalEnergy" title="BioSimSpace.Process.Namd.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current potential energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentVanDerWaalsEnergy" title="BioSimSpace.Process.Namd.getCurrentVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVanDerWaalsEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentVanDerWaalsEnergy" title="BioSimSpace.Process.Namd.getCurrentVanDerWaalsEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVanDerWaalsEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current Van der Waals energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentVolume" title="BioSimSpace.Process.Namd.getCurrentVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVolume</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getCurrentVolume" title="BioSimSpace.Process.Namd.getCurrentVolume"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentVolume</span></code></a>([time_series])</p></td>
 <td><p>Get the current volume.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getDihedralEnergy" title="BioSimSpace.Process.Namd.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
-<td><p>Get the dihedral energy.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getDihedralEnergy" title="BioSimSpace.Process.Namd.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
+<td><p>Get the total dihedral energy (proper + improper).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getElectrostaticEnergy" title="BioSimSpace.Process.Namd.getElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getElectrostaticEnergy" title="BioSimSpace.Process.Namd.getElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the electrostatic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getFrame" title="BioSimSpace.Process.Namd.getFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrame</span></code></a>(index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getFrame" title="BioSimSpace.Process.Namd.getFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrame</span></code></a>(index)</p></td>
 <td><p>Return a specific trajectory frame.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressure" title="BioSimSpace.Process.Namd.getGPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressure" title="BioSimSpace.Process.Namd.getGPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressureAverage" title="BioSimSpace.Process.Namd.getGPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressureAverage</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getGPressureAverage" title="BioSimSpace.Process.Namd.getGPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getGPressureAverage</span></code></a>([time_series, block])</p></td>
 <td><p>Get the average pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getImproperEnergy" title="BioSimSpace.Process.Namd.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getImproperEnergy" title="BioSimSpace.Process.Namd.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the improper energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getInput" title="BioSimSpace.Process.Namd.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getInput" title="BioSimSpace.Process.Namd.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
 <td><p>Return a link to a zip file containing the input files used by the process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getKineticEnergy" title="BioSimSpace.Process.Namd.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getKineticEnergy" title="BioSimSpace.Process.Namd.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the kinetic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getMiscEnergy" title="BioSimSpace.Process.Namd.getMiscEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMiscEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getMiscEnergy" title="BioSimSpace.Process.Namd.getMiscEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getMiscEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the external energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getName" title="BioSimSpace.Process.Namd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getName" title="BioSimSpace.Process.Namd.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Return the process name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getOutput" title="BioSimSpace.Process.Namd.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
 <td><p>Return a link to a zip file of the working directory.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPackageName" title="BioSimSpace.Process.Namd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPackageName" title="BioSimSpace.Process.Namd.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
 <td><p>Return the package name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPotentialEnergy" title="BioSimSpace.Process.Namd.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPotentialEnergy" title="BioSimSpace.Process.Namd.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the potential energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressure" title="BioSimSpace.Process.Namd.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressure" title="BioSimSpace.Process.Namd.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressureAverage" title="BioSimSpace.Process.Namd.getPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureAverage</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getPressureAverage" title="BioSimSpace.Process.Namd.getPressureAverage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureAverage</span></code></a>([time_series, block])</p></td>
 <td><p>Get the average pressure.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getProperEnergy" title="BioSimSpace.Process.Namd.getProperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProperEnergy</span></code></a>([time_series, block])</p></td>
+<td><p>Get the proper dihedral energy.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Namd.getRecord" title="BioSimSpace.Process.Namd.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
 <td><p>Get a record from the stdout dictionary.</p></td>
@@ -694,7 +700,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.getCurrentDihedralEnergy">
 <code class="sig-name descname">getCurrentDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getCurrentDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current dihedral energy.</p>
+<dd><p>Get the current total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
@@ -857,6 +863,23 @@ path to a configuration file.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Namd.getCurrentProperEnergy">
+<code class="sig-name descname">getCurrentProperEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getCurrentProperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current proper dihedral energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>energy</strong> – The proper dihedral energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1072,7 +1095,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Namd.getDihedralEnergy">
 <code class="sig-name descname">getDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the dihedral energy.</p>
+<dd><p>Get the total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1081,7 +1104,7 @@ path to a configuration file.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
+<dd class="field-even"><p><strong>energy</strong> – The total dihedral energy.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
@@ -1349,6 +1372,26 @@ the process.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Namd.getProperEnergy">
+<code class="sig-name descname">getProperEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Namd.getProperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the proper dihedral energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
+<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>energy</strong> – The proper dihedral energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

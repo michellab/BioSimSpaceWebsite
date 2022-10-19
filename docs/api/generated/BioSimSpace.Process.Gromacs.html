@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2023.0.0+10 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Process.Gromacs &mdash; BioSimSpace 2023.0.0+12 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -248,7 +248,7 @@ use of checkpoint files for Equilibration protocols.</p></li>
 <td><p>Get the current short-range Coulomb energy.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy" title="BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code></a>([time_series])</p></td>
-<td><p>Get the current dihedral energy.</p></td>
+<td><p>Get the current total dihedral energy (proper + improper).</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection" title="BioSimSpace.Process.Gromacs.getCurrentDispersionCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDispersionCorrection</span></code></a>([time_series])</p></td>
 <td><p>Get the current dispersion correction.</p></td>
@@ -274,71 +274,77 @@ use of checkpoint files for Equilibration protocols.</p></li>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentPressureDC" title="BioSimSpace.Process.Gromacs.getCurrentPressureDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentPressureDC</span></code></a>([time_series])</p></td>
 <td><p>Get the current DC pressure.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecord" title="BioSimSpace.Process.Gromacs.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[, time_series, unit])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentProperEnergy" title="BioSimSpace.Process.Gromacs.getCurrentProperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentProperEnergy</span></code></a>([time_series])</p></td>
+<td><p>Get the current proper dihedral energy.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecord" title="BioSimSpace.Process.Gromacs.getCurrentRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecord</span></code></a>(record[, time_series, unit])</p></td>
 <td><p>Get a current record from the stdout dictionary.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecords" title="BioSimSpace.Process.Gromacs.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRecords" title="BioSimSpace.Process.Gromacs.getCurrentRecords"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRecords</span></code></a>()</p></td>
 <td><p>Return the current dictionary of stdout time-series records.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy" title="BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRestraintEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy" title="BioSimSpace.Process.Gromacs.getCurrentRestraintEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentRestraintEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current position restraint energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentStep" title="BioSimSpace.Process.Gromacs.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentStep" title="BioSimSpace.Process.Gromacs.getCurrentStep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentStep</span></code></a>([time_series])</p></td>
 <td><p>Get the current number of integration steps.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentSystem" title="BioSimSpace.Process.Gromacs.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentSystem" title="BioSimSpace.Process.Gromacs.getCurrentSystem"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentSystem</span></code></a>()</p></td>
 <td><p>Get the latest molecular system.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTemperature" title="BioSimSpace.Process.Gromacs.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTemperature" title="BioSimSpace.Process.Gromacs.getCurrentTemperature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTemperature</span></code></a>([time_series])</p></td>
 <td><p>Get the current temperature.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTime" title="BioSimSpace.Process.Gromacs.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTime" title="BioSimSpace.Process.Gromacs.getCurrentTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTime</span></code></a>([time_series])</p></td>
 <td><p>Get the current simulation time.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTotalEnergy" title="BioSimSpace.Process.Gromacs.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getCurrentTotalEnergy" title="BioSimSpace.Process.Gromacs.getCurrentTotalEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentTotalEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current total energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDihedralEnergy" title="BioSimSpace.Process.Gromacs.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
-<td><p>Get the dihedral energy.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDihedralEnergy" title="BioSimSpace.Process.Gromacs.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
+<td><p>Get the total dihedral energy (proper + improper).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDispersionCorrection" title="BioSimSpace.Process.Gromacs.getDispersionCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDispersionCorrection</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getDispersionCorrection" title="BioSimSpace.Process.Gromacs.getDispersionCorrection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDispersionCorrection</span></code></a>([time_series, block])</p></td>
 <td><p>Get the dispersion correction.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getFrame" title="BioSimSpace.Process.Gromacs.getFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrame</span></code></a>(index)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getFrame" title="BioSimSpace.Process.Gromacs.getFrame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getFrame</span></code></a>(index)</p></td>
 <td><p>Return a specific trajectory frame.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getImproperEnergy" title="BioSimSpace.Process.Gromacs.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getImproperEnergy" title="BioSimSpace.Process.Gromacs.getImproperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getImproperEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the improper energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getInput" title="BioSimSpace.Process.Gromacs.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getInput" title="BioSimSpace.Process.Gromacs.getInput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getInput</span></code></a>([name, file_link])</p></td>
 <td><p>Return a link to a zip file containing the input files used by the process.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getKineticEnergy" title="BioSimSpace.Process.Gromacs.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getKineticEnergy" title="BioSimSpace.Process.Gromacs.getKineticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getKineticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the kinetic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJones14" title="BioSimSpace.Process.Gromacs.getLennardJones14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJones14</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJones14" title="BioSimSpace.Process.Gromacs.getLennardJones14"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJones14</span></code></a>([time_series, block])</p></td>
 <td><p>Get the Lennard-Jones energy between atoms 1 and 4.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJonesSR" title="BioSimSpace.Process.Gromacs.getLennardJonesSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJonesSR</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getLennardJonesSR" title="BioSimSpace.Process.Gromacs.getLennardJonesSR"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getLennardJonesSR</span></code></a>([time_series, block])</p></td>
 <td><p>Get the short-range Lennard-Jones energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getName" title="BioSimSpace.Process.Gromacs.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getName" title="BioSimSpace.Process.Gromacs.getName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getName</span></code></a>()</p></td>
 <td><p>Return the process name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getOutput" title="BioSimSpace.Process.Gromacs.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getOutput" title="BioSimSpace.Process.Gromacs.getOutput"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getOutput</span></code></a>([name, block, file_link])</p></td>
 <td><p>Return a link to a zip file of the working directory.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPackageName" title="BioSimSpace.Process.Gromacs.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPackageName" title="BioSimSpace.Process.Gromacs.getPackageName"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPackageName</span></code></a>()</p></td>
 <td><p>Return the package name.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPotentialEnergy" title="BioSimSpace.Process.Gromacs.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPotentialEnergy" title="BioSimSpace.Process.Gromacs.getPotentialEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPotentialEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the potential energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressure" title="BioSimSpace.Process.Gromacs.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressure" title="BioSimSpace.Process.Gromacs.getPressure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressure</span></code></a>([time_series, block])</p></td>
 <td><p>Get the pressure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressureDC" title="BioSimSpace.Process.Gromacs.getPressureDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureDC</span></code></a>([time_series, block])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getPressureDC" title="BioSimSpace.Process.Gromacs.getPressureDC"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getPressureDC</span></code></a>([time_series, block])</p></td>
 <td><p>Get the DC pressure.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getProperEnergy" title="BioSimSpace.Process.Gromacs.getProperEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getProperEnergy</span></code></a>([time_series, block])</p></td>
+<td><p>Get the proper dihedral energy.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Gromacs.getRecord" title="BioSimSpace.Process.Gromacs.getRecord"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getRecord</span></code></a>(record[, time_series, unit, block])</p></td>
 <td><p>Get a record from the stdout dictionary.</p></td>
@@ -827,7 +833,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy">
 <code class="sig-name descname">getCurrentDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current dihedral energy.</p>
+<dd><p>Get the current total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
@@ -978,6 +984,23 @@ path to a configuration file.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getCurrentProperEnergy">
+<code class="sig-name descname">getCurrentProperEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentProperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current proper dihedral energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>energy</strong> – The proper dihedral energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="BioSimSpace.Process.Gromacs.getCurrentRecord">
 <code class="sig-name descname">getCurrentRecord</code><span class="sig-paren">(</span><em class="sig-param">record</em>, <em class="sig-param">time_series=False</em>, <em class="sig-param">unit=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getCurrentRecord" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a current record from the stdout dictionary.</p>
@@ -1120,7 +1143,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Gromacs.getDihedralEnergy">
 <code class="sig-name descname">getDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the dihedral energy.</p>
+<dd><p>Get the total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1129,7 +1152,7 @@ path to a configuration file.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
+<dd class="field-even"><p><strong>energy</strong> – The total dihedral energy.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
@@ -1377,6 +1400,26 @@ the process.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Pressure.html#BioSimSpace.Types.Pressure" title="BioSimSpace.Types.Pressure"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pressure</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="BioSimSpace.Process.Gromacs.getProperEnergy">
+<code class="sig-name descname">getProperEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Gromacs.getProperEnergy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the proper dihedral energy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p></li>
+<li><p><strong>block</strong> (<em>bool</em>) – Whether to block until the process has finished running.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>energy</strong> – The proper dihedral energy.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>

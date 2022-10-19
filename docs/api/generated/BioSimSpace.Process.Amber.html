@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2023.0.0+10 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Process.Amber &mdash; BioSimSpace 2023.0.0+12 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -219,7 +219,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <td><p>Get the current density.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentDihedralEnergy" title="BioSimSpace.Process.Amber.getCurrentDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentDihedralEnergy</span></code></a>([time_series])</p></td>
-<td><p>Get the current dihedral energy.</p></td>
+<td><p>Get the current total dihedral energy (proper + improper).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy" title="BioSimSpace.Process.Amber.getCurrentElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getCurrentElectrostaticEnergy</span></code></a>([time_series])</p></td>
 <td><p>Get the current dihedral energy.</p></td>
@@ -279,7 +279,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 <td><p>Get the density.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getDihedralEnergy" title="BioSimSpace.Process.Amber.getDihedralEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getDihedralEnergy</span></code></a>([time_series, block])</p></td>
-<td><p>Get the dihedral energy.</p></td>
+<td><p>Get the total dihedral energy (proper + improper).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.Amber.getElectrostaticEnergy" title="BioSimSpace.Process.Amber.getElectrostaticEnergy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">getElectrostaticEnergy</span></code></a>([time_series, block])</p></td>
 <td><p>Get the electrostatic energy.</p></td>
@@ -682,13 +682,13 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Amber.getCurrentDihedralEnergy">
 <code class="sig-name descname">getCurrentDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getCurrentDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current dihedral energy.</p>
+<dd><p>Get the current total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>time_series</strong> (<em>bool</em>) – Whether to return a list of time series records.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
+<dd class="field-even"><p><strong>energy</strong> – The total dihedral energy.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>
@@ -1026,7 +1026,7 @@ path to a configuration file.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.Amber.getDihedralEnergy">
 <code class="sig-name descname">getDihedralEnergy</code><span class="sig-paren">(</span><em class="sig-param">time_series=False</em>, <em class="sig-param">block='AUTO'</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.Amber.getDihedralEnergy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the dihedral energy.</p>
+<dd><p>Get the total dihedral energy (proper + improper).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1035,7 +1035,7 @@ path to a configuration file.</p>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p><strong>energy</strong> – The dihedral energy.</p>
+<dd class="field-even"><p><strong>energy</strong> – The total dihedral energy.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference internal" href="BioSimSpace.Types.Energy.html#BioSimSpace.Types.Energy" title="BioSimSpace.Types.Energy"><code class="xref py py-class docutils literal notranslate"><span class="pre">Energy</span></code></a></p>

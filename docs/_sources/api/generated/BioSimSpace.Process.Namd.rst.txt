@@ -41,6 +41,7 @@ BioSimSpace.Process.Namd
       ~Namd.getCurrentPotentialEnergy
       ~Namd.getCurrentPressure
       ~Namd.getCurrentPressureAverage
+      ~Namd.getCurrentProperEnergy
       ~Namd.getCurrentRecord
       ~Namd.getCurrentRecords
       ~Namd.getCurrentStep
@@ -68,6 +69,7 @@ BioSimSpace.Process.Namd
       ~Namd.getPotentialEnergy
       ~Namd.getPressure
       ~Namd.getPressureAverage
+      ~Namd.getProperEnergy
       ~Namd.getRecord
       ~Namd.getRecords
       ~Namd.getSeed
