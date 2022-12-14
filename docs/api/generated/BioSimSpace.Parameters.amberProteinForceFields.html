@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Units.Length.picometer &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Parameters.amberProteinForceFields &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -18,8 +18,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="BioSimSpace.Units.Area.meter2" href="BioSimSpace.Units.Area.meter2.html" />
-    <link rel="prev" title="BioSimSpace.Units.Length.nanometer" href="BioSimSpace.Units.Length.nanometer.html" /> 
+    <link rel="next" title="BioSimSpace.Parameters.ff03" href="BioSimSpace.Parameters.ff03.html" />
+    <link rel="prev" title="BioSimSpace.Parameters.amberForceFields" href="BioSimSpace.Parameters.amberForceFields.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -57,31 +57,46 @@
 <li class="toctree-l2"><a class="reference internal" href="../index_MD.html">BioSimSpace.MD</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Node.html">BioSimSpace.Node</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Notebook.html">BioSimSpace.Notebook</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.amberForceFields.html">BioSimSpace.Parameters.amberForceFields</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Parameters.amberProteinForceFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff03.html">BioSimSpace.Parameters.ff03</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99.html">BioSimSpace.Parameters.ff99</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SB.html">BioSimSpace.Parameters.ff99SB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99SBildn.html">BioSimSpace.Parameters.ff99SBildn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.forceFields.html">BioSimSpace.Parameters.forceFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff.html">BioSimSpace.Parameters.gaff</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.gaff2.html">BioSimSpace.Parameters.gaff2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openForceFields.html">BioSimSpace.Parameters.openForceFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_0_0.html">BioSimSpace.Parameters.openff_unconstrained_1_0_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_0_0_RC1.html">BioSimSpace.Parameters.openff_unconstrained_1_0_0_RC1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_0_0_RC2.html">BioSimSpace.Parameters.openff_unconstrained_1_0_0_RC2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_0_1.html">BioSimSpace.Parameters.openff_unconstrained_1_0_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_1_0.html">BioSimSpace.Parameters.openff_unconstrained_1_1_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_1_1.html">BioSimSpace.Parameters.openff_unconstrained_1_1_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_2_0.html">BioSimSpace.Parameters.openff_unconstrained_1_2_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_2_1.html">BioSimSpace.Parameters.openff_unconstrained_1_2_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_3_0.html">BioSimSpace.Parameters.openff_unconstrained_1_3_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_3_1.html">BioSimSpace.Parameters.openff_unconstrained_1_3_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_1_3_1_alpha_1.html">BioSimSpace.Parameters.openff_unconstrained_1_3_1_alpha_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_2_0_0.html">BioSimSpace.Parameters.openff_unconstrained_2_0_0</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_2_0_0_rc_1.html">BioSimSpace.Parameters.openff_unconstrained_2_0_0_rc_1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.openff_unconstrained_2_0_0_rc_2.html">BioSimSpace.Parameters.openff_unconstrained_2_0_0_rc_2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.parameterise.html">BioSimSpace.Parameters.parameterise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.formalCharge.html">BioSimSpace.Parameters.formalCharge</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Process.html">BioSimSpace.Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Protocol.html">BioSimSpace.Protocol</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Sandpit.html">BioSimSpace.Sandpit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Solvent.html">BioSimSpace.Solvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Trajectory.html">BioSimSpace.Trajectory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Types.html">BioSimSpace.Types</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../index_Units.html#length-units">Length units</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Units.Length.meter.html">BioSimSpace.Units.Length.meter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Units.Length.angstrom.html">BioSimSpace.Units.Length.angstrom</a></li>
-<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Units.Length.nanometer.html">BioSimSpace.Units.Length.nanometer</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">BioSimSpace.Units.Length.picometer</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#area-units">Area units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#angle-units">Angle units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#volume-units">Volume units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#charge-units">Charge units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#energy-units">Energy units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#pressure-units">Pressure units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#temperature-units">Temperature units</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../index_Units.html#time-units">Time units</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../index_Units.html">BioSimSpace.Units</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Exceptions.html">BioSimSpace._Exceptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_SireWrappers.html">BioSimSpace._SireWrappers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../index_Utils.html">BioSimSpace._Utils</a></li>
@@ -123,10 +138,10 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Documentation</a></li>
-          <li class="breadcrumb-item"><a href="../index_Units.html">BioSimSpace.Units</a></li>
-      <li class="breadcrumb-item active">BioSimSpace.Units.Length.picometer</li>
+          <li class="breadcrumb-item"><a href="../index_Parameters.html">BioSimSpace.Parameters</a></li>
+      <li class="breadcrumb-item active">BioSimSpace.Parameters.amberProteinForceFields</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/api/generated/BioSimSpace.Units.Length.picometer.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/api/generated/BioSimSpace.Parameters.amberProteinForceFields.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -134,12 +149,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="biosimspace-units-length-picometer">
-<h1>BioSimSpace.Units.Length.picometer<a class="headerlink" href="#biosimspace-units-length-picometer" title="Permalink to this headline">¶</a></h1>
-<dl class="data">
-<dt id="BioSimSpace.Units.Length.picometer">
-<code class="sig-prename descclassname">BioSimSpace.Units.Length.</code><code class="sig-name descname">picometer</code><em class="property"> = 1.0000 pm</em><a class="headerlink" href="#BioSimSpace.Units.Length.picometer" title="Permalink to this definition">¶</a></dt>
-<dd><p>A length in picometers.</p>
+  <section id="biosimspace-parameters-amberproteinforcefields">
+<h1>BioSimSpace.Parameters.amberProteinForceFields<a class="headerlink" href="#biosimspace-parameters-amberproteinforcefields" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="BioSimSpace.Parameters.amberProteinForceFields">
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">amberProteinForceFields</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.amberProteinForceFields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of the supported AMBER protein force fields.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><strong>force_fields</strong> – A list of the supported AMBER protein force fields.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>[str]</p>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -148,8 +171,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="BioSimSpace.Units.Length.nanometer.html" class="btn btn-neutral float-left" title="BioSimSpace.Units.Length.nanometer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="BioSimSpace.Units.Area.meter2.html" class="btn btn-neutral float-right" title="BioSimSpace.Units.Area.meter2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="BioSimSpace.Parameters.amberForceFields.html" class="btn btn-neutral float-left" title="BioSimSpace.Parameters.amberForceFields" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="BioSimSpace.Parameters.ff03.html" class="btn btn-neutral float-right" title="BioSimSpace.Parameters.ff03" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Parameters.parameterise &mdash; BioSimSpace 2023.0.0+103 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Parameters.parameterise &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -60,6 +60,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index_Parameters.html">BioSimSpace.Parameters</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index_Parameters.html#functions">Functions</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.amberForceFields.html">BioSimSpace.Parameters.amberForceFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.amberProteinForceFields.html">BioSimSpace.Parameters.amberProteinForceFields</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff03.html">BioSimSpace.Parameters.ff03</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff14SB.html">BioSimSpace.Parameters.ff14SB</a></li>
 <li class="toctree-l4"><a class="reference internal" href="BioSimSpace.Parameters.ff99.html">BioSimSpace.Parameters.ff99</a></li>
@@ -152,23 +153,21 @@
 <h1>BioSimSpace.Parameters.parameterise<a class="headerlink" href="#biosimspace-parameters-parameterise" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Parameters.parameterise">
-<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">parameterise</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">forcefield</em>, <em class="sig-param">water_model=None</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.parameterise" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Parameters.</code><code class="sig-name descname">parameterise</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">forcefield</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Parameters.parameterise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parameterise a molecule using a specified force field.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>molecule</strong> (<a class="reference internal" href="BioSimSpace._SireWrappers.Molecule.html#BioSimSpace._SireWrappers.Molecule" title="BioSimSpace._SireWrappers.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Molecule</span></code></a>, str) – The molecule to parameterise, either as a Molecule object or SMILES
 string.</p></li>
-<li><p><strong>water_model</strong> (<em>str</em>) – The water model used to parameterise any structural ions. This
-will be ignored when it is not supported by the chosen force field,
-or when ions aren’t present. Run ‘BioSimSpace.Solvent.waterModels()’
-to see the supported water models.</p></li>
 <li><p><strong>forcefield</strong> (<em>str</em>) – The force field. Run BioSimSpace.Parameters.forceFields() to get a
 list of the supported force fields.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory for the process.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – A dictionary of additional keyword arguments required for specific
+parameterisation functions.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -194,7 +193,7 @@ own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Nov 17, 2022.
+      <span class="lastupdated">Last updated on Dec 14, 2022.
       </span></p>
   </div>
 

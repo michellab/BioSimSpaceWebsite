@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Metadynamics.run &mdash; BioSimSpace 2023.0.0+103 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Metadynamics.run &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -130,7 +130,7 @@
 <h1>BioSimSpace.Metadynamics.run<a class="headerlink" href="#biosimspace-metadynamics-run" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.Metadynamics.run">
-<code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">engine='auto'</em>, <em class="sig-param">gpu_support=False</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">name='metamd'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">ignore_warnings=False</em>, <em class="sig-param">show_errors=True</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.run" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.Metadynamics.</code><code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">system</em>, <em class="sig-param">protocol</em>, <em class="sig-param">engine='auto'</em>, <em class="sig-param">gpu_support=False</em>, <em class="sig-param">auto_start=True</em>, <em class="sig-param">name='metamd'</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">property_map={}</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Metadynamics.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Auto-configure and run a metadynamics process.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -148,12 +148,7 @@ found using ‘BioSimSpace.Metadynamics.engines()’.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
 own naming scheme, e.g. { “charge” : “my-charge” }</p></li>
-<li><p><strong>ignore_warnings</strong> (<em>bool</em>) – Whether to ignore warnings when generating the binary run file.
-This option is specific to GROMACS and will be ignored when a
-different molecular dynamics engine is chosen.</p></li>
-<li><p><strong>show_errors</strong> (<em>bool</em>) – Whether to show warning/error messages when generating the binary
-run file. This option is specific to GROMACS and will be ignored
-when a different molecular dynamics engine is chosen.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – A dictionary of optional keyword arguments neeeded by the engine.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -179,7 +174,7 @@ when a different molecular dynamics engine is chosen.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Nov 17, 2022.
+      <span class="lastupdated">Last updated on Dec 14, 2022.
       </span></p>
   </div>
 
