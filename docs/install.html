@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Installation &mdash; BioSimSpace 2023.0.0+135 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -109,37 +109,37 @@ BioSimSpace is built using dependencies from <a class="reference external" href=
 so please ensure that the channel takes strict priority. We recommend using
 <a class="reference external" href="https://github.com/conda-forge/miniforge">Miniforge</a>.</p>
 <p>To create a new environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n biosimspace -c conda-forge -c michellab biosimspace
-conda activate biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>biosimspace<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>michellab<span class="w"> </span>biosimspace
+conda<span class="w"> </span>activate<span class="w"> </span>biosimspace
 </pre></div>
 </div>
 <p>To install the latest development version you can use:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n biosimspace-dev -c conda-forge -c michellab/label/dev biosimspace
-conda activate biosimspace-dev
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>biosimspace-dev<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>michellab/label/dev<span class="w"> </span>biosimspace
+conda<span class="w"> </span>activate<span class="w"> </span>biosimspace-dev
 </pre></div>
 </div>
 <p>When updating the development version it is generally advised to update <a class="reference external" href="https://github.com/michellab/Sire">Sire</a>
 at the same time:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c conda-forge -c michellab/label/dev biosimspace sire
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>michellab/label/dev<span class="w"> </span>biosimspace<span class="w"> </span>sire
 </pre></div>
 </div>
 <p>If you plan on using BioSimSpace interactively via Jupyter, then you might also
 need to enable the required notebook extensions within your Conda environment:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-nbextension <span class="nb">enable</span> nglview --py --sys-prefix
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nglview<span class="w"> </span>--py<span class="w"> </span>--sys-prefix
 </pre></div>
 </div>
 <p>Unless you add the required channels to your Conda configuration, then you’ll
 need to add them when updating, e.g., for the development package:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda update -c conda-forge -c michellab/label/dev biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>michellab/label/dev<span class="w"> </span>biosimspace
 </pre></div>
 </div>
 <p>If you find that Conda is particularly slow to install or upgrade BioSimSpace,
 then we advise using <a class="reference external" href="https://github.com/TheSnakePit/mamba">mamba</a>:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge mamba
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba
 </pre></div>
 </div>
 <p>You can then replace all <code class="docutils literal notranslate"><span class="pre">conda</span></code> commands with <code class="docutils literal notranslate"><span class="pre">mamba</span></code>, e.g.:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba create -n biosimspace -c conda-forge -c michellab biosimspace
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mamba<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>biosimspace<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>michellab<span class="w"> </span>biosimspace
 </pre></div>
 </div>
 </section>
@@ -160,9 +160,9 @@ sure that BioSimSpace’s dependencies are installed into the Sire conda
 environment at the point at which Sire is installed.</p>
 <p>Next you will need to download BioSimSpace and install it into your Sire
 Conda environment.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/michellab/BioSimSpace
-<span class="nb">cd</span> BioSimSpace/python
-python setup.py install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/michellab/BioSimSpace
+<span class="nb">cd</span><span class="w"> </span>BioSimSpace/python
+python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
 <p>Once finished, you can test the installation by running:</p>
@@ -176,16 +176,16 @@ python setup.py install
 <p>When developing you may not wish to continually re-install BioSimSpace and its
 associated dependencies. To avoid this, you can either make use of <code class="docutils literal notranslate"><span class="pre">PYTHONPATH</span></code>,
 e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python python script.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$HOME</span>/Code/BioSimSpace/python<span class="w"> </span>python<span class="w"> </span>script.py
 </pre></div>
 </div>
 <p>or use the <code class="docutils literal notranslate"><span class="pre">develop</span></code> argument when running the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> script, i.e.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python setup.py develop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>setup.py<span class="w"> </span>develop
 </pre></div>
 </div>
 <p>You can also skip installation of external dependencies by setting the
 environment variable <code class="docutils literal notranslate"><span class="pre">BSS_SKIP_DEPENDENCIES</span></code>, e.g.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True python setup.py install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">BSS_SKIP_DEPENDENCIES</span><span class="o">=</span>True<span class="w"> </span>python<span class="w"> </span>setup.py<span class="w"> </span>install
 </pre></div>
 </div>
 </section>
@@ -195,11 +195,11 @@ environment variable <code class="docutils literal notranslate"><span class="pre
 <li><p>If you experience problems with <a class="reference external" href="https://matplotlib.org">Matplotlib</a> when
 importing BioSimSpace on macOS, e.g.</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RuntimeError**: Python is not installed as a framework.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>RuntimeError**:<span class="w"> </span>Python<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>installed<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>framework.
 </pre></div>
 </div>
 <p>simply add the following to <code class="docutils literal notranslate"><span class="pre">~/.matplotlib/matplotlibrc</span></code></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>backend: TkAgg
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>backend:<span class="w"> </span>TkAgg
 </pre></div>
 </div>
 <p>Note that plotting functionality will be disabled if you are using
@@ -241,7 +241,7 @@ against.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Dec 14, 2022.
+      <span class="lastupdated">Last updated on Jan 03, 2023.
       </span></p>
   </div>
 

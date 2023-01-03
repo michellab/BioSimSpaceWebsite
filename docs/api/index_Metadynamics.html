@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Metadynamics &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Metadynamics &mdash; BioSimSpace 2023.0.0+135 documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -142,8 +142,8 @@ support for version 2.5 and above. Once installed, make sure that the
 <code class="docutils literal notranslate"><span class="pre">plumed</span></code> binary is visible in your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> so that it can be found by
 BioSimSpace. You will also need to ensure that the PLUMED kernel is
 visible, and likely need to update your <code class="docutils literal notranslate"><span class="pre">LD_LIBRARY_PATH</span></code> too, e.g:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PLUMED_KERNEL</span><span class="o">=</span>/usr/local/lib/libplumedKernel.so
-<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PLUMED_KERNEL</span><span class="o">=</span>/usr/local/lib/libplumedKernel.so
+<span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span>/usr/local/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 </pre></div>
 </div>
 <p>To use PLUMED you will also have to patch an appropriate molecular dynamics
@@ -210,7 +210,7 @@ At present we only support metadynamics simulations using
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Dec 14, 2022.
+      <span class="lastupdated">Last updated on Jan 03, 2023.
       </span></p>
   </div>
 

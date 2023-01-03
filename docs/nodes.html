@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nodes &mdash; BioSimSpace 2023.0.0+131 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <title>Nodes &mdash; BioSimSpace 2023.0.0+135 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -187,13 +187,13 @@ and visualisations.</p>
 a means of chaining together nodes by passing the output of one node as the
 input to another. For example, given the following YAML configuration file,
 <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code>:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.crd</span><span class="w"></span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.top</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.crd</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amber/ala.top</span>
 </pre></div>
 </div>
 <p>it would be possible to run a minimisation followed by an equilibration as follows:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python minimisation.py --config config.yaml <span class="o">&amp;&amp;</span> python equilibration.py --config output.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>minimisation.py<span class="w"> </span>--config<span class="w"> </span>config.yaml<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python<span class="w"> </span>equilibration.py<span class="w"> </span>--config<span class="w"> </span>output.yaml
 </pre></div>
 </div>
 <p>Nodes can also be accessed from within BioSimSpace itself, allowing the user
@@ -218,21 +218,21 @@ function.)</p>
 <p>It is also possible to export a node as a
 <a class="reference external" href="https://www.commonwl.org/">Common Workflow Language</a> (CWL) wrapper.
 For example, using the <code class="docutils literal notranslate"><span class="pre">minimisation.py</span></code> example from the previous section:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python minimisation.py --export-cwl
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>minimisation.py<span class="w"> </span>--export-cwl
 </pre></div>
 </div>
 <p>This will write a wrapper called <code class="docutils literal notranslate"><span class="pre">minimisation.cwl</span></code> to the current directory.</p>
 <p>The node could then be run as part of a CWL workflow using something like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cwltool minimisation.cwl config.yaml
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cwltool<span class="w"> </span>minimisation.cwl<span class="w"> </span>config.yaml
 </pre></div>
 </div>
 <p>Here <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> is a YAML configuration file, e.g.:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.top</span><span class="p p-Indicator">}</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.crd</span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">files</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.top</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="nv">File</span><span class="p p-Indicator">,</span><span class="nt"> path</span><span class="p">:</span><span class="w"> </span><span class="nv">/home/lester/BioSimSpace/demo/amber/ala/ala.crd</span><span class="p p-Indicator">}</span>
 
-<span class="nt">steps</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1000</span><span class="w"></span>
+<span class="nt">steps</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 </pre></div>
 </div>
 <p>At present, using BioSimSpace within CWL is limited to the use of
@@ -248,8 +248,8 @@ be renamed when a mismatch is found.</p>
 <p>Any unit based input requirement, e.g.
 <a class="reference internal" href="api/generated/BioSimSpace.Gateway.Length.html#BioSimSpace.Gateway.Length" title="BioSimSpace.Gateway.Length"><code class="xref py py-class docutils literal notranslate"><span class="pre">BioSimSpace.Gateway.Length</span></code></a>, should be
 specifying as a CWL <code class="docutils literal notranslate"><span class="pre">string</span></code> type to allow for greatest flexibility, e.g.:</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">length</span><span class="p">:</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">25 Angstroms</span>
 </pre></div>
 </div>
 </section>
@@ -326,7 +326,7 @@ modification.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Dec 14, 2022.
+      <span class="lastupdated">Last updated on Jan 03, 2023.
       </span></p>
   </div>
 
