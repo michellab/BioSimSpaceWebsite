@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.IO.readPDB &mdash; BioSimSpace 2023.0.0+137 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.IO.readPDB &mdash; BioSimSpace 2023.0.0+173 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -133,7 +133,7 @@
 <h1>BioSimSpace.IO.readPDB<a class="headerlink" href="#biosimspace-io-readpdb" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="BioSimSpace.IO.readPDB">
-<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readPDB</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">pdb4amber=False</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readPDB" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">BioSimSpace.IO.</code><code class="sig-name descname">readPDB</code><span class="sig-paren">(</span><em class="sig-param">id</em>, <em class="sig-param">pdb4amber=False</em>, <em class="sig-param">work_dir=None</em>, <em class="sig-param">show_warnings=False</em>, <em class="sig-param">property_map={}</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.IO.readPDB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a molecular system from a Protein Data Bank (PDBP) ID in the RSCB PDB
 website.</p>
 <dl class="field-list simple">
@@ -142,6 +142,7 @@ website.</p>
 <li><p><strong>id</strong> (<em>str</em>) – The PDB ID string, or path to a PDB file.</p></li>
 <li><p><strong>pdb4amber</strong> (<em>bool</em>) – Whether to process the PDB file using pdb4amber. This reformats the file
 such that it can be handled by the AMBER suite of tools.</p></li>
+<li><p><strong>show_warnings</strong> (<em>bool</em>) – Whether to show any warnings raised during parsing of the input files.</p></li>
 <li><p><strong>work_dir</strong> (<em>str</em>) – The working directory used to run pdb4amber.</p></li>
 <li><p><strong>property_map</strong> (<em>dict</em>) – A dictionary that maps system “properties” to their user defined
 values. This allows the user to refer to properties with their
@@ -185,7 +186,7 @@ Data Bank (PDB) record.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 04, 2023.
+      <span class="lastupdated">Last updated on Jan 13, 2023.
       </span></p>
   </div>
 

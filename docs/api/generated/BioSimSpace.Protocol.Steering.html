@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Protocol.Steering &mdash; BioSimSpace 2023.0.0+137 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Protocol.Steering &mdash; BioSimSpace 2023.0.0+173 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -143,9 +143,9 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                                 [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) used to perform the steering.</p></li>
+<li><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                              [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) used to perform the steering.</p></li>
 <li><p><strong>schedule</strong> ([<a class="reference internal" href="BioSimSpace.Types.Time.html#BioSimSpace.Types.Time" title="BioSimSpace.Types.Time"><code class="xref py py-class docutils literal notranslate"><span class="pre">Time</span></code></a>]) – The time schedule for the steering.</p></li>
-<li><p><strong>restraints</strong> ([<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>]                         [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
+<li><p><strong>restraints</strong> ([<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>]                     [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
 each stage of the schedule.</p></li>
 <li><p><strong>verse</strong> (<em>str</em>) – Whether the restraint is acting for values of the collective
 variable “larger” or “smaller” than the restraint, or acting
@@ -287,7 +287,7 @@ information in the file must be consistent with the
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Steering.getReportInterval">
 <code class="sig-name descname">getReportInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getReportInterval" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the interval between reporting statistics. (In integration steps.)</p>
+<dd><p>Return the interval between reporting statistics. (In integration steps.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><strong>report_interval</strong> – The number of integration steps between reporting statistics.</p>
@@ -302,7 +302,7 @@ information in the file must be consistent with the
 <dt id="BioSimSpace.Protocol.Steering.getRestartInterval">
 <code class="sig-name descname">getRestartInterval</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.getRestartInterval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the interval between saving restart confiugrations, and/or
-trajectory frames. (In integration steps.)</p>
+trajectory frames. (In integration steps.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><strong>restart_interval</strong> – The number of integration steps between saving restart
@@ -325,7 +325,7 @@ the schedule.</p>
 each stage of the schedule.</p>
 </dd>
 <dt class="field-even">Return type</dt>
-<dd class="field-even"><p>[:class`CollectiveVariable &lt;BioSimSpace.Metadynamics.CollectiveVariable&gt;`]                         [(<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>)]]</p>
+<dd class="field-even"><p>[:class`CollectiveVariable &lt;BioSimSpace.Metadynamics.CollectiveVariable&gt;`]                      [(<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>)]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -411,7 +411,7 @@ on “both” sides (default).</p>
 <dd><p>Set the collective variable (or variables).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                                 [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) for the simulation.</p>
+<dd class="field-odd"><p><strong>collective_variable</strong> (<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>,                              [<a class="reference internal" href="../index_Metadynamics_CollectiveVariable.html#module-BioSimSpace.Metadynamics.CollectiveVariable" title="BioSimSpace.Metadynamics.CollectiveVariable"><code class="xref py py-class docutils literal notranslate"><span class="pre">CollectiveVariable</span></code></a>]) – The collective variable (or variables) for the simulation.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -441,7 +441,7 @@ on “both” sides (default).</p>
 <dl class="method">
 <dt id="BioSimSpace.Protocol.Steering.setReportInterval">
 <code class="sig-name descname">setReportInterval</code><span class="sig-paren">(</span><em class="sig-param">report_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setReportInterval" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the interval at which statistics are reported. (In integration steps.)</p>
+<dd><p>Set the interval at which statistics are reported. (In integration steps.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>report_interval</strong> (<em>int</em>) – The number of integration steps between reporting statistics.</p>
@@ -453,7 +453,7 @@ on “both” sides (default).</p>
 <dt id="BioSimSpace.Protocol.Steering.setRestartInterval">
 <code class="sig-name descname">setRestartInterval</code><span class="sig-paren">(</span><em class="sig-param">restart_interval</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Protocol.Steering.setRestartInterval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the interval between saving restart confiugrations, and/or
-trajectory frames. (In integration steps.)</p>
+trajectory frames. (In integration steps.).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>restart_interval</strong> (<em>int</em>) – The number of integration steps between saving restart
@@ -468,7 +468,7 @@ configurations and/or trajectory frames.</p>
 <dd><p>Set the restraints for the steering schedule.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>restraint</strong> ([:class`Restraint &lt;BioSimSpace.Metadynamics.Restraint&gt;`]                        [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
+<dd class="field-odd"><p><strong>restraint</strong> ([:class`Restraint &lt;BioSimSpace.Metadynamics.Restraint&gt;`]                     [(<a class="reference internal" href="BioSimSpace.Metadynamics.Restraint.html#BioSimSpace.Metadynamics.Restraint" title="BioSimSpace.Metadynamics.Restraint"><code class="xref py py-class docutils literal notranslate"><span class="pre">Restraint</span></code></a>)]]) – The position of the restraint on each collective variable for
 each stage of the schedule.</p>
 </dd>
 </dl>
@@ -549,7 +549,7 @@ on “both” sides (default).</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 04, 2023.
+      <span class="lastupdated">Last updated on Jan 13, 2023.
       </span></p>
   </div>
 

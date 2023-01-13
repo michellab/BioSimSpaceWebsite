@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2023.0.0+137 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <title>BioSimSpace.Process.ProcessRunner &mdash; BioSimSpace 2023.0.0+173 documentation</title><link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" /><link rel="shortcut icon" href="../../_static/favicon.ico"/>
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
@@ -192,7 +192,7 @@ can be run independently and allocated their own specific resources.</p>
 <td><p>Return whether each process is running.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.kill" title="BioSimSpace.Process.ProcessRunner.kill"><code class="xref py py-obj docutils literal notranslate"><span class="pre">kill</span></code></a>(index)</p></td>
-<td><p>Kill a specific process.</p></td>
+<td><p>Kill a specific process. The same can be achieved using:</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.killAll" title="BioSimSpace.Process.ProcessRunner.killAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">killAll</span></code></a>()</p></td>
 <td><p>Kill all of the processes.</p></td>
@@ -231,7 +231,7 @@ can be run independently and allocated their own specific resources.</p>
 <td><p>Set the process runner name.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.start" title="BioSimSpace.Process.ProcessRunner.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a>(index)</p></td>
-<td><p>Start a specific process.</p></td>
+<td><p>Start a specific process. The same can be achieved using:</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#BioSimSpace.Process.ProcessRunner.startAll" title="BioSimSpace.Process.ProcessRunner.startAll"><code class="xref py py-obj docutils literal notranslate"><span class="pre">startAll</span></code></a>([serial, batch_size, max_retries])</p></td>
 <td><p>Start all of the processes.</p></td>
@@ -250,7 +250,7 @@ can be run independently and allocated their own specific resources.</p>
 <dd><p>Add a process to the runner.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>process</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>,                      [<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – The process/processes to add.</p>
+<dd class="field-odd"><p><strong>process</strong> (<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>,                  [<a class="reference internal" href="../index_Process.html#module-BioSimSpace.Process" title="BioSimSpace.Process"><code class="xref py py-class docutils literal notranslate"><span class="pre">Process</span></code></a>]) – The process/processes to add.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -328,15 +328,19 @@ can be run independently and allocated their own specific resources.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.kill">
 <code class="sig-name descname">kill</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.kill" title="Permalink to this definition">¶</a></dt>
-<dd><p>Kill a specific process. The same can be achieved using:</p>
+<dd><blockquote>
+<div><p>Kill a specific process. The same can be achieved using:</p>
+</div></blockquote>
+<p>.</p>
 <blockquote>
+<div><blockquote>
 <div><p>runner.processes()[index].kill()</p>
 </div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
+<dl class="simple">
+<dt>index<span class="classifier">int</span></dt><dd><p>The index of the process.</p>
 </dd>
 </dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -488,15 +492,19 @@ can be run independently and allocated their own specific resources.</p>
 <dl class="method">
 <dt id="BioSimSpace.Process.ProcessRunner.start">
 <code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">index</em><span class="sig-paren">)</span><a class="headerlink" href="#BioSimSpace.Process.ProcessRunner.start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a specific process. The same can be achieved using:</p>
+<dd><blockquote>
+<div><p>Start a specific process. The same can be achieved using:</p>
+</div></blockquote>
+<p>.</p>
 <blockquote>
+<div><blockquote>
 <div><p>runner.processes()[index].start()</p>
 </div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>index</strong> (<em>int</em>) – The index of the process.</p>
+<dl class="simple">
+<dt>index<span class="classifier">int</span></dt><dd><p>The index of the process.</p>
 </dd>
 </dl>
+</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -557,7 +565,7 @@ to the output of multiprocess.cpu_count().</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2017-2021 Michel Lab.
-      <span class="lastupdated">Last updated on Jan 04, 2023.
+      <span class="lastupdated">Last updated on Jan 13, 2023.
       </span></p>
   </div>
 
